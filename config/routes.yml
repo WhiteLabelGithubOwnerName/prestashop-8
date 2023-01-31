@@ -1,0 +1,14 @@
+download_packing_slip:
+  path: whiteLabelMachineName/{orderId}/packingslip
+  methods: [GET]
+  defaults:
+    _controller: PrestaShop\Module\WhiteLabelMachineName\Controller\Admin\processWhiteLabelMachineNamePackingSlip::processWhiteLabelMachineNamePackingSlip
+  requirements:
+      orderId: \d+
+download_invoice:
+  path: whiteLabelMachineName/{orderId}/invoice
+  methods: [GET]
+  defaults:
+    _controller: PrestaShop\Module\WhiteLabelMachineName\Controller\Admin\processWhiteLabelMachineNameInvoice::processWhiteLabelMachineNameInvoice
+  requirements:
+      orderId: \d+

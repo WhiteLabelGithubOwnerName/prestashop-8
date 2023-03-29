@@ -84,7 +84,8 @@ class CountryService {
 	 * Operation allWithHttpInfo
 	 *
 	 * All
-	 *
+     
+     *
 	 * @throws \WhiteLabelMachineName\Sdk\ApiException
 	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
 	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
@@ -119,7 +120,6 @@ class CountryService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
@@ -128,7 +128,7 @@ class CountryService {
 				$headerParams,
 				'\WhiteLabelMachineName\Sdk\Model\RestCountry[]',
 				'/country/all'
-			);
+            );
 			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\RestCountry[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {

@@ -1,8 +1,9 @@
+[![Build Status](https://travis-ci.org/WhiteLabelGithubOwnerName/prestashop-8.svg?branch=master)](https://travis-ci.org/WhiteLabelGithubOwnerName/prestashop-8)
 
 
-# PrestaShop 1.8 WhiteLabelName Integration - ALPHA
+
+# PrestaShop 1.8 WhiteLabelName Integration
 This repository contains the PrestaShop WhiteLabelName payment module that enables the shop to process payments with [WhiteLabelName](https://whitelabel-website.com).
-This plugin is still in ALPHA and there may be bugs
 
 ##### To use this extension, a [WhiteLabelName](https://whitelabel-signup.com) account is required.
 
@@ -14,7 +15,7 @@ This plugin is still in ALPHA and there may be bugs
 
 ## Documentation
 
-* [English](@WalleeDocPath(/docs/en/documentation.html))
+* [English](https://whitelabel-docs.com/prestashop-8/1.0.0/docs/en/documentation.html)
 
 ## Support
 
@@ -22,7 +23,7 @@ Support queries can be issued on the [WhiteLabelName support site](https://white
 
 ## License
 
-Please see the [license file](@WalleeRepoPath(/LICENSE)) for more information.
+Please see the [license file](https://github.com/WhiteLabelGithubOwnerName/prestashop-8/blob/1.0.0/LICENSE) for more information.
 
 ## Other PrestaShop Versions
 

@@ -130,7 +130,7 @@ class WhiteLabelMachineNameBasemodule
         return $order;
     }
 
-    public function checkRequirements(WhiteLabelMachineName $module)
+    public static function checkRequirements(WhiteLabelMachineName $module)
     {
         if (!Module::isInstalled('mailhook')) {
             $module->addError(
@@ -207,7 +207,7 @@ class WhiteLabelMachineNameBasemodule
     }
 
 
-    private function installControllers(WhiteLabelMachineName $module)
+    private static function installControllers(WhiteLabelMachineName $module)
     {
         foreach ($module->getBackendControllers() as $className => $data) {
             if (Tab::getIdFromClassName($className)) {

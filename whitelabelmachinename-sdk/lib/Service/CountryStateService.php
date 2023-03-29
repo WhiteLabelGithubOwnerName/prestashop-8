@@ -84,7 +84,8 @@ class CountryStateService {
 	 * Operation allWithHttpInfo
 	 *
 	 * All
-	 *
+     
+     *
 	 * @throws \WhiteLabelMachineName\Sdk\ApiException
 	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
 	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
@@ -119,7 +120,6 @@ class CountryStateService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
@@ -128,7 +128,7 @@ class CountryStateService {
 				$headerParams,
 				'\WhiteLabelMachineName\Sdk\Model\RestCountryState[]',
 				'/country-state/all'
-			);
+            );
 			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\RestCountryState[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
@@ -180,7 +180,8 @@ class CountryStateService {
 	 * Operation countryWithHttpInfo
 	 *
 	 * Find by Country
-	 *
+     
+     *
 	 * @param string $code The country code in ISO code two letter format for which all states should be returned. (required)
 	 * @throws \WhiteLabelMachineName\Sdk\ApiException
 	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
@@ -223,7 +224,6 @@ class CountryStateService {
 		}
 		// make the API Call
 		try {
-			$this->apiClient->setConnectionTimeout(ApiClient::CONNECTION_TIMEOUT);
 			$response = $this->apiClient->callApi(
 				$resourcePath,
 				'GET',
@@ -232,7 +232,7 @@ class CountryStateService {
 				$headerParams,
 				'\WhiteLabelMachineName\Sdk\Model\RestCountryState[]',
 				'/country-state/country'
-			);
+            );
 			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\RestCountryState[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {

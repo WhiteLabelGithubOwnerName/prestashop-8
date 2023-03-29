@@ -482,16 +482,16 @@ class WhiteLabelMachineNameHelper
      */
     public static function sortMethodConfiguration(array $configurations)
     {
-        usort(
-            $configurations,
-            function ($a, $b) {
-                if ($a->getSortOrder() == $b->getSortOrder()) {
-                    return $a->getConfigurationName() > $b->getConfigurationName();
-                }
-                return $a->getSortOrder() > $b->getSortOrder();
-            }
-        );
-        return $configurations;
+		usort(
+			$configurations,
+			function ($a, $b) {
+				if ($a->getSortOrder() == $b->getSortOrder()) {
+					return  $b->getConfigurationName() <=> $a->getConfigurationName();
+				}
+				return  $b->getSortOrder() <=> $a->getSortOrder();
+			}
+		);
+		return $configurations;
     }
 
     /**

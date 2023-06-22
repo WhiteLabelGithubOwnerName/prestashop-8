@@ -9,6 +9,8 @@
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache Software License (ASL 2.0)
  */
 
+use WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionCreate;
+
 /**
  * This service provides functions to deal with WhiteLabelName transaction completions.
  */
@@ -121,10 +123,15 @@ class WhiteLabelMachineNameServiceTransactioncompletion extends WhiteLabelMachin
             $collected[] = $baseOrder;
 
             $lineItems = WhiteLabelMachineNameServiceLineitem::instance()->getItemsFromOrders($collected);
+
+	        $lineItemVersion = (new TransactionLineItemVersionCreate())
+			  ->setTransaction((int)$completionJob->getTransactionId())
+			  ->setLineItems($lineItems)
+			  ->setExternalId(uniqid());
+			
             WhiteLabelMachineNameServiceTransaction::instance()->updateLineItems(
                 $completionJob->getSpaceId(),
-                $completionJob->getTransactionId(),
-                $lineItems
+                $lineItemVersion
             );
             $completionJob->setState(WhiteLabelMachineNameModelCompletionjob::STATE_ITEMS_UPDATED);
             $completionJob->save();

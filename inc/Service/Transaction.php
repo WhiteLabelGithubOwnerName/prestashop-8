@@ -9,6 +9,10 @@
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache Software License (ASL 2.0)
  */
 
+use WhiteLabelMachineName\Sdk\Service\TransactionInvoiceService;
+use WhiteLabelMachineName\Sdk\Service\TransactionLineItemVersionService;
+use WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionCreate;
+
 /**
  * This service provides functions to deal with WhiteLabelName transactions.
  */
@@ -56,7 +60,9 @@ class WhiteLabelMachineNameServiceTransaction extends WhiteLabelMachineNameServi
      * @var \WhiteLabelMachineName\Sdk\Service\ChargeAttemptService
      */
     private $chargeAttemptService;
-
+	
+	private $transactionLineItemVersionService;
+	
     /**
      * Returns the transaction API service.
      *
@@ -212,22 +218,20 @@ class WhiteLabelMachineNameServiceTransaction extends WhiteLabelMachineNameServi
             return null;
         }
     }
-
-    /**
-     * Updates the line items of the given transaction.
-     *
-     * @param int $spaceId
-     * @param int $transactionId
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $lineItems
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersion
-     */
-    public function updateLineItems($spaceId, $transactionId, $lineItems)
-    {
-        $updateRequest = new \WhiteLabelMachineName\Sdk\Model\TransactionLineItemUpdateRequest();
-        $updateRequest->setTransactionId($transactionId);
-        $updateRequest->setNewLineItems($lineItems);
-        return $this->getTransactionService()->updateTransactionLineItems($spaceId, $updateRequest);
-    }
+	
+	/**
+	 * Create a version of line items
+	 *
+	 * @param string $spaceId
+	 * @param \WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionCreate $lineItemVersion
+	 * @return \WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersion
+	 * @throws \WhiteLabelMachineName\Sdk\ApiException
+	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
+	 */
+	public function updateLineItems($spaceId, TransactionLineItemVersionCreate $lineItemVersion){
+		return $this->getTransactionLineItemVersionService()->create($spaceId, $lineItemVersion);
+	}
 
     /**
      * Stores the transaction data in the database.
@@ -723,6 +727,17 @@ class WhiteLabelMachineNameServiceTransaction extends WhiteLabelMachineNameServi
         }
         return null;
     }
+	
+	/**
+	 * @return TransactionLineItemVersionService
+	 * @throws Exception
+	 */
+	protected function getTransactionLineItemVersionService() {
+		if (!$this->transactionLineItemVersionService) {
+			$this->transactionLineItemVersionService = new TransactionLineItemVersionService(WhiteLabelMachineNameHelper::getApiClient());
+		}
+		return $this->transactionLineItemVersionService;
+	}
 
     /**
      * Returns the shipping name

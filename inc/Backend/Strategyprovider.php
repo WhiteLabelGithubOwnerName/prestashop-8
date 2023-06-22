@@ -16,10 +16,6 @@
  */
 class WhiteLabelMachineNameBackendStrategyprovider
 {
-    private static $supported_strategies = [
-        '1.7.7.4' => WhiteLabelMachineNameBackendStrategy1774::class
-    ];
-
     /**
      * Returns the refund strategy to use
      *
@@ -27,9 +23,6 @@ class WhiteLabelMachineNameBackendStrategyprovider
      */
     public static function getStrategy()
     {
-        if (isset(self::$supported_strategies[_PS_VERSION_])) {
-            return new self::$supported_strategies[_PS_VERSION_];
-        }
         return new WhiteLabelMachineNameBackendDefaultstrategy();
     }
 }

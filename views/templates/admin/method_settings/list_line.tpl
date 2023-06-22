@@ -9,7 +9,7 @@
 *}
 <tr>
 	<td class="fixed-width-sm center">
-		<img class="img-thumbnail" alt="{$method.configurationName|escape:'html':'UTF-8'}" src="{$method.imageUrl|escape:'html'}" />
+		<img class="img-thumbnail" alt="{$method.configurationName|escape:'html':'UTF-8'}" src="{$method.imageUrl|escape:'html':'UTF-8'}" />
 	</td>
 	<td>
 		<div id="anchor{$method.configurationName|escape:'html':'UTF-8'}">
@@ -21,7 +21,7 @@
 	<td class="actions">
 		<div class="btn-group-action">
 			<div class="btn-group">
-				<a class=" btn btn-default" href={$link->getAdminLink('AdminWhiteLabelMachineNameMethodSettings')|escape:'html'}&method_id={$method.id|escape:'html':'UTF-8'} title="{l s='Configure' mod='whitelabelmachinename'}"><i class="icon-wrench"></i> {l s='Configure' mod='whitelabelmachinename'}</a>
+				<a class=" btn btn-default" href={$link->getAdminLink('AdminWhiteLabelMachineNameMethodSettings')|escape:'html':'UTF-8'}&method_id={$method.id|escape:'html':'UTF-8'} title="{l s='Configure' mod='whitelabelmachinename'}"><i class="icon-wrench"></i> {l s='Configure' mod='whitelabelmachinename'}</a>
 			</div>
 		</div>
 	</td>

@@ -21,15 +21,15 @@
 			<dl class="well list-detail">
 				<dt>{l s='Payment Method' mod='whitelabelmachinename'}</dt>
 				<dd>{$configurationName|escape:'html':'UTF-8'}
-			{if !empty($methodImage)} 
+			{if !empty($methodImage)}
 			 	<br /><img
-						src="{$methodImage|escape:'html'}"
+						src="{$methodImage|escape:'html':'UTF-8'}"
 						width="50" />
 			{/if}
 				</dd>
 				<dt>{l s='Transaction State' mod='whitelabelmachinename'}</dt>
 				<dd>{$transactionState|escape:'html':'UTF-8'}</dd>
-			{if !empty($failureReason)} 
+			{if !empty($failureReason)}
             	<dt>{l s='Failure Reason' mod='whitelabelmachinename'}</dt>
 				<dd>{$failureReason|escape:'html':'UTF-8'}</dd>
 			{/if}
@@ -37,7 +37,7 @@
 				<dd>{displayPrice price=$authorizationAmount}</dd>
 				<dt>{l s='Transaction' mod='whitelabelmachinename'}</dt>
 				<dd>
-					<a href="{$transactionUrl|escape:'html'}" target="_blank">
+					<a href="{$transactionUrl|escape:'html':'UTF-8'}" target="_blank">
 						{l s='View' mod='whitelabelmachinename'}
 					</a>
 				</dd>
@@ -98,7 +98,7 @@
 									{$completion->getCompletionId()|escape:'html':'UTF-8'}
 								{else}
 									{l s='Not available' mod='whitelabelmachinename'}
-								{/if}	
+								{/if}
 							</td>
 							<td>{$completion->getState()|escape:'html':'UTF-8'}</td>
 							<td>{if !empty($completion->getFailureReason())}
@@ -111,12 +111,12 @@
 							<td>
 								{if ($completion->getCompletionId() != 0)}
 									{assign var='completionUrl' value="{whitelabelmachinename_completion_url completion=$completion}"}
-									<a href="{$completionUrl|escape:'html'}" target="_blank">
+									<a href="{$completionUrl|escape:'html':'UTF-8'}" target="_blank">
 										{l s='View' mod='whitelabelmachinename'}
 									</a>
 								{else}
 									{l s='Not available' mod='whitelabelmachinename'}
-								{/if}	
+								{/if}
 							</td>
 						</tr>
 					{/foreach}
@@ -160,7 +160,7 @@
 									{$voidItem->getVoidId()|escape:'html':'UTF-8'}
 								{else}
 									{l s='Not available' mod='whitelabelmachinename'}
-								{/if}		
+								{/if}
 							</td>
 							<td>{$voidItem->getState()|escape:'html':'UTF-8'}</td>
 							<td>{if !empty($voidItem->getFailureReason())}
@@ -173,12 +173,12 @@
 							<td>
 								{if ($voidItem->getVoidId() != 0)}
 									{assign var='voidUrl' value="{whitelabelmachinename_void_url void=$voidItem}"}
-									<a href="{$voidUrl|escape:'html'}" target="_blank">
+									<a href="{$voidUrl|escape:'html':'UTF-8'}" target="_blank">
 										{l s='View' mod='whitelabelmachinename'}
 									</a>
 								{else}
 									{l s='Not available' mod='whitelabelmachinename'}
-								{/if}	
+								{/if}
 							</td>
 						</tr>
 					{/foreach}
@@ -200,7 +200,7 @@
 							<th>
 								<span class="title_box ">{l s='Job Id' mod='whitelabelmachinename'}</span>
 							</th>
-							
+
 							<th>
 								<span class="title_box ">{l s='External Id' mod='whitelabelmachinename'}</span>
 							</th>
@@ -234,7 +234,7 @@
 									{$refund->getRefundId()|escape:'html':'UTF-8'}
 								{else}
 									{l s='Not available' mod='whitelabelmachinename'}
-								{/if}	
+								{/if}
 							</td>
 							<td>
 								{assign var='refundAmount' value="{whitelabelmachinename_refund_amount refund=$refund}"}
@@ -255,12 +255,12 @@
 							<td>
 								{if ($refund->getRefundId() != 0)}
 									{assign var='refundURl' value="{whitelabelmachinename_refund_url refund=$refund}"}
-									<a href="{$refundURl|escape:'html'}" target="_blank">
+									<a href="{$refundURl|escape:'html':'UTF-8'}" target="_blank">
 										{l s='View' mod='whitelabelmachinename'}
 									</a>
 								{else}
 									{l s='Not available' mod='whitelabelmachinename'}
-								{/if}	
+								{/if}
 							</td>
 						</tr>
 					{/foreach}
@@ -269,6 +269,6 @@
 			</div>
 		</div>
 	{/if}
-	</div>	
+	</div>
 
 </div>

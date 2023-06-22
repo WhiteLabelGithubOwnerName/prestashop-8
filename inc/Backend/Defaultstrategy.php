@@ -9,6 +9,8 @@
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache Software License (ASL 2.0)
  */
 
+use WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionCreate;
+
 /**
  * Webhook processor to handle transaction completion state transitions.
  */
@@ -1065,10 +1067,15 @@ class WhiteLabelMachineNameBackendDefaultstrategy implements WhiteLabelMachineNa
             $orders = $order->getBrother()->getResults();
             $orders[] = $order;
             $lineItems = WhiteLabelMachineNameServiceLineitem::instance()->getItemsFromOrders($orders);
+	
+	        $lineItemVersion = (new TransactionLineItemVersionCreate())
+	          ->setTransaction((int)$transactionInfo->getTransactionId())
+	          ->setLineItems($lineItems)
+	          ->setExternalId(uniqid());
+			
             WhiteLabelMachineNameServiceTransaction::instance()->updateLineItems(
                 $transactionInfo->getSpaceId(),
-                $transactionInfo->getTransactionId(),
-                $lineItems
+                $lineItemVersion
             );
         } catch (Exception $e) {
             WhiteLabelMachineNameHelper::rollbackDBTransaction();
@@ -1244,10 +1251,15 @@ class WhiteLabelMachineNameBackendDefaultstrategy implements WhiteLabelMachineNa
                 $orders = $order->getBrother()->getResults();
                 $orders[] = $order;
                 $lineItems = WhiteLabelMachineNameServiceLineitem::instance()->getItemsFromOrders($orders);
+	
+	            $lineItemVersion = (new TransactionLineItemVersionCreate())
+	              ->setTransaction((int)$transactionInfo->getTransactionId())
+	              ->setLineItems($lineItems)
+	              ->setExternalId(uniqid());
+
                 WhiteLabelMachineNameServiceTransaction::instance()->updateLineItems(
                     $transactionInfo->getSpaceId(),
-                    $transactionInfo->getTransactionId(),
-                    $lineItems
+                    $lineItemVersion
                 );
                 WhiteLabelMachineNameHelper::commitDBTransaction();
             } catch (Exception $e) {

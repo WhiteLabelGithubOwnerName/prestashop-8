@@ -29,16 +29,16 @@ class WhiteLabelMachineName extends PaymentModule
     {
         $this->name = 'whitelabelmachinename';
         $this->tab = 'payments_gateways';
-        $this->author = 'Customweb GmbH';
+        $this->author = 'wallee AG';
         $this->bootstrap = true;
         $this->need_instance = 0;
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->displayName = 'WhiteLabelName';
         $this->description = $this->l('This PrestaShop module enables to process payments with %s.');
         $this->description = sprintf($this->description, 'WhiteLabelName');
-        $this->module_key = 'b91273c64c78a1faccec4ff76eee10eb';
+        $this->module_key = 'PrestaShop_ProductKey_V8';
         $this->ps_versions_compliancy = array(
-            'min' => '1.7',
+            'min' => '8',
             'max' => _PS_VERSION_
         );
         parent::__construct();
@@ -141,8 +141,7 @@ class WhiteLabelMachineName extends PaymentModule
 
     public function getContent()
     {
-        $output = WhiteLabelMachineNameBasemodule::getMailHookActiveWarning($this);
-        $output .= WhiteLabelMachineNameBasemodule::handleSaveAll($this);
+        $output = WhiteLabelMachineNameBasemodule::handleSaveAll($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveApplication($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveEmail($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveCartRecreation($this);
@@ -452,51 +451,49 @@ class WhiteLabelMachineName extends PaymentModule
 
     public function hookActionOrderSlipAdd($params)
     {
-        if (version_compare(_PS_VERSION_, '1.7.7', '>=')) {
-            $refundParameters = Tools::getAllValues();
+        $refundParameters = Tools::getAllValues();
 
-            $order = $params['order'];
+        $order = $params['order'];
 
-            if (!Validate::isLoadedObject($order) || $order->module != $this->name) {
-                $idOrder = Tools::getValue('id_order');
-                if (!$idOrder) {
-                    $order = $params['order'];
-                    $idOrder = (int)$order->id;
-                }
-                $order = new Order((int) $idOrder);
-                if (! Validate::isLoadedObject($order) || $order->module != $module->name) {
-                    return;
-                }
+        if (!Validate::isLoadedObject($order) || $order->module != $this->name) {
+            $idOrder = Tools::getValue('id_order');
+            if (!$idOrder) {
+                $order = $params['order'];
+                $idOrder = (int)$order->id;
             }
-
-            $strategy = WhiteLabelMachineNameBackendStrategyprovider::getStrategy();
-
-            if ($strategy->isVoucherOnlyWhiteLabelMachineName($order, $refundParameters)) {
+            $order = new Order((int) $idOrder);
+            if (! Validate::isLoadedObject($order) || $order->module != $module->name) {
                 return;
             }
+        }
 
-            // need to manually set this here as it's expected downstream
-            $refundParameters['partialRefund'] = true;
+        $strategy = WhiteLabelMachineNameBackendStrategyprovider::getStrategy();
 
-            $backendController = Context::getContext()->controller;
-            $editAccess = 0;
+        if ($strategy->isVoucherOnlyWhiteLabelMachineName($order, $refundParameters)) {
+            return;
+        }
 
-            $access = Profile::getProfileAccess(
-                Context::getContext()->employee->id_profile,
-                (int) Tab::getIdFromClassName('AdminOrders')
-            );
-            $editAccess = isset($access['edit']) && $access['edit'] == 1;
+        // need to manually set this here as it's expected downstream
+        $refundParameters['partialRefund'] = true;
 
-            if ($editAccess) {
-                try {
-                    $parsedData = $strategy->simplifiedRefund($refundParameters);
-                    WhiteLabelMachineNameServiceRefund::instance()->executeRefund($order, $parsedData);
-                } catch (Exception $e) {
-                    $backendController->errors[] = WhiteLabelMachineNameHelper::cleanExceptionMessage($e->getMessage());
-                }
-            } else {
-                $backendController->errors[] = Tools::displayError('You do not have permission to delete this.');
+        $backendController = Context::getContext()->controller;
+        $editAccess = 0;
+
+        $access = Profile::getProfileAccess(
+            Context::getContext()->employee->id_profile,
+            (int) Tab::getIdFromClassName('AdminOrders')
+        );
+        $editAccess = isset($access['edit']) && $access['edit'] == 1;
+
+        if ($editAccess) {
+            try {
+                $parsedData = $strategy->simplifiedRefund($refundParameters);
+                WhiteLabelMachineNameServiceRefund::instance()->executeRefund($order, $parsedData);
+            } catch (Exception $e) {
+                $backendController->errors[] = WhiteLabelMachineNameHelper::cleanExceptionMessage($e->getMessage());
             }
+        } else {
+            $backendController->errors[] = Tools::displayError('You do not have permission to delete this.');
         }
     }
 

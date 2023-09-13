@@ -32,7 +32,7 @@ class WhiteLabelMachineName extends PaymentModule
         $this->author = 'wallee AG';
         $this->bootstrap = true;
         $this->need_instance = 0;
-        $this->version = '1.0.2';
+        $this->version = '1.0.4';
         $this->displayName = 'WhiteLabelName';
         $this->description = $this->l('This PrestaShop module enables to process payments with %s.');
         $this->description = sprintf($this->description, 'WhiteLabelName');
@@ -144,6 +144,7 @@ class WhiteLabelMachineName extends PaymentModule
         $output = WhiteLabelMachineNameBasemodule::handleSaveAll($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveApplication($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveEmail($this);
+        $output .= WhiteLabelMachineNameBasemodule::handleSaveIntegration($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveCartRecreation($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveFeeItem($this);
         $output .= WhiteLabelMachineNameBasemodule::handleSaveDownload($this);
@@ -158,6 +159,7 @@ class WhiteLabelMachineName extends PaymentModule
     {
         return array(
             WhiteLabelMachineNameBasemodule::getEmailForm($this),
+            WhiteLabelMachineNameBasemodule::getIntegrationForm($this),
             WhiteLabelMachineNameBasemodule::getCartRecreationForm($this),
             WhiteLabelMachineNameBasemodule::getFeeForm($this),
             WhiteLabelMachineNameBasemodule::getDocumentForm($this),
@@ -172,6 +174,7 @@ class WhiteLabelMachineName extends PaymentModule
         return array_merge(
             WhiteLabelMachineNameBasemodule::getApplicationConfigValues($this),
             WhiteLabelMachineNameBasemodule::getEmailConfigValues($this),
+            WhiteLabelMachineNameBasemodule::getIntegrationConfigValues($this),
             WhiteLabelMachineNameBasemodule::getCartRecreationConfigValues($this),
             WhiteLabelMachineNameBasemodule::getFeeItemConfigValues($this),
             WhiteLabelMachineNameBasemodule::getDownloadConfigValues($this),
@@ -251,6 +254,7 @@ class WhiteLabelMachineName extends PaymentModule
         foreach (WhiteLabelMachineNameHelper::sortMethodConfiguration($methods) as $methodConfiguration) {
             $parameters = WhiteLabelMachineNameBasemodule::getParametersFromMethodConfiguration($this, $methodConfiguration, $cart, $shopId, $language);
             $parameters['priceDisplayTax'] = Group::getPriceDisplayMethod(Group::getCurrent()->id);
+            $parameters['iframe'] = $cart->iframe;
             $parameters['orderUrl'] = $this->context->link->getModuleLink(
                 'whitelabelmachinename',
                 'order',

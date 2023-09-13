@@ -9,7 +9,7 @@
  *}
 <form action="{$orderUrl|escape:'html':'UTF-8'}" class="whitelabelmachinename-payment-form" data-method-id="{$methodId|escape:'html':'UTF-8'}">
 	<div id="whitelabelmachinename-{$methodId|escape:'html':'UTF-8'}">
-		<input type="hidden" id="whitelabelmachinename-iframe-possible-{$methodId|escape:'html':'UTF-8'}" name="whitelabelmachinename-iframe-possible-{$methodId|escape:'html':'UTF-8'}" value="false" />
+		<input type="hidden" id="whitelabelmachinename-iframe-possible-{$methodId|escape:'html':'UTF-8'}" name="whitelabelmachinename-iframe-possible-{$methodId|escape:'html':'UTF-8'}" value="{$iframe|escape:'html':'UTF-8'}" />
 		<div id="whitelabelmachinename-loader-{$methodId|escape:'html':'UTF-8'}" class="whitelabelmachinename-loader"></div>
 	</div>
 </form>

@@ -35,6 +35,8 @@ class WhiteLabelMachineNameBasemodule
 
     const CK_MAIL = 'WLM_SHOP_EMAIL';
 
+    const CK_INTEGRATION = 'WLM_SHOP_INTEGRATION';
+
     const CK_CART_RECREATION = 'WLM_CART_RECREATION';
 
     const CK_INVOICE = 'WLM_INVOICE_DOWNLOAD';
@@ -164,6 +166,7 @@ class WhiteLabelMachineNameBasemodule
     public static function installConfigurationValues()
     {
         return Configuration::updateGlobalValue(self::CK_MAIL, true) &&
+            Configuration::updateGlobalValue(self::CK_INTEGRATION, 0) &&
             Configuration::updateGlobalValue(self::CK_CART_RECREATION, true) &&
             Configuration::updateGlobalValue(self::CK_INVOICE, true) &&
             Configuration::updateGlobalValue(self::CK_PACKING_SLIP, true) &&
@@ -178,6 +181,7 @@ class WhiteLabelMachineNameBasemodule
             Configuration::deleteByName(self::CK_SPACE_ID) &&
             Configuration::deleteByName(self::CK_SPACE_VIEW_ID) &&
             Configuration::deleteByName(self::CK_MAIL) &&
+            Configuration::deleteByName(self::CK_INTEGRATION) &&
             Configuration::deleteByName(self::CK_CART_RECREATION) &&
             Configuration::deleteByName(self::CK_INVOICE) &&
             Configuration::deleteByName(self::CK_PACKING_SLIP) &&
@@ -292,6 +296,7 @@ class WhiteLabelMachineNameBasemodule
             self::CK_SPACE_ID,
             self::CK_SPACE_VIEW_ID,
             self::CK_MAIL,
+            self::CK_INTEGRATION,
             self::CK_CART_RECREATION,
             self::CK_INVOICE,
             self::CK_PACKING_SLIP,
@@ -382,6 +387,28 @@ class WhiteLabelMachineNameBasemodule
         return $output;
     }
 
+    /**
+     * Stores de integration type (iframe or payment page)
+     *
+     * @param WhiteLabelMachineName $module
+     * @return string
+     */
+    public static function handleSaveIntegration(WhiteLabelMachineName $module)
+    {
+        $output = "";
+        if (Tools::isSubmit('submit' . $module->name . '_iframe')) {
+            if (! $module->getContext()->shop->isFeatureActive() || $module->getContext()->shop->getContext() == Shop::CONTEXT_SHOP) {
+                Configuration::updateValue(self::CK_INTEGRATION, Tools::getValue(self::CK_INTEGRATION));
+                $output .= $module->displayConfirmation($module->l('Settings updated', 'basemodule'));
+            } else {
+                $output .= $module->displayError(
+                    $module->l('You can not store the configuration for all Shops or a Shop Group.', 'basemodule')
+                );
+            }
+        }
+        return $output;
+    }
+
     public static function handleSaveFeeItem(WhiteLabelMachineName $module)
     {
         $output = "";
@@ -462,7 +489,7 @@ class WhiteLabelMachineNameBasemodule
     /**
      * Stores de configuration values set for the cron settings form.
      *
-     * @param Wallee $module
+     * @param WhiteLabelMachineName $module
      * @return string
      */
     public static function handleSaveCronSettings(WhiteLabelMachineName $module)
@@ -709,6 +736,57 @@ class WhiteLabelMachineNameBasemodule
         );
     }
 
+
+    public static function getIntegrationForm(WhiteLabelMachineName $module)
+    {
+        $iframeConfig = array(
+            array(
+                'type' => 'select',
+                'label' => $module->l('Type of integration', 'basemodule'),
+                'name' => self::CK_INTEGRATION,
+                'options' => array(
+
+                    'query' => array(
+                        array(
+                            'name' => $module->l('Iframe', 'basemodule'),
+                            'type' => WhiteLabelMachineNameBasemodule::TOTAL_MODE_BOTH_INC
+                        ),
+                        array(
+                            'name' => $module->l('Payment page', 'basemodule'),
+                            'type' => WhiteLabelMachineNameBasemodule::TOTAL_MODE_BOTH_EXC
+                        ),
+                    
+                    ),
+                    'id' => 'type',
+                    'name' => 'name'
+                )
+            )
+        );
+
+        return array(
+            'legend' => array(
+                'title' => $module->l('Payment Integration', 'basemodule')
+            ),
+            'input' => $iframeConfig,
+            'buttons' => array(
+                array(
+                    'title' => $module->l('Save All', 'basemodule'),
+                    'class' => 'pull-right',
+                    'type' => 'input',
+                    'icon' => 'process-icon-save',
+                    'name' => 'submit' . $module->name . '_all'
+                ),
+                array(
+                    'title' => $module->l('Save', 'basemodule'),
+                    'class' => 'pull-right',
+                    'type' => 'input',
+                    'icon' => 'process-icon-save',
+                    'name' => 'submit' . $module->name . '_iframe'
+                )
+            )
+        );
+    }
+
     public static function getEmailForm(WhiteLabelMachineName $module)
     {
         $emailConfig = array(
@@ -772,6 +850,14 @@ class WhiteLabelMachineNameBasemodule
         $values = array();
         if (! $module->getContext()->shop->isFeatureActive() || $module->getContext()->shop->getContext() == Shop::CONTEXT_SHOP) {
             $values[self::CK_MAIL] = (bool) Configuration::get(self::CK_MAIL);
+        }
+        return $values;
+    }
+
+    public static function getIntegrationConfigValues(WhiteLabelMachineName $module) {
+        $values = array();
+        if (! $module->getContext()->shop->isFeatureActive() || $module->getContext()->shop->getContext() == Shop::CONTEXT_SHOP) {
+            $values[self::CK_INTEGRATION] = (bool) Configuration::get(self::CK_INTEGRATION);
         }
         return $values;
     }
@@ -1254,7 +1340,7 @@ class WhiteLabelMachineNameBasemodule
     /**
      * Gets a form with cron configuration settings.
      *
-     * @param Wallee $module
+     * @param WhiteLabelMachineName $module
      * @return mixed[]
      */
     public static function getCronSettingsForm(WhiteLabelMachineName $module)
@@ -1301,7 +1387,7 @@ class WhiteLabelMachineNameBasemodule
     /**
      * Returns an array with the configuration values for the cron settings.
      *
-     * @param Wallee $module
+     * @param WhiteLabelMachineName $module
      * @return mixed[]
      */
     public static function getCronSettingsConfigValues(WhiteLabelMachineName $module)
@@ -1381,6 +1467,8 @@ class WhiteLabelMachineNameBasemodule
         $parameters = array();
         $parameters['methodId'] = $methodConfiguration->getId();
         $parameters['configurationId'] = $methodConfiguration->getConfigurationId();
+        $cart->iframe = (bool) Configuration::get(self::CK_INTEGRATION);
+
         $parameters['link'] = $module->getContext()->link->getModuleLink(
             'whitelabelmachinename',
             'payment',
@@ -1389,6 +1477,7 @@ class WhiteLabelMachineNameBasemodule
             ),
             true
         );
+
         $name = $methodConfiguration->getConfigurationName();
         $translatedName = WhiteLabelMachineNameHelper::translate($methodConfiguration->getTitle(), $language);
         if (! empty($translatedName)) {
@@ -1628,6 +1717,13 @@ class WhiteLabelMachineNameBasemodule
                     'spaceId' => $transaction->getLinkedSpaceId(),
                     'transactionId' => $transaction->getId()
                 );
+
+                if (Configuration::get(self::CK_INTEGRATION) == 1) { //If (CK_INTEGRATION == 1) it will go to the payment page, otherwise it will load the iframe
+                    $link = WhiteLabelMachineNameServiceTransaction::instance()->getPaymentPageUrl($transaction->getLinkedSpaceId(), $transaction->getId());
+                    $result = json_encode(array("redirect" => $link, "result" => "redirect"));
+                    echo $result;
+                    die();
+                }
             } catch (Exception $e) {
                 PrestaShopLogger::addLog($e->getMessage(), 3, null, null, false);
                 WhiteLabelMachineNameHelper::deleteOrderEmails($dataOrder);

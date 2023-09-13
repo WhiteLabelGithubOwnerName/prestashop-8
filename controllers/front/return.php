@@ -97,13 +97,15 @@ class WhiteLabelMachineNameReturnModuleFrontController extends ModuleFrontContro
         if (! empty($userFailureMessage)) {
             $this->context->cookie->wlm_error = $userFailureMessage;
         }
-
-        // Set cart to cookie
+	
+        $order->setCurrentState(Configuration::get(WhiteLabelMachineNameBasemodule::CK_STATUS_FAILED));
+        
+	// Set cart to cookie
         $originalCartId = WhiteLabelMachineNameHelper::getOrderMeta($order, 'originalCart');
         if (! empty($originalCartId)) {
             $this->context->cookie->id_cart = $originalCartId;
         }
-
+	
         $this->redirect_after = $this->context->link->getPageLink('order', true, null, "step=3");
     }
 

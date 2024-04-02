@@ -6,7 +6,7 @@
  * This Prestashop module enables to process payments with WhiteLabelName (https://whitelabel-website.com).
  *
  * @author customweb GmbH (http://www.customweb.com/)
- * @copyright 2017 - 2023 customweb GmbH
+ * @copyright 2017 - 2024 customweb GmbH
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache Software License (ASL 2.0)
  */
 
@@ -32,7 +32,7 @@ class WhiteLabelMachineName extends PaymentModule
         $this->author = 'wallee AG';
         $this->bootstrap = true;
         $this->need_instance = 0;
-        $this->version = '1.0.4';
+        $this->version = '1.0.5';
         $this->displayName = 'WhiteLabelName';
         $this->description = $this->l('This PrestaShop module enables to process payments with %s.');
         $this->description = sprintf($this->description, 'WhiteLabelName');

@@ -32,7 +32,7 @@ class WhiteLabelMachineName extends PaymentModule
         $this->author = 'wallee AG';
         $this->bootstrap = true;
         $this->need_instance = 0;
-        $this->version = '1.0.5';
+        $this->version = '1.0.6';
         $this->displayName = 'WhiteLabelName';
         $this->description = $this->l('This PrestaShop module enables to process payments with %s.');
         $this->description = sprintf($this->description, 'WhiteLabelName');

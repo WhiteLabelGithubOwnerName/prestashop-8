@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description A batch of the result of a query executed in Analytics.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AnalyticsQueryResultBatch implements ModelInterface, ArrayAccess

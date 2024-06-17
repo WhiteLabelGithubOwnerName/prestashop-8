@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description The metric usage is the actual usage of a metric for a particular subscription as collected by an external application.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionMetricUsageReport implements ModelInterface, ArrayAccess

@@ -27,7 +27,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description A metric represents the usage of a resource that can be measured.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionMetricCreate extends AbstractSubscriptionMetricUpdate 

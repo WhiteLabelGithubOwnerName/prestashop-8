@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description The subscription create request holds all the data required to create a new subscription.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionCreateRequest implements ModelInterface, ArrayAccess

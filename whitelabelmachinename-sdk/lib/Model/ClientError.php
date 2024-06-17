@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description An error that is returned as the result of a bad user request or a misconfiguration.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ClientError implements ModelInterface, ArrayAccess

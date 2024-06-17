@@ -28,7 +28,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  *
  * @category    Class
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractSubscriptionMetricUpdate implements ModelInterface, ArrayAccess
@@ -48,8 +48,8 @@ class AbstractSubscriptionMetricUpdate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'description' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate',
-        'name' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate'
+        'description' => 'map[string,string]',
+        'name' => 'map[string,string]'
     ];
 
     /**
@@ -209,7 +209,7 @@ class AbstractSubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -219,7 +219,7 @@ class AbstractSubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate $description 
+     * @param map[string,string] $description 
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class AbstractSubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -244,7 +244,7 @@ class AbstractSubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate $name 
+     * @param map[string,string] $name 
      *
      * @return $this
      */

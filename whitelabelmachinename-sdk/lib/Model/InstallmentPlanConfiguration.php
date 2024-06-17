@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description The installment plan allows to setup a template for an installment.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InstallmentPlanConfiguration implements ModelInterface, ArrayAccess
@@ -64,7 +64,7 @@ class InstallmentPlanConfiguration implements ModelInterface, ArrayAccess
         'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
         'tax_class' => '\WhiteLabelMachineName\Sdk\Model\TaxClass',
         'terms_and_conditions' => '\WhiteLabelMachineName\Sdk\Model\ModelResourcePath',
-        'title' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString',
+        'title' => 'map[string,string]',
         'version' => 'int'
     ];
 
@@ -698,7 +698,7 @@ class InstallmentPlanConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets title
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getTitle()
     {
@@ -708,7 +708,7 @@ class InstallmentPlanConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets title
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString $title The title of the installment plan is used within the payment process. The title is visible to the buyer.
+     * @param map[string,string] $title The title of the installment plan is used within the payment process. The title is visible to the buyer.
      *
      * @return $this
      */

@@ -28,7 +28,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  *
  * @category    Class
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
@@ -219,7 +219,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddressCreate $address 
+     * @param \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddressCreate $address The actual postal address.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressType $address_type 
+     * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
      *
      * @return $this
      */

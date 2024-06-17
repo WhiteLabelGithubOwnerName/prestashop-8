@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description A metric represents the usage of a resource that can be measured.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionMetric implements ModelInterface, ArrayAccess
@@ -49,10 +49,10 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'description' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString',
+        'description' => 'map[string,string]',
         'id' => 'int',
         'linked_space_id' => 'int',
-        'name' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString',
+        'name' => 'map[string,string]',
         'planned_purge_date' => '\DateTime',
         'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
         'type' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionMetricType',
@@ -252,7 +252,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -262,7 +262,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString $description 
+     * @param map[string,string] $description 
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -337,7 +337,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedString $name 
+     * @param map[string,string] $name 
      *
      * @return $this
      */

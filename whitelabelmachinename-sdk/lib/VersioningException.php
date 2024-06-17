@@ -27,7 +27,7 @@ use Exception;
  *
  * @category Class
  * @package  WhiteLabelMachineName\Sdk
- * @author   customweb GmbH
+ * @author   WhiteLabelMachineName
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class VersioningException extends Exception {

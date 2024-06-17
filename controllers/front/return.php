@@ -97,8 +97,9 @@ class WhiteLabelMachineNameReturnModuleFrontController extends ModuleFrontContro
         if (! empty($userFailureMessage)) {
             $this->context->cookie->wlm_error = $userFailureMessage;
         }
+        
+        $this->setCurrentState($order);
 
-        $order->setCurrentState(Configuration::get(WhiteLabelMachineNameBasemodule::CK_STATUS_FAILED));
         //the new state should be saved here to override the stock issues of incrementing or decrementing items when going through the webhooks
         //by calling the setCurrentState function more than once without saving.
         $order->save();
@@ -115,6 +116,25 @@ class WhiteLabelMachineNameReturnModuleFrontController extends ModuleFrontContro
     public function setMedia()
     {
         // We do not need styling here
+    }
+    
+    /**
+     * @param Order $order
+     * @return void
+     * @throws PrestaShopDatabaseException
+     * @throws PrestaShopException
+     */
+    protected function setCurrentState(Order $order): void
+    {
+        $newState = Configuration::get(WhiteLabelMachineNameBasemodule::CK_STATUS_FAILED);
+        $history = new OrderHistory();
+        $history->id_order = $order->id;
+        $history->id_order_state = $newState;
+        $history->id_employee = (int)Context::getContext()->employee->id;
+        $history->date_add = date('Y-m-d H:i:s');
+        $history->add();
+        
+        $order->current_state = $newState;
     }
 
     protected function displayMaintenancePage()

@@ -1,6 +1,6 @@
 {
     "name": "whitelabelmachinename/sdk",
-    "version": "3.2.0",
+    "version": "4.2.0",
 	"description": "WhiteLabelName SDK for PHP",
 	"keywords": [
 		"whitelabelmachinename",
@@ -13,8 +13,9 @@
 	"license": "Apache-2.0",
 	"authors": [
 		{
-			"name": "wallee AG",
-			"homepage": "https://wallee.com"
+			"name": "WhiteLabelMachineName",
+			"email": "support@whitelabel.com",
+			"homepage": "https://whitelabel-website.com"
 		}
 	],
 	"require": {

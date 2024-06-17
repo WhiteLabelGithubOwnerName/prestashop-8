@@ -27,7 +27,7 @@ use WhiteLabelMachineName\Sdk\ApiClient;
  *
  * @category Interface
  * @package  WhiteLabelMachineName\Sdk\Http
- * @author   customweb GmbH
+ * @author   WhiteLabelMachineName
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 interface IHttpClient {

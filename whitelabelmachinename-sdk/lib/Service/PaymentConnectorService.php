@@ -31,7 +31,7 @@ use WhiteLabelMachineName\Sdk\ObjectSerializer;
  *
  * @category Class
  * @package  WhiteLabelMachineName\Sdk
- * @author   customweb GmbH
+ * @author   WhiteLabelMachineName
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentConnectorService {
@@ -264,5 +264,6 @@ class PaymentConnectorService {
 			throw $e;
 		}
 	}
+
 
 }

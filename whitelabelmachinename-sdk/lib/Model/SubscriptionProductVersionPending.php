@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description 
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionProductVersionPending implements ModelInterface, ArrayAccess
@@ -56,7 +56,7 @@ class SubscriptionProductVersionPending implements ModelInterface, ArrayAccess
         'default_currency' => 'string',
         'enabled_currencies' => 'string[]',
         'minimal_number_of_periods' => 'int',
-        'name' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate',
+        'name' => 'map[string,string]',
         'number_of_notice_periods' => 'int',
         'product' => 'int',
         'state' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersionState',
@@ -461,7 +461,7 @@ class SubscriptionProductVersionPending implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -471,7 +471,7 @@ class SubscriptionProductVersionPending implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate $name The product version name is the name of the product which is shown to the user for the version. When the visible product name should be changed for a particular product a new version has to be created which contains the new name of the product.
+     * @param map[string,string] $name The product version name is the name of the product which is shown to the user for the version. When the visible product name should be changed for a particular product a new version has to be created which contains the new name of the product.
      *
      * @return $this
      */

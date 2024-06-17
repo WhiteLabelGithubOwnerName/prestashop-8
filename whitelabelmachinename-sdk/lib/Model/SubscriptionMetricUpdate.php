@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description A metric represents the usage of a resource that can be measured.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
@@ -51,8 +51,8 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'version' => 'int',
-        'description' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate',
-        'name' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate'
+        'description' => 'map[string,string]',
+        'name' => 'map[string,string]'
     ];
 
     /**
@@ -280,7 +280,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getDescription()
     {
@@ -290,7 +290,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate $description 
+     * @param map[string,string] $description 
      *
      * @return $this
      */
@@ -305,7 +305,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -315,7 +315,7 @@ class SubscriptionMetricUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate $name 
+     * @param map[string,string] $name 
      *
      * @return $this
      */

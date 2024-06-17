@@ -30,7 +30,7 @@ use WhiteLabelMachineName\Sdk\Http\HttpClientFactory;
  *
  * @category Class
  * @package  WhiteLabelMachineName\Sdk
- * @author   customweb GmbH
+ * @author   WhiteLabelMachineName
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class ApiClient {
@@ -48,7 +48,7 @@ final class ApiClient {
 	 * @var array
 	 */
 	private $defaultHeaders = [
-        'x-meta-sdk-version' => "3.2.0",
+        'x-meta-sdk-version' => "4.2.0",
         'x-meta-sdk-language' => 'php',
         'x-meta-sdk-provider' => "WhiteLabelName",
     ];
@@ -58,7 +58,7 @@ final class ApiClient {
 	 *
 	 * @var string
 	 */
-	private $userAgent = 'PHP-Client/3.2.0/php';
+	private $userAgent = 'PHP-Client/4.2.0/php';
 
 	/**
 	 * The path to the certificate authority file.
@@ -1831,6 +1831,18 @@ final class ApiClient {
             $this->webAppService = new \WhiteLabelMachineName\Sdk\Service\WebAppService($this);
         }
         return $this->webAppService;
+    }
+    
+    protected $webhookEncryptionService;
+
+    /**
+     * @return \WhiteLabelMachineName\Sdk\Service\WebhookEncryptionService
+     */
+    public function getWebhookEncryptionService() {
+        if(is_null($this->webhookEncryptionService)){
+            $this->webhookEncryptionService = new \WhiteLabelMachineName\Sdk\Service\WebhookEncryptionService($this);
+        }
+        return $this->webhookEncryptionService;
     }
     
     protected $webhookListenerService;

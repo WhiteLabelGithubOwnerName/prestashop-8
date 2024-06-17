@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description 
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CustomerAddress implements ModelInterface, ArrayAccess
@@ -262,7 +262,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddress $address 
+     * @param \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddress $address The actual postal address.
      *
      * @return $this
      */
@@ -287,7 +287,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets address_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressType $address_type 
+     * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
      *
      * @return $this
      */
@@ -337,7 +337,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Customer $customer 
+     * @param \WhiteLabelMachineName\Sdk\Model\Customer $customer The customer that the object belongs to.
      *
      * @return $this
      */
@@ -362,7 +362,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets default_address
      *
-     * @param bool $default_address 
+     * @param bool $default_address Whether this is the customer's default address.
      *
      * @return $this
      */

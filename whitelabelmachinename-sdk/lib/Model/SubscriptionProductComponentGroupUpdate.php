@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description 
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionProductComponentGroupUpdate implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class SubscriptionProductComponentGroupUpdate implements ModelInterface, ArrayAc
     protected static $swaggerTypes = [
         'id' => 'int',
         'version' => 'int',
-        'name' => '\WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate',
+        'name' => 'map[string,string]',
         'optional' => 'bool',
         'product_version' => 'int',
         'sort_order' => 'int'
@@ -294,7 +294,7 @@ class SubscriptionProductComponentGroupUpdate implements ModelInterface, ArrayAc
     /**
      * Gets name
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate
+     * @return map[string,string]
      */
     public function getName()
     {
@@ -304,7 +304,7 @@ class SubscriptionProductComponentGroupUpdate implements ModelInterface, ArrayAc
     /**
      * Sets name
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DatabaseTranslatedStringCreate $name The component group name will be shown when the components are selected. This can be visible to the subscriber.
+     * @param map[string,string] $name The component group name will be shown when the components are selected. This can be visible to the subscriber.
      *
      * @return $this
      */

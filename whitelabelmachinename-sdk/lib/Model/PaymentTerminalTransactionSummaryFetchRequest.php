@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description The receipt fetch request allows to retrieve the receipt documents for a terminal transaction.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalTransactionSummaryFetchRequest implements ModelInterface, ArrayAccess

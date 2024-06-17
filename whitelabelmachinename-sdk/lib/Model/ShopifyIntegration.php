@@ -29,7 +29,7 @@ use \WhiteLabelMachineName\Sdk\ObjectSerializer;
  * @category    Class
  * @description A Shopify Integration allows to connect a Shopify shop.
  * @package     WhiteLabelMachineName\Sdk
- * @author      customweb GmbH
+ * @author      WhiteLabelMachineName
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifyIntegration implements ModelInterface, ArrayAccess
@@ -848,7 +848,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Sets space_view_id
      *
-     * @param int $space_view_id 
+     * @param int $space_view_id The ID of the space view this object is linked to.
      *
      * @return $this
      */

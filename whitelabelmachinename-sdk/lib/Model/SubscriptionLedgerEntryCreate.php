@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionLedgerEntryCreate model
  *
  * @category    Class
  * @description The subscription ledger entry represents a single change on the subscription balance.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
         'external_id' => 'string',
         'quantity' => 'float',
         'subscription_version' => 'int',
-        'taxes' => '\WhiteLabelMachineName\Sdk\Model\TaxCreate[]',
+        'taxes' => '\Wallee\Sdk\Model\TaxCreate[]',
         'title' => 'string'
     ];
 
@@ -271,7 +271,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
     /**
      * Sets amount_including_tax
      *
-     * @param float $amount_including_tax 
+     * @param float $amount_including_tax The leger entry's amount with discounts applied, including taxes.
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
     /**
      * Sets quantity
      *
-     * @param float $quantity 
+     * @param float $quantity The number of items that were consumed.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_version
      *
-     * @param int $subscription_version 
+     * @param int $subscription_version The subscription version that the ledger entry belongs to.
      *
      * @return $this
      */
@@ -361,7 +361,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
     /**
      * Gets taxes
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TaxCreate[]
+     * @return \Wallee\Sdk\Model\TaxCreate[]
      */
     public function getTaxes()
     {
@@ -371,7 +371,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
     /**
      * Sets taxes
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TaxCreate[] $taxes 
+     * @param \Wallee\Sdk\Model\TaxCreate[] $taxes A set of tax lines, each of which specifies a tax applied to the ledger entry.
      *
      * @return $this
      */
@@ -396,7 +396,7 @@ class SubscriptionLedgerEntryCreate implements ModelInterface, ArrayAccess
     /**
      * Sets title
      *
-     * @param string $title 
+     * @param string $title The title that indicates what the ledger entry is about.
      *
      * @return $this
      */

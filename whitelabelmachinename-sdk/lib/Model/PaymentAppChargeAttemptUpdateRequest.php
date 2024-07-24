@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAppChargeAttemptUpdateRequest model
  *
  * @category    Class
  * @description The charge attempt update request allows to change the state of a charge attempt. The charge attempt must be linked with a processor that was created by the payment Web App that invokes the operation.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAppChargeAttemptUpdateRequest implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class PaymentAppChargeAttemptUpdateRequest implements ModelInterface, ArrayAcces
         'end_user_failure_message' => 'string',
         'failure_reason_id' => 'int',
         'reference' => 'string',
-        'target_state' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppChargeAttemptTargetState'
+        'target_state' => '\Wallee\Sdk\Model\PaymentAppChargeAttemptTargetState'
     ];
 
     /**
@@ -347,7 +347,7 @@ class PaymentAppChargeAttemptUpdateRequest implements ModelInterface, ArrayAcces
     /**
      * Gets target_state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppChargeAttemptTargetState
+     * @return \Wallee\Sdk\Model\PaymentAppChargeAttemptTargetState
      */
     public function getTargetState()
     {
@@ -357,7 +357,7 @@ class PaymentAppChargeAttemptUpdateRequest implements ModelInterface, ArrayAcces
     /**
      * Sets target_state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppChargeAttemptTargetState $target_state The target state defines the state into which the charge attempt should be switched into. Once the charge attempt changed the state it will not be possible to change it again.
+     * @param \Wallee\Sdk\Model\PaymentAppChargeAttemptTargetState $target_state The target state defines the state into which the charge attempt should be switched into. Once the charge attempt changed the state it will not be possible to change it again.
      *
      * @return $this
      */

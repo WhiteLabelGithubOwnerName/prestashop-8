@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionUpdateRequest model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
@@ -49,9 +49,9 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_configuration' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
+        'billing_configuration' => '\Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
         'id' => 'int',
-        'items' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelItem[]',
+        'items' => '\Wallee\Sdk\Model\ShopifySubscriptionModelItem[]',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool'
     ];
@@ -231,7 +231,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
      */
     public function getBillingConfiguration()
     {
@@ -241,7 +241,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
      *
      * @return $this
      */
@@ -281,7 +281,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelItem[]
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelItem[]
      */
     public function getItems()
     {
@@ -291,7 +291,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelItem[] $items 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelItem[] $items 
      *
      * @return $this
      */

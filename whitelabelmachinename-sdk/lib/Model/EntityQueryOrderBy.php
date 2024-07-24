@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * EntityQueryOrderBy model
  *
  * @category    Class
  * @description The 'order by' allows to order the returned entities.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class EntityQueryOrderBy implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class EntityQueryOrderBy implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'field_name' => 'string',
-        'sorting' => '\WhiteLabelMachineName\Sdk\Model\EntityQueryOrderByType'
+        'sorting' => '\Wallee\Sdk\Model\EntityQueryOrderByType'
     ];
 
     /**
@@ -241,7 +241,7 @@ class EntityQueryOrderBy implements ModelInterface, ArrayAccess
     /**
      * Gets sorting
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\EntityQueryOrderByType
+     * @return \Wallee\Sdk\Model\EntityQueryOrderByType
      */
     public function getSorting()
     {
@@ -251,7 +251,7 @@ class EntityQueryOrderBy implements ModelInterface, ArrayAccess
     /**
      * Sets sorting
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryOrderByType $sorting 
+     * @param \Wallee\Sdk\Model\EntityQueryOrderByType $sorting 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionProduct model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
@@ -52,8 +52,8 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
         'absolute_price_adjustment' => 'float',
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
-        'billing_weekday' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
         'fixed_price' => 'float',
         'id' => 'int',
         'linked_space_id' => 'int',
@@ -61,7 +61,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
         'planned_purge_date' => '\DateTime',
-        'pricing_option' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionProductPricingOption',
+        'pricing_option' => '\Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption',
         'product_id' => 'string',
         'product_name' => 'string',
         'product_price' => 'float',
@@ -71,7 +71,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
         'relative_price_adjustment' => 'float',
         'shipping_required' => 'bool',
         'shop' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionProductState',
+        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionProductState',
         'stock_check_required' => 'bool',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool',
@@ -474,7 +474,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets billing_interval_unit
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -484,7 +484,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets billing_interval_unit
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets billing_weekday
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -509,7 +509,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets billing_weekday
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
      *
      * @return $this
      */
@@ -699,7 +699,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets pricing_option
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionProductPricingOption
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption
      */
     public function getPricingOption()
     {
@@ -709,7 +709,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets pricing_option
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionProductPricingOption $pricing_option 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption $pricing_option 
      *
      * @return $this
      */
@@ -949,7 +949,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionProductState
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionProductState
      */
     public function getState()
     {
@@ -959,7 +959,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionProductState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionProductState $state The object's current state.
      *
      * @return $this
      */

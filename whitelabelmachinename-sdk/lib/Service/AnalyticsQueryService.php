@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * AnalyticsQueryService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AnalyticsQueryService {
@@ -72,9 +72,9 @@ class AnalyticsQueryService {
 	 * Cancel Execution
 	 *
 	 * @param int $id The ID of the query execution to cancel. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function cancelExecution($id) {
@@ -88,9 +88,9 @@ class AnalyticsQueryService {
      
      *
 	 * @param int $id The ID of the query execution to cancel. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function cancelExecutionWithHttpInfo($id) {
@@ -144,7 +144,7 @@ class AnalyticsQueryService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -152,7 +152,7 @@ class AnalyticsQueryService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -171,10 +171,10 @@ class AnalyticsQueryService {
 	 * @param int $timeout The maximal time in seconds to wait for the result if it is not yet available. Use 0 (the default) to return immediately without waiting. (optional)
 	 * @param int $max_rows The maximum number of rows to return per batch. (Between 1 and 999. The default is 999.) (optional)
 	 * @param string $next_token The next-token of the preceding batch to get the next result batch or null to get the first result batch. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\AnalyticsQueryResultBatch
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\AnalyticsQueryResultBatch
 	 */
 	public function fetchResult($id, $timeout = null, $max_rows = null, $next_token = null) {
 		return $this->fetchResultWithHttpInfo($id, $timeout, $max_rows, $next_token)->getData();
@@ -190,9 +190,9 @@ class AnalyticsQueryService {
 	 * @param int $timeout The maximal time in seconds to wait for the result if it is not yet available. Use 0 (the default) to return immediately without waiting. (optional)
 	 * @param int $max_rows The maximum number of rows to return per batch. (Between 1 and 999. The default is 999.) (optional)
 	 * @param string $next_token The next-token of the preceding batch to get the next result batch or null to get the first result batch. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function fetchResultWithHttpInfo($id, $timeout = null, $max_rows = null, $next_token = null) {
@@ -246,16 +246,16 @@ class AnalyticsQueryService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryResultBatch',
+				'\Wallee\Sdk\Model\AnalyticsQueryResultBatch',
 				'/analytics-query/fetch-result'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryResultBatch', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\AnalyticsQueryResultBatch', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryResultBatch',
+                        '\Wallee\Sdk\Model\AnalyticsQueryResultBatch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class AnalyticsQueryService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -271,7 +271,7 @@ class AnalyticsQueryService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,9 +288,9 @@ class AnalyticsQueryService {
 	 *
 	 * @param int $id The ID of the query execution for which to generate the download URL. (required)
 	 * @param int $timeout The maximal time in seconds to wait for the result if it is not yet available. Use 0 (the default) to return immediately without waiting. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return string
 	 */
 	public function generateDownloadUrl($id, $timeout = null) {
@@ -305,9 +305,9 @@ class AnalyticsQueryService {
      *
 	 * @param int $id The ID of the query execution for which to generate the download URL. (required)
 	 * @param int $timeout The maximal time in seconds to wait for the result if it is not yet available. Use 0 (the default) to return immediately without waiting. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function generateDownloadUrlWithHttpInfo($id, $timeout = null) {
@@ -372,7 +372,7 @@ class AnalyticsQueryService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -380,7 +380,7 @@ class AnalyticsQueryService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -395,10 +395,10 @@ class AnalyticsQueryService {
 	 *
 	 * Get Schemas
 	 *
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaTable[]
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\AnalyticsSchemaTable[]
 	 */
 	public function schema() {
 		return $this->schemaWithHttpInfo()->getData();
@@ -410,9 +410,9 @@ class AnalyticsQueryService {
 	 * Get Schemas
      
      *
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function schemaWithHttpInfo() {
@@ -450,16 +450,16 @@ class AnalyticsQueryService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaTable[]',
+				'\Wallee\Sdk\Model\AnalyticsSchemaTable[]',
 				'/analytics-query/schema'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaTable[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\AnalyticsSchemaTable[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaTable[]',
+                        '\Wallee\Sdk\Model\AnalyticsSchemaTable[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -467,7 +467,7 @@ class AnalyticsQueryService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -475,7 +475,7 @@ class AnalyticsQueryService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,10 +491,10 @@ class AnalyticsQueryService {
 	 * Execution Status
 	 *
 	 * @param int $id The ID of the query execution for which to get the status. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\AnalyticsQueryExecution
 	 */
 	public function status($id) {
 		return $this->statusWithHttpInfo($id)->getData();
@@ -507,9 +507,9 @@ class AnalyticsQueryService {
      
      *
 	 * @param int $id The ID of the query execution for which to get the status. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function statusWithHttpInfo($id) {
@@ -554,16 +554,16 @@ class AnalyticsQueryService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution',
+				'\Wallee\Sdk\Model\AnalyticsQueryExecution',
 				'/analytics-query/status'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\AnalyticsQueryExecution', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution',
+                        '\Wallee\Sdk\Model\AnalyticsQueryExecution',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -571,7 +571,7 @@ class AnalyticsQueryService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -579,7 +579,7 @@ class AnalyticsQueryService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -594,11 +594,11 @@ class AnalyticsQueryService {
 	 *
 	 * Submit Query
 	 *
-	 * @param \WhiteLabelMachineName\Sdk\Model\AnalyticsQuery $query The query to submit. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution
+	 * @param \Wallee\Sdk\Model\AnalyticsQuery $query The query to submit. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\AnalyticsQueryExecution
 	 */
 	public function submitQuery($query) {
 		return $this->submitQueryWithHttpInfo($query)->getData();
@@ -610,10 +610,10 @@ class AnalyticsQueryService {
 	 * Submit Query
      
      *
-	 * @param \WhiteLabelMachineName\Sdk\Model\AnalyticsQuery $query The query to submit. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\AnalyticsQuery $query The query to submit. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function submitQueryWithHttpInfo($query) {
@@ -660,16 +660,16 @@ class AnalyticsQueryService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution',
+				'\Wallee\Sdk\Model\AnalyticsQueryExecution',
 				'/analytics-query/submit-query'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\AnalyticsQueryExecution', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecution',
+                        '\Wallee\Sdk\Model\AnalyticsQueryExecution',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -677,7 +677,7 @@ class AnalyticsQueryService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -685,7 +685,7 @@ class AnalyticsQueryService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

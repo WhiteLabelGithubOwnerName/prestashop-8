@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * UserAccountRole model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class UserAccountRole implements ModelInterface, ArrayAccess
@@ -248,7 +248,7 @@ class UserAccountRole implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param int $account 
+     * @param int $account The account in which the role is assigned to the user.
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class UserAccountRole implements ModelInterface, ArrayAccess
     /**
      * Sets applies_on_sub_account
      *
-     * @param bool $applies_on_sub_account 
+     * @param bool $applies_on_sub_account Whether the role is assigned to the user in subaccounts only.
      *
      * @return $this
      */
@@ -323,7 +323,7 @@ class UserAccountRole implements ModelInterface, ArrayAccess
     /**
      * Sets role
      *
-     * @param int $role 
+     * @param int $role The role that is assigned to the user.
      *
      * @return $this
      */
@@ -348,7 +348,7 @@ class UserAccountRole implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param int $user 
+     * @param int $user The user whose role this defines.
      *
      * @return $this
      */

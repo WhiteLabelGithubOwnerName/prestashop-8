@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Http;
+namespace Wallee\Sdk\Http;
 
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * This class represents an HTTP request.
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk\Http
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk\Http
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class HttpRequest {
@@ -76,11 +76,11 @@ final class HttpRequest {
 	const HEADER_KEY_ACCEPT = 'accept';
 	
 	/**
-	 * The key of the 'x-whitelabelmachinename-logtoken' header.
+	 * The key of the 'x-wallee-logtoken' header.
 	 *
 	 * @var string
 	 */
-	const HEADER_LOG_TOKEN = 'x-whitelabelmachinename-logtoken';
+	const HEADER_LOG_TOKEN = 'x-wallee-logtoken';
 
 	/**
 	 * The object serializer.

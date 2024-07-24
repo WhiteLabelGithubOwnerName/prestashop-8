@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionProductComponentGroup model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'name' => 'map[string,string]',
         'optional' => 'bool',
-        'product_version' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion',
+        'product_version' => '\Wallee\Sdk\Model\SubscriptionProductVersion',
         'sort_order' => 'int',
         'version' => 'int'
     ];
@@ -305,7 +305,7 @@ class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param map[string,string] $name The component group name will be shown when the components are selected. This can be visible to the subscriber.
+     * @param map[string,string] $name The localized name of the component group that is displayed to the customer.
      *
      * @return $this
      */
@@ -330,7 +330,7 @@ class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
     /**
      * Sets optional
      *
-     * @param bool $optional The component group can be optional. This means no component has to be selected by the subscriber.
+     * @param bool $optional Whether the component group is optional, i.e. the customer does not have to select any component.
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
     /**
      * Gets product_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion
+     * @return \Wallee\Sdk\Model\SubscriptionProductVersion
      */
     public function getProductVersion()
     {
@@ -355,7 +355,7 @@ class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
     /**
      * Sets product_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion $product_version 
+     * @param \Wallee\Sdk\Model\SubscriptionProductVersion $product_version The product version that the component group belongs to.
      *
      * @return $this
      */
@@ -380,7 +380,7 @@ class SubscriptionProductComponentGroup implements ModelInterface, ArrayAccess
     /**
      * Sets sort_order
      *
-     * @param int $sort_order The sort order controls in which order the component group is listed. The sort order is used to order the component groups in ascending order.
+     * @param int $sort_order When listing component groups, they can be sorted by this number.
      *
      * @return $this
      */

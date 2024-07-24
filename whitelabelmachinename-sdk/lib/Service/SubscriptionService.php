@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionService {
@@ -72,11 +72,11 @@ class SubscriptionService {
 	 * apply changes
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionChangeRequest $request  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionVersion
+	 * @param \Wallee\Sdk\Model\SubscriptionChangeRequest $request  (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\SubscriptionVersion
 	 */
 	public function applyChanges($space_id, $request) {
 		return $this->applyChangesWithHttpInfo($space_id, $request)->getData();
@@ -89,10 +89,10 @@ class SubscriptionService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionChangeRequest $request  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\SubscriptionChangeRequest $request  (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function applyChangesWithHttpInfo($space_id, $request) {
@@ -146,16 +146,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+				'\Wallee\Sdk\Model\SubscriptionVersion',
 				'/subscription/applyChanges'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\SubscriptionVersion', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+                        '\Wallee\Sdk\Model\SubscriptionVersion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -163,7 +163,7 @@ class SubscriptionService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -171,7 +171,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,7 +179,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -195,10 +195,10 @@ class SubscriptionService {
 	 * Count
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return int
 	 */
 	public function count($space_id, $filter = null) {
@@ -212,10 +212,10 @@ class SubscriptionService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countWithHttpInfo($space_id, $filter = null) {
@@ -282,7 +282,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -290,7 +290,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -306,11 +306,11 @@ class SubscriptionService {
 	 * Create
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionCreateRequest $create_request  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionVersion
+	 * @param \Wallee\Sdk\Model\SubscriptionCreateRequest $create_request  (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\SubscriptionVersion
 	 */
 	public function create($space_id, $create_request) {
 		return $this->createWithHttpInfo($space_id, $create_request)->getData();
@@ -323,10 +323,10 @@ class SubscriptionService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionCreateRequest $create_request  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\SubscriptionCreateRequest $create_request  (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function createWithHttpInfo($space_id, $create_request) {
@@ -380,16 +380,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+				'\Wallee\Sdk\Model\SubscriptionVersion',
 				'/subscription/create'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\SubscriptionVersion', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+                        '\Wallee\Sdk\Model\SubscriptionVersion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -397,7 +397,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -405,7 +405,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -422,10 +422,10 @@ class SubscriptionService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The provided subscription id will be used to lookup the subscription which should be initialized. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionCharge
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\SubscriptionCharge
 	 */
 	public function initialize($space_id, $subscription_id) {
 		return $this->initializeWithHttpInfo($space_id, $subscription_id)->getData();
@@ -439,9 +439,9 @@ class SubscriptionService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The provided subscription id will be used to lookup the subscription which should be initialized. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function initializeWithHttpInfo($space_id, $subscription_id) {
@@ -493,16 +493,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\SubscriptionCharge',
+				'\Wallee\Sdk\Model\SubscriptionCharge',
 				'/subscription/initialize'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\SubscriptionCharge', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\SubscriptionCharge', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\SubscriptionCharge',
+                        '\Wallee\Sdk\Model\SubscriptionCharge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -510,7 +510,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -518,7 +518,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,10 +537,10 @@ class SubscriptionService {
 	 * @param int $subscription_id  (required)
 	 * @param string $success_url The subscriber will be redirected to the success URL when the transaction is successful. (optional)
 	 * @param string $failed_url The subscriber will be redirected to the fail URL when the transaction fails. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionCharge
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\SubscriptionCharge
 	 */
 	public function initializeSubscriberPresent($space_id, $subscription_id, $success_url = null, $failed_url = null) {
 		return $this->initializeSubscriberPresentWithHttpInfo($space_id, $subscription_id, $success_url, $failed_url)->getData();
@@ -556,9 +556,9 @@ class SubscriptionService {
 	 * @param int $subscription_id  (required)
 	 * @param string $success_url The subscriber will be redirected to the success URL when the transaction is successful. (optional)
 	 * @param string $failed_url The subscriber will be redirected to the fail URL when the transaction fails. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function initializeSubscriberPresentWithHttpInfo($space_id, $subscription_id, $success_url = null, $failed_url = null) {
@@ -616,16 +616,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\SubscriptionCharge',
+				'\Wallee\Sdk\Model\SubscriptionCharge',
 				'/subscription/initializeSubscriberPresent'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\SubscriptionCharge', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\SubscriptionCharge', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\SubscriptionCharge',
+                        '\Wallee\Sdk\Model\SubscriptionCharge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -633,7 +633,7 @@ class SubscriptionService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -641,7 +641,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -649,7 +649,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -666,10 +666,10 @@ class SubscriptionService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the subscription which should be returned. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Subscription
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Subscription
 	 */
 	public function read($space_id, $id) {
 		return $this->readWithHttpInfo($space_id, $id)->getData();
@@ -683,9 +683,9 @@ class SubscriptionService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the subscription which should be returned. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($space_id, $id) {
@@ -737,16 +737,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Subscription',
+				'\Wallee\Sdk\Model\Subscription',
 				'/subscription/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Subscription', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Subscription', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Subscription',
+                        '\Wallee\Sdk\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,7 +754,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -762,7 +762,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,11 +778,11 @@ class SubscriptionService {
 	 * Search
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the subscriptions which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Subscription[]
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the subscriptions which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Subscription[]
 	 */
 	public function search($space_id, $query) {
 		return $this->searchWithHttpInfo($space_id, $query)->getData();
@@ -795,10 +795,10 @@ class SubscriptionService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the subscriptions which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the subscriptions which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchWithHttpInfo($space_id, $query) {
@@ -852,16 +852,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Subscription[]',
+				'\Wallee\Sdk\Model\Subscription[]',
 				'/subscription/search'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Subscription[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Subscription[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Subscription[]',
+                        '\Wallee\Sdk\Model\Subscription[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -869,7 +869,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -877,7 +877,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -894,11 +894,11 @@ class SubscriptionService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The id of the subscription for which the invoices should be searched for. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the invoices which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\TransactionInvoice[]
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the invoices which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\TransactionInvoice[]
 	 */
 	public function searchSubscriptionInvoices($space_id, $subscription_id, $query) {
 		return $this->searchSubscriptionInvoicesWithHttpInfo($space_id, $subscription_id, $query)->getData();
@@ -912,10 +912,10 @@ class SubscriptionService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The id of the subscription for which the invoices should be searched for. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the invoices which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the invoices which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchSubscriptionInvoicesWithHttpInfo($space_id, $subscription_id, $query) {
@@ -976,16 +976,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\TransactionInvoice[]',
+				'\Wallee\Sdk\Model\TransactionInvoice[]',
 				'/subscription/searchSubscriptionInvoices'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\TransactionInvoice[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionInvoice[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\TransactionInvoice[]',
+                        '\Wallee\Sdk\Model\TransactionInvoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -993,7 +993,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1001,7 +1001,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1019,9 +1019,9 @@ class SubscriptionService {
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The subscription id identifies the subscription which should be terminated. (required)
 	 * @param bool $respect_termination_period The respect termination period controls whether the termination period configured on the product version should be respected or if the operation should take effect immediately. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function terminate($space_id, $subscription_id, $respect_termination_period) {
@@ -1037,9 +1037,9 @@ class SubscriptionService {
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The subscription id identifies the subscription which should be terminated. (required)
 	 * @param bool $respect_termination_period The respect termination period controls whether the termination period configured on the product version should be respected or if the operation should take effect immediately. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function terminateWithHttpInfo($space_id, $subscription_id, $respect_termination_period) {
@@ -1107,7 +1107,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1115,7 +1115,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1132,11 +1132,11 @@ class SubscriptionService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionUpdateRequest $request  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Subscription
+	 * @param \Wallee\Sdk\Model\SubscriptionUpdateRequest $request  (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Subscription
 	 */
 	public function update($space_id, $subscription_id, $request) {
 		return $this->updateWithHttpInfo($space_id, $subscription_id, $request)->getData();
@@ -1150,10 +1150,10 @@ class SubscriptionService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionUpdateRequest $request  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\SubscriptionUpdateRequest $request  (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateWithHttpInfo($space_id, $subscription_id, $request) {
@@ -1214,16 +1214,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Subscription',
+				'\Wallee\Sdk\Model\Subscription',
 				'/subscription/update'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Subscription', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Subscription', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Subscription',
+                        '\Wallee\Sdk\Model\Subscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1231,7 +1231,7 @@ class SubscriptionService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1239,7 +1239,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1247,7 +1247,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1265,10 +1265,10 @@ class SubscriptionService {
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The subscription id identifies the subscription which should be updated to the latest version. (required)
 	 * @param bool $respect_termination_period The subscription version may be retired. The respect termination period controls whether the termination period configured on the product version should be respected or if the operation should take effect immediately. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionVersion
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\SubscriptionVersion
 	 */
 	public function updateProductVersion($space_id, $subscription_id, $respect_termination_period) {
 		return $this->updateProductVersionWithHttpInfo($space_id, $subscription_id, $respect_termination_period)->getData();
@@ -1283,9 +1283,9 @@ class SubscriptionService {
 	 * @param int $space_id  (required)
 	 * @param int $subscription_id The subscription id identifies the subscription which should be updated to the latest version. (required)
 	 * @param bool $respect_termination_period The subscription version may be retired. The respect termination period controls whether the termination period configured on the product version should be respected or if the operation should take effect immediately. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateProductVersionWithHttpInfo($space_id, $subscription_id, $respect_termination_period) {
@@ -1344,16 +1344,16 @@ class SubscriptionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+				'\Wallee\Sdk\Model\SubscriptionVersion',
 				'/subscription/updateProductVersion'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\SubscriptionVersion', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+                        '\Wallee\Sdk\Model\SubscriptionVersion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1361,7 +1361,7 @@ class SubscriptionService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1369,7 +1369,7 @@ class SubscriptionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1377,7 +1377,7 @@ class SubscriptionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

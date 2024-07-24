@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * CardCryptogram model
  *
  * @category    Class
  * @description This model holds the additional card authentication.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CardCryptogram implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class CardCryptogram implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => '\WhiteLabelMachineName\Sdk\Model\CardCryptogramType',
+        'type' => '\Wallee\Sdk\Model\CardCryptogramType',
         'value' => 'string'
     ];
 
@@ -210,7 +210,7 @@ class CardCryptogram implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CardCryptogramType
+     * @return \Wallee\Sdk\Model\CardCryptogramType
      */
     public function getType()
     {
@@ -220,7 +220,7 @@ class CardCryptogram implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CardCryptogramType $type 
+     * @param \Wallee\Sdk\Model\CardCryptogramType $type 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * CardholderAuthentication model
  *
  * @category    Class
  * @description This model holds the cardholder authentication data (e.g. 3-D Secure authentication).
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CardholderAuthentication implements ModelInterface, ArrayAccess
@@ -50,10 +50,10 @@ class CardholderAuthentication implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'authentication_identifier' => 'string',
-        'authentication_response' => '\WhiteLabelMachineName\Sdk\Model\CardAuthenticationResponse',
+        'authentication_response' => '\Wallee\Sdk\Model\CardAuthenticationResponse',
         'authentication_value' => 'string',
         'electronic_commerce_indicator' => 'string',
-        'version' => '\WhiteLabelMachineName\Sdk\Model\CardAuthenticationVersion'
+        'version' => '\Wallee\Sdk\Model\CardAuthenticationVersion'
     ];
 
     /**
@@ -256,7 +256,7 @@ class CardholderAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets authentication_response
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CardAuthenticationResponse
+     * @return \Wallee\Sdk\Model\CardAuthenticationResponse
      */
     public function getAuthenticationResponse()
     {
@@ -266,7 +266,7 @@ class CardholderAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets authentication_response
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CardAuthenticationResponse $authentication_response 
+     * @param \Wallee\Sdk\Model\CardAuthenticationResponse $authentication_response 
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class CardholderAuthentication implements ModelInterface, ArrayAccess
     /**
      * Gets version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CardAuthenticationVersion
+     * @return \Wallee\Sdk\Model\CardAuthenticationVersion
      */
     public function getVersion()
     {
@@ -341,7 +341,7 @@ class CardholderAuthentication implements ModelInterface, ArrayAccess
     /**
      * Sets version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CardAuthenticationVersion $version 
+     * @param \Wallee\Sdk\Model\CardAuthenticationVersion $version 
      *
      * @return $this
      */

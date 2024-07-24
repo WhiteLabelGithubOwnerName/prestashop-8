@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionUpdate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionUpdate implements ModelInterface, ArrayAccess
@@ -301,7 +301,7 @@ class SubscriptionUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets affiliate
      *
-     * @param int $affiliate 
+     * @param int $affiliate The affiliate that led to the creation of the subscription.
      *
      * @return $this
      */
@@ -326,7 +326,7 @@ class SubscriptionUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param string $description A description used to identify the subscription.
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class SubscriptionUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets planned_termination_date
      *
-     * @param \DateTime $planned_termination_date 
+     * @param \DateTime $planned_termination_date The date and time when the subscription is planned to be terminated.
      *
      * @return $this
      */

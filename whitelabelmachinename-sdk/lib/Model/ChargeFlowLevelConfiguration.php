@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ChargeFlowLevelConfiguration model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
@@ -49,14 +49,14 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'flow' => '\WhiteLabelMachineName\Sdk\Model\ChargeFlow',
+        'flow' => '\Wallee\Sdk\Model\ChargeFlow',
         'id' => 'int',
         'linked_space_id' => 'int',
         'name' => 'string',
         'period' => 'string',
         'planned_purge_date' => '\DateTime',
         'priority' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'type' => 'int',
         'version' => 'int'
     ];
@@ -270,7 +270,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets flow
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeFlow
+     * @return \Wallee\Sdk\Model\ChargeFlow
      */
     public function getFlow()
     {
@@ -280,7 +280,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets flow
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeFlow $flow The charge flow level configuration to which the flow is associated.
+     * @param \Wallee\Sdk\Model\ChargeFlow $flow The charge flow level configuration to which the flow is associated.
      *
      * @return $this
      */
@@ -449,7 +449,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -459,7 +459,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * RefundService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RefundService {
@@ -72,10 +72,10 @@ class RefundService {
 	 * Count
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return int
 	 */
 	public function count($space_id, $filter = null) {
@@ -89,10 +89,10 @@ class RefundService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countWithHttpInfo($space_id, $filter = null) {
@@ -159,7 +159,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -167,7 +167,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,10 +184,10 @@ class RefundService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $refund_id The id of the refund which should be marked as failed. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Refund
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Refund
 	 */
 	public function fail($space_id, $refund_id) {
 		return $this->failWithHttpInfo($space_id, $refund_id)->getData();
@@ -201,9 +201,9 @@ class RefundService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $refund_id The id of the refund which should be marked as failed. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function failWithHttpInfo($space_id, $refund_id) {
@@ -255,16 +255,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Refund',
+				'\Wallee\Sdk\Model\Refund',
 				'/refund/fail'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Refund', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Refund', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Refund',
+                        '\Wallee\Sdk\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,7 +280,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -297,10 +297,10 @@ class RefundService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the refund to get the document for. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\RenderedDocument
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\RenderedDocument
 	 */
 	public function getRefundDocument($space_id, $id) {
 		return $this->getRefundDocumentWithHttpInfo($space_id, $id)->getData();
@@ -314,9 +314,9 @@ class RefundService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the refund to get the document for. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function getRefundDocumentWithHttpInfo($space_id, $id) {
@@ -368,16 +368,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\RenderedDocument',
+				'\Wallee\Sdk\Model\RenderedDocument',
 				'/refund/getRefundDocument'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\RenderedDocument', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\RenderedDocument', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\RenderedDocument',
+                        '\Wallee\Sdk\Model\RenderedDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -385,7 +385,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -393,7 +393,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -411,10 +411,10 @@ class RefundService {
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the refund to get the document for. (required)
 	 * @param int $target_media_type_id The id of the target media type for which the refund should be generated for. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\RenderedDocument
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\RenderedDocument
 	 */
 	public function getRefundDocumentWithTargetMediaType($space_id, $id, $target_media_type_id) {
 		return $this->getRefundDocumentWithTargetMediaTypeWithHttpInfo($space_id, $id, $target_media_type_id)->getData();
@@ -429,9 +429,9 @@ class RefundService {
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the refund to get the document for. (required)
 	 * @param int $target_media_type_id The id of the target media type for which the refund should be generated for. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function getRefundDocumentWithTargetMediaTypeWithHttpInfo($space_id, $id, $target_media_type_id) {
@@ -490,16 +490,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\RenderedDocument',
+				'\Wallee\Sdk\Model\RenderedDocument',
 				'/refund/getRefundDocumentWithTargetMediaType'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\RenderedDocument', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\RenderedDocument', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\RenderedDocument',
+                        '\Wallee\Sdk\Model\RenderedDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -507,7 +507,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -532,10 +532,10 @@ class RefundService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the refund which should be returned. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Refund
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Refund
 	 */
 	public function read($space_id, $id) {
 		return $this->readWithHttpInfo($space_id, $id)->getData();
@@ -549,9 +549,9 @@ class RefundService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the refund which should be returned. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($space_id, $id) {
@@ -603,16 +603,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Refund',
+				'\Wallee\Sdk\Model\Refund',
 				'/refund/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Refund', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Refund', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Refund',
+                        '\Wallee\Sdk\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -620,7 +620,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -628,7 +628,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,11 +644,11 @@ class RefundService {
 	 * create
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\RefundCreate $refund The refund object which should be created. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Refund
+	 * @param \Wallee\Sdk\Model\RefundCreate $refund The refund object which should be created. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Refund
 	 */
 	public function refund($space_id, $refund) {
 		return $this->refundWithHttpInfo($space_id, $refund)->getData();
@@ -661,10 +661,10 @@ class RefundService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\RefundCreate $refund The refund object which should be created. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\RefundCreate $refund The refund object which should be created. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function refundWithHttpInfo($space_id, $refund) {
@@ -718,16 +718,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Refund',
+				'\Wallee\Sdk\Model\Refund',
 				'/refund/refund'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Refund', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Refund', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Refund',
+                        '\Wallee\Sdk\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -735,7 +735,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -743,7 +743,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -759,11 +759,11 @@ class RefundService {
 	 * Search
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the refunds which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Refund[]
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the refunds which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Refund[]
 	 */
 	public function search($space_id, $query) {
 		return $this->searchWithHttpInfo($space_id, $query)->getData();
@@ -776,10 +776,10 @@ class RefundService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the refunds which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the refunds which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchWithHttpInfo($space_id, $query) {
@@ -833,16 +833,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Refund[]',
+				'\Wallee\Sdk\Model\Refund[]',
 				'/refund/search'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Refund[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Refund[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Refund[]',
+                        '\Wallee\Sdk\Model\Refund[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -850,7 +850,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -875,10 +875,10 @@ class RefundService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $refund_id The id of the refund which should be marked as successful. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Refund
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Refund
 	 */
 	public function succeed($space_id, $refund_id) {
 		return $this->succeedWithHttpInfo($space_id, $refund_id)->getData();
@@ -892,9 +892,9 @@ class RefundService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $refund_id The id of the refund which should be marked as successful. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function succeedWithHttpInfo($space_id, $refund_id) {
@@ -946,16 +946,16 @@ class RefundService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Refund',
+				'\Wallee\Sdk\Model\Refund',
 				'/refund/succeed'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Refund', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Refund', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Refund',
+                        '\Wallee\Sdk\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -963,7 +963,7 @@ class RefundService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -971,7 +971,7 @@ class RefundService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

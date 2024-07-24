@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminalLocationVersion model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
@@ -49,15 +49,15 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalAddress',
-        'contact_address' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalAddress',
+        'address' => '\Wallee\Sdk\Model\PaymentTerminalAddress',
+        'contact_address' => '\Wallee\Sdk\Model\PaymentTerminalAddress',
         'created_by' => 'int',
         'created_on' => '\DateTime',
         'id' => 'int',
         'linked_space_id' => 'int',
-        'location' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalLocation',
+        'location' => '\Wallee\Sdk\Model\PaymentTerminalLocation',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalLocationVersionState',
+        'state' => '\Wallee\Sdk\Model\PaymentTerminalLocationVersionState',
         'version' => 'int',
         'version_applied_immediately' => 'bool'
     ];
@@ -273,7 +273,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalAddress
+     * @return \Wallee\Sdk\Model\PaymentTerminalAddress
      */
     public function getAddress()
     {
@@ -283,7 +283,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalAddress $address The postal address of the location where the payment terminals are used.
+     * @param \Wallee\Sdk\Model\PaymentTerminalAddress $address The postal address of the location where the payment terminals are used.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets contact_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalAddress
+     * @return \Wallee\Sdk\Model\PaymentTerminalAddress
      */
     public function getContactAddress()
     {
@@ -308,7 +308,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets contact_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalAddress $contact_address The contact details if the person responsible for the payment terminals at this location.
+     * @param \Wallee\Sdk\Model\PaymentTerminalAddress $contact_address The contact details if the person responsible for the payment terminals at this location.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets location
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalLocation
+     * @return \Wallee\Sdk\Model\PaymentTerminalLocation
      */
     public function getLocation()
     {
@@ -433,7 +433,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalLocation $location The payment terminal location that the version belongs to.
+     * @param \Wallee\Sdk\Model\PaymentTerminalLocation $location The payment terminal location that the version belongs to.
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalLocationVersionState
+     * @return \Wallee\Sdk\Model\PaymentTerminalLocationVersionState
      */
     public function getState()
     {
@@ -483,7 +483,7 @@ class PaymentTerminalLocationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalLocationVersionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentTerminalLocationVersionState $state The object's current state.
      *
      * @return $this
      */

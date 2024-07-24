@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * Role model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Role implements ModelInterface, ArrayAccess
@@ -49,12 +49,12 @@ class Role implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\WhiteLabelMachineName\Sdk\Model\Account',
+        'account' => '\Wallee\Sdk\Model\Account',
         'id' => 'int',
         'name' => 'map[string,string]',
-        'permissions' => '\WhiteLabelMachineName\Sdk\Model\Permission[]',
+        'permissions' => '\Wallee\Sdk\Model\Permission[]',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\RoleState',
+        'state' => '\Wallee\Sdk\Model\RoleState',
         'two_factor_required' => 'bool',
         'version' => 'int'
     ];
@@ -252,7 +252,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Account
+     * @return \Wallee\Sdk\Model\Account
      */
     public function getAccount()
     {
@@ -262,7 +262,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Account $account The account the role belongs to. The role can only be assigned within this account.
+     * @param \Wallee\Sdk\Model\Account $account The account the role belongs to. The role can only be assigned within this account.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets permissions
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Permission[]
+     * @return \Wallee\Sdk\Model\Permission[]
      */
     public function getPermissions()
     {
@@ -337,7 +337,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets permissions
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Permission[] $permissions The permissions granted to users with this role.
+     * @param \Wallee\Sdk\Model\Permission[] $permissions The permissions granted to users with this role.
      *
      * @return $this
      */
@@ -377,7 +377,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RoleState
+     * @return \Wallee\Sdk\Model\RoleState
      */
     public function getState()
     {
@@ -387,7 +387,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RoleState $state The object's current state.
+     * @param \Wallee\Sdk\Model\RoleState $state The object's current state.
      *
      * @return $this
      */

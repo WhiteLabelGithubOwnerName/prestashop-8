@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * CustomerAddressService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CustomerAddressService {
@@ -72,10 +72,10 @@ class CustomerAddressService {
 	 * Count
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return int
 	 */
 	public function count($space_id, $filter = null) {
@@ -89,10 +89,10 @@ class CustomerAddressService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countWithHttpInfo($space_id, $filter = null) {
@@ -159,7 +159,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -167,7 +167,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,11 +183,11 @@ class CustomerAddressService {
 	 * Create
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressCreate $entity The customer object which should be created. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\CustomerAddress
+	 * @param \Wallee\Sdk\Model\CustomerAddressCreate $entity The customer object which should be created. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\CustomerAddress
 	 */
 	public function create($space_id, $entity) {
 		return $this->createWithHttpInfo($space_id, $entity)->getData();
@@ -200,10 +200,10 @@ class CustomerAddressService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressCreate $entity The customer object which should be created. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\CustomerAddressCreate $entity The customer object which should be created. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function createWithHttpInfo($space_id, $entity) {
@@ -257,16 +257,16 @@ class CustomerAddressService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\CustomerAddress',
+				'\Wallee\Sdk\Model\CustomerAddress',
 				'/customer-address/create'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\CustomerAddress', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\CustomerAddress', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\CustomerAddress',
+                        '\Wallee\Sdk\Model\CustomerAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -274,7 +274,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -299,9 +299,9 @@ class CustomerAddressService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function delete($space_id, $id) {
@@ -316,9 +316,9 @@ class CustomerAddressService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id  (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function deleteWithHttpInfo($space_id, $id) {
@@ -381,7 +381,7 @@ class CustomerAddressService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -389,7 +389,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -397,7 +397,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -414,10 +414,10 @@ class CustomerAddressService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the customer which should be returned. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\CustomerAddress
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\CustomerAddress
 	 */
 	public function read($space_id, $id) {
 		return $this->readWithHttpInfo($space_id, $id)->getData();
@@ -431,9 +431,9 @@ class CustomerAddressService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the customer which should be returned. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($space_id, $id) {
@@ -485,16 +485,16 @@ class CustomerAddressService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\CustomerAddress',
+				'\Wallee\Sdk\Model\CustomerAddress',
 				'/customer-address/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\CustomerAddress', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\CustomerAddress', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\CustomerAddress',
+                        '\Wallee\Sdk\Model\CustomerAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -502,7 +502,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -510,7 +510,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -526,11 +526,11 @@ class CustomerAddressService {
 	 * Search
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the customers which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\CustomerAddress[]
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the customers which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\CustomerAddress[]
 	 */
 	public function search($space_id, $query) {
 		return $this->searchWithHttpInfo($space_id, $query)->getData();
@@ -543,10 +543,10 @@ class CustomerAddressService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\EntityQuery $query The query restricts the customers which are returned by the search. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the customers which are returned by the search. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchWithHttpInfo($space_id, $query) {
@@ -600,16 +600,16 @@ class CustomerAddressService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\CustomerAddress[]',
+				'\Wallee\Sdk\Model\CustomerAddress[]',
 				'/customer-address/search'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\CustomerAddress[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\CustomerAddress[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\CustomerAddress[]',
+                        '\Wallee\Sdk\Model\CustomerAddress[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -617,7 +617,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -625,7 +625,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,9 +642,9 @@ class CustomerAddressService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the customer address to set as default. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function selectDefaultAddress($space_id, $id) {
@@ -659,9 +659,9 @@ class CustomerAddressService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the customer address to set as default. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function selectDefaultAddressWithHttpInfo($space_id, $id) {
@@ -722,7 +722,7 @@ class CustomerAddressService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -730,7 +730,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -738,7 +738,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,11 +754,11 @@ class CustomerAddressService {
 	 * Update
 	 *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressActive $entity The customer object with the properties which should be updated. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\CustomerAddress
+	 * @param \Wallee\Sdk\Model\CustomerAddressActive $entity The customer object with the properties which should be updated. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\CustomerAddress
 	 */
 	public function update($space_id, $entity) {
 		return $this->updateWithHttpInfo($space_id, $entity)->getData();
@@ -771,10 +771,10 @@ class CustomerAddressService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressActive $entity The customer object with the properties which should be updated. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\CustomerAddressActive $entity The customer object with the properties which should be updated. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateWithHttpInfo($space_id, $entity) {
@@ -828,16 +828,16 @@ class CustomerAddressService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\CustomerAddress',
+				'\Wallee\Sdk\Model\CustomerAddress',
 				'/customer-address/update'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\CustomerAddress', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\CustomerAddress', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\CustomerAddress',
+                        '\Wallee\Sdk\Model\CustomerAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -845,7 +845,7 @@ class CustomerAddressService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -853,7 +853,7 @@ class CustomerAddressService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -861,7 +861,7 @@ class CustomerAddressService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

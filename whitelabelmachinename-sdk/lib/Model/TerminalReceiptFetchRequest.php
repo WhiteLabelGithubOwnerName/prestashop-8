@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TerminalReceiptFetchRequest model
  *
  * @category    Class
  * @description The receipt fetch request allows to retrieve the receipt documents for a terminal transaction.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TerminalReceiptFetchRequest implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class TerminalReceiptFetchRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'format' => '\WhiteLabelMachineName\Sdk\Model\TerminalReceiptFormat',
+        'format' => '\Wallee\Sdk\Model\TerminalReceiptFormat',
         'transaction' => 'int',
         'width' => 'int'
     ];
@@ -223,7 +223,7 @@ class TerminalReceiptFetchRequest implements ModelInterface, ArrayAccess
     /**
      * Gets format
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TerminalReceiptFormat
+     * @return \Wallee\Sdk\Model\TerminalReceiptFormat
      */
     public function getFormat()
     {
@@ -233,7 +233,7 @@ class TerminalReceiptFetchRequest implements ModelInterface, ArrayAccess
     /**
      * Sets format
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TerminalReceiptFormat $format The format determines in what format the receipts will be returned in.
+     * @param \Wallee\Sdk\Model\TerminalReceiptFormat $format The format determines in what format the receipts will be returned in.
      *
      * @return $this
      */

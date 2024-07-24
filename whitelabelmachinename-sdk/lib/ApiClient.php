@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,19 +18,19 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk;
+namespace Wallee\Sdk;
 
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\VersioningException;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\Http\HttpClientFactory;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\VersioningException;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\Http\HttpClientFactory;
 
 /**
  * This class sends API calls to the endpoint.
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class ApiClient {
@@ -48,9 +48,9 @@ final class ApiClient {
 	 * @var array
 	 */
 	private $defaultHeaders = [
-        'x-meta-sdk-version' => "4.2.0",
+        'x-meta-sdk-version' => "4.4.0",
         'x-meta-sdk-language' => 'php',
-        'x-meta-sdk-provider' => "WhiteLabelName",
+        'x-meta-sdk-provider' => "wallee",
     ];
 
 	/**
@@ -58,7 +58,7 @@ final class ApiClient {
 	 *
 	 * @var string
 	 */
-	private $userAgent = 'PHP-Client/4.2.0/php';
+	private $userAgent = 'PHP-Client/4.4.0/php';
 
 	/**
 	 * The path to the certificate authority file.
@@ -268,7 +268,7 @@ final class ApiClient {
 	 * Return the http client type to use for communication.
 	 *
 	 * @return string
-	 * @see \WhiteLabelMachineName\Sdk\Http\HttpClientFactory
+	 * @see \Wallee\Sdk\Http\HttpClientFactory
 	 */
 	public function getHttpClientType() {
 		return $this->httpClientType;
@@ -280,7 +280,7 @@ final class ApiClient {
 	 *
 	 * @param string $httpClientType the http client type
 	 * @return ApiClient
-	 * @see \WhiteLabelMachineName\Sdk\Http\HttpClientFactory
+	 * @see \Wallee\Sdk\Http\HttpClientFactory
 	 */
 	public function setHttpClientType($httpClientType) {
 		$this->httpClientType = $httpClientType;
@@ -462,10 +462,10 @@ final class ApiClient {
 	 * @param string $responseType the expected response type
 	 * @param string $endpointPath the path to the method endpoint before expanding parameters
 	 *
-	 * @return \WhiteLabelMachineName\Sdk\ApiResponse
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
+	 * @return \Wallee\Sdk\ApiResponse
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\VersioningException
 	 */
 	public function callApi($resourcePath, $method, $queryParams, $postData, $headerParams, $responseType = null, $endpointPath = null, $timeOut = null) {
         if ($timeOut === null) {
@@ -576,11 +576,11 @@ final class ApiClient {
     protected $accountService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\AccountService
+     * @return \Wallee\Sdk\Service\AccountService
      */
     public function getAccountService() {
         if(is_null($this->accountService)){
-            $this->accountService = new \WhiteLabelMachineName\Sdk\Service\AccountService($this);
+            $this->accountService = new \Wallee\Sdk\Service\AccountService($this);
         }
         return $this->accountService;
     }
@@ -588,11 +588,11 @@ final class ApiClient {
     protected $analyticsQueryService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\AnalyticsQueryService
+     * @return \Wallee\Sdk\Service\AnalyticsQueryService
      */
     public function getAnalyticsQueryService() {
         if(is_null($this->analyticsQueryService)){
-            $this->analyticsQueryService = new \WhiteLabelMachineName\Sdk\Service\AnalyticsQueryService($this);
+            $this->analyticsQueryService = new \Wallee\Sdk\Service\AnalyticsQueryService($this);
         }
         return $this->analyticsQueryService;
     }
@@ -600,11 +600,11 @@ final class ApiClient {
     protected $applicationUserService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ApplicationUserService
+     * @return \Wallee\Sdk\Service\ApplicationUserService
      */
     public function getApplicationUserService() {
         if(is_null($this->applicationUserService)){
-            $this->applicationUserService = new \WhiteLabelMachineName\Sdk\Service\ApplicationUserService($this);
+            $this->applicationUserService = new \Wallee\Sdk\Service\ApplicationUserService($this);
         }
         return $this->applicationUserService;
     }
@@ -612,11 +612,11 @@ final class ApiClient {
     protected $bankAccountService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\BankAccountService
+     * @return \Wallee\Sdk\Service\BankAccountService
      */
     public function getBankAccountService() {
         if(is_null($this->bankAccountService)){
-            $this->bankAccountService = new \WhiteLabelMachineName\Sdk\Service\BankAccountService($this);
+            $this->bankAccountService = new \Wallee\Sdk\Service\BankAccountService($this);
         }
         return $this->bankAccountService;
     }
@@ -624,11 +624,11 @@ final class ApiClient {
     protected $bankTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\BankTransactionService
+     * @return \Wallee\Sdk\Service\BankTransactionService
      */
     public function getBankTransactionService() {
         if(is_null($this->bankTransactionService)){
-            $this->bankTransactionService = new \WhiteLabelMachineName\Sdk\Service\BankTransactionService($this);
+            $this->bankTransactionService = new \Wallee\Sdk\Service\BankTransactionService($this);
         }
         return $this->bankTransactionService;
     }
@@ -636,11 +636,11 @@ final class ApiClient {
     protected $cardProcessingService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CardProcessingService
+     * @return \Wallee\Sdk\Service\CardProcessingService
      */
     public function getCardProcessingService() {
         if(is_null($this->cardProcessingService)){
-            $this->cardProcessingService = new \WhiteLabelMachineName\Sdk\Service\CardProcessingService($this);
+            $this->cardProcessingService = new \Wallee\Sdk\Service\CardProcessingService($this);
         }
         return $this->cardProcessingService;
     }
@@ -648,11 +648,11 @@ final class ApiClient {
     protected $chargeAttemptService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ChargeAttemptService
+     * @return \Wallee\Sdk\Service\ChargeAttemptService
      */
     public function getChargeAttemptService() {
         if(is_null($this->chargeAttemptService)){
-            $this->chargeAttemptService = new \WhiteLabelMachineName\Sdk\Service\ChargeAttemptService($this);
+            $this->chargeAttemptService = new \Wallee\Sdk\Service\ChargeAttemptService($this);
         }
         return $this->chargeAttemptService;
     }
@@ -660,11 +660,11 @@ final class ApiClient {
     protected $chargeBankTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ChargeBankTransactionService
+     * @return \Wallee\Sdk\Service\ChargeBankTransactionService
      */
     public function getChargeBankTransactionService() {
         if(is_null($this->chargeBankTransactionService)){
-            $this->chargeBankTransactionService = new \WhiteLabelMachineName\Sdk\Service\ChargeBankTransactionService($this);
+            $this->chargeBankTransactionService = new \Wallee\Sdk\Service\ChargeBankTransactionService($this);
         }
         return $this->chargeBankTransactionService;
     }
@@ -672,11 +672,11 @@ final class ApiClient {
     protected $chargeFlowLevelPaymentLinkService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ChargeFlowLevelPaymentLinkService
+     * @return \Wallee\Sdk\Service\ChargeFlowLevelPaymentLinkService
      */
     public function getChargeFlowLevelPaymentLinkService() {
         if(is_null($this->chargeFlowLevelPaymentLinkService)){
-            $this->chargeFlowLevelPaymentLinkService = new \WhiteLabelMachineName\Sdk\Service\ChargeFlowLevelPaymentLinkService($this);
+            $this->chargeFlowLevelPaymentLinkService = new \Wallee\Sdk\Service\ChargeFlowLevelPaymentLinkService($this);
         }
         return $this->chargeFlowLevelPaymentLinkService;
     }
@@ -684,11 +684,11 @@ final class ApiClient {
     protected $chargeFlowLevelService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ChargeFlowLevelService
+     * @return \Wallee\Sdk\Service\ChargeFlowLevelService
      */
     public function getChargeFlowLevelService() {
         if(is_null($this->chargeFlowLevelService)){
-            $this->chargeFlowLevelService = new \WhiteLabelMachineName\Sdk\Service\ChargeFlowLevelService($this);
+            $this->chargeFlowLevelService = new \Wallee\Sdk\Service\ChargeFlowLevelService($this);
         }
         return $this->chargeFlowLevelService;
     }
@@ -696,11 +696,11 @@ final class ApiClient {
     protected $chargeFlowService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ChargeFlowService
+     * @return \Wallee\Sdk\Service\ChargeFlowService
      */
     public function getChargeFlowService() {
         if(is_null($this->chargeFlowService)){
-            $this->chargeFlowService = new \WhiteLabelMachineName\Sdk\Service\ChargeFlowService($this);
+            $this->chargeFlowService = new \Wallee\Sdk\Service\ChargeFlowService($this);
         }
         return $this->chargeFlowService;
     }
@@ -708,11 +708,11 @@ final class ApiClient {
     protected $conditionTypeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ConditionTypeService
+     * @return \Wallee\Sdk\Service\ConditionTypeService
      */
     public function getConditionTypeService() {
         if(is_null($this->conditionTypeService)){
-            $this->conditionTypeService = new \WhiteLabelMachineName\Sdk\Service\ConditionTypeService($this);
+            $this->conditionTypeService = new \Wallee\Sdk\Service\ConditionTypeService($this);
         }
         return $this->conditionTypeService;
     }
@@ -720,11 +720,11 @@ final class ApiClient {
     protected $countryService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CountryService
+     * @return \Wallee\Sdk\Service\CountryService
      */
     public function getCountryService() {
         if(is_null($this->countryService)){
-            $this->countryService = new \WhiteLabelMachineName\Sdk\Service\CountryService($this);
+            $this->countryService = new \Wallee\Sdk\Service\CountryService($this);
         }
         return $this->countryService;
     }
@@ -732,11 +732,11 @@ final class ApiClient {
     protected $countryStateService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CountryStateService
+     * @return \Wallee\Sdk\Service\CountryStateService
      */
     public function getCountryStateService() {
         if(is_null($this->countryStateService)){
-            $this->countryStateService = new \WhiteLabelMachineName\Sdk\Service\CountryStateService($this);
+            $this->countryStateService = new \Wallee\Sdk\Service\CountryStateService($this);
         }
         return $this->countryStateService;
     }
@@ -744,11 +744,11 @@ final class ApiClient {
     protected $currencyBankAccountService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CurrencyBankAccountService
+     * @return \Wallee\Sdk\Service\CurrencyBankAccountService
      */
     public function getCurrencyBankAccountService() {
         if(is_null($this->currencyBankAccountService)){
-            $this->currencyBankAccountService = new \WhiteLabelMachineName\Sdk\Service\CurrencyBankAccountService($this);
+            $this->currencyBankAccountService = new \Wallee\Sdk\Service\CurrencyBankAccountService($this);
         }
         return $this->currencyBankAccountService;
     }
@@ -756,11 +756,11 @@ final class ApiClient {
     protected $currencyService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CurrencyService
+     * @return \Wallee\Sdk\Service\CurrencyService
      */
     public function getCurrencyService() {
         if(is_null($this->currencyService)){
-            $this->currencyService = new \WhiteLabelMachineName\Sdk\Service\CurrencyService($this);
+            $this->currencyService = new \Wallee\Sdk\Service\CurrencyService($this);
         }
         return $this->currencyService;
     }
@@ -768,11 +768,11 @@ final class ApiClient {
     protected $customerAddressService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CustomerAddressService
+     * @return \Wallee\Sdk\Service\CustomerAddressService
      */
     public function getCustomerAddressService() {
         if(is_null($this->customerAddressService)){
-            $this->customerAddressService = new \WhiteLabelMachineName\Sdk\Service\CustomerAddressService($this);
+            $this->customerAddressService = new \Wallee\Sdk\Service\CustomerAddressService($this);
         }
         return $this->customerAddressService;
     }
@@ -780,11 +780,11 @@ final class ApiClient {
     protected $customerCommentService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CustomerCommentService
+     * @return \Wallee\Sdk\Service\CustomerCommentService
      */
     public function getCustomerCommentService() {
         if(is_null($this->customerCommentService)){
-            $this->customerCommentService = new \WhiteLabelMachineName\Sdk\Service\CustomerCommentService($this);
+            $this->customerCommentService = new \Wallee\Sdk\Service\CustomerCommentService($this);
         }
         return $this->customerCommentService;
     }
@@ -792,11 +792,11 @@ final class ApiClient {
     protected $customerService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\CustomerService
+     * @return \Wallee\Sdk\Service\CustomerService
      */
     public function getCustomerService() {
         if(is_null($this->customerService)){
-            $this->customerService = new \WhiteLabelMachineName\Sdk\Service\CustomerService($this);
+            $this->customerService = new \Wallee\Sdk\Service\CustomerService($this);
         }
         return $this->customerService;
     }
@@ -804,11 +804,11 @@ final class ApiClient {
     protected $debtCollectionCaseService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\DebtCollectionCaseService
+     * @return \Wallee\Sdk\Service\DebtCollectionCaseService
      */
     public function getDebtCollectionCaseService() {
         if(is_null($this->debtCollectionCaseService)){
-            $this->debtCollectionCaseService = new \WhiteLabelMachineName\Sdk\Service\DebtCollectionCaseService($this);
+            $this->debtCollectionCaseService = new \Wallee\Sdk\Service\DebtCollectionCaseService($this);
         }
         return $this->debtCollectionCaseService;
     }
@@ -816,11 +816,11 @@ final class ApiClient {
     protected $debtCollectorConfigurationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\DebtCollectorConfigurationService
+     * @return \Wallee\Sdk\Service\DebtCollectorConfigurationService
      */
     public function getDebtCollectorConfigurationService() {
         if(is_null($this->debtCollectorConfigurationService)){
-            $this->debtCollectorConfigurationService = new \WhiteLabelMachineName\Sdk\Service\DebtCollectorConfigurationService($this);
+            $this->debtCollectorConfigurationService = new \Wallee\Sdk\Service\DebtCollectorConfigurationService($this);
         }
         return $this->debtCollectorConfigurationService;
     }
@@ -828,11 +828,11 @@ final class ApiClient {
     protected $debtCollectorService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\DebtCollectorService
+     * @return \Wallee\Sdk\Service\DebtCollectorService
      */
     public function getDebtCollectorService() {
         if(is_null($this->debtCollectorService)){
-            $this->debtCollectorService = new \WhiteLabelMachineName\Sdk\Service\DebtCollectorService($this);
+            $this->debtCollectorService = new \Wallee\Sdk\Service\DebtCollectorService($this);
         }
         return $this->debtCollectorService;
     }
@@ -840,11 +840,11 @@ final class ApiClient {
     protected $deliveryIndicationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\DeliveryIndicationService
+     * @return \Wallee\Sdk\Service\DeliveryIndicationService
      */
     public function getDeliveryIndicationService() {
         if(is_null($this->deliveryIndicationService)){
-            $this->deliveryIndicationService = new \WhiteLabelMachineName\Sdk\Service\DeliveryIndicationService($this);
+            $this->deliveryIndicationService = new \Wallee\Sdk\Service\DeliveryIndicationService($this);
         }
         return $this->deliveryIndicationService;
     }
@@ -852,11 +852,11 @@ final class ApiClient {
     protected $documentTemplateService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\DocumentTemplateService
+     * @return \Wallee\Sdk\Service\DocumentTemplateService
      */
     public function getDocumentTemplateService() {
         if(is_null($this->documentTemplateService)){
-            $this->documentTemplateService = new \WhiteLabelMachineName\Sdk\Service\DocumentTemplateService($this);
+            $this->documentTemplateService = new \Wallee\Sdk\Service\DocumentTemplateService($this);
         }
         return $this->documentTemplateService;
     }
@@ -864,11 +864,11 @@ final class ApiClient {
     protected $documentTemplateTypeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\DocumentTemplateTypeService
+     * @return \Wallee\Sdk\Service\DocumentTemplateTypeService
      */
     public function getDocumentTemplateTypeService() {
         if(is_null($this->documentTemplateTypeService)){
-            $this->documentTemplateTypeService = new \WhiteLabelMachineName\Sdk\Service\DocumentTemplateTypeService($this);
+            $this->documentTemplateTypeService = new \Wallee\Sdk\Service\DocumentTemplateTypeService($this);
         }
         return $this->documentTemplateTypeService;
     }
@@ -876,11 +876,11 @@ final class ApiClient {
     protected $externalTransferBankTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ExternalTransferBankTransactionService
+     * @return \Wallee\Sdk\Service\ExternalTransferBankTransactionService
      */
     public function getExternalTransferBankTransactionService() {
         if(is_null($this->externalTransferBankTransactionService)){
-            $this->externalTransferBankTransactionService = new \WhiteLabelMachineName\Sdk\Service\ExternalTransferBankTransactionService($this);
+            $this->externalTransferBankTransactionService = new \Wallee\Sdk\Service\ExternalTransferBankTransactionService($this);
         }
         return $this->externalTransferBankTransactionService;
     }
@@ -888,11 +888,11 @@ final class ApiClient {
     protected $humanUserService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\HumanUserService
+     * @return \Wallee\Sdk\Service\HumanUserService
      */
     public function getHumanUserService() {
         if(is_null($this->humanUserService)){
-            $this->humanUserService = new \WhiteLabelMachineName\Sdk\Service\HumanUserService($this);
+            $this->humanUserService = new \Wallee\Sdk\Service\HumanUserService($this);
         }
         return $this->humanUserService;
     }
@@ -900,11 +900,11 @@ final class ApiClient {
     protected $installmentPaymentService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InstallmentPaymentService
+     * @return \Wallee\Sdk\Service\InstallmentPaymentService
      */
     public function getInstallmentPaymentService() {
         if(is_null($this->installmentPaymentService)){
-            $this->installmentPaymentService = new \WhiteLabelMachineName\Sdk\Service\InstallmentPaymentService($this);
+            $this->installmentPaymentService = new \Wallee\Sdk\Service\InstallmentPaymentService($this);
         }
         return $this->installmentPaymentService;
     }
@@ -912,11 +912,11 @@ final class ApiClient {
     protected $installmentPaymentSliceService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InstallmentPaymentSliceService
+     * @return \Wallee\Sdk\Service\InstallmentPaymentSliceService
      */
     public function getInstallmentPaymentSliceService() {
         if(is_null($this->installmentPaymentSliceService)){
-            $this->installmentPaymentSliceService = new \WhiteLabelMachineName\Sdk\Service\InstallmentPaymentSliceService($this);
+            $this->installmentPaymentSliceService = new \Wallee\Sdk\Service\InstallmentPaymentSliceService($this);
         }
         return $this->installmentPaymentSliceService;
     }
@@ -924,11 +924,11 @@ final class ApiClient {
     protected $installmentPlanCalculationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InstallmentPlanCalculationService
+     * @return \Wallee\Sdk\Service\InstallmentPlanCalculationService
      */
     public function getInstallmentPlanCalculationService() {
         if(is_null($this->installmentPlanCalculationService)){
-            $this->installmentPlanCalculationService = new \WhiteLabelMachineName\Sdk\Service\InstallmentPlanCalculationService($this);
+            $this->installmentPlanCalculationService = new \Wallee\Sdk\Service\InstallmentPlanCalculationService($this);
         }
         return $this->installmentPlanCalculationService;
     }
@@ -936,11 +936,11 @@ final class ApiClient {
     protected $installmentPlanConfigurationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InstallmentPlanConfigurationService
+     * @return \Wallee\Sdk\Service\InstallmentPlanConfigurationService
      */
     public function getInstallmentPlanConfigurationService() {
         if(is_null($this->installmentPlanConfigurationService)){
-            $this->installmentPlanConfigurationService = new \WhiteLabelMachineName\Sdk\Service\InstallmentPlanConfigurationService($this);
+            $this->installmentPlanConfigurationService = new \Wallee\Sdk\Service\InstallmentPlanConfigurationService($this);
         }
         return $this->installmentPlanConfigurationService;
     }
@@ -948,11 +948,11 @@ final class ApiClient {
     protected $installmentPlanSliceConfigurationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InstallmentPlanSliceConfigurationService
+     * @return \Wallee\Sdk\Service\InstallmentPlanSliceConfigurationService
      */
     public function getInstallmentPlanSliceConfigurationService() {
         if(is_null($this->installmentPlanSliceConfigurationService)){
-            $this->installmentPlanSliceConfigurationService = new \WhiteLabelMachineName\Sdk\Service\InstallmentPlanSliceConfigurationService($this);
+            $this->installmentPlanSliceConfigurationService = new \Wallee\Sdk\Service\InstallmentPlanSliceConfigurationService($this);
         }
         return $this->installmentPlanSliceConfigurationService;
     }
@@ -960,11 +960,11 @@ final class ApiClient {
     protected $internalTransferBankTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InternalTransferBankTransactionService
+     * @return \Wallee\Sdk\Service\InternalTransferBankTransactionService
      */
     public function getInternalTransferBankTransactionService() {
         if(is_null($this->internalTransferBankTransactionService)){
-            $this->internalTransferBankTransactionService = new \WhiteLabelMachineName\Sdk\Service\InternalTransferBankTransactionService($this);
+            $this->internalTransferBankTransactionService = new \Wallee\Sdk\Service\InternalTransferBankTransactionService($this);
         }
         return $this->internalTransferBankTransactionService;
     }
@@ -972,11 +972,11 @@ final class ApiClient {
     protected $invoiceReconciliationRecordInvoiceLinkService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InvoiceReconciliationRecordInvoiceLinkService
+     * @return \Wallee\Sdk\Service\InvoiceReconciliationRecordInvoiceLinkService
      */
     public function getInvoiceReconciliationRecordInvoiceLinkService() {
         if(is_null($this->invoiceReconciliationRecordInvoiceLinkService)){
-            $this->invoiceReconciliationRecordInvoiceLinkService = new \WhiteLabelMachineName\Sdk\Service\InvoiceReconciliationRecordInvoiceLinkService($this);
+            $this->invoiceReconciliationRecordInvoiceLinkService = new \Wallee\Sdk\Service\InvoiceReconciliationRecordInvoiceLinkService($this);
         }
         return $this->invoiceReconciliationRecordInvoiceLinkService;
     }
@@ -984,11 +984,11 @@ final class ApiClient {
     protected $invoiceReconciliationRecordService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InvoiceReconciliationRecordService
+     * @return \Wallee\Sdk\Service\InvoiceReconciliationRecordService
      */
     public function getInvoiceReconciliationRecordService() {
         if(is_null($this->invoiceReconciliationRecordService)){
-            $this->invoiceReconciliationRecordService = new \WhiteLabelMachineName\Sdk\Service\InvoiceReconciliationRecordService($this);
+            $this->invoiceReconciliationRecordService = new \Wallee\Sdk\Service\InvoiceReconciliationRecordService($this);
         }
         return $this->invoiceReconciliationRecordService;
     }
@@ -996,11 +996,11 @@ final class ApiClient {
     protected $invoiceReimbursementService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\InvoiceReimbursementService
+     * @return \Wallee\Sdk\Service\InvoiceReimbursementService
      */
     public function getInvoiceReimbursementService() {
         if(is_null($this->invoiceReimbursementService)){
-            $this->invoiceReimbursementService = new \WhiteLabelMachineName\Sdk\Service\InvoiceReimbursementService($this);
+            $this->invoiceReimbursementService = new \Wallee\Sdk\Service\InvoiceReimbursementService($this);
         }
         return $this->invoiceReimbursementService;
     }
@@ -1008,11 +1008,11 @@ final class ApiClient {
     protected $labelDescriptionGroupService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\LabelDescriptionGroupService
+     * @return \Wallee\Sdk\Service\LabelDescriptionGroupService
      */
     public function getLabelDescriptionGroupService() {
         if(is_null($this->labelDescriptionGroupService)){
-            $this->labelDescriptionGroupService = new \WhiteLabelMachineName\Sdk\Service\LabelDescriptionGroupService($this);
+            $this->labelDescriptionGroupService = new \Wallee\Sdk\Service\LabelDescriptionGroupService($this);
         }
         return $this->labelDescriptionGroupService;
     }
@@ -1020,11 +1020,11 @@ final class ApiClient {
     protected $labelDescriptionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\LabelDescriptionService
+     * @return \Wallee\Sdk\Service\LabelDescriptionService
      */
     public function getLabelDescriptionService() {
         if(is_null($this->labelDescriptionService)){
-            $this->labelDescriptionService = new \WhiteLabelMachineName\Sdk\Service\LabelDescriptionService($this);
+            $this->labelDescriptionService = new \Wallee\Sdk\Service\LabelDescriptionService($this);
         }
         return $this->labelDescriptionService;
     }
@@ -1032,11 +1032,11 @@ final class ApiClient {
     protected $languageService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\LanguageService
+     * @return \Wallee\Sdk\Service\LanguageService
      */
     public function getLanguageService() {
         if(is_null($this->languageService)){
-            $this->languageService = new \WhiteLabelMachineName\Sdk\Service\LanguageService($this);
+            $this->languageService = new \Wallee\Sdk\Service\LanguageService($this);
         }
         return $this->languageService;
     }
@@ -1044,11 +1044,11 @@ final class ApiClient {
     protected $legalOrganizationFormService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\LegalOrganizationFormService
+     * @return \Wallee\Sdk\Service\LegalOrganizationFormService
      */
     public function getLegalOrganizationFormService() {
         if(is_null($this->legalOrganizationFormService)){
-            $this->legalOrganizationFormService = new \WhiteLabelMachineName\Sdk\Service\LegalOrganizationFormService($this);
+            $this->legalOrganizationFormService = new \Wallee\Sdk\Service\LegalOrganizationFormService($this);
         }
         return $this->legalOrganizationFormService;
     }
@@ -1056,11 +1056,11 @@ final class ApiClient {
     protected $manualTaskService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ManualTaskService
+     * @return \Wallee\Sdk\Service\ManualTaskService
      */
     public function getManualTaskService() {
         if(is_null($this->manualTaskService)){
-            $this->manualTaskService = new \WhiteLabelMachineName\Sdk\Service\ManualTaskService($this);
+            $this->manualTaskService = new \Wallee\Sdk\Service\ManualTaskService($this);
         }
         return $this->manualTaskService;
     }
@@ -1068,11 +1068,11 @@ final class ApiClient {
     protected $merticUsageService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\MerticUsageService
+     * @return \Wallee\Sdk\Service\MerticUsageService
      */
     public function getMerticUsageService() {
         if(is_null($this->merticUsageService)){
-            $this->merticUsageService = new \WhiteLabelMachineName\Sdk\Service\MerticUsageService($this);
+            $this->merticUsageService = new \Wallee\Sdk\Service\MerticUsageService($this);
         }
         return $this->merticUsageService;
     }
@@ -1080,11 +1080,11 @@ final class ApiClient {
     protected $paymentConnectorConfigurationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentConnectorConfigurationService
+     * @return \Wallee\Sdk\Service\PaymentConnectorConfigurationService
      */
     public function getPaymentConnectorConfigurationService() {
         if(is_null($this->paymentConnectorConfigurationService)){
-            $this->paymentConnectorConfigurationService = new \WhiteLabelMachineName\Sdk\Service\PaymentConnectorConfigurationService($this);
+            $this->paymentConnectorConfigurationService = new \Wallee\Sdk\Service\PaymentConnectorConfigurationService($this);
         }
         return $this->paymentConnectorConfigurationService;
     }
@@ -1092,11 +1092,11 @@ final class ApiClient {
     protected $paymentConnectorService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentConnectorService
+     * @return \Wallee\Sdk\Service\PaymentConnectorService
      */
     public function getPaymentConnectorService() {
         if(is_null($this->paymentConnectorService)){
-            $this->paymentConnectorService = new \WhiteLabelMachineName\Sdk\Service\PaymentConnectorService($this);
+            $this->paymentConnectorService = new \Wallee\Sdk\Service\PaymentConnectorService($this);
         }
         return $this->paymentConnectorService;
     }
@@ -1104,11 +1104,11 @@ final class ApiClient {
     protected $paymentLinkService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentLinkService
+     * @return \Wallee\Sdk\Service\PaymentLinkService
      */
     public function getPaymentLinkService() {
         if(is_null($this->paymentLinkService)){
-            $this->paymentLinkService = new \WhiteLabelMachineName\Sdk\Service\PaymentLinkService($this);
+            $this->paymentLinkService = new \Wallee\Sdk\Service\PaymentLinkService($this);
         }
         return $this->paymentLinkService;
     }
@@ -1116,11 +1116,11 @@ final class ApiClient {
     protected $paymentMethodBrandService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentMethodBrandService
+     * @return \Wallee\Sdk\Service\PaymentMethodBrandService
      */
     public function getPaymentMethodBrandService() {
         if(is_null($this->paymentMethodBrandService)){
-            $this->paymentMethodBrandService = new \WhiteLabelMachineName\Sdk\Service\PaymentMethodBrandService($this);
+            $this->paymentMethodBrandService = new \Wallee\Sdk\Service\PaymentMethodBrandService($this);
         }
         return $this->paymentMethodBrandService;
     }
@@ -1128,11 +1128,11 @@ final class ApiClient {
     protected $paymentMethodConfigurationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentMethodConfigurationService
+     * @return \Wallee\Sdk\Service\PaymentMethodConfigurationService
      */
     public function getPaymentMethodConfigurationService() {
         if(is_null($this->paymentMethodConfigurationService)){
-            $this->paymentMethodConfigurationService = new \WhiteLabelMachineName\Sdk\Service\PaymentMethodConfigurationService($this);
+            $this->paymentMethodConfigurationService = new \Wallee\Sdk\Service\PaymentMethodConfigurationService($this);
         }
         return $this->paymentMethodConfigurationService;
     }
@@ -1140,11 +1140,11 @@ final class ApiClient {
     protected $paymentMethodService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentMethodService
+     * @return \Wallee\Sdk\Service\PaymentMethodService
      */
     public function getPaymentMethodService() {
         if(is_null($this->paymentMethodService)){
-            $this->paymentMethodService = new \WhiteLabelMachineName\Sdk\Service\PaymentMethodService($this);
+            $this->paymentMethodService = new \Wallee\Sdk\Service\PaymentMethodService($this);
         }
         return $this->paymentMethodService;
     }
@@ -1152,11 +1152,11 @@ final class ApiClient {
     protected $paymentProcessorConfigurationService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentProcessorConfigurationService
+     * @return \Wallee\Sdk\Service\PaymentProcessorConfigurationService
      */
     public function getPaymentProcessorConfigurationService() {
         if(is_null($this->paymentProcessorConfigurationService)){
-            $this->paymentProcessorConfigurationService = new \WhiteLabelMachineName\Sdk\Service\PaymentProcessorConfigurationService($this);
+            $this->paymentProcessorConfigurationService = new \Wallee\Sdk\Service\PaymentProcessorConfigurationService($this);
         }
         return $this->paymentProcessorConfigurationService;
     }
@@ -1164,11 +1164,11 @@ final class ApiClient {
     protected $paymentProcessorService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentProcessorService
+     * @return \Wallee\Sdk\Service\PaymentProcessorService
      */
     public function getPaymentProcessorService() {
         if(is_null($this->paymentProcessorService)){
-            $this->paymentProcessorService = new \WhiteLabelMachineName\Sdk\Service\PaymentProcessorService($this);
+            $this->paymentProcessorService = new \Wallee\Sdk\Service\PaymentProcessorService($this);
         }
         return $this->paymentProcessorService;
     }
@@ -1176,11 +1176,11 @@ final class ApiClient {
     protected $paymentTerminalService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentTerminalService
+     * @return \Wallee\Sdk\Service\PaymentTerminalService
      */
     public function getPaymentTerminalService() {
         if(is_null($this->paymentTerminalService)){
-            $this->paymentTerminalService = new \WhiteLabelMachineName\Sdk\Service\PaymentTerminalService($this);
+            $this->paymentTerminalService = new \Wallee\Sdk\Service\PaymentTerminalService($this);
         }
         return $this->paymentTerminalService;
     }
@@ -1188,11 +1188,11 @@ final class ApiClient {
     protected $paymentTerminalTillService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentTerminalTillService
+     * @return \Wallee\Sdk\Service\PaymentTerminalTillService
      */
     public function getPaymentTerminalTillService() {
         if(is_null($this->paymentTerminalTillService)){
-            $this->paymentTerminalTillService = new \WhiteLabelMachineName\Sdk\Service\PaymentTerminalTillService($this);
+            $this->paymentTerminalTillService = new \Wallee\Sdk\Service\PaymentTerminalTillService($this);
         }
         return $this->paymentTerminalTillService;
     }
@@ -1200,11 +1200,11 @@ final class ApiClient {
     protected $paymentTerminalTransactionSummaryService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentTerminalTransactionSummaryService
+     * @return \Wallee\Sdk\Service\PaymentTerminalTransactionSummaryService
      */
     public function getPaymentTerminalTransactionSummaryService() {
         if(is_null($this->paymentTerminalTransactionSummaryService)){
-            $this->paymentTerminalTransactionSummaryService = new \WhiteLabelMachineName\Sdk\Service\PaymentTerminalTransactionSummaryService($this);
+            $this->paymentTerminalTransactionSummaryService = new \Wallee\Sdk\Service\PaymentTerminalTransactionSummaryService($this);
         }
         return $this->paymentTerminalTransactionSummaryService;
     }
@@ -1212,11 +1212,11 @@ final class ApiClient {
     protected $paymentWebAppService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PaymentWebAppService
+     * @return \Wallee\Sdk\Service\PaymentWebAppService
      */
     public function getPaymentWebAppService() {
         if(is_null($this->paymentWebAppService)){
-            $this->paymentWebAppService = new \WhiteLabelMachineName\Sdk\Service\PaymentWebAppService($this);
+            $this->paymentWebAppService = new \Wallee\Sdk\Service\PaymentWebAppService($this);
         }
         return $this->paymentWebAppService;
     }
@@ -1224,11 +1224,11 @@ final class ApiClient {
     protected $permissionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\PermissionService
+     * @return \Wallee\Sdk\Service\PermissionService
      */
     public function getPermissionService() {
         if(is_null($this->permissionService)){
-            $this->permissionService = new \WhiteLabelMachineName\Sdk\Service\PermissionService($this);
+            $this->permissionService = new \Wallee\Sdk\Service\PermissionService($this);
         }
         return $this->permissionService;
     }
@@ -1236,11 +1236,11 @@ final class ApiClient {
     protected $refundBankTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\RefundBankTransactionService
+     * @return \Wallee\Sdk\Service\RefundBankTransactionService
      */
     public function getRefundBankTransactionService() {
         if(is_null($this->refundBankTransactionService)){
-            $this->refundBankTransactionService = new \WhiteLabelMachineName\Sdk\Service\RefundBankTransactionService($this);
+            $this->refundBankTransactionService = new \Wallee\Sdk\Service\RefundBankTransactionService($this);
         }
         return $this->refundBankTransactionService;
     }
@@ -1248,11 +1248,11 @@ final class ApiClient {
     protected $refundCommentService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\RefundCommentService
+     * @return \Wallee\Sdk\Service\RefundCommentService
      */
     public function getRefundCommentService() {
         if(is_null($this->refundCommentService)){
-            $this->refundCommentService = new \WhiteLabelMachineName\Sdk\Service\RefundCommentService($this);
+            $this->refundCommentService = new \Wallee\Sdk\Service\RefundCommentService($this);
         }
         return $this->refundCommentService;
     }
@@ -1260,11 +1260,11 @@ final class ApiClient {
     protected $refundRecoveryBankTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\RefundRecoveryBankTransactionService
+     * @return \Wallee\Sdk\Service\RefundRecoveryBankTransactionService
      */
     public function getRefundRecoveryBankTransactionService() {
         if(is_null($this->refundRecoveryBankTransactionService)){
-            $this->refundRecoveryBankTransactionService = new \WhiteLabelMachineName\Sdk\Service\RefundRecoveryBankTransactionService($this);
+            $this->refundRecoveryBankTransactionService = new \Wallee\Sdk\Service\RefundRecoveryBankTransactionService($this);
         }
         return $this->refundRecoveryBankTransactionService;
     }
@@ -1272,11 +1272,11 @@ final class ApiClient {
     protected $refundService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\RefundService
+     * @return \Wallee\Sdk\Service\RefundService
      */
     public function getRefundService() {
         if(is_null($this->refundService)){
-            $this->refundService = new \WhiteLabelMachineName\Sdk\Service\RefundService($this);
+            $this->refundService = new \Wallee\Sdk\Service\RefundService($this);
         }
         return $this->refundService;
     }
@@ -1284,11 +1284,11 @@ final class ApiClient {
     protected $shopifyRecurringOrderService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifyRecurringOrderService
+     * @return \Wallee\Sdk\Service\ShopifyRecurringOrderService
      */
     public function getShopifyRecurringOrderService() {
         if(is_null($this->shopifyRecurringOrderService)){
-            $this->shopifyRecurringOrderService = new \WhiteLabelMachineName\Sdk\Service\ShopifyRecurringOrderService($this);
+            $this->shopifyRecurringOrderService = new \Wallee\Sdk\Service\ShopifyRecurringOrderService($this);
         }
         return $this->shopifyRecurringOrderService;
     }
@@ -1296,11 +1296,11 @@ final class ApiClient {
     protected $shopifySubscriberService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifySubscriberService
+     * @return \Wallee\Sdk\Service\ShopifySubscriberService
      */
     public function getShopifySubscriberService() {
         if(is_null($this->shopifySubscriberService)){
-            $this->shopifySubscriberService = new \WhiteLabelMachineName\Sdk\Service\ShopifySubscriberService($this);
+            $this->shopifySubscriberService = new \Wallee\Sdk\Service\ShopifySubscriberService($this);
         }
         return $this->shopifySubscriberService;
     }
@@ -1308,11 +1308,11 @@ final class ApiClient {
     protected $shopifySubscriptionProductService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionProductService
+     * @return \Wallee\Sdk\Service\ShopifySubscriptionProductService
      */
     public function getShopifySubscriptionProductService() {
         if(is_null($this->shopifySubscriptionProductService)){
-            $this->shopifySubscriptionProductService = new \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionProductService($this);
+            $this->shopifySubscriptionProductService = new \Wallee\Sdk\Service\ShopifySubscriptionProductService($this);
         }
         return $this->shopifySubscriptionProductService;
     }
@@ -1320,11 +1320,11 @@ final class ApiClient {
     protected $shopifySubscriptionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionService
+     * @return \Wallee\Sdk\Service\ShopifySubscriptionService
      */
     public function getShopifySubscriptionService() {
         if(is_null($this->shopifySubscriptionService)){
-            $this->shopifySubscriptionService = new \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionService($this);
+            $this->shopifySubscriptionService = new \Wallee\Sdk\Service\ShopifySubscriptionService($this);
         }
         return $this->shopifySubscriptionService;
     }
@@ -1332,11 +1332,11 @@ final class ApiClient {
     protected $shopifySubscriptionSuspensionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionSuspensionService
+     * @return \Wallee\Sdk\Service\ShopifySubscriptionSuspensionService
      */
     public function getShopifySubscriptionSuspensionService() {
         if(is_null($this->shopifySubscriptionSuspensionService)){
-            $this->shopifySubscriptionSuspensionService = new \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionSuspensionService($this);
+            $this->shopifySubscriptionSuspensionService = new \Wallee\Sdk\Service\ShopifySubscriptionSuspensionService($this);
         }
         return $this->shopifySubscriptionSuspensionService;
     }
@@ -1344,11 +1344,11 @@ final class ApiClient {
     protected $shopifySubscriptionVersionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionVersionService
+     * @return \Wallee\Sdk\Service\ShopifySubscriptionVersionService
      */
     public function getShopifySubscriptionVersionService() {
         if(is_null($this->shopifySubscriptionVersionService)){
-            $this->shopifySubscriptionVersionService = new \WhiteLabelMachineName\Sdk\Service\ShopifySubscriptionVersionService($this);
+            $this->shopifySubscriptionVersionService = new \Wallee\Sdk\Service\ShopifySubscriptionVersionService($this);
         }
         return $this->shopifySubscriptionVersionService;
     }
@@ -1356,11 +1356,11 @@ final class ApiClient {
     protected $shopifyTransactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\ShopifyTransactionService
+     * @return \Wallee\Sdk\Service\ShopifyTransactionService
      */
     public function getShopifyTransactionService() {
         if(is_null($this->shopifyTransactionService)){
-            $this->shopifyTransactionService = new \WhiteLabelMachineName\Sdk\Service\ShopifyTransactionService($this);
+            $this->shopifyTransactionService = new \Wallee\Sdk\Service\ShopifyTransactionService($this);
         }
         return $this->shopifyTransactionService;
     }
@@ -1368,11 +1368,11 @@ final class ApiClient {
     protected $spaceService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SpaceService
+     * @return \Wallee\Sdk\Service\SpaceService
      */
     public function getSpaceService() {
         if(is_null($this->spaceService)){
-            $this->spaceService = new \WhiteLabelMachineName\Sdk\Service\SpaceService($this);
+            $this->spaceService = new \Wallee\Sdk\Service\SpaceService($this);
         }
         return $this->spaceService;
     }
@@ -1380,11 +1380,11 @@ final class ApiClient {
     protected $staticValueService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\StaticValueService
+     * @return \Wallee\Sdk\Service\StaticValueService
      */
     public function getStaticValueService() {
         if(is_null($this->staticValueService)){
-            $this->staticValueService = new \WhiteLabelMachineName\Sdk\Service\StaticValueService($this);
+            $this->staticValueService = new \Wallee\Sdk\Service\StaticValueService($this);
         }
         return $this->staticValueService;
     }
@@ -1392,11 +1392,11 @@ final class ApiClient {
     protected $subscriberService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriberService
+     * @return \Wallee\Sdk\Service\SubscriberService
      */
     public function getSubscriberService() {
         if(is_null($this->subscriberService)){
-            $this->subscriberService = new \WhiteLabelMachineName\Sdk\Service\SubscriberService($this);
+            $this->subscriberService = new \Wallee\Sdk\Service\SubscriberService($this);
         }
         return $this->subscriberService;
     }
@@ -1404,11 +1404,11 @@ final class ApiClient {
     protected $subscriptionAffiliateService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionAffiliateService
+     * @return \Wallee\Sdk\Service\SubscriptionAffiliateService
      */
     public function getSubscriptionAffiliateService() {
         if(is_null($this->subscriptionAffiliateService)){
-            $this->subscriptionAffiliateService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionAffiliateService($this);
+            $this->subscriptionAffiliateService = new \Wallee\Sdk\Service\SubscriptionAffiliateService($this);
         }
         return $this->subscriptionAffiliateService;
     }
@@ -1416,11 +1416,11 @@ final class ApiClient {
     protected $subscriptionChargeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionChargeService
+     * @return \Wallee\Sdk\Service\SubscriptionChargeService
      */
     public function getSubscriptionChargeService() {
         if(is_null($this->subscriptionChargeService)){
-            $this->subscriptionChargeService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionChargeService($this);
+            $this->subscriptionChargeService = new \Wallee\Sdk\Service\SubscriptionChargeService($this);
         }
         return $this->subscriptionChargeService;
     }
@@ -1428,11 +1428,11 @@ final class ApiClient {
     protected $subscriptionLedgerEntryService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionLedgerEntryService
+     * @return \Wallee\Sdk\Service\SubscriptionLedgerEntryService
      */
     public function getSubscriptionLedgerEntryService() {
         if(is_null($this->subscriptionLedgerEntryService)){
-            $this->subscriptionLedgerEntryService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionLedgerEntryService($this);
+            $this->subscriptionLedgerEntryService = new \Wallee\Sdk\Service\SubscriptionLedgerEntryService($this);
         }
         return $this->subscriptionLedgerEntryService;
     }
@@ -1440,11 +1440,11 @@ final class ApiClient {
     protected $subscriptionMetricService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionMetricService
+     * @return \Wallee\Sdk\Service\SubscriptionMetricService
      */
     public function getSubscriptionMetricService() {
         if(is_null($this->subscriptionMetricService)){
-            $this->subscriptionMetricService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionMetricService($this);
+            $this->subscriptionMetricService = new \Wallee\Sdk\Service\SubscriptionMetricService($this);
         }
         return $this->subscriptionMetricService;
     }
@@ -1452,11 +1452,11 @@ final class ApiClient {
     protected $subscriptionMetricUsageService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionMetricUsageService
+     * @return \Wallee\Sdk\Service\SubscriptionMetricUsageService
      */
     public function getSubscriptionMetricUsageService() {
         if(is_null($this->subscriptionMetricUsageService)){
-            $this->subscriptionMetricUsageService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionMetricUsageService($this);
+            $this->subscriptionMetricUsageService = new \Wallee\Sdk\Service\SubscriptionMetricUsageService($this);
         }
         return $this->subscriptionMetricUsageService;
     }
@@ -1464,11 +1464,11 @@ final class ApiClient {
     protected $subscriptionPeriodBillService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionPeriodBillService
+     * @return \Wallee\Sdk\Service\SubscriptionPeriodBillService
      */
     public function getSubscriptionPeriodBillService() {
         if(is_null($this->subscriptionPeriodBillService)){
-            $this->subscriptionPeriodBillService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionPeriodBillService($this);
+            $this->subscriptionPeriodBillService = new \Wallee\Sdk\Service\SubscriptionPeriodBillService($this);
         }
         return $this->subscriptionPeriodBillService;
     }
@@ -1476,11 +1476,11 @@ final class ApiClient {
     protected $subscriptionProductComponentGroupService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductComponentGroupService
+     * @return \Wallee\Sdk\Service\SubscriptionProductComponentGroupService
      */
     public function getSubscriptionProductComponentGroupService() {
         if(is_null($this->subscriptionProductComponentGroupService)){
-            $this->subscriptionProductComponentGroupService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductComponentGroupService($this);
+            $this->subscriptionProductComponentGroupService = new \Wallee\Sdk\Service\SubscriptionProductComponentGroupService($this);
         }
         return $this->subscriptionProductComponentGroupService;
     }
@@ -1488,11 +1488,11 @@ final class ApiClient {
     protected $subscriptionProductComponentService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductComponentService
+     * @return \Wallee\Sdk\Service\SubscriptionProductComponentService
      */
     public function getSubscriptionProductComponentService() {
         if(is_null($this->subscriptionProductComponentService)){
-            $this->subscriptionProductComponentService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductComponentService($this);
+            $this->subscriptionProductComponentService = new \Wallee\Sdk\Service\SubscriptionProductComponentService($this);
         }
         return $this->subscriptionProductComponentService;
     }
@@ -1500,11 +1500,11 @@ final class ApiClient {
     protected $subscriptionProductFeeTierService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductFeeTierService
+     * @return \Wallee\Sdk\Service\SubscriptionProductFeeTierService
      */
     public function getSubscriptionProductFeeTierService() {
         if(is_null($this->subscriptionProductFeeTierService)){
-            $this->subscriptionProductFeeTierService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductFeeTierService($this);
+            $this->subscriptionProductFeeTierService = new \Wallee\Sdk\Service\SubscriptionProductFeeTierService($this);
         }
         return $this->subscriptionProductFeeTierService;
     }
@@ -1512,11 +1512,11 @@ final class ApiClient {
     protected $subscriptionProductMeteredFeeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductMeteredFeeService
+     * @return \Wallee\Sdk\Service\SubscriptionProductMeteredFeeService
      */
     public function getSubscriptionProductMeteredFeeService() {
         if(is_null($this->subscriptionProductMeteredFeeService)){
-            $this->subscriptionProductMeteredFeeService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductMeteredFeeService($this);
+            $this->subscriptionProductMeteredFeeService = new \Wallee\Sdk\Service\SubscriptionProductMeteredFeeService($this);
         }
         return $this->subscriptionProductMeteredFeeService;
     }
@@ -1524,11 +1524,11 @@ final class ApiClient {
     protected $subscriptionProductPeriodFeeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductPeriodFeeService
+     * @return \Wallee\Sdk\Service\SubscriptionProductPeriodFeeService
      */
     public function getSubscriptionProductPeriodFeeService() {
         if(is_null($this->subscriptionProductPeriodFeeService)){
-            $this->subscriptionProductPeriodFeeService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductPeriodFeeService($this);
+            $this->subscriptionProductPeriodFeeService = new \Wallee\Sdk\Service\SubscriptionProductPeriodFeeService($this);
         }
         return $this->subscriptionProductPeriodFeeService;
     }
@@ -1536,11 +1536,11 @@ final class ApiClient {
     protected $subscriptionProductRetirementService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductRetirementService
+     * @return \Wallee\Sdk\Service\SubscriptionProductRetirementService
      */
     public function getSubscriptionProductRetirementService() {
         if(is_null($this->subscriptionProductRetirementService)){
-            $this->subscriptionProductRetirementService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductRetirementService($this);
+            $this->subscriptionProductRetirementService = new \Wallee\Sdk\Service\SubscriptionProductRetirementService($this);
         }
         return $this->subscriptionProductRetirementService;
     }
@@ -1548,11 +1548,11 @@ final class ApiClient {
     protected $subscriptionProductService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductService
+     * @return \Wallee\Sdk\Service\SubscriptionProductService
      */
     public function getSubscriptionProductService() {
         if(is_null($this->subscriptionProductService)){
-            $this->subscriptionProductService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductService($this);
+            $this->subscriptionProductService = new \Wallee\Sdk\Service\SubscriptionProductService($this);
         }
         return $this->subscriptionProductService;
     }
@@ -1560,11 +1560,11 @@ final class ApiClient {
     protected $subscriptionProductSetupFeeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductSetupFeeService
+     * @return \Wallee\Sdk\Service\SubscriptionProductSetupFeeService
      */
     public function getSubscriptionProductSetupFeeService() {
         if(is_null($this->subscriptionProductSetupFeeService)){
-            $this->subscriptionProductSetupFeeService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductSetupFeeService($this);
+            $this->subscriptionProductSetupFeeService = new \Wallee\Sdk\Service\SubscriptionProductSetupFeeService($this);
         }
         return $this->subscriptionProductSetupFeeService;
     }
@@ -1572,11 +1572,11 @@ final class ApiClient {
     protected $subscriptionProductVersionRetirementService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductVersionRetirementService
+     * @return \Wallee\Sdk\Service\SubscriptionProductVersionRetirementService
      */
     public function getSubscriptionProductVersionRetirementService() {
         if(is_null($this->subscriptionProductVersionRetirementService)){
-            $this->subscriptionProductVersionRetirementService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductVersionRetirementService($this);
+            $this->subscriptionProductVersionRetirementService = new \Wallee\Sdk\Service\SubscriptionProductVersionRetirementService($this);
         }
         return $this->subscriptionProductVersionRetirementService;
     }
@@ -1584,11 +1584,11 @@ final class ApiClient {
     protected $subscriptionProductVersionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionProductVersionService
+     * @return \Wallee\Sdk\Service\SubscriptionProductVersionService
      */
     public function getSubscriptionProductVersionService() {
         if(is_null($this->subscriptionProductVersionService)){
-            $this->subscriptionProductVersionService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionProductVersionService($this);
+            $this->subscriptionProductVersionService = new \Wallee\Sdk\Service\SubscriptionProductVersionService($this);
         }
         return $this->subscriptionProductVersionService;
     }
@@ -1596,11 +1596,11 @@ final class ApiClient {
     protected $subscriptionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionService
+     * @return \Wallee\Sdk\Service\SubscriptionService
      */
     public function getSubscriptionService() {
         if(is_null($this->subscriptionService)){
-            $this->subscriptionService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionService($this);
+            $this->subscriptionService = new \Wallee\Sdk\Service\SubscriptionService($this);
         }
         return $this->subscriptionService;
     }
@@ -1608,11 +1608,11 @@ final class ApiClient {
     protected $subscriptionSuspensionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionSuspensionService
+     * @return \Wallee\Sdk\Service\SubscriptionSuspensionService
      */
     public function getSubscriptionSuspensionService() {
         if(is_null($this->subscriptionSuspensionService)){
-            $this->subscriptionSuspensionService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionSuspensionService($this);
+            $this->subscriptionSuspensionService = new \Wallee\Sdk\Service\SubscriptionSuspensionService($this);
         }
         return $this->subscriptionSuspensionService;
     }
@@ -1620,11 +1620,11 @@ final class ApiClient {
     protected $subscriptionVersionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\SubscriptionVersionService
+     * @return \Wallee\Sdk\Service\SubscriptionVersionService
      */
     public function getSubscriptionVersionService() {
         if(is_null($this->subscriptionVersionService)){
-            $this->subscriptionVersionService = new \WhiteLabelMachineName\Sdk\Service\SubscriptionVersionService($this);
+            $this->subscriptionVersionService = new \Wallee\Sdk\Service\SubscriptionVersionService($this);
         }
         return $this->subscriptionVersionService;
     }
@@ -1632,11 +1632,11 @@ final class ApiClient {
     protected $tokenService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TokenService
+     * @return \Wallee\Sdk\Service\TokenService
      */
     public function getTokenService() {
         if(is_null($this->tokenService)){
-            $this->tokenService = new \WhiteLabelMachineName\Sdk\Service\TokenService($this);
+            $this->tokenService = new \Wallee\Sdk\Service\TokenService($this);
         }
         return $this->tokenService;
     }
@@ -1644,11 +1644,11 @@ final class ApiClient {
     protected $tokenVersionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TokenVersionService
+     * @return \Wallee\Sdk\Service\TokenVersionService
      */
     public function getTokenVersionService() {
         if(is_null($this->tokenVersionService)){
-            $this->tokenVersionService = new \WhiteLabelMachineName\Sdk\Service\TokenVersionService($this);
+            $this->tokenVersionService = new \Wallee\Sdk\Service\TokenVersionService($this);
         }
         return $this->tokenVersionService;
     }
@@ -1656,11 +1656,11 @@ final class ApiClient {
     protected $transactionCommentService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionCommentService
+     * @return \Wallee\Sdk\Service\TransactionCommentService
      */
     public function getTransactionCommentService() {
         if(is_null($this->transactionCommentService)){
-            $this->transactionCommentService = new \WhiteLabelMachineName\Sdk\Service\TransactionCommentService($this);
+            $this->transactionCommentService = new \Wallee\Sdk\Service\TransactionCommentService($this);
         }
         return $this->transactionCommentService;
     }
@@ -1668,11 +1668,11 @@ final class ApiClient {
     protected $transactionCompletionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionCompletionService
+     * @return \Wallee\Sdk\Service\TransactionCompletionService
      */
     public function getTransactionCompletionService() {
         if(is_null($this->transactionCompletionService)){
-            $this->transactionCompletionService = new \WhiteLabelMachineName\Sdk\Service\TransactionCompletionService($this);
+            $this->transactionCompletionService = new \Wallee\Sdk\Service\TransactionCompletionService($this);
         }
         return $this->transactionCompletionService;
     }
@@ -1680,11 +1680,11 @@ final class ApiClient {
     protected $transactionIframeService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionIframeService
+     * @return \Wallee\Sdk\Service\TransactionIframeService
      */
     public function getTransactionIframeService() {
         if(is_null($this->transactionIframeService)){
-            $this->transactionIframeService = new \WhiteLabelMachineName\Sdk\Service\TransactionIframeService($this);
+            $this->transactionIframeService = new \Wallee\Sdk\Service\TransactionIframeService($this);
         }
         return $this->transactionIframeService;
     }
@@ -1692,11 +1692,11 @@ final class ApiClient {
     protected $transactionInvoiceCommentService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionInvoiceCommentService
+     * @return \Wallee\Sdk\Service\TransactionInvoiceCommentService
      */
     public function getTransactionInvoiceCommentService() {
         if(is_null($this->transactionInvoiceCommentService)){
-            $this->transactionInvoiceCommentService = new \WhiteLabelMachineName\Sdk\Service\TransactionInvoiceCommentService($this);
+            $this->transactionInvoiceCommentService = new \Wallee\Sdk\Service\TransactionInvoiceCommentService($this);
         }
         return $this->transactionInvoiceCommentService;
     }
@@ -1704,11 +1704,11 @@ final class ApiClient {
     protected $transactionInvoiceService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionInvoiceService
+     * @return \Wallee\Sdk\Service\TransactionInvoiceService
      */
     public function getTransactionInvoiceService() {
         if(is_null($this->transactionInvoiceService)){
-            $this->transactionInvoiceService = new \WhiteLabelMachineName\Sdk\Service\TransactionInvoiceService($this);
+            $this->transactionInvoiceService = new \Wallee\Sdk\Service\TransactionInvoiceService($this);
         }
         return $this->transactionInvoiceService;
     }
@@ -1716,11 +1716,11 @@ final class ApiClient {
     protected $transactionLightboxService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionLightboxService
+     * @return \Wallee\Sdk\Service\TransactionLightboxService
      */
     public function getTransactionLightboxService() {
         if(is_null($this->transactionLightboxService)){
-            $this->transactionLightboxService = new \WhiteLabelMachineName\Sdk\Service\TransactionLightboxService($this);
+            $this->transactionLightboxService = new \Wallee\Sdk\Service\TransactionLightboxService($this);
         }
         return $this->transactionLightboxService;
     }
@@ -1728,11 +1728,11 @@ final class ApiClient {
     protected $transactionLineItemVersionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionLineItemVersionService
+     * @return \Wallee\Sdk\Service\TransactionLineItemVersionService
      */
     public function getTransactionLineItemVersionService() {
         if(is_null($this->transactionLineItemVersionService)){
-            $this->transactionLineItemVersionService = new \WhiteLabelMachineName\Sdk\Service\TransactionLineItemVersionService($this);
+            $this->transactionLineItemVersionService = new \Wallee\Sdk\Service\TransactionLineItemVersionService($this);
         }
         return $this->transactionLineItemVersionService;
     }
@@ -1740,11 +1740,11 @@ final class ApiClient {
     protected $transactionMobileSdkService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionMobileSdkService
+     * @return \Wallee\Sdk\Service\TransactionMobileSdkService
      */
     public function getTransactionMobileSdkService() {
         if(is_null($this->transactionMobileSdkService)){
-            $this->transactionMobileSdkService = new \WhiteLabelMachineName\Sdk\Service\TransactionMobileSdkService($this);
+            $this->transactionMobileSdkService = new \Wallee\Sdk\Service\TransactionMobileSdkService($this);
         }
         return $this->transactionMobileSdkService;
     }
@@ -1752,11 +1752,11 @@ final class ApiClient {
     protected $transactionPaymentPageService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionPaymentPageService
+     * @return \Wallee\Sdk\Service\TransactionPaymentPageService
      */
     public function getTransactionPaymentPageService() {
         if(is_null($this->transactionPaymentPageService)){
-            $this->transactionPaymentPageService = new \WhiteLabelMachineName\Sdk\Service\TransactionPaymentPageService($this);
+            $this->transactionPaymentPageService = new \Wallee\Sdk\Service\TransactionPaymentPageService($this);
         }
         return $this->transactionPaymentPageService;
     }
@@ -1764,11 +1764,11 @@ final class ApiClient {
     protected $transactionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionService
+     * @return \Wallee\Sdk\Service\TransactionService
      */
     public function getTransactionService() {
         if(is_null($this->transactionService)){
-            $this->transactionService = new \WhiteLabelMachineName\Sdk\Service\TransactionService($this);
+            $this->transactionService = new \Wallee\Sdk\Service\TransactionService($this);
         }
         return $this->transactionService;
     }
@@ -1776,11 +1776,11 @@ final class ApiClient {
     protected $transactionTerminalService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionTerminalService
+     * @return \Wallee\Sdk\Service\TransactionTerminalService
      */
     public function getTransactionTerminalService() {
         if(is_null($this->transactionTerminalService)){
-            $this->transactionTerminalService = new \WhiteLabelMachineName\Sdk\Service\TransactionTerminalService($this);
+            $this->transactionTerminalService = new \Wallee\Sdk\Service\TransactionTerminalService($this);
         }
         return $this->transactionTerminalService;
     }
@@ -1788,11 +1788,11 @@ final class ApiClient {
     protected $transactionVoidService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\TransactionVoidService
+     * @return \Wallee\Sdk\Service\TransactionVoidService
      */
     public function getTransactionVoidService() {
         if(is_null($this->transactionVoidService)){
-            $this->transactionVoidService = new \WhiteLabelMachineName\Sdk\Service\TransactionVoidService($this);
+            $this->transactionVoidService = new \Wallee\Sdk\Service\TransactionVoidService($this);
         }
         return $this->transactionVoidService;
     }
@@ -1800,11 +1800,11 @@ final class ApiClient {
     protected $userAccountRoleService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\UserAccountRoleService
+     * @return \Wallee\Sdk\Service\UserAccountRoleService
      */
     public function getUserAccountRoleService() {
         if(is_null($this->userAccountRoleService)){
-            $this->userAccountRoleService = new \WhiteLabelMachineName\Sdk\Service\UserAccountRoleService($this);
+            $this->userAccountRoleService = new \Wallee\Sdk\Service\UserAccountRoleService($this);
         }
         return $this->userAccountRoleService;
     }
@@ -1812,11 +1812,11 @@ final class ApiClient {
     protected $userSpaceRoleService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\UserSpaceRoleService
+     * @return \Wallee\Sdk\Service\UserSpaceRoleService
      */
     public function getUserSpaceRoleService() {
         if(is_null($this->userSpaceRoleService)){
-            $this->userSpaceRoleService = new \WhiteLabelMachineName\Sdk\Service\UserSpaceRoleService($this);
+            $this->userSpaceRoleService = new \Wallee\Sdk\Service\UserSpaceRoleService($this);
         }
         return $this->userSpaceRoleService;
     }
@@ -1824,11 +1824,11 @@ final class ApiClient {
     protected $webAppService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\WebAppService
+     * @return \Wallee\Sdk\Service\WebAppService
      */
     public function getWebAppService() {
         if(is_null($this->webAppService)){
-            $this->webAppService = new \WhiteLabelMachineName\Sdk\Service\WebAppService($this);
+            $this->webAppService = new \Wallee\Sdk\Service\WebAppService($this);
         }
         return $this->webAppService;
     }
@@ -1836,11 +1836,11 @@ final class ApiClient {
     protected $webhookEncryptionService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\WebhookEncryptionService
+     * @return \Wallee\Sdk\Service\WebhookEncryptionService
      */
     public function getWebhookEncryptionService() {
         if(is_null($this->webhookEncryptionService)){
-            $this->webhookEncryptionService = new \WhiteLabelMachineName\Sdk\Service\WebhookEncryptionService($this);
+            $this->webhookEncryptionService = new \Wallee\Sdk\Service\WebhookEncryptionService($this);
         }
         return $this->webhookEncryptionService;
     }
@@ -1848,11 +1848,11 @@ final class ApiClient {
     protected $webhookListenerService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\WebhookListenerService
+     * @return \Wallee\Sdk\Service\WebhookListenerService
      */
     public function getWebhookListenerService() {
         if(is_null($this->webhookListenerService)){
-            $this->webhookListenerService = new \WhiteLabelMachineName\Sdk\Service\WebhookListenerService($this);
+            $this->webhookListenerService = new \Wallee\Sdk\Service\WebhookListenerService($this);
         }
         return $this->webhookListenerService;
     }
@@ -1860,11 +1860,11 @@ final class ApiClient {
     protected $webhookUrlService;
 
     /**
-     * @return \WhiteLabelMachineName\Sdk\Service\WebhookUrlService
+     * @return \Wallee\Sdk\Service\WebhookUrlService
      */
     public function getWebhookUrlService() {
         if(is_null($this->webhookUrlService)){
-            $this->webhookUrlService = new \WhiteLabelMachineName\Sdk\Service\WebhookUrlService($this);
+            $this->webhookUrlService = new \Wallee\Sdk\Service\WebhookUrlService($this);
         }
         return $this->webhookUrlService;
     }

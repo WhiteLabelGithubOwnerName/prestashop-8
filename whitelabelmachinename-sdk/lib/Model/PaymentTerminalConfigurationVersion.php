@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminalConfigurationVersion model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfiguration',
+        'configuration' => '\Wallee\Sdk\Model\PaymentTerminalConfiguration',
         'connector_configurations' => 'int[]',
         'created_by' => 'int',
         'created_on' => '\DateTime',
@@ -59,7 +59,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
         'maintenance_window_duration' => 'string',
         'maintenance_window_start' => 'string',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfigurationVersionState',
+        'state' => '\Wallee\Sdk\Model\PaymentTerminalConfigurationVersionState',
         'time_zone' => 'string',
         'version' => 'int',
         'version_applied_immediately' => 'bool'
@@ -294,7 +294,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfiguration
+     * @return \Wallee\Sdk\Model\PaymentTerminalConfiguration
      */
     public function getConfiguration()
     {
@@ -304,7 +304,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfiguration $configuration The payment terminal configuration that the version belongs to.
+     * @param \Wallee\Sdk\Model\PaymentTerminalConfiguration $configuration The payment terminal configuration that the version belongs to.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfigurationVersionState
+     * @return \Wallee\Sdk\Model\PaymentTerminalConfigurationVersionState
      */
     public function getState()
     {
@@ -554,7 +554,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfigurationVersionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentTerminalConfigurationVersionState $state The object's current state.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * DeliveryIndication model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class DeliveryIndication extends TransactionAwareEntity 
@@ -47,7 +47,7 @@ class DeliveryIndication extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'automatic_decision_reason' => '\WhiteLabelMachineName\Sdk\Model\DeliveryIndicationDecisionReason',
+        'automatic_decision_reason' => '\Wallee\Sdk\Model\DeliveryIndicationDecisionReason',
         'automatically_decided_on' => '\DateTime',
         'completion' => 'int',
         'created_on' => '\DateTime',
@@ -55,9 +55,9 @@ class DeliveryIndication extends TransactionAwareEntity
         'manually_decided_by' => 'int',
         'manually_decided_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\DeliveryIndicationState',
+        'state' => '\Wallee\Sdk\Model\DeliveryIndicationState',
         'timeout_on' => '\DateTime',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction'
+        'transaction' => '\Wallee\Sdk\Model\Transaction'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DeliveryIndication extends TransactionAwareEntity
     /**
      * Gets automatic_decision_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DeliveryIndicationDecisionReason
+     * @return \Wallee\Sdk\Model\DeliveryIndicationDecisionReason
      */
     public function getAutomaticDecisionReason()
     {
@@ -277,7 +277,7 @@ class DeliveryIndication extends TransactionAwareEntity
     /**
      * Sets automatic_decision_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DeliveryIndicationDecisionReason $automatic_decision_reason 
+     * @param \Wallee\Sdk\Model\DeliveryIndicationDecisionReason $automatic_decision_reason 
      *
      * @return $this
      */
@@ -467,7 +467,7 @@ class DeliveryIndication extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DeliveryIndicationState
+     * @return \Wallee\Sdk\Model\DeliveryIndicationState
      */
     public function getState()
     {
@@ -477,7 +477,7 @@ class DeliveryIndication extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DeliveryIndicationState $state The object's current state.
+     * @param \Wallee\Sdk\Model\DeliveryIndicationState $state The object's current state.
      *
      * @return $this
      */
@@ -517,7 +517,7 @@ class DeliveryIndication extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -527,7 +527,7 @@ class DeliveryIndication extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

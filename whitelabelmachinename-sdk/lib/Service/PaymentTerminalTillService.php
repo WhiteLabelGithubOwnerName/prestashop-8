@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminalTillService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalTillService {
@@ -75,10 +75,10 @@ class PaymentTerminalTillService {
 	 * @param int $transaction_id The ID of the transaction which is used to process with the terminal. (required)
 	 * @param int $terminal_id The ID of the terminal which should be used to process the transaction. (required)
 	 * @param string $language The language in which the messages should be rendered in. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Transaction
 	 */
 	public function performTransaction($space_id, $transaction_id, $terminal_id, $language = null) {
 		return $this->performTransactionWithHttpInfo($space_id, $transaction_id, $terminal_id, $language)->getData();
@@ -94,9 +94,9 @@ class PaymentTerminalTillService {
 	 * @param int $transaction_id The ID of the transaction which is used to process with the terminal. (required)
 	 * @param int $terminal_id The ID of the terminal which should be used to process the transaction. (required)
 	 * @param string $language The language in which the messages should be rendered in. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function performTransactionWithHttpInfo($space_id, $transaction_id, $terminal_id, $language = null) {
@@ -158,17 +158,17 @@ class PaymentTerminalTillService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Transaction',
+				'\Wallee\Sdk\Model\Transaction',
 				'/payment-terminal-till/perform-transaction',
                 90
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Transaction', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Transaction', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Transaction',
+                        '\Wallee\Sdk\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class PaymentTerminalTillService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class PaymentTerminalTillService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class PaymentTerminalTillService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class PaymentTerminalTillService {
                 case 543:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,10 +219,10 @@ class PaymentTerminalTillService {
 	 * @param int $transaction_id The ID of the transaction which is used to process with the terminal. (required)
 	 * @param string $terminal_identifier The identifier (aka TID) of the terminal which should be used to process the transaction. (required)
 	 * @param string $language The language in which the messages should be rendered in. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Transaction
 	 */
 	public function performTransactionByIdentifier($space_id, $transaction_id, $terminal_identifier, $language = null) {
 		return $this->performTransactionByIdentifierWithHttpInfo($space_id, $transaction_id, $terminal_identifier, $language)->getData();
@@ -238,9 +238,9 @@ class PaymentTerminalTillService {
 	 * @param int $transaction_id The ID of the transaction which is used to process with the terminal. (required)
 	 * @param string $terminal_identifier The identifier (aka TID) of the terminal which should be used to process the transaction. (required)
 	 * @param string $language The language in which the messages should be rendered in. (optional)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function performTransactionByIdentifierWithHttpInfo($space_id, $transaction_id, $terminal_identifier, $language = null) {
@@ -302,17 +302,17 @@ class PaymentTerminalTillService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Transaction',
+				'\Wallee\Sdk\Model\Transaction',
 				'/payment-terminal-till/perform-transaction-by-identifier',
                 90
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Transaction', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Transaction', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Transaction',
+                        '\Wallee\Sdk\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -320,7 +320,7 @@ class PaymentTerminalTillService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -328,7 +328,7 @@ class PaymentTerminalTillService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -336,7 +336,7 @@ class PaymentTerminalTillService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -344,7 +344,7 @@ class PaymentTerminalTillService {
                 case 543:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

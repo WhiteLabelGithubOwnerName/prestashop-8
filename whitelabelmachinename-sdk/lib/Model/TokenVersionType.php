@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TokenVersionType model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TokenVersionType implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class TokenVersionType implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'description' => 'map[string,string]',
-        'feature' => '\WhiteLabelMachineName\Sdk\Model\Feature',
+        'feature' => '\Wallee\Sdk\Model\Feature',
         'id' => 'int',
         'name' => 'map[string,string]'
     ];
@@ -249,7 +249,7 @@ class TokenVersionType implements ModelInterface, ArrayAccess
     /**
      * Gets feature
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Feature
+     * @return \Wallee\Sdk\Model\Feature
      */
     public function getFeature()
     {
@@ -259,7 +259,7 @@ class TokenVersionType implements ModelInterface, ArrayAccess
     /**
      * Sets feature
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Feature $feature 
+     * @param \Wallee\Sdk\Model\Feature $feature 
      *
      * @return $this
      */

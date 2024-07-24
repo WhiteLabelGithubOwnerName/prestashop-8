@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * Account model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Account implements ModelInterface, ArrayAccess
@@ -58,13 +58,13 @@ class Account implements ModelInterface, ArrayAccess
         'id' => 'int',
         'last_modified_date' => '\DateTime',
         'name' => 'string',
-        'parent_account' => '\WhiteLabelMachineName\Sdk\Model\Account',
+        'parent_account' => '\Wallee\Sdk\Model\Account',
         'planned_purge_date' => '\DateTime',
         'restricted_active' => 'bool',
         'scope' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\AccountState',
+        'state' => '\Wallee\Sdk\Model\AccountState',
         'subaccount_limit' => 'int',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\AccountType',
+        'type' => '\Wallee\Sdk\Model\AccountType',
         'version' => 'int'
     ];
 
@@ -555,7 +555,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets parent_account
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Account
+     * @return \Wallee\Sdk\Model\Account
      */
     public function getParentAccount()
     {
@@ -565,7 +565,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets parent_account
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Account $parent_account The parent account responsible for administering this account.
+     * @param \Wallee\Sdk\Model\Account $parent_account The parent account responsible for administering this account.
      *
      * @return $this
      */
@@ -655,7 +655,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\AccountState
+     * @return \Wallee\Sdk\Model\AccountState
      */
     public function getState()
     {
@@ -665,7 +665,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\AccountState $state The object's current state.
+     * @param \Wallee\Sdk\Model\AccountState $state The object's current state.
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\AccountType
+     * @return \Wallee\Sdk\Model\AccountType
      */
     public function getType()
     {
@@ -715,7 +715,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\AccountType $type The account's type which defines its role and capabilities.
+     * @param \Wallee\Sdk\Model\AccountType $type The account's type which defines its role and capabilities.
      *
      * @return $this
      */

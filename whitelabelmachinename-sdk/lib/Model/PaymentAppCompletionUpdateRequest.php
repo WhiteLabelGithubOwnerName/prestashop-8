@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAppCompletionUpdateRequest model
  *
  * @category    Class
  * @description The completion update request allows to change the state of a completion. The completion must be linked with a processor that was created by the payment Web App that invokes the operation.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAppCompletionUpdateRequest implements ModelInterface, ArrayAccess
@@ -52,7 +52,7 @@ class PaymentAppCompletionUpdateRequest implements ModelInterface, ArrayAccess
         'completion_id' => 'int',
         'failure_reason_id' => 'int',
         'reference' => 'string',
-        'target_state' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionTargetState'
+        'target_state' => '\Wallee\Sdk\Model\PaymentAppCompletionTargetState'
     ];
 
     /**
@@ -307,7 +307,7 @@ class PaymentAppCompletionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets target_state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionTargetState
+     * @return \Wallee\Sdk\Model\PaymentAppCompletionTargetState
      */
     public function getTargetState()
     {
@@ -317,7 +317,7 @@ class PaymentAppCompletionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets target_state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionTargetState $target_state The target state defines the state into which the completion should be switched into. Once the completion changed the state it will not be possible to change it again.
+     * @param \Wallee\Sdk\Model\PaymentAppCompletionTargetState $target_state The target state defines the state into which the completion should be switched into. Once the completion changed the state it will not be possible to change it again.
      *
      * @return $this
      */

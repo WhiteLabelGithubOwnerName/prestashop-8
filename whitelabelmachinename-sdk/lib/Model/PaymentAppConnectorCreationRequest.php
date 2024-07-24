@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAppConnectorCreationRequest model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAppConnectorCreationRequest implements ModelInterface, ArrayAccess
@@ -50,13 +50,13 @@ class PaymentAppConnectorCreationRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'authorization_timeout_in_minutes' => 'int',
-        'completion_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionConfigurationCreate',
+        'completion_configuration' => '\Wallee\Sdk\Model\PaymentAppCompletionConfigurationCreate',
         'connector' => 'int',
         'external_id' => 'string',
         'name' => 'string',
         'payment_page_endpoint' => 'string',
         'processor_external_id' => 'string',
-        'refund_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppRefundConfigurationCreate'
+        'refund_configuration' => '\Wallee\Sdk\Model\PaymentAppRefundConfigurationCreate'
     ];
 
     /**
@@ -315,7 +315,7 @@ class PaymentAppConnectorCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets completion_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionConfigurationCreate
+     * @return \Wallee\Sdk\Model\PaymentAppCompletionConfigurationCreate
      */
     public function getCompletionConfiguration()
     {
@@ -325,7 +325,7 @@ class PaymentAppConnectorCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets completion_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionConfigurationCreate $completion_configuration The completion configuration allows the connector to support deferred completions on a transaction. If it is not provided the connector will not process transactions in deferred mode.
+     * @param \Wallee\Sdk\Model\PaymentAppCompletionConfigurationCreate $completion_configuration The completion configuration allows the connector to support deferred completions on a transaction. If it is not provided the connector will not process transactions in deferred mode.
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class PaymentAppConnectorCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets refund_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundConfigurationCreate
+     * @return \Wallee\Sdk\Model\PaymentAppRefundConfigurationCreate
      */
     public function getRefundConfiguration()
     {
@@ -493,7 +493,7 @@ class PaymentAppConnectorCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets refund_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundConfigurationCreate $refund_configuration The refund configuration allows the connector to support refunds on transactions. In case no refund configuration is provided the connector will not support refunds.
+     * @param \Wallee\Sdk\Model\PaymentAppRefundConfigurationCreate $refund_configuration The refund configuration allows the connector to support refunds on transactions. In case no refund configuration is provided the connector will not support refunds.
      *
      * @return $this
      */

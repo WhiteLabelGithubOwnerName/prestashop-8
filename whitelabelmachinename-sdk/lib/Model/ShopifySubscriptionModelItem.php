@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionModelItem model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
         'product_id' => 'int',
         'quantity' => 'float',
         'recalculate_price' => 'bool',
-        'tax_lines' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelTaxLine[]'
+        'tax_lines' => '\Wallee\Sdk\Model\ShopifySubscriptionModelTaxLine[]'
     ];
 
     /**
@@ -331,7 +331,7 @@ class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
     /**
      * Gets tax_lines
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelTaxLine[]
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelTaxLine[]
      */
     public function getTaxLines()
     {
@@ -341,7 +341,7 @@ class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_lines
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelTaxLine[] $tax_lines 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelTaxLine[] $tax_lines 
      *
      * @return $this
      */

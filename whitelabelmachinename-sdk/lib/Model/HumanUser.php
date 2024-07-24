@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * HumanUser model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class HumanUser implements ModelInterface, ArrayAccess
@@ -60,7 +60,7 @@ class HumanUser implements ModelInterface, ArrayAccess
         'scope' => 'int',
         'time_zone' => 'string',
         'two_factor_enabled' => 'bool',
-        'two_factor_type' => '\WhiteLabelMachineName\Sdk\Model\TwoFactorAuthenticationType'
+        'two_factor_type' => '\Wallee\Sdk\Model\TwoFactorAuthenticationType'
     ];
 
     /**
@@ -587,7 +587,7 @@ class HumanUser implements ModelInterface, ArrayAccess
     /**
      * Gets two_factor_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TwoFactorAuthenticationType
+     * @return \Wallee\Sdk\Model\TwoFactorAuthenticationType
      */
     public function getTwoFactorType()
     {
@@ -597,7 +597,7 @@ class HumanUser implements ModelInterface, ArrayAccess
     /**
      * Sets two_factor_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TwoFactorAuthenticationType $two_factor_type The type of two-factor authentication that is enabled for the user.
+     * @param \Wallee\Sdk\Model\TwoFactorAuthenticationType $two_factor_type The type of two-factor authentication that is enabled for the user.
      *
      * @return $this
      */

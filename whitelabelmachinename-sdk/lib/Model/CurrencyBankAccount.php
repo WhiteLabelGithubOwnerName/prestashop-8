@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * CurrencyBankAccount model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CurrencyBankAccount implements ModelInterface, ArrayAccess
@@ -49,9 +49,9 @@ class CurrencyBankAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bank_account' => '\WhiteLabelMachineName\Sdk\Model\BankAccount',
+        'bank_account' => '\Wallee\Sdk\Model\BankAccount',
         'currency' => 'string',
-        'environment' => '\WhiteLabelMachineName\Sdk\Model\BankAccountEnvironment',
+        'environment' => '\Wallee\Sdk\Model\BankAccountEnvironment',
         'id' => 'int',
         'linked_space_id' => 'int',
         'version' => 'int'
@@ -238,7 +238,7 @@ class CurrencyBankAccount implements ModelInterface, ArrayAccess
     /**
      * Gets bank_account
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankAccount
+     * @return \Wallee\Sdk\Model\BankAccount
      */
     public function getBankAccount()
     {
@@ -248,7 +248,7 @@ class CurrencyBankAccount implements ModelInterface, ArrayAccess
     /**
      * Sets bank_account
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankAccount $bank_account 
+     * @param \Wallee\Sdk\Model\BankAccount $bank_account 
      *
      * @return $this
      */
@@ -288,7 +288,7 @@ class CurrencyBankAccount implements ModelInterface, ArrayAccess
     /**
      * Gets environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankAccountEnvironment
+     * @return \Wallee\Sdk\Model\BankAccountEnvironment
      */
     public function getEnvironment()
     {
@@ -298,7 +298,7 @@ class CurrencyBankAccount implements ModelInterface, ArrayAccess
     /**
      * Sets environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankAccountEnvironment $environment 
+     * @param \Wallee\Sdk\Model\BankAccountEnvironment $environment 
      *
      * @return $this
      */

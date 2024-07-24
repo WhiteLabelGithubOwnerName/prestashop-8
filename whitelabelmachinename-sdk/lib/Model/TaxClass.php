@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TaxClass model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TaxClass implements ModelInterface, ArrayAccess
@@ -53,8 +53,7 @@ class TaxClass implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'space_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -68,7 +67,6 @@ class TaxClass implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int64',
         'name' => null,
         'planned_purge_date' => 'date-time',
-        'space_id' => 'int64',
         'state' => null,
         'version' => 'int32'
     ];
@@ -84,7 +82,6 @@ class TaxClass implements ModelInterface, ArrayAccess
         'linked_space_id' => 'linkedSpaceId',
         'name' => 'name',
         'planned_purge_date' => 'plannedPurgeDate',
-        'space_id' => 'spaceId',
         'state' => 'state',
         'version' => 'version'
     ];
@@ -99,7 +96,6 @@ class TaxClass implements ModelInterface, ArrayAccess
         'linked_space_id' => 'setLinkedSpaceId',
         'name' => 'setName',
         'planned_purge_date' => 'setPlannedPurgeDate',
-        'space_id' => 'setSpaceId',
         'state' => 'setState',
         'version' => 'setVersion'
     ];
@@ -114,7 +110,6 @@ class TaxClass implements ModelInterface, ArrayAccess
         'linked_space_id' => 'getLinkedSpaceId',
         'name' => 'getName',
         'planned_purge_date' => 'getPlannedPurgeDate',
-        'space_id' => 'getSpaceId',
         'state' => 'getState',
         'version' => 'getVersion'
     ];
@@ -144,8 +139,6 @@ class TaxClass implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         
         $this->container['planned_purge_date'] = isset($data['planned_purge_date']) ? $data['planned_purge_date'] : null;
-        
-        $this->container['space_id'] = isset($data['space_id']) ? $data['space_id'] : null;
         
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         
@@ -309,7 +302,7 @@ class TaxClass implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name The tax class name is used internally to identify the tax class in administrative interfaces. For example it is used within search fields and hence it should be distinct and descriptive.
+     * @param string $name The name used to identify the tax class.
      *
      * @return $this
      */
@@ -351,34 +344,9 @@ class TaxClass implements ModelInterface, ArrayAccess
     
 
     /**
-     * Gets space_id
-     *
-     * @return int
-     */
-    public function getSpaceId()
-    {
-        return $this->container['space_id'];
-    }
-
-    /**
-     * Sets space_id
-     *
-     * @param int $space_id 
-     *
-     * @return $this
-     */
-    public function setSpaceId($space_id)
-    {
-        $this->container['space_id'] = $space_id;
-
-        return $this;
-    }
-    
-
-    /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -388,7 +356,7 @@ class TaxClass implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

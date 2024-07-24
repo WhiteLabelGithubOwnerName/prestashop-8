@@ -1,21 +1,21 @@
 {
-    "name": "whitelabelmachinename/sdk",
-    "version": "4.2.0",
-	"description": "WhiteLabelName SDK for PHP",
+    "name": "wallee/sdk",
+    "version": "4.4.0",
+	"description": "wallee SDK for PHP",
 	"keywords": [
-		"whitelabelmachinename",
+		"wallee",
 		"payment",
 		"php",
 		"sdk",
 		"api"
 	],
-	"homepage": "http://github.com/WhiteLabelGithubOwnerName/php-sdk",
+	"homepage": "http://github.com/wallee-payment/php-sdk",
 	"license": "Apache-2.0",
 	"authors": [
 		{
-			"name": "WhiteLabelMachineName",
-			"email": "support@whitelabel.com",
-			"homepage": "https://whitelabel-website.com"
+			"name": "wallee AG",
+			"email": "info@wallee.com",
+			"homepage": "https://www.wallee.com"
 		}
 	],
 	"require": {
@@ -27,9 +27,9 @@
 		"phpunit/phpunit": "~8"
 	},
 	"autoload": {
-		"psr-4": { "WhiteLabelMachineName\\Sdk\\" : "lib/" }
+		"psr-4": { "Wallee\\Sdk\\" : "lib/" }
 	},
 	"autoload-dev": {
-		"psr-4": { "WhiteLabelMachineName\\Sdk\\" : "test/" }
+		"psr-4": { "Wallee\\Sdk\\" : "test/" }
 	}
 }

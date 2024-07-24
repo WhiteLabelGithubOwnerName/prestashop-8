@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentLink model
  *
  * @category    Class
  * @description The payment link defines an URL to automatically create transactions.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentLink implements ModelInterface, ArrayAccess
@@ -49,23 +49,23 @@ class PaymentLink implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'allowed_payment_method_configurations' => '\WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]',
+        'allowed_payment_method_configurations' => '\Wallee\Sdk\Model\PaymentMethodConfiguration[]',
         'applied_space_view' => 'int',
         'available_from' => '\DateTime',
         'available_until' => '\DateTime',
-        'billing_address_handling_mode' => '\WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode',
+        'billing_address_handling_mode' => '\Wallee\Sdk\Model\PaymentLinkAddressHandlingMode',
         'currency' => 'string',
         'external_id' => 'string',
         'id' => 'int',
         'language' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
+        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
         'linked_space_id' => 'int',
         'maximal_number_of_transactions' => 'int',
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'protection_mode' => '\WhiteLabelMachineName\Sdk\Model\PaymentLinkProtectionMode',
-        'shipping_address_handling_mode' => '\WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'protection_mode' => '\Wallee\Sdk\Model\PaymentLinkProtectionMode',
+        'shipping_address_handling_mode' => '\Wallee\Sdk\Model\PaymentLinkAddressHandlingMode',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'url' => 'string',
         'version' => 'int'
     ];
@@ -333,7 +333,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_payment_method_configurations
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]
+     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration[]
      */
     public function getAllowedPaymentMethodConfigurations()
     {
@@ -343,7 +343,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_method_configurations
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations The allowed payment method configurations restrict the payment methods which can be used with this payment link.
+     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations The allowed payment method configurations restrict the payment methods which can be used with this payment link.
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address_handling_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode
+     * @return \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode
      */
     public function getBillingAddressHandlingMode()
     {
@@ -443,7 +443,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address_handling_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode $billing_address_handling_mode The billing address handling mode controls if the address is collected or not and how it is collected.
+     * @param \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode $billing_address_handling_mode The billing address handling mode controls if the address is collected or not and how it is collected.
      *
      * @return $this
      */
@@ -558,7 +558,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -568,7 +568,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $line_items The line items allows to define the line items for this payment link. When the line items are defined they cannot be overridden through the request parameters. If no amount for the payment link is defined, the additional checkout page to enter the amount is shown to the consumer.
+     * @param \Wallee\Sdk\Model\LineItem[] $line_items The line items allows to define the line items for this payment link. When the line items are defined they cannot be overridden through the request parameters. If no amount for the payment link is defined, the additional checkout page to enter the amount is shown to the consumer.
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Gets protection_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentLinkProtectionMode
+     * @return \Wallee\Sdk\Model\PaymentLinkProtectionMode
      */
     public function getProtectionMode()
     {
@@ -697,7 +697,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Sets protection_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentLinkProtectionMode $protection_mode The protection mode determines if the payment link is protected against tampering and in what way.
+     * @param \Wallee\Sdk\Model\PaymentLinkProtectionMode $protection_mode The protection mode determines if the payment link is protected against tampering and in what way.
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address_handling_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode
+     * @return \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode
      */
     public function getShippingAddressHandlingMode()
     {
@@ -722,7 +722,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address_handling_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode $shipping_address_handling_mode The shipping address handling mode controls if the address is collected or not and how it is collected.
+     * @param \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode $shipping_address_handling_mode The shipping address handling mode controls if the address is collected or not and how it is collected.
      *
      * @return $this
      */
@@ -737,7 +737,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -747,7 +747,7 @@ class PaymentLink implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

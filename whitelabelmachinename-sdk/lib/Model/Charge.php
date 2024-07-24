@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * Charge model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Charge extends TransactionAwareEntity 
@@ -48,15 +48,15 @@ class Charge extends TransactionAwareEntity
       */
     protected static $swaggerTypes = [
         'created_on' => '\DateTime',
-        'failure_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
+        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
         'language' => 'string',
         'planned_purge_date' => '\DateTime',
         'space_view_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ChargeState',
+        'state' => '\Wallee\Sdk\Model\ChargeState',
         'time_zone' => 'string',
         'timeout_on' => '\DateTime',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\ChargeType',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
+        'type' => '\Wallee\Sdk\Model\ChargeType',
         'user_failure_message' => 'string',
         'version' => 'int'
     ];
@@ -299,7 +299,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -309,7 +309,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $failure_reason 
+     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeState
+     * @return \Wallee\Sdk\Model\ChargeState
      */
     public function getState()
     {
@@ -409,7 +409,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ChargeState $state The object's current state.
      *
      * @return $this
      */
@@ -474,7 +474,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -484,7 +484,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeType
+     * @return \Wallee\Sdk\Model\ChargeType
      */
     public function getType()
     {
@@ -509,7 +509,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeType $type 
+     * @param \Wallee\Sdk\Model\ChargeType $type 
      *
      * @return $this
      */

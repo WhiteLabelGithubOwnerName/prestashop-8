@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentMethodConfiguration model
  *
  * @category    Class
  * @description The payment method configuration builds the base to connect with different payment method connectors.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
@@ -49,13 +49,13 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data_collection_type' => '\WhiteLabelMachineName\Sdk\Model\DataCollectionType',
+        'data_collection_type' => '\Wallee\Sdk\Model\DataCollectionType',
         'description' => 'map[string,string]',
         'id' => 'int',
-        'image_resource_path' => '\WhiteLabelMachineName\Sdk\Model\ModelResourcePath',
+        'image_resource_path' => '\Wallee\Sdk\Model\ModelResourcePath',
         'linked_space_id' => 'int',
         'name' => 'string',
-        'one_click_payment_mode' => '\WhiteLabelMachineName\Sdk\Model\OneClickPaymentMode',
+        'one_click_payment_mode' => '\Wallee\Sdk\Model\OneClickPaymentMode',
         'payment_method' => 'int',
         'planned_purge_date' => '\DateTime',
         'resolved_description' => 'map[string,string]',
@@ -63,7 +63,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
         'resolved_title' => 'map[string,string]',
         'sort_order' => 'int',
         'space_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'title' => 'map[string,string]',
         'version' => 'int'
     ];
@@ -319,7 +319,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets data_collection_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DataCollectionType
+     * @return \Wallee\Sdk\Model\DataCollectionType
      */
     public function getDataCollectionType()
     {
@@ -329,7 +329,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets data_collection_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DataCollectionType $data_collection_type The data collection type specifies how the payment information is collected.
+     * @param \Wallee\Sdk\Model\DataCollectionType $data_collection_type The data collection type specifies how the payment information is collected.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets image_resource_path
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ModelResourcePath
+     * @return \Wallee\Sdk\Model\ModelResourcePath
      */
     public function getImageResourcePath()
     {
@@ -404,7 +404,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets image_resource_path
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ModelResourcePath $image_resource_path The resource path to a custom image for the payment method which is displayed to the customer.
+     * @param \Wallee\Sdk\Model\ModelResourcePath $image_resource_path The resource path to a custom image for the payment method which is displayed to the customer.
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets one_click_payment_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\OneClickPaymentMode
+     * @return \Wallee\Sdk\Model\OneClickPaymentMode
      */
     public function getOneClickPaymentMode()
     {
@@ -483,7 +483,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets one_click_payment_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\OneClickPaymentMode $one_click_payment_mode The one-click payment mode determines whether the customer can save their payment details for later payments.
+     * @param \Wallee\Sdk\Model\OneClickPaymentMode $one_click_payment_mode The one-click payment mode determines whether the customer can save their payment details for later payments.
      *
      * @return $this
      */
@@ -673,7 +673,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -683,7 +683,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

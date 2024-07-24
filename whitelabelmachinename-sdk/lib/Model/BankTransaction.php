@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * BankTransaction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class BankTransaction implements ModelInterface, ArrayAccess
@@ -49,12 +49,12 @@ class BankTransaction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'adjustments' => '\WhiteLabelMachineName\Sdk\Model\PaymentAdjustment[]',
+        'adjustments' => '\Wallee\Sdk\Model\PaymentAdjustment[]',
         'created_by' => 'int',
         'created_on' => '\DateTime',
-        'currency_bank_account' => '\WhiteLabelMachineName\Sdk\Model\CurrencyBankAccount',
+        'currency_bank_account' => '\Wallee\Sdk\Model\CurrencyBankAccount',
         'external_id' => 'string',
-        'flow_direction' => '\WhiteLabelMachineName\Sdk\Model\BankTransactionFlowDirection',
+        'flow_direction' => '\Wallee\Sdk\Model\BankTransactionFlowDirection',
         'id' => 'int',
         'linked_space_id' => 'int',
         'payment_date' => '\DateTime',
@@ -62,7 +62,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
         'posting_amount' => 'float',
         'reference' => 'string',
         'source' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\BankTransactionState',
+        'state' => '\Wallee\Sdk\Model\BankTransactionState',
         'total_adjustment_amount_including_tax' => 'float',
         'type' => 'int',
         'value_amount' => 'float',
@@ -337,7 +337,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets adjustments
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAdjustment[]
+     * @return \Wallee\Sdk\Model\PaymentAdjustment[]
      */
     public function getAdjustments()
     {
@@ -347,7 +347,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets adjustments
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAdjustment[] $adjustments The adjustments applied on this bank transaction.
+     * @param \Wallee\Sdk\Model\PaymentAdjustment[] $adjustments The adjustments applied on this bank transaction.
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets currency_bank_account
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CurrencyBankAccount
+     * @return \Wallee\Sdk\Model\CurrencyBankAccount
      */
     public function getCurrencyBankAccount()
     {
@@ -422,7 +422,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets currency_bank_account
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CurrencyBankAccount $currency_bank_account The currency bank account which is used to handle money flow.
+     * @param \Wallee\Sdk\Model\CurrencyBankAccount $currency_bank_account The currency bank account which is used to handle money flow.
      *
      * @return $this
      */
@@ -469,7 +469,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets flow_direction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankTransactionFlowDirection
+     * @return \Wallee\Sdk\Model\BankTransactionFlowDirection
      */
     public function getFlowDirection()
     {
@@ -479,7 +479,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets flow_direction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankTransactionFlowDirection $flow_direction 
+     * @param \Wallee\Sdk\Model\BankTransactionFlowDirection $flow_direction 
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankTransactionState
+     * @return \Wallee\Sdk\Model\BankTransactionState
      */
     public function getState()
     {
@@ -679,7 +679,7 @@ class BankTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankTransactionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\BankTransactionState $state The object's current state.
      *
      * @return $this
      */

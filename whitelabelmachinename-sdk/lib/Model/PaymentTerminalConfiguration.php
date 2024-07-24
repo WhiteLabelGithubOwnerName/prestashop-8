@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminalConfiguration model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalConfiguration implements ModelInterface, ArrayAccess
@@ -53,8 +53,8 @@ class PaymentTerminalConfiguration implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfigurationState',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalType',
+        'state' => '\Wallee\Sdk\Model\PaymentTerminalConfigurationState',
+        'type' => '\Wallee\Sdk\Model\PaymentTerminalType',
         'version' => 'int'
     ];
 
@@ -353,7 +353,7 @@ class PaymentTerminalConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfigurationState
+     * @return \Wallee\Sdk\Model\PaymentTerminalConfigurationState
      */
     public function getState()
     {
@@ -363,7 +363,7 @@ class PaymentTerminalConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalConfigurationState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentTerminalConfigurationState $state The object's current state.
      *
      * @return $this
      */
@@ -378,7 +378,7 @@ class PaymentTerminalConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalType
+     * @return \Wallee\Sdk\Model\PaymentTerminalType
      */
     public function getType()
     {
@@ -388,7 +388,7 @@ class PaymentTerminalConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalType $type The type of payment terminals that this configuration can be assigned to.
+     * @param \Wallee\Sdk\Model\PaymentTerminalType $type The type of payment terminals that this configuration can be assigned to.
      *
      * @return $this
      */

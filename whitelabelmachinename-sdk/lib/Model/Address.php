@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * Address model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Address implements ModelInterface, ArrayAccess
@@ -56,9 +56,9 @@ class Address implements ModelInterface, ArrayAccess
         'dependent_locality' => 'string',
         'email_address' => 'string',
         'family_name' => 'string',
-        'gender' => '\WhiteLabelMachineName\Sdk\Model\Gender',
+        'gender' => '\Wallee\Sdk\Model\Gender',
         'given_name' => 'string',
-        'legal_organization_form' => '\WhiteLabelMachineName\Sdk\Model\LegalOrganizationForm',
+        'legal_organization_form' => '\Wallee\Sdk\Model\LegalOrganizationForm',
         'mobile_phone_number' => 'string',
         'organization_name' => 'string',
         'phone_number' => 'string',
@@ -591,7 +591,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets gender
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Gender
+     * @return \Wallee\Sdk\Model\Gender
      */
     public function getGender()
     {
@@ -601,7 +601,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets gender
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Gender $gender The gender.
+     * @param \Wallee\Sdk\Model\Gender $gender The gender.
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets legal_organization_form
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LegalOrganizationForm
+     * @return \Wallee\Sdk\Model\LegalOrganizationForm
      */
     public function getLegalOrganizationForm()
     {
@@ -655,7 +655,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets legal_organization_form
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LegalOrganizationForm $legal_organization_form The legal form of the organization.
+     * @param \Wallee\Sdk\Model\LegalOrganizationForm $legal_organization_form The legal form of the organization.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * RefundBankTransaction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RefundBankTransaction extends TransactionAwareEntity 
@@ -47,9 +47,9 @@ class RefundBankTransaction extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bank_transaction' => '\WhiteLabelMachineName\Sdk\Model\BankTransaction',
+        'bank_transaction' => '\Wallee\Sdk\Model\BankTransaction',
         'language' => 'string',
-        'refund' => '\WhiteLabelMachineName\Sdk\Model\Refund',
+        'refund' => '\Wallee\Sdk\Model\Refund',
         'refund_currency_amount' => 'float',
         'refund_currency_value_amount' => 'float',
         'space_view_id' => 'int',
@@ -239,7 +239,7 @@ class RefundBankTransaction extends TransactionAwareEntity
     /**
      * Gets bank_transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankTransaction
+     * @return \Wallee\Sdk\Model\BankTransaction
      */
     public function getBankTransaction()
     {
@@ -249,7 +249,7 @@ class RefundBankTransaction extends TransactionAwareEntity
     /**
      * Sets bank_transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankTransaction $bank_transaction 
+     * @param \Wallee\Sdk\Model\BankTransaction $bank_transaction 
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class RefundBankTransaction extends TransactionAwareEntity
     /**
      * Gets refund
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Refund
+     * @return \Wallee\Sdk\Model\Refund
      */
     public function getRefund()
     {
@@ -299,7 +299,7 @@ class RefundBankTransaction extends TransactionAwareEntity
     /**
      * Sets refund
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Refund $refund 
+     * @param \Wallee\Sdk\Model\Refund $refund 
      *
      * @return $this
      */

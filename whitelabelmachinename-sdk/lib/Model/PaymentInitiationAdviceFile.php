@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentInitiationAdviceFile model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentInitiationAdviceFile implements ModelInterface, ArrayAccess
@@ -57,8 +57,8 @@ class PaymentInitiationAdviceFile implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'name' => 'string',
         'processed_on' => '\DateTime',
-        'processor' => '\WhiteLabelMachineName\Sdk\Model\PaymentProcessor',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentInitiationAdviceFileState'
+        'processor' => '\Wallee\Sdk\Model\PaymentProcessor',
+        'state' => '\Wallee\Sdk\Model\PaymentInitiationAdviceFileState'
     ];
 
     /**
@@ -466,7 +466,7 @@ class PaymentInitiationAdviceFile implements ModelInterface, ArrayAccess
     /**
      * Gets processor
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentProcessor
+     * @return \Wallee\Sdk\Model\PaymentProcessor
      */
     public function getProcessor()
     {
@@ -476,7 +476,7 @@ class PaymentInitiationAdviceFile implements ModelInterface, ArrayAccess
     /**
      * Sets processor
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentProcessor $processor 
+     * @param \Wallee\Sdk\Model\PaymentProcessor $processor 
      *
      * @return $this
      */
@@ -491,7 +491,7 @@ class PaymentInitiationAdviceFile implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentInitiationAdviceFileState
+     * @return \Wallee\Sdk\Model\PaymentInitiationAdviceFileState
      */
     public function getState()
     {
@@ -501,7 +501,7 @@ class PaymentInitiationAdviceFile implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentInitiationAdviceFileState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentInitiationAdviceFileState $state The object's current state.
      *
      * @return $this
      */

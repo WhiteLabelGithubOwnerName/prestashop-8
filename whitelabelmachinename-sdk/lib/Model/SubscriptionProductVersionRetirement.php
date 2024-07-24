@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionProductVersionRetirement model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAccess
@@ -52,9 +52,9 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
         'created_on' => '\DateTime',
         'id' => 'int',
         'linked_space_id' => 'int',
-        'product_version' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion',
-        'respect_terminiation_periods_enabled' => 'bool',
-        'target_product' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProduct',
+        'product_version' => '\Wallee\Sdk\Model\SubscriptionProductVersion',
+        'respect_termination_periods' => 'bool',
+        'target_product' => '\Wallee\Sdk\Model\SubscriptionProduct',
         'version' => 'int'
     ];
 
@@ -68,7 +68,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
         'id' => 'int64',
         'linked_space_id' => 'int64',
         'product_version' => null,
-        'respect_terminiation_periods_enabled' => null,
+        'respect_termination_periods' => null,
         'target_product' => null,
         'version' => 'int32'
     ];
@@ -84,7 +84,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
         'id' => 'id',
         'linked_space_id' => 'linkedSpaceId',
         'product_version' => 'productVersion',
-        'respect_terminiation_periods_enabled' => 'respectTerminiationPeriodsEnabled',
+        'respect_termination_periods' => 'respectTerminationPeriods',
         'target_product' => 'targetProduct',
         'version' => 'version'
     ];
@@ -99,7 +99,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
         'id' => 'setId',
         'linked_space_id' => 'setLinkedSpaceId',
         'product_version' => 'setProductVersion',
-        'respect_terminiation_periods_enabled' => 'setRespectTerminiationPeriodsEnabled',
+        'respect_termination_periods' => 'setRespectTerminationPeriods',
         'target_product' => 'setTargetProduct',
         'version' => 'setVersion'
     ];
@@ -114,7 +114,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
         'id' => 'getId',
         'linked_space_id' => 'getLinkedSpaceId',
         'product_version' => 'getProductVersion',
-        'respect_terminiation_periods_enabled' => 'getRespectTerminiationPeriodsEnabled',
+        'respect_termination_periods' => 'getRespectTerminationPeriods',
         'target_product' => 'getTargetProduct',
         'version' => 'getVersion'
     ];
@@ -145,7 +145,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
         
         $this->container['product_version'] = isset($data['product_version']) ? $data['product_version'] : null;
         
-        $this->container['respect_terminiation_periods_enabled'] = isset($data['respect_terminiation_periods_enabled']) ? $data['respect_terminiation_periods_enabled'] : null;
+        $this->container['respect_termination_periods'] = isset($data['respect_termination_periods']) ? $data['respect_termination_periods'] : null;
         
         $this->container['target_product'] = isset($data['target_product']) ? $data['target_product'] : null;
         
@@ -320,7 +320,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
     /**
      * Gets product_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion
+     * @return \Wallee\Sdk\Model\SubscriptionProductVersion
      */
     public function getProductVersion()
     {
@@ -330,7 +330,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
     /**
      * Sets product_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion $product_version 
+     * @param \Wallee\Sdk\Model\SubscriptionProductVersion $product_version The product version that is to be retired.
      *
      * @return $this
      */
@@ -343,25 +343,25 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
     
 
     /**
-     * Gets respect_terminiation_periods_enabled
+     * Gets respect_termination_periods
      *
      * @return bool
      */
-    public function getRespectTerminiationPeriodsEnabled()
+    public function getRespectTerminationPeriods()
     {
-        return $this->container['respect_terminiation_periods_enabled'];
+        return $this->container['respect_termination_periods'];
     }
 
     /**
-     * Sets respect_terminiation_periods_enabled
+     * Sets respect_termination_periods
      *
-     * @param bool $respect_terminiation_periods_enabled 
+     * @param bool $respect_termination_periods Whether the subscriptions' termination periods should be respected.
      *
      * @return $this
      */
-    public function setRespectTerminiationPeriodsEnabled($respect_terminiation_periods_enabled)
+    public function setRespectTerminationPeriods($respect_termination_periods)
     {
-        $this->container['respect_terminiation_periods_enabled'] = $respect_terminiation_periods_enabled;
+        $this->container['respect_termination_periods'] = $respect_termination_periods;
 
         return $this;
     }
@@ -370,7 +370,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
     /**
      * Gets target_product
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProduct
+     * @return \Wallee\Sdk\Model\SubscriptionProduct
      */
     public function getTargetProduct()
     {
@@ -380,7 +380,7 @@ class SubscriptionProductVersionRetirement implements ModelInterface, ArrayAcces
     /**
      * Sets target_product
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProduct $target_product When a target product is not chosen, all customers with the retired product will be terminated.
+     * @param \Wallee\Sdk\Model\SubscriptionProduct $target_product The product to which the subscriptions with the retiring product version are to be migrated. If none is defined, the subscriptions are terminated.
      *
      * @return $this
      */

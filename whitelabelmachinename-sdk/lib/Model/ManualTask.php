@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ManualTask model
  *
  * @category    Class
  * @description A manual task requires the manual intervention of a human.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ManualTask implements ModelInterface, ArrayAccess
@@ -56,7 +56,7 @@ class ManualTask implements ModelInterface, ArrayAccess
         'id' => 'int',
         'linked_space_id' => 'int',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ManualTaskState',
+        'state' => '\Wallee\Sdk\Model\ManualTaskState',
         'type' => 'int'
     ];
 
@@ -434,7 +434,7 @@ class ManualTask implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ManualTaskState
+     * @return \Wallee\Sdk\Model\ManualTaskState
      */
     public function getState()
     {
@@ -444,7 +444,7 @@ class ManualTask implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ManualTaskState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ManualTaskState $state The object's current state.
      *
      * @return $this
      */

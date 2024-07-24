@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InstallmentPaymentSlice model
  *
  * @category    Class
  * @description An installment payment slice represents a single transaction of money from the buyer to the merchant.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InstallmentPaymentSlice extends TransactionAwareEntity 
@@ -49,11 +49,11 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     protected static $swaggerTypes = [
         'charge_on' => '\DateTime',
         'created_on' => '\DateTime',
-        'installment_payment' => '\WhiteLabelMachineName\Sdk\Model\InstallmentPayment',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
+        'installment_payment' => '\Wallee\Sdk\Model\InstallmentPayment',
+        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\InstallmentPaymentSliceState',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
+        'state' => '\Wallee\Sdk\Model\InstallmentPaymentSliceState',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -296,7 +296,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Gets installment_payment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InstallmentPayment
+     * @return \Wallee\Sdk\Model\InstallmentPayment
      */
     public function getInstallmentPayment()
     {
@@ -306,7 +306,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Sets installment_payment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InstallmentPayment $installment_payment 
+     * @param \Wallee\Sdk\Model\InstallmentPayment $installment_payment 
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -331,7 +331,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $line_items 
+     * @param \Wallee\Sdk\Model\LineItem[] $line_items 
      *
      * @return $this
      */
@@ -371,7 +371,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InstallmentPaymentSliceState
+     * @return \Wallee\Sdk\Model\InstallmentPaymentSliceState
      */
     public function getState()
     {
@@ -381,7 +381,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InstallmentPaymentSliceState $state The object's current state.
+     * @param \Wallee\Sdk\Model\InstallmentPaymentSliceState $state The object's current state.
      *
      * @return $this
      */
@@ -396,7 +396,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -406,7 +406,7 @@ class InstallmentPaymentSlice extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

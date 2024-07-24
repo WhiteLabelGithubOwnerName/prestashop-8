@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * LegalOrganizationForm model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class LegalOrganizationForm implements ModelInterface, ArrayAccess
@@ -50,10 +50,10 @@ class LegalOrganizationForm implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'country' => 'string',
-        'description' => '\WhiteLabelMachineName\Sdk\Model\LocalizedString[]',
+        'description' => '\Wallee\Sdk\Model\LocalizedString[]',
         'english_description' => 'string',
         'id' => 'int',
-        'shortcut' => '\WhiteLabelMachineName\Sdk\Model\LocalizedString[]'
+        'shortcut' => '\Wallee\Sdk\Model\LocalizedString[]'
     ];
 
     /**
@@ -256,7 +256,7 @@ class LegalOrganizationForm implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LocalizedString[]
+     * @return \Wallee\Sdk\Model\LocalizedString[]
      */
     public function getDescription()
     {
@@ -266,7 +266,7 @@ class LegalOrganizationForm implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LocalizedString[] $description The localized descriptions of the legal organization form.
+     * @param \Wallee\Sdk\Model\LocalizedString[] $description The localized descriptions of the legal organization form.
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class LegalOrganizationForm implements ModelInterface, ArrayAccess
     /**
      * Gets shortcut
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LocalizedString[]
+     * @return \Wallee\Sdk\Model\LocalizedString[]
      */
     public function getShortcut()
     {
@@ -341,7 +341,7 @@ class LegalOrganizationForm implements ModelInterface, ArrayAccess
     /**
      * Sets shortcut
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LocalizedString[] $shortcut The localized shortcuts of the legal organization form.
+     * @param \Wallee\Sdk\Model\LocalizedString[] $shortcut The localized shortcuts of the legal organization form.
      *
      * @return $this
      */

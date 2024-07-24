@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionCharge model
  *
  * @category    Class
  * @description The subscription charge represents a single charge carried out for a particular subscription.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionCharge implements ModelInterface, ArrayAccess
@@ -57,18 +57,18 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
         'failed_url' => 'string',
         'id' => 'int',
         'language' => 'string',
-        'ledger_entries' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionLedgerEntry[]',
+        'ledger_entries' => '\Wallee\Sdk\Model\SubscriptionLedgerEntry[]',
         'linked_space_id' => 'int',
         'planned_execution_date' => '\DateTime',
         'planned_purge_date' => '\DateTime',
-        'processing_type' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionChargeProcessingType',
+        'processing_type' => '\Wallee\Sdk\Model\SubscriptionChargeProcessingType',
         'reference' => 'string',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionChargeState',
-        'subscription' => '\WhiteLabelMachineName\Sdk\Model\Subscription',
+        'state' => '\Wallee\Sdk\Model\SubscriptionChargeState',
+        'subscription' => '\Wallee\Sdk\Model\Subscription',
         'succeed_on' => '\DateTime',
         'success_url' => 'string',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionChargeType',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
+        'type' => '\Wallee\Sdk\Model\SubscriptionChargeType',
         'version' => 'int'
     ];
 
@@ -373,7 +373,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets created_on
      *
-     * @param \DateTime $created_on 
+     * @param \DateTime $created_on The date and time when the charge was created.
      *
      * @return $this
      */
@@ -398,7 +398,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets discarded_by
      *
-     * @param int $discarded_by 
+     * @param int $discarded_by The ID of the user the charge was discarded by.
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets discarded_on
      *
-     * @param \DateTime $discarded_on 
+     * @param \DateTime $discarded_on The date and time when the charge was discarded.
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets failed_on
      *
-     * @param \DateTime $failed_on 
+     * @param \DateTime $failed_on The date and time when the charge failed.
      *
      * @return $this
      */
@@ -498,7 +498,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets failed_url
      *
-     * @param string $failed_url The user will be redirected to failed URL when the transaction could not be authorized or completed. In case no failed URL is specified a default failed page will be displayed.
+     * @param string $failed_url The URL to redirect the customer back to after they canceled or failed to authenticated their payment.
      *
      * @return $this
      */
@@ -570,7 +570,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Gets ledger_entries
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionLedgerEntry[]
+     * @return \Wallee\Sdk\Model\SubscriptionLedgerEntry[]
      */
     public function getLedgerEntries()
     {
@@ -580,7 +580,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets ledger_entries
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionLedgerEntry[] $ledger_entries 
+     * @param \Wallee\Sdk\Model\SubscriptionLedgerEntry[] $ledger_entries The ledger entries that belong to the charge.
      *
      * @return $this
      */
@@ -630,7 +630,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets planned_execution_date
      *
-     * @param \DateTime $planned_execution_date 
+     * @param \DateTime $planned_execution_date The date and time when the execution of the charge is planned.
      *
      * @return $this
      */
@@ -670,7 +670,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Gets processing_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionChargeProcessingType
+     * @return \Wallee\Sdk\Model\SubscriptionChargeProcessingType
      */
     public function getProcessingType()
     {
@@ -680,7 +680,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets processing_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionChargeProcessingType $processing_type 
+     * @param \Wallee\Sdk\Model\SubscriptionChargeProcessingType $processing_type The processing type specifies how the charge is to be processed.
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets reference
      *
-     * @param string $reference 
+     * @param string $reference The merchant's reference used to identify the charge.
      *
      * @return $this
      */
@@ -724,7 +724,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionChargeState
+     * @return \Wallee\Sdk\Model\SubscriptionChargeState
      */
     public function getState()
     {
@@ -734,7 +734,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionChargeState $state The object's current state.
+     * @param \Wallee\Sdk\Model\SubscriptionChargeState $state The object's current state.
      *
      * @return $this
      */
@@ -749,7 +749,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Subscription
+     * @return \Wallee\Sdk\Model\Subscription
      */
     public function getSubscription()
     {
@@ -759,7 +759,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Subscription $subscription The field subscription indicates the subscription to which the charge belongs to.
+     * @param \Wallee\Sdk\Model\Subscription $subscription The subscription that the charge belongs to.
      *
      * @return $this
      */
@@ -784,7 +784,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets succeed_on
      *
-     * @param \DateTime $succeed_on 
+     * @param \DateTime $succeed_on The date and time when the charge succeeded.
      *
      * @return $this
      */
@@ -809,7 +809,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets success_url
      *
-     * @param string $success_url The user will be redirected to success URL when the transaction could be authorized or completed. In case no success URL is specified a default success page will be displayed.
+     * @param string $success_url The URL to redirect the customer back to after they successfully authenticated their payment.
      *
      * @return $this
      */
@@ -831,7 +831,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -841,7 +841,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction The transaction used to process the charge.
      *
      * @return $this
      */
@@ -856,7 +856,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionChargeType
+     * @return \Wallee\Sdk\Model\SubscriptionChargeType
      */
     public function getType()
     {
@@ -866,7 +866,7 @@ class SubscriptionCharge implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionChargeType $type 
+     * @param \Wallee\Sdk\Model\SubscriptionChargeType $type The type specified how the charge was initiated.
      *
      * @return $this
      */

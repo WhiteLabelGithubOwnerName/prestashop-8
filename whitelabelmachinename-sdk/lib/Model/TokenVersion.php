@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TokenVersion model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TokenVersion implements ModelInterface, ArrayAccess
@@ -50,27 +50,27 @@ class TokenVersion implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'activated_on' => '\DateTime',
-        'billing_address' => '\WhiteLabelMachineName\Sdk\Model\Address',
+        'billing_address' => '\Wallee\Sdk\Model\Address',
         'created_on' => '\DateTime',
-        'environment' => '\WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment',
+        'environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
         'expires_on' => '\DateTime',
         'icon_url' => 'string',
         'id' => 'int',
-        'labels' => '\WhiteLabelMachineName\Sdk\Model\Label[]',
+        'labels' => '\Wallee\Sdk\Model\Label[]',
         'language' => 'string',
         'linked_space_id' => 'int',
         'name' => 'string',
         'obsoleted_on' => '\DateTime',
-        'payment_connector_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration',
-        'payment_information_hashes' => '\WhiteLabelMachineName\Sdk\Model\PaymentInformationHash[]',
+        'payment_connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
+        'payment_information_hashes' => '\Wallee\Sdk\Model\PaymentInformationHash[]',
         'payment_method' => 'int',
         'payment_method_brand' => 'int',
         'planned_purge_date' => '\DateTime',
         'processor_token' => 'string',
-        'shipping_address' => '\WhiteLabelMachineName\Sdk\Model\Address',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\TokenVersionState',
-        'token' => '\WhiteLabelMachineName\Sdk\Model\Token',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\TokenVersionType',
+        'shipping_address' => '\Wallee\Sdk\Model\Address',
+        'state' => '\Wallee\Sdk\Model\TokenVersionState',
+        'token' => '\Wallee\Sdk\Model\Token',
+        'type' => '\Wallee\Sdk\Model\TokenVersionType',
         'version' => 'int'
     ];
 
@@ -390,7 +390,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Address
+     * @return \Wallee\Sdk\Model\Address
      */
     public function getBillingAddress()
     {
@@ -400,7 +400,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Address $billing_address 
+     * @param \Wallee\Sdk\Model\Address $billing_address 
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getEnvironment()
     {
@@ -450,7 +450,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment $environment 
+     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $environment 
      *
      * @return $this
      */
@@ -540,7 +540,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets labels
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Label[]
+     * @return \Wallee\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -550,7 +550,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets labels
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Label[] $labels 
+     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets payment_connector_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getPaymentConnectorConfiguration()
     {
@@ -679,7 +679,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets payment_connector_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration 
+     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration 
      *
      * @return $this
      */
@@ -694,7 +694,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets payment_information_hashes
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentInformationHash[]
+     * @return \Wallee\Sdk\Model\PaymentInformationHash[]
      */
     public function getPaymentInformationHashes()
     {
@@ -704,7 +704,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets payment_information_hashes
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentInformationHash[] $payment_information_hashes The payment information hash set contains hashes of the payment information represented by this token version.
+     * @param \Wallee\Sdk\Model\PaymentInformationHash[] $payment_information_hashes The payment information hash set contains hashes of the payment information represented by this token version.
      *
      * @return $this
      */
@@ -823,7 +823,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Address
+     * @return \Wallee\Sdk\Model\Address
      */
     public function getShippingAddress()
     {
@@ -833,7 +833,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Address $shipping_address 
+     * @param \Wallee\Sdk\Model\Address $shipping_address 
      *
      * @return $this
      */
@@ -848,7 +848,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TokenVersionState
+     * @return \Wallee\Sdk\Model\TokenVersionState
      */
     public function getState()
     {
@@ -858,7 +858,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TokenVersionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\TokenVersionState $state The object's current state.
      *
      * @return $this
      */
@@ -873,7 +873,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets token
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Token
+     * @return \Wallee\Sdk\Model\Token
      */
     public function getToken()
     {
@@ -883,7 +883,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets token
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Token $token 
+     * @param \Wallee\Sdk\Model\Token $token 
      *
      * @return $this
      */
@@ -898,7 +898,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TokenVersionType
+     * @return \Wallee\Sdk\Model\TokenVersionType
      */
     public function getType()
     {
@@ -908,7 +908,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TokenVersionType $type The token version type determines what kind of token it is and by which payment connector the token can be processed by.
+     * @param \Wallee\Sdk\Model\TokenVersionType $type The token version type determines what kind of token it is and by which payment connector the token can be processed by.
      *
      * @return $this
      */

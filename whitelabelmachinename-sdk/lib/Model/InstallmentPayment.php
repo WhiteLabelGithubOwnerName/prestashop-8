@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InstallmentPayment model
  *
  * @category    Class
  * @description An installment payment represents a payment paid in multiple slices.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InstallmentPayment implements ModelInterface, ArrayAccess
@@ -51,12 +51,12 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'created_on' => '\DateTime',
         'id' => 'int',
-        'initial_transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
+        'initial_transaction' => '\Wallee\Sdk\Model\Transaction',
+        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
         'linked_space_id' => 'int',
         'plan_configuration' => 'int',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\InstallmentPaymentState',
+        'state' => '\Wallee\Sdk\Model\InstallmentPaymentState',
         'version' => 'int'
     ];
 
@@ -309,7 +309,7 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     /**
      * Gets initial_transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getInitialTransaction()
     {
@@ -319,7 +319,7 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     /**
      * Sets initial_transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $initial_transaction 
+     * @param \Wallee\Sdk\Model\Transaction $initial_transaction 
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -344,7 +344,7 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $line_items 
+     * @param \Wallee\Sdk\Model\LineItem[] $line_items 
      *
      * @return $this
      */
@@ -434,7 +434,7 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InstallmentPaymentState
+     * @return \Wallee\Sdk\Model\InstallmentPaymentState
      */
     public function getState()
     {
@@ -444,7 +444,7 @@ class InstallmentPayment implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InstallmentPaymentState $state The object's current state.
+     * @param \Wallee\Sdk\Model\InstallmentPaymentState $state The object's current state.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ProductSetupFee model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ProductSetupFee implements ModelInterface, ArrayAccess
@@ -49,15 +49,15 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'component' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponent',
+        'component' => '\Wallee\Sdk\Model\SubscriptionProductComponent',
         'description' => 'map[string,string]',
         'id' => 'int',
         'linked_space_id' => 'int',
         'name' => 'map[string,string]',
-        'on_downgrade_credited_amount' => '\WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[]',
-        'on_upgrade_credited_amount' => '\WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[]',
-        'setup_fee' => '\WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[]',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\ProductFeeType',
+        'on_downgrade_credited_amount' => '\Wallee\Sdk\Model\PersistableCurrencyAmount[]',
+        'on_upgrade_credited_amount' => '\Wallee\Sdk\Model\PersistableCurrencyAmount[]',
+        'setup_fee' => '\Wallee\Sdk\Model\PersistableCurrencyAmount[]',
+        'type' => '\Wallee\Sdk\Model\ProductFeeType',
         'version' => 'int'
     ];
 
@@ -266,7 +266,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets component
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponent
+     * @return \Wallee\Sdk\Model\SubscriptionProductComponent
      */
     public function getComponent()
     {
@@ -276,7 +276,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets component
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponent $component 
+     * @param \Wallee\Sdk\Model\SubscriptionProductComponent $component The product component that the fee belongs to.
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description The description of a component fee describes the fee to the subscriber. The description may be shown in documents or on certain user interfaces.
+     * @param map[string,string] $description The localized description of the fee that is displayed to the customer.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param map[string,string] $name The name of the fee should describe for the subscriber in few words for what the fee is for.
+     * @param map[string,string] $name The localized name of the fee that is displayed to the customer.
      *
      * @return $this
      */
@@ -391,7 +391,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets on_downgrade_credited_amount
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[]
+     * @return \Wallee\Sdk\Model\PersistableCurrencyAmount[]
      */
     public function getOnDowngradeCreditedAmount()
     {
@@ -401,7 +401,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets on_downgrade_credited_amount
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[] $on_downgrade_credited_amount When the subscription is changed and the change is considered as a downgrade the amount defined by this property will be credited to the subscriber.
+     * @param \Wallee\Sdk\Model\PersistableCurrencyAmount[] $on_downgrade_credited_amount The amount charged to the customer when a subscription is downgraded.
      *
      * @return $this
      */
@@ -416,7 +416,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets on_upgrade_credited_amount
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[]
+     * @return \Wallee\Sdk\Model\PersistableCurrencyAmount[]
      */
     public function getOnUpgradeCreditedAmount()
     {
@@ -426,7 +426,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets on_upgrade_credited_amount
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[] $on_upgrade_credited_amount When the subscription is changed and the change is considered as a upgrade the amount defined by this property will be credited to the subscriber.
+     * @param \Wallee\Sdk\Model\PersistableCurrencyAmount[] $on_upgrade_credited_amount The amount charged to the customer when a subscription is upgraded.
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets setup_fee
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[]
+     * @return \Wallee\Sdk\Model\PersistableCurrencyAmount[]
      */
     public function getSetupFee()
     {
@@ -451,7 +451,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets setup_fee
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmount[] $setup_fee The setup fee is charged when the subscriber subscribes to this component. The setup fee is debited with the first charge for the subscriptions.
+     * @param \Wallee\Sdk\Model\PersistableCurrencyAmount[] $setup_fee The amount charged to the customer once when they subscribe to a subscription.
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ProductFeeType
+     * @return \Wallee\Sdk\Model\ProductFeeType
      */
     public function getType()
     {
@@ -476,7 +476,7 @@ class ProductSetupFee implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ProductFeeType $type 
+     * @param \Wallee\Sdk\Model\ProductFeeType $type The type of the fee.
      *
      * @return $this
      */

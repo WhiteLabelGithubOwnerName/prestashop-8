@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionPending model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionPending extends SubscriptionUpdate 
@@ -235,7 +235,7 @@ class SubscriptionPending extends SubscriptionUpdate
     /**
      * Sets reference
      *
-     * @param string $reference 
+     * @param string $reference The merchant's reference used to identify the subscription.
      *
      * @return $this
      */
@@ -264,7 +264,7 @@ class SubscriptionPending extends SubscriptionUpdate
     /**
      * Sets subscriber
      *
-     * @param int $subscriber 
+     * @param int $subscriber The subscriber that the subscription belongs to.
      *
      * @return $this
      */
@@ -289,7 +289,7 @@ class SubscriptionPending extends SubscriptionUpdate
     /**
      * Sets token
      *
-     * @param int $token 
+     * @param int $token The payment token that is used to charge the customer.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ExternalTransferBankTransaction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ExternalTransferBankTransaction implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class ExternalTransferBankTransaction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bank_transaction' => '\WhiteLabelMachineName\Sdk\Model\BankTransaction',
+        'bank_transaction' => '\Wallee\Sdk\Model\BankTransaction',
         'external_account_identifier' => 'string',
         'external_account_type' => 'string',
         'external_bank_name' => 'string',
@@ -245,7 +245,7 @@ class ExternalTransferBankTransaction implements ModelInterface, ArrayAccess
     /**
      * Gets bank_transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankTransaction
+     * @return \Wallee\Sdk\Model\BankTransaction
      */
     public function getBankTransaction()
     {
@@ -255,7 +255,7 @@ class ExternalTransferBankTransaction implements ModelInterface, ArrayAccess
     /**
      * Sets bank_transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankTransaction $bank_transaction 
+     * @param \Wallee\Sdk\Model\BankTransaction $bank_transaction 
      *
      * @return $this
      */

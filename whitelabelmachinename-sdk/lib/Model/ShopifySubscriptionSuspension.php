@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionSuspension model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
@@ -54,13 +54,13 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
         'ended_by' => 'int',
         'ended_on' => '\DateTime',
         'id' => 'int',
-        'initiator' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionInitiator',
+        'initiator' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionInitiator',
         'linked_space_id' => 'int',
         'planned_end_date' => '\DateTime',
         'shop' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionState',
-        'subscription' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscription',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionType',
+        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionState',
+        'subscription' => '\Wallee\Sdk\Model\ShopifySubscription',
+        'type' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionType',
         'version' => 'int'
     ];
 
@@ -412,7 +412,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets initiator
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionInitiator
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionInitiator
      */
     public function getInitiator()
     {
@@ -422,7 +422,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets initiator
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionInitiator $initiator 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionInitiator $initiator 
      *
      * @return $this
      */
@@ -512,7 +512,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionState
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionState
      */
     public function getState()
     {
@@ -522,7 +522,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionState $state The object's current state.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscription
+     * @return \Wallee\Sdk\Model\ShopifySubscription
      */
     public function getSubscription()
     {
@@ -547,7 +547,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscription $subscription 
+     * @param \Wallee\Sdk\Model\ShopifySubscription $subscription 
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionType
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType
      */
     public function getType()
     {
@@ -572,7 +572,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionType $type 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType $type 
      *
      * @return $this
      */

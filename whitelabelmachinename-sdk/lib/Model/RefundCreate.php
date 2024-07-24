@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * RefundCreate model
  *
  * @category    Class
  * @description The refund represents a credit back to the customer. It can be issued by the merchant or by the customer (reversal).
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RefundCreate implements ModelInterface, ArrayAccess
@@ -53,9 +53,9 @@ class RefundCreate implements ModelInterface, ArrayAccess
         'completion' => 'int',
         'external_id' => 'string',
         'merchant_reference' => 'string',
-        'reductions' => '\WhiteLabelMachineName\Sdk\Model\LineItemReductionCreate[]',
+        'reductions' => '\Wallee\Sdk\Model\LineItemReductionCreate[]',
         'transaction' => 'int',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\RefundType'
+        'type' => '\Wallee\Sdk\Model\RefundType'
     ];
 
     /**
@@ -374,7 +374,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Gets reductions
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItemReductionCreate[]
+     * @return \Wallee\Sdk\Model\LineItemReductionCreate[]
      */
     public function getReductions()
     {
@@ -384,7 +384,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Sets reductions
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItemReductionCreate[] $reductions 
+     * @param \Wallee\Sdk\Model\LineItemReductionCreate[] $reductions 
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RefundType
+     * @return \Wallee\Sdk\Model\RefundType
      */
     public function getType()
     {
@@ -434,7 +434,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RefundType $type 
+     * @param \Wallee\Sdk\Model\RefundType $type 
      *
      * @return $this
      */

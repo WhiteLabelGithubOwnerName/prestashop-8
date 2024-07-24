@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionCreationRequest model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
@@ -49,19 +49,19 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddressCreate',
-        'billing_configuration' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
+        'billing_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddressCreate',
+        'billing_configuration' => '\Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
         'currency' => 'string',
         'external_id' => 'string',
         'initial_execution_date' => '\DateTime',
         'integration' => 'int',
-        'items' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelItem[]',
+        'items' => '\Wallee\Sdk\Model\ShopifySubscriptionModelItem[]',
         'language' => 'string',
-        'shipping_address' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddressCreate',
+        'shipping_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddressCreate',
         'shipping_method_name' => 'string',
         'space_view_id' => 'int',
         'store_order_confirmation_email_enabled' => 'bool',
-        'subscriber' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriberCreation',
+        'subscriber' => '\Wallee\Sdk\Model\ShopifySubscriberCreation',
         'subscriber_suspension_allowed' => 'bool'
     ];
 
@@ -318,7 +318,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddressCreate
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate
      */
     public function getBillingAddress()
     {
@@ -328,7 +328,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddressCreate $billing_address 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate $billing_address 
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
      */
     public function getBillingConfiguration()
     {
@@ -353,7 +353,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
      *
      * @return $this
      */
@@ -468,7 +468,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelItem[]
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelItem[]
      */
     public function getItems()
     {
@@ -478,7 +478,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionModelItem[] $items 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelItem[] $items 
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddressCreate
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate
      */
     public function getShippingAddress()
     {
@@ -528,7 +528,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddressCreate $shipping_address 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate $shipping_address 
      *
      * @return $this
      */
@@ -618,7 +618,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets subscriber
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriberCreation
+     * @return \Wallee\Sdk\Model\ShopifySubscriberCreation
      */
     public function getSubscriber()
     {
@@ -628,7 +628,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets subscriber
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriberCreation $subscriber 
+     * @param \Wallee\Sdk\Model\ShopifySubscriberCreation $subscriber 
      *
      * @return $this
      */

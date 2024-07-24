@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminalTransactionSummary model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dcc_transaction_sums' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalDccTransactionSum[]',
+        'dcc_transaction_sums' => '\Wallee\Sdk\Model\PaymentTerminalDccTransactionSum[]',
         'ended_on' => '\DateTime',
         'id' => 'int',
         'linked_space_id' => 'int',
@@ -57,7 +57,7 @@ class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
         'payment_terminal' => 'int',
         'receipt' => 'string',
         'started_on' => '\DateTime',
-        'transaction_sums' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminalTransactionSum[]',
+        'transaction_sums' => '\Wallee\Sdk\Model\PaymentTerminalTransactionSum[]',
         'version' => 'int'
     ];
 
@@ -266,7 +266,7 @@ class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
     /**
      * Gets dcc_transaction_sums
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalDccTransactionSum[]
+     * @return \Wallee\Sdk\Model\PaymentTerminalDccTransactionSum[]
      */
     public function getDccTransactionSums()
     {
@@ -276,7 +276,7 @@ class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets dcc_transaction_sums
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalDccTransactionSum[] $dcc_transaction_sums 
+     * @param \Wallee\Sdk\Model\PaymentTerminalDccTransactionSum[] $dcc_transaction_sums 
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_sums
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminalTransactionSum[]
+     * @return \Wallee\Sdk\Model\PaymentTerminalTransactionSum[]
      */
     public function getTransactionSums()
     {
@@ -476,7 +476,7 @@ class PaymentTerminalTransactionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_sums
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminalTransactionSum[] $transaction_sums 
+     * @param \Wallee\Sdk\Model\PaymentTerminalTransactionSum[] $transaction_sums 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * EntityQuery model
  *
  * @category    Class
  * @description The entity query allows to search for specific entities by providing filters. This is similar to a SQL query.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class EntityQuery implements ModelInterface, ArrayAccess
@@ -49,10 +49,10 @@ class EntityQuery implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filter' => '\WhiteLabelMachineName\Sdk\Model\EntityQueryFilter',
+        'filter' => '\Wallee\Sdk\Model\EntityQueryFilter',
         'language' => 'string',
         'number_of_entities' => 'int',
-        'order_bys' => '\WhiteLabelMachineName\Sdk\Model\EntityQueryOrderBy[]',
+        'order_bys' => '\Wallee\Sdk\Model\EntityQueryOrderBy[]',
         'starting_entity' => 'int'
     ];
 
@@ -231,7 +231,7 @@ class EntityQuery implements ModelInterface, ArrayAccess
     /**
      * Gets filter
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter
+     * @return \Wallee\Sdk\Model\EntityQueryFilter
      */
     public function getFilter()
     {
@@ -241,7 +241,7 @@ class EntityQuery implements ModelInterface, ArrayAccess
     /**
      * Sets filter
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter $filter The filter node defines the root filter node of the query. The root node may contain multiple sub nodes with different filters in it.
+     * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter node defines the root filter node of the query. The root node may contain multiple sub nodes with different filters in it.
      *
      * @return $this
      */
@@ -306,7 +306,7 @@ class EntityQuery implements ModelInterface, ArrayAccess
     /**
      * Gets order_bys
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\EntityQueryOrderBy[]
+     * @return \Wallee\Sdk\Model\EntityQueryOrderBy[]
      */
     public function getOrderBys()
     {
@@ -316,7 +316,7 @@ class EntityQuery implements ModelInterface, ArrayAccess
     /**
      * Sets order_bys
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryOrderBy[] $order_bys The order bys allows to define the ordering of the entities returned by the search.
+     * @param \Wallee\Sdk\Model\EntityQueryOrderBy[] $order_bys The order bys allows to define the ordering of the entities returned by the search.
      *
      * @return $this
      */

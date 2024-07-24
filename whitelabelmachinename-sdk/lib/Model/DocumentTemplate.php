@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * DocumentTemplate model
  *
  * @category    Class
  * @description A document template contains the customizations for a particular document template type.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class DocumentTemplate implements ModelInterface, ArrayAccess
@@ -56,8 +56,8 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
         'space_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
-        'template_resource' => '\WhiteLabelMachineName\Sdk\Model\ModelResourcePath',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'template_resource' => '\Wallee\Sdk\Model\ModelResourcePath',
         'type' => 'int',
         'version' => 'int'
     ];
@@ -287,7 +287,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets default_template
      *
-     * @param bool $default_template The default document template is used whenever no specific template is specified for a particular template type.
+     * @param bool $default_template Whether this is the default document template which is used whenever no specific template is specified for the same template type.
      *
      * @return $this
      */
@@ -312,7 +312,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_enabled
      *
-     * @param bool $delivery_enabled 
+     * @param bool $delivery_enabled Whether documents of this template should be delivered.
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param string $name The name used to identify the document template.
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets space_id
      *
-     * @param int $space_id 
+     * @param int $space_id The ID of the space this object belongs to.
      *
      * @return $this
      */
@@ -456,7 +456,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -466,7 +466,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -481,7 +481,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Gets template_resource
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ModelResourcePath
+     * @return \Wallee\Sdk\Model\ModelResourcePath
      */
     public function getTemplateResource()
     {
@@ -491,7 +491,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets template_resource
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ModelResourcePath $template_resource 
+     * @param \Wallee\Sdk\Model\ModelResourcePath $template_resource The resource path to a custom template to be used to generate PDF documents.
      *
      * @return $this
      */
@@ -516,7 +516,7 @@ class DocumentTemplate implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param int $type 
+     * @param int $type The document template's type.
      *
      * @return $this
      */

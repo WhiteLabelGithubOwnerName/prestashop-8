@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * AbstractCustomerAddressActive model
  *
  * @category    Class
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
@@ -48,8 +48,8 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\WhiteLabelMachineName\Sdk\Model\CustomerPostalAddressCreate',
-        'address_type' => '\WhiteLabelMachineName\Sdk\Model\CustomerAddressType'
+        'address' => '\Wallee\Sdk\Model\CustomerPostalAddressCreate',
+        'address_type' => '\Wallee\Sdk\Model\CustomerAddressType'
     ];
 
     /**
@@ -209,7 +209,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddressCreate
+     * @return \Wallee\Sdk\Model\CustomerPostalAddressCreate
      */
     public function getAddress()
     {
@@ -219,7 +219,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddressCreate $address The actual postal address.
+     * @param \Wallee\Sdk\Model\CustomerPostalAddressCreate $address The actual postal address.
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Gets address_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomerAddressType
+     * @return \Wallee\Sdk\Model\CustomerAddressType
      */
     public function getAddressType()
     {
@@ -244,7 +244,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
+     * @param \Wallee\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
      *
      * @return $this
      */

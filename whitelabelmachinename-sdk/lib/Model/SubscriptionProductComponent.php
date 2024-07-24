@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionProductComponent model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionProductComponent implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'component_change_weight' => 'int',
-        'component_group' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentGroup',
+        'component_group' => '\Wallee\Sdk\Model\SubscriptionProductComponentGroup',
         'default_component' => 'bool',
         'description' => 'map[string,string]',
         'id' => 'int',
@@ -59,9 +59,9 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
         'minimal_quantity' => 'float',
         'name' => 'map[string,string]',
         'quantity_step' => 'float',
-        'reference' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentReference',
+        'reference' => '\Wallee\Sdk\Model\SubscriptionProductComponentReference',
         'sort_order' => 'int',
-        'tax_class' => '\WhiteLabelMachineName\Sdk\Model\TaxClass',
+        'tax_class' => '\Wallee\Sdk\Model\TaxClass',
         'version' => 'int'
     ];
 
@@ -304,7 +304,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets component_change_weight
      *
-     * @param int $component_change_weight If a product component changes from one with a lower product component tier (e.g. 1) to one with a higher product component tier (e.g. 3), it is considered an upgrade and a one-time fee could be applied.
+     * @param int $component_change_weight If switching from a component with a lower tier to a component with a higher one, this is considered an upgrade and a fee may be applied.
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Gets component_group
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentGroup
+     * @return \Wallee\Sdk\Model\SubscriptionProductComponentGroup
      */
     public function getComponentGroup()
     {
@@ -329,7 +329,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets component_group
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentGroup $component_group 
+     * @param \Wallee\Sdk\Model\SubscriptionProductComponentGroup $component_group The group that the component belongs to.
      *
      * @return $this
      */
@@ -354,7 +354,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets default_component
      *
-     * @param bool $default_component When a component is marked as a 'default' component it is used as the default component in its group and will be preselected in the product configuration.
+     * @param bool $default_component Whether this is the default component in its group and preselected.
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description The component description may contain a longer description which gives the subscriber a better understanding of what the component contains.
+     * @param map[string,string] $description The localized description of the component that is displayed to the customer.
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets maximal_quantity
      *
-     * @param float $maximal_quantity The maximum quantity defines the maximum value which must be entered for the quantity.
+     * @param float $maximal_quantity A maximum of the defined quantity can be selected for this component.
      *
      * @return $this
      */
@@ -479,7 +479,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets minimal_quantity
      *
-     * @param float $minimal_quantity The minimal quantity defines the minimum value which must be entered for the quantity.
+     * @param float $minimal_quantity A minimum of the defined quantity must be selected for this component.
      *
      * @return $this
      */
@@ -504,7 +504,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param map[string,string] $name The component name is shown to the subscriber. It should describe in few words what the component does contain.
+     * @param map[string,string] $name The localized name of the component that is displayed to the customer.
      *
      * @return $this
      */
@@ -529,7 +529,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets quantity_step
      *
-     * @param float $quantity_step The quantity step defines at which interval the quantity can be increased.
+     * @param float $quantity_step The quantity step determines the interval in which the quantity can be increased.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Gets reference
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentReference
+     * @return \Wallee\Sdk\Model\SubscriptionProductComponentReference
      */
     public function getReference()
     {
@@ -554,7 +554,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets reference
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentReference $reference The component reference is used to identify the component by external systems and it marks components to represent the same component within different product versions.
+     * @param \Wallee\Sdk\Model\SubscriptionProductComponentReference $reference The reference is used to link components across different product versions.
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets sort_order
      *
-     * @param int $sort_order The sort order controls in which order the component is listed. The sort order is used to order the components in ascending order.
+     * @param int $sort_order When listing components, they can be sorted by this number.
      *
      * @return $this
      */
@@ -594,7 +594,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Gets tax_class
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TaxClass
+     * @return \Wallee\Sdk\Model\TaxClass
      */
     public function getTaxClass()
     {
@@ -604,7 +604,7 @@ class SubscriptionProductComponent implements ModelInterface, ArrayAccess
     /**
      * Sets tax_class
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TaxClass $tax_class The tax class of the component determines the taxes which are applicable on all fees linked with the component.
+     * @param \Wallee\Sdk\Model\TaxClass $tax_class The tax class to be applied to fees.
      *
      * @return $this
      */

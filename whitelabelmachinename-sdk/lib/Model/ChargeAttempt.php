@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ChargeAttempt model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeAttempt extends TransactionAwareEntity 
@@ -47,32 +47,32 @@ class ChargeAttempt extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'charge' => '\WhiteLabelMachineName\Sdk\Model\Charge',
-        'completion_behavior' => '\WhiteLabelMachineName\Sdk\Model\TransactionCompletionBehavior',
-        'connector_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration',
+        'charge' => '\Wallee\Sdk\Model\Charge',
+        'completion_behavior' => '\Wallee\Sdk\Model\TransactionCompletionBehavior',
+        'connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
         'created_on' => '\DateTime',
-        'customers_presence' => '\WhiteLabelMachineName\Sdk\Model\CustomersPresence',
-        'environment' => '\WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment',
+        'customers_presence' => '\Wallee\Sdk\Model\CustomersPresence',
+        'environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
+        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
         'initializing_token_version' => 'bool',
-        'invocation' => '\WhiteLabelMachineName\Sdk\Model\ConnectorInvocation',
-        'labels' => '\WhiteLabelMachineName\Sdk\Model\Label[]',
+        'invocation' => '\Wallee\Sdk\Model\ConnectorInvocation',
+        'labels' => '\Wallee\Sdk\Model\Label[]',
         'language' => 'string',
         'next_update_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'redirection_url' => 'string',
         'sales_channel' => 'int',
         'space_view_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ChargeAttemptState',
+        'state' => '\Wallee\Sdk\Model\ChargeAttemptState',
         'succeeded_on' => '\DateTime',
-        'terminal' => '\WhiteLabelMachineName\Sdk\Model\PaymentTerminal',
+        'terminal' => '\Wallee\Sdk\Model\PaymentTerminal',
         'time_zone' => 'string',
         'timeout_on' => '\DateTime',
-        'token_version' => '\WhiteLabelMachineName\Sdk\Model\TokenVersion',
+        'token_version' => '\Wallee\Sdk\Model\TokenVersion',
         'user_failure_message' => 'string',
         'version' => 'int',
-        'wallet' => '\WhiteLabelMachineName\Sdk\Model\WalletType'
+        'wallet' => '\Wallee\Sdk\Model\WalletType'
     ];
 
     /**
@@ -376,7 +376,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets charge
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Charge
+     * @return \Wallee\Sdk\Model\Charge
      */
     public function getCharge()
     {
@@ -386,7 +386,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets charge
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Charge $charge 
+     * @param \Wallee\Sdk\Model\Charge $charge 
      *
      * @return $this
      */
@@ -401,7 +401,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets completion_behavior
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionCompletionBehavior
+     * @return \Wallee\Sdk\Model\TransactionCompletionBehavior
      */
     public function getCompletionBehavior()
     {
@@ -411,7 +411,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets completion_behavior
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TransactionCompletionBehavior $completion_behavior 
+     * @param \Wallee\Sdk\Model\TransactionCompletionBehavior $completion_behavior 
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets connector_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getConnectorConfiguration()
     {
@@ -436,7 +436,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets connector_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration $connector_configuration 
+     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $connector_configuration 
      *
      * @return $this
      */
@@ -476,7 +476,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets customers_presence
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomersPresence
+     * @return \Wallee\Sdk\Model\CustomersPresence
      */
     public function getCustomersPresence()
     {
@@ -486,7 +486,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets customers_presence
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomersPresence $customers_presence The customers presence indicates which kind of customer interaction was used during the charge attempt.
+     * @param \Wallee\Sdk\Model\CustomersPresence $customers_presence The customers presence indicates which kind of customer interaction was used during the charge attempt.
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getEnvironment()
     {
@@ -511,7 +511,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment $environment 
+     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $environment 
      *
      * @return $this
      */
@@ -551,7 +551,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -561,7 +561,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $failure_reason 
+     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -601,7 +601,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets invocation
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ConnectorInvocation
+     * @return \Wallee\Sdk\Model\ConnectorInvocation
      */
     public function getInvocation()
     {
@@ -611,7 +611,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets invocation
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ConnectorInvocation $invocation 
+     * @param \Wallee\Sdk\Model\ConnectorInvocation $invocation 
      *
      * @return $this
      */
@@ -626,7 +626,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets labels
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Label[]
+     * @return \Wallee\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -636,7 +636,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets labels
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Label[] $labels 
+     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeAttemptState
+     * @return \Wallee\Sdk\Model\ChargeAttemptState
      */
     public function getState()
     {
@@ -811,7 +811,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeAttemptState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ChargeAttemptState $state The object's current state.
      *
      * @return $this
      */
@@ -851,7 +851,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets terminal
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentTerminal
+     * @return \Wallee\Sdk\Model\PaymentTerminal
      */
     public function getTerminal()
     {
@@ -861,7 +861,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets terminal
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentTerminal $terminal 
+     * @param \Wallee\Sdk\Model\PaymentTerminal $terminal 
      *
      * @return $this
      */
@@ -926,7 +926,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets token_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TokenVersion
+     * @return \Wallee\Sdk\Model\TokenVersion
      */
     public function getTokenVersion()
     {
@@ -936,7 +936,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets token_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TokenVersion $token_version 
+     * @param \Wallee\Sdk\Model\TokenVersion $token_version 
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets wallet
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\WalletType
+     * @return \Wallee\Sdk\Model\WalletType
      */
     public function getWallet()
     {
@@ -1015,7 +1015,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets wallet
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\WalletType $wallet 
+     * @param \Wallee\Sdk\Model\WalletType $wallet 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * LineItemCreate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class LineItemCreate implements ModelInterface, ArrayAccess
@@ -50,14 +50,14 @@ class LineItemCreate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'amount_including_tax' => 'float',
-        'attributes' => 'map[string,\WhiteLabelMachineName\Sdk\Model\LineItemAttributeCreate]',
+        'attributes' => 'map[string,\Wallee\Sdk\Model\LineItemAttributeCreate]',
         'discount_including_tax' => 'float',
         'name' => 'string',
         'quantity' => 'float',
         'shipping_required' => 'bool',
         'sku' => 'string',
-        'taxes' => '\WhiteLabelMachineName\Sdk\Model\TaxCreate[]',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\LineItemType',
+        'taxes' => '\Wallee\Sdk\Model\TaxCreate[]',
+        'type' => '\Wallee\Sdk\Model\LineItemType',
         'unique_id' => 'string'
     ];
 
@@ -322,7 +322,7 @@ class LineItemCreate implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return map[string,\WhiteLabelMachineName\Sdk\Model\LineItemAttributeCreate]
+     * @return map[string,\Wallee\Sdk\Model\LineItemAttributeCreate]
      */
     public function getAttributes()
     {
@@ -332,7 +332,7 @@ class LineItemCreate implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param map[string,\WhiteLabelMachineName\Sdk\Model\LineItemAttributeCreate] $attributes A map of custom information for the item.
+     * @param map[string,\Wallee\Sdk\Model\LineItemAttributeCreate] $attributes A map of custom information for the item.
      *
      * @return $this
      */
@@ -483,7 +483,7 @@ class LineItemCreate implements ModelInterface, ArrayAccess
     /**
      * Gets taxes
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TaxCreate[]
+     * @return \Wallee\Sdk\Model\TaxCreate[]
      */
     public function getTaxes()
     {
@@ -493,7 +493,7 @@ class LineItemCreate implements ModelInterface, ArrayAccess
     /**
      * Sets taxes
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TaxCreate[] $taxes A set of tax lines, each of which specifies a tax applied to the item.
+     * @param \Wallee\Sdk\Model\TaxCreate[] $taxes A set of tax lines, each of which specifies a tax applied to the item.
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class LineItemCreate implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItemType
+     * @return \Wallee\Sdk\Model\LineItemType
      */
     public function getType()
     {
@@ -518,7 +518,7 @@ class LineItemCreate implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItemType $type The type of the line item.
+     * @param \Wallee\Sdk\Model\LineItemType $type The type of the line item.
      *
      * @return $this
      */

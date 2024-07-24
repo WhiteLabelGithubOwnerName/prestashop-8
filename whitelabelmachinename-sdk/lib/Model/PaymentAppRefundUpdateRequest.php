@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAppRefundUpdateRequest model
  *
  * @category    Class
  * @description The refund update request allows to change the state of a refund. The refund must be linked with a processor that was created by the payment Web App that invokes the operation.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAppRefundUpdateRequest implements ModelInterface, ArrayAccess
@@ -52,7 +52,7 @@ class PaymentAppRefundUpdateRequest implements ModelInterface, ArrayAccess
         'failure_reason_id' => 'int',
         'reference' => 'string',
         'refund_id' => 'int',
-        'target_state' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppRefundTargetState'
+        'target_state' => '\Wallee\Sdk\Model\PaymentAppRefundTargetState'
     ];
 
     /**
@@ -307,7 +307,7 @@ class PaymentAppRefundUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets target_state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundTargetState
+     * @return \Wallee\Sdk\Model\PaymentAppRefundTargetState
      */
     public function getTargetState()
     {
@@ -317,7 +317,7 @@ class PaymentAppRefundUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets target_state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundTargetState $target_state The target state defines the state into which the refund should be switched into. Once the refund changed the state it will not be possible to change it again.
+     * @param \Wallee\Sdk\Model\PaymentAppRefundTargetState $target_state The target state defines the state into which the refund should be switched into. Once the refund changed the state it will not be possible to change it again.
      *
      * @return $this
      */

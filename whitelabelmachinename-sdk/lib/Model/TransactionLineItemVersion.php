@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TransactionLineItemVersion model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionLineItemVersion extends TransactionAwareEntity 
@@ -52,19 +52,19 @@ class TransactionLineItemVersion extends TransactionAwareEntity
         'created_on' => '\DateTime',
         'external_id' => 'string',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
-        'labels' => '\WhiteLabelMachineName\Sdk\Model\Label[]',
+        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'labels' => '\Wallee\Sdk\Model\Label[]',
         'language' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
+        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
         'next_update_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'processing_on' => '\DateTime',
         'space_view_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionState',
+        'state' => '\Wallee\Sdk\Model\TransactionLineItemVersionState',
         'succeeded_on' => '\DateTime',
         'tax_amount' => 'float',
         'timeout_on' => '\DateTime',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -448,7 +448,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -458,7 +458,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $failure_reason 
+     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Gets labels
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Label[]
+     * @return \Wallee\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -483,7 +483,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Sets labels
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Label[] $labels 
+     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -523,7 +523,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -533,7 +533,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $line_items 
+     * @param \Wallee\Sdk\Model\LineItem[] $line_items 
      *
      * @return $this
      */
@@ -648,7 +648,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionState
+     * @return \Wallee\Sdk\Model\TransactionLineItemVersionState
      */
     public function getState()
     {
@@ -658,7 +658,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TransactionLineItemVersionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\TransactionLineItemVersionState $state The object's current state.
      *
      * @return $this
      */
@@ -748,7 +748,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -758,7 +758,7 @@ class TransactionLineItemVersion extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

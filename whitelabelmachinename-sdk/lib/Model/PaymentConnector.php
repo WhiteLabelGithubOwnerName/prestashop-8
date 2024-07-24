@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentConnector model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentConnector implements ModelInterface, ArrayAccess
@@ -49,18 +49,18 @@ class PaymentConnector implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data_collection_type' => '\WhiteLabelMachineName\Sdk\Model\DataCollectionType',
+        'data_collection_type' => '\Wallee\Sdk\Model\DataCollectionType',
         'deprecated' => 'bool',
         'deprecation_reason' => 'map[string,string]',
         'description' => 'map[string,string]',
         'id' => 'int',
         'name' => 'map[string,string]',
         'payment_method' => 'int',
-        'payment_method_brand' => '\WhiteLabelMachineName\Sdk\Model\PaymentMethodBrand',
-        'primary_risk_taker' => '\WhiteLabelMachineName\Sdk\Model\PaymentPrimaryRiskTaker',
+        'payment_method_brand' => '\Wallee\Sdk\Model\PaymentMethodBrand',
+        'primary_risk_taker' => '\Wallee\Sdk\Model\PaymentPrimaryRiskTaker',
         'processor' => 'int',
         'supported_currencies' => 'string[]',
-        'supported_customers_presences' => '\WhiteLabelMachineName\Sdk\Model\CustomersPresence[]',
+        'supported_customers_presences' => '\Wallee\Sdk\Model\CustomersPresence[]',
         'supported_features' => 'int[]'
     ];
 
@@ -287,7 +287,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Gets data_collection_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DataCollectionType
+     * @return \Wallee\Sdk\Model\DataCollectionType
      */
     public function getDataCollectionType()
     {
@@ -297,7 +297,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Sets data_collection_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DataCollectionType $data_collection_type The data collection type specifies how the payment information is collected.
+     * @param \Wallee\Sdk\Model\DataCollectionType $data_collection_type The data collection type specifies how the payment information is collected.
      *
      * @return $this
      */
@@ -462,7 +462,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method_brand
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentMethodBrand
+     * @return \Wallee\Sdk\Model\PaymentMethodBrand
      */
     public function getPaymentMethodBrand()
     {
@@ -472,7 +472,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method_brand
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentMethodBrand $payment_method_brand The specific brand that this payment connector supports.
+     * @param \Wallee\Sdk\Model\PaymentMethodBrand $payment_method_brand The specific brand that this payment connector supports.
      *
      * @return $this
      */
@@ -487,7 +487,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Gets primary_risk_taker
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentPrimaryRiskTaker
+     * @return \Wallee\Sdk\Model\PaymentPrimaryRiskTaker
      */
     public function getPrimaryRiskTaker()
     {
@@ -497,7 +497,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Sets primary_risk_taker
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentPrimaryRiskTaker $primary_risk_taker The entity that bears the main risk in the event that a contracting party fails to meet its obligations.
+     * @param \Wallee\Sdk\Model\PaymentPrimaryRiskTaker $primary_risk_taker The entity that bears the main risk in the event that a contracting party fails to meet its obligations.
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Gets supported_customers_presences
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomersPresence[]
+     * @return \Wallee\Sdk\Model\CustomersPresence[]
      */
     public function getSupportedCustomersPresences()
     {
@@ -572,7 +572,7 @@ class PaymentConnector implements ModelInterface, ArrayAccess
     /**
      * Sets supported_customers_presences
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomersPresence[] $supported_customers_presences The types of customer's presence that are supported by the connector.
+     * @param \Wallee\Sdk\Model\CustomersPresence[] $supported_customers_presences The types of customer's presence that are supported by the connector.
      *
      * @return $this
      */

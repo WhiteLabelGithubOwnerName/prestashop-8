@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentMethod model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentMethod implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentMethod implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data_collection_types' => '\WhiteLabelMachineName\Sdk\Model\DataCollectionType[]',
+        'data_collection_types' => '\Wallee\Sdk\Model\DataCollectionType[]',
         'description' => 'map[string,string]',
         'id' => 'int',
         'image_path' => 'string',
@@ -245,7 +245,7 @@ class PaymentMethod implements ModelInterface, ArrayAccess
     /**
      * Gets data_collection_types
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DataCollectionType[]
+     * @return \Wallee\Sdk\Model\DataCollectionType[]
      */
     public function getDataCollectionTypes()
     {
@@ -255,7 +255,7 @@ class PaymentMethod implements ModelInterface, ArrayAccess
     /**
      * Sets data_collection_types
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DataCollectionType[] $data_collection_types The data collection types that are supported by the payment method.
+     * @param \Wallee\Sdk\Model\DataCollectionType[] $data_collection_types The data collection types that are supported by the payment method.
      *
      * @return $this
      */

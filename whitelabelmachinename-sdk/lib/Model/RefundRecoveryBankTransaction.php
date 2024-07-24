@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * RefundRecoveryBankTransaction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RefundRecoveryBankTransaction extends TransactionAwareEntity 
@@ -47,10 +47,10 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bank_transaction' => '\WhiteLabelMachineName\Sdk\Model\BankTransaction',
+        'bank_transaction' => '\Wallee\Sdk\Model\BankTransaction',
         'language' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
-        'refund' => '\WhiteLabelMachineName\Sdk\Model\Refund',
+        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'refund' => '\Wallee\Sdk\Model\Refund',
         'refund_currency_amount' => 'float',
         'refund_currency_value_amount' => 'float',
         'space_view_id' => 'int',
@@ -246,7 +246,7 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
     /**
      * Gets bank_transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankTransaction
+     * @return \Wallee\Sdk\Model\BankTransaction
      */
     public function getBankTransaction()
     {
@@ -256,7 +256,7 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
     /**
      * Sets bank_transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankTransaction $bank_transaction 
+     * @param \Wallee\Sdk\Model\BankTransaction $bank_transaction 
      *
      * @return $this
      */
@@ -296,7 +296,7 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -306,7 +306,7 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $line_items The line items contain the items which could be recovered.
+     * @param \Wallee\Sdk\Model\LineItem[] $line_items The line items contain the items which could be recovered.
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
     /**
      * Gets refund
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Refund
+     * @return \Wallee\Sdk\Model\Refund
      */
     public function getRefund()
     {
@@ -331,7 +331,7 @@ class RefundRecoveryBankTransaction extends TransactionAwareEntity
     /**
      * Sets refund
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Refund $refund 
+     * @param \Wallee\Sdk\Model\Refund $refund 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * EntityQueryFilter model
  *
  * @category    Class
  * @description The query filter allows to restrict the entities which are returned.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class EntityQueryFilter implements ModelInterface, ArrayAccess
@@ -49,10 +49,10 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'children' => '\WhiteLabelMachineName\Sdk\Model\EntityQueryFilter[]',
+        'children' => '\Wallee\Sdk\Model\EntityQueryFilter[]',
         'field_name' => 'string',
-        'operator' => '\WhiteLabelMachineName\Sdk\Model\CriteriaOperator',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\EntityQueryFilterType',
+        'operator' => '\Wallee\Sdk\Model\CriteriaOperator',
+        'type' => '\Wallee\Sdk\Model\EntityQueryFilterType',
         'value' => 'object'
     ];
 
@@ -234,7 +234,7 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
     /**
      * Gets children
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter[]
+     * @return \Wallee\Sdk\Model\EntityQueryFilter[]
      */
     public function getChildren()
     {
@@ -244,7 +244,7 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
     /**
      * Sets children
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilter[] $children The 'children' can contain other filter nodes which are applied to the query. This property is only applicable on filter types 'OR' and 'AND'.
+     * @param \Wallee\Sdk\Model\EntityQueryFilter[] $children The 'children' can contain other filter nodes which are applied to the query. This property is only applicable on filter types 'OR' and 'AND'.
      *
      * @return $this
      */
@@ -284,7 +284,7 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
     /**
      * Gets operator
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CriteriaOperator
+     * @return \Wallee\Sdk\Model\CriteriaOperator
      */
     public function getOperator()
     {
@@ -294,7 +294,7 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
     /**
      * Sets operator
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CriteriaOperator $operator The 'operator' indicates what kind of filtering on the 'fieldName' is executed on. This property is only applicable on filter type 'LEAF'.
+     * @param \Wallee\Sdk\Model\CriteriaOperator $operator The 'operator' indicates what kind of filtering on the 'fieldName' is executed on. This property is only applicable on filter type 'LEAF'.
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\EntityQueryFilterType
+     * @return \Wallee\Sdk\Model\EntityQueryFilterType
      */
     public function getType()
     {
@@ -319,7 +319,7 @@ class EntityQueryFilter implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\EntityQueryFilterType $type The filter type controls how the query node is interpreted. I.e. if the node acts as leaf node or as a filter group.
+     * @param \Wallee\Sdk\Model\EntityQueryFilterType $type The filter type controls how the query node is interpreted. I.e. if the node acts as leaf node or as a filter group.
      *
      * @return $this
      */

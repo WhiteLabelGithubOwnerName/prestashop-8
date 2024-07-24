@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * FailureReason model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class FailureReason implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class FailureReason implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'category' => '\WhiteLabelMachineName\Sdk\Model\FailureCategory',
+        'category' => '\Wallee\Sdk\Model\FailureCategory',
         'description' => 'map[string,string]',
         'id' => 'int',
         'name' => 'map[string,string]'
@@ -224,7 +224,7 @@ class FailureReason implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureCategory
+     * @return \Wallee\Sdk\Model\FailureCategory
      */
     public function getCategory()
     {
@@ -234,7 +234,7 @@ class FailureReason implements ModelInterface, ArrayAccess
     /**
      * Sets category
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureCategory $category The category that the failure reason belongs to.
+     * @param \Wallee\Sdk\Model\FailureCategory $category The category that the failure reason belongs to.
      *
      * @return $this
      */

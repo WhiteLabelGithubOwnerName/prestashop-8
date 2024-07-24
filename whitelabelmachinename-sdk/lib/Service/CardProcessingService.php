@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * CardProcessingService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CardProcessingService {
@@ -74,11 +74,11 @@ class CardProcessingService {
 	 * @param int $space_id  (required)
 	 * @param int $transaction_id The ID of the transaction which should be processed. (required)
 	 * @param int $payment_method_configuration_id The payment method configuration ID which is applied to the transaction. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\AuthenticatedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+	 * @param \Wallee\Sdk\Model\AuthenticatedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Transaction
 	 */
 	public function process($space_id, $transaction_id, $payment_method_configuration_id, $card_data) {
 		return $this->processWithHttpInfo($space_id, $transaction_id, $payment_method_configuration_id, $card_data)->getData();
@@ -93,10 +93,10 @@ class CardProcessingService {
 	 * @param int $space_id  (required)
 	 * @param int $transaction_id The ID of the transaction which should be processed. (required)
 	 * @param int $payment_method_configuration_id The payment method configuration ID which is applied to the transaction. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\AuthenticatedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\AuthenticatedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function processWithHttpInfo($space_id, $transaction_id, $payment_method_configuration_id, $card_data) {
@@ -164,16 +164,16 @@ class CardProcessingService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Transaction',
+				'\Wallee\Sdk\Model\Transaction',
 				'/card-processing/process'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Transaction', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Transaction', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Transaction',
+                        '\Wallee\Sdk\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,7 +181,7 @@ class CardProcessingService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class CardProcessingService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -197,7 +197,7 @@ class CardProcessingService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,10 +215,10 @@ class CardProcessingService {
 	 * @param int $space_id  (required)
 	 * @param int $transaction_id The ID of the transaction which should be processed. (required)
 	 * @param int $payment_method_configuration_id The payment method configuration ID which is applied to the transaction. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\TokenizedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\TokenizedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return string
 	 */
 	public function processWith3DSecure($space_id, $transaction_id, $payment_method_configuration_id, $card_data) {
@@ -234,10 +234,10 @@ class CardProcessingService {
 	 * @param int $space_id  (required)
 	 * @param int $transaction_id The ID of the transaction which should be processed. (required)
 	 * @param int $payment_method_configuration_id The payment method configuration ID which is applied to the transaction. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\TokenizedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\TokenizedCardDataCreate $card_data The card details as JSON in plain which should be used to authorize the payment. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function processWith3DSecureWithHttpInfo($space_id, $transaction_id, $payment_method_configuration_id, $card_data) {
@@ -322,7 +322,7 @@ class CardProcessingService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -330,7 +330,7 @@ class CardProcessingService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class CardProcessingService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

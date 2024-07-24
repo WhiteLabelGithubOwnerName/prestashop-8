@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Service;
+namespace Wallee\Sdk\Service;
 
-use WhiteLabelMachineName\Sdk\ApiClient;
-use WhiteLabelMachineName\Sdk\ApiException;
-use WhiteLabelMachineName\Sdk\ApiResponse;
-use WhiteLabelMachineName\Sdk\Http\HttpRequest;
-use WhiteLabelMachineName\Sdk\ObjectSerializer;
+use Wallee\Sdk\ApiClient;
+use Wallee\Sdk\ApiException;
+use Wallee\Sdk\ApiResponse;
+use Wallee\Sdk\Http\HttpRequest;
+use Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentWebAppService service
  *
  * @category Class
- * @package  WhiteLabelMachineName\Sdk
- * @author   WhiteLabelMachineName
+ * @package  Wallee\Sdk
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentWebAppService {
@@ -73,10 +73,10 @@ class PaymentWebAppService {
 	 *
 	 * @param int $space_id The space ID identifies the space in which the processor is installed in. (required)
 	 * @param string $external_id The external ID identifies the processor. The external ID corresponds to the ID provided during inserting of the processor. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\PaymentAppProcessor
 	 */
 	public function activateProcessorForProduction($space_id, $external_id) {
 		return $this->activateProcessorForProductionWithHttpInfo($space_id, $external_id)->getData();
@@ -90,9 +90,9 @@ class PaymentWebAppService {
      *
 	 * @param int $space_id The space ID identifies the space in which the processor is installed in. (required)
 	 * @param string $external_id The external ID identifies the processor. The external ID corresponds to the ID provided during inserting of the processor. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function activateProcessorForProductionWithHttpInfo($space_id, $external_id) {
@@ -144,16 +144,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor',
+				'\Wallee\Sdk\Model\PaymentAppProcessor',
 				'/payment-web-app/activate-processor-for-production'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\PaymentAppProcessor', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor',
+                        '\Wallee\Sdk\Model\PaymentAppProcessor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -161,7 +161,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,9 +186,9 @@ class PaymentWebAppService {
 	 *
 	 * @param int $space_id The space ID identifies the space in which the connector is installed in. (required)
 	 * @param string $external_id The external ID identifies the connector. The external ID corresponds to the ID provided during inserting of the connector. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function deleteConnector($space_id, $external_id) {
@@ -203,9 +203,9 @@ class PaymentWebAppService {
      *
 	 * @param int $space_id The space ID identifies the space in which the connector is installed in. (required)
 	 * @param string $external_id The external ID identifies the connector. The external ID corresponds to the ID provided during inserting of the connector. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function deleteConnectorWithHttpInfo($space_id, $external_id) {
@@ -266,7 +266,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -274,7 +274,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,9 +291,9 @@ class PaymentWebAppService {
 	 *
 	 * @param int $space_id The space ID identifies the space in which the processor is installed in. (required)
 	 * @param string $external_id The external ID identifies the processor. The external ID corresponds to the ID provided during inserting of the processor. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function deleteProcessor($space_id, $external_id) {
@@ -308,9 +308,9 @@ class PaymentWebAppService {
      *
 	 * @param int $space_id The space ID identifies the space in which the processor is installed in. (required)
 	 * @param string $external_id The external ID identifies the processor. The external ID corresponds to the ID provided during inserting of the processor. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function deleteProcessorWithHttpInfo($space_id, $external_id) {
@@ -371,7 +371,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -379,7 +379,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -395,11 +395,11 @@ class PaymentWebAppService {
 	 * Insert or Update Connector
 	 *
 	 * @param int $space_id The space ID identifies the space into which the connector should be inserted into. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppConnectorCreationRequest $request The connector object contains all the details required to create or update a web app connector. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppConnector
+	 * @param \Wallee\Sdk\Model\PaymentAppConnectorCreationRequest $request The connector object contains all the details required to create or update a web app connector. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\PaymentAppConnector
 	 */
 	public function insertOrUpdateConnector($space_id, $request) {
 		return $this->insertOrUpdateConnectorWithHttpInfo($space_id, $request)->getData();
@@ -412,10 +412,10 @@ class PaymentWebAppService {
      
      *
 	 * @param int $space_id The space ID identifies the space into which the connector should be inserted into. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppConnectorCreationRequest $request The connector object contains all the details required to create or update a web app connector. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\PaymentAppConnectorCreationRequest $request The connector object contains all the details required to create or update a web app connector. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function insertOrUpdateConnectorWithHttpInfo($space_id, $request) {
@@ -469,16 +469,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\PaymentAppConnector',
+				'\Wallee\Sdk\Model\PaymentAppConnector',
 				'/payment-web-app/insert-or-update-connector'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\PaymentAppConnector', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\PaymentAppConnector', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\PaymentAppConnector',
+                        '\Wallee\Sdk\Model\PaymentAppConnector',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -494,7 +494,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -510,11 +510,11 @@ class PaymentWebAppService {
 	 * Insert or Update Processor
 	 *
 	 * @param int $space_id The space ID identifies the space into which the processor should be inserted into. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessorCreationRequest $request The processor object contains all the details required to create or update a web app processor. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor
+	 * @param \Wallee\Sdk\Model\PaymentAppProcessorCreationRequest $request The processor object contains all the details required to create or update a web app processor. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\PaymentAppProcessor
 	 */
 	public function insertOrUpdateProcessor($space_id, $request) {
 		return $this->insertOrUpdateProcessorWithHttpInfo($space_id, $request)->getData();
@@ -527,10 +527,10 @@ class PaymentWebAppService {
      
      *
 	 * @param int $space_id The space ID identifies the space into which the processor should be inserted into. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessorCreationRequest $request The processor object contains all the details required to create or update a web app processor. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\PaymentAppProcessorCreationRequest $request The processor object contains all the details required to create or update a web app processor. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function insertOrUpdateProcessorWithHttpInfo($space_id, $request) {
@@ -584,16 +584,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor',
+				'\Wallee\Sdk\Model\PaymentAppProcessor',
 				'/payment-web-app/insert-or-update-processor'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\PaymentAppProcessor', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor',
+                        '\Wallee\Sdk\Model\PaymentAppProcessor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -601,7 +601,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -609,7 +609,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -625,11 +625,11 @@ class PaymentWebAppService {
 	 * Update Charge Attempt
 	 *
 	 * @param int $space_id This is the ID of the space in which the charge attempt is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppChargeAttemptUpdateRequest $request The charge attempt update request allows to update the state of a charge attempt. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\ChargeAttempt
+	 * @param \Wallee\Sdk\Model\PaymentAppChargeAttemptUpdateRequest $request The charge attempt update request allows to update the state of a charge attempt. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\ChargeAttempt
 	 */
 	public function updateChargeAttempt($space_id, $request) {
 		return $this->updateChargeAttemptWithHttpInfo($space_id, $request)->getData();
@@ -642,10 +642,10 @@ class PaymentWebAppService {
      
      *
 	 * @param int $space_id This is the ID of the space in which the charge attempt is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppChargeAttemptUpdateRequest $request The charge attempt update request allows to update the state of a charge attempt. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\PaymentAppChargeAttemptUpdateRequest $request The charge attempt update request allows to update the state of a charge attempt. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateChargeAttemptWithHttpInfo($space_id, $request) {
@@ -699,16 +699,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\ChargeAttempt',
+				'\Wallee\Sdk\Model\ChargeAttempt',
 				'/payment-web-app/update-charge-attempt'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\ChargeAttempt', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\ChargeAttempt', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ChargeAttempt',
+                        '\Wallee\Sdk\Model\ChargeAttempt',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -716,7 +716,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -724,7 +724,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -740,11 +740,11 @@ class PaymentWebAppService {
 	 * Update Completion
 	 *
 	 * @param int $space_id This is the ID of the space in which the completion is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionUpdateRequest $request The completion update request allows to update the state of a completion. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\TransactionCompletion
+	 * @param \Wallee\Sdk\Model\PaymentAppCompletionUpdateRequest $request The completion update request allows to update the state of a completion. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\TransactionCompletion
 	 */
 	public function updateCompletion($space_id, $request) {
 		return $this->updateCompletionWithHttpInfo($space_id, $request)->getData();
@@ -757,10 +757,10 @@ class PaymentWebAppService {
      
      *
 	 * @param int $space_id This is the ID of the space in which the completion is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionUpdateRequest $request The completion update request allows to update the state of a completion. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\PaymentAppCompletionUpdateRequest $request The completion update request allows to update the state of a completion. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateCompletionWithHttpInfo($space_id, $request) {
@@ -814,16 +814,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\TransactionCompletion',
+				'\Wallee\Sdk\Model\TransactionCompletion',
 				'/payment-web-app/update-completion'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\TransactionCompletion', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionCompletion', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\TransactionCompletion',
+                        '\Wallee\Sdk\Model\TransactionCompletion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -855,11 +855,11 @@ class PaymentWebAppService {
 	 * Update Refund
 	 *
 	 * @param int $space_id This is the ID of the space in which the refund is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundUpdateRequest $request The refund update request allows to update the state of a refund. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\Refund
+	 * @param \Wallee\Sdk\Model\PaymentAppRefundUpdateRequest $request The refund update request allows to update the state of a refund. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\Refund
 	 */
 	public function updateRefund($space_id, $request) {
 		return $this->updateRefundWithHttpInfo($space_id, $request)->getData();
@@ -872,10 +872,10 @@ class PaymentWebAppService {
      
      *
 	 * @param int $space_id This is the ID of the space in which the refund is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundUpdateRequest $request The refund update request allows to update the state of a refund. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\PaymentAppRefundUpdateRequest $request The refund update request allows to update the state of a refund. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateRefundWithHttpInfo($space_id, $request) {
@@ -929,16 +929,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\Refund',
+				'\Wallee\Sdk\Model\Refund',
 				'/payment-web-app/update-refund'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\Refund', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Refund', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\Refund',
+                        '\Wallee\Sdk\Model\Refund',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -946,7 +946,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -954,7 +954,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -970,11 +970,11 @@ class PaymentWebAppService {
 	 * Update Void
 	 *
 	 * @param int $space_id This is the ID of the space in which the void is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppVoidUpdateRequest $request The void update request allows to update the state of a void. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
-	 * @return \WhiteLabelMachineName\Sdk\Model\TransactionVoid
+	 * @param \Wallee\Sdk\Model\PaymentAppVoidUpdateRequest $request The void update request allows to update the state of a void. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @return \Wallee\Sdk\Model\TransactionVoid
 	 */
 	public function updateVoid($space_id, $request) {
 		return $this->updateVoidWithHttpInfo($space_id, $request)->getData();
@@ -987,10 +987,10 @@ class PaymentWebAppService {
      
      *
 	 * @param int $space_id This is the ID of the space in which the void is located in. (required)
-	 * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppVoidUpdateRequest $request The void update request allows to update the state of a void. (required)
-	 * @throws \WhiteLabelMachineName\Sdk\ApiException
-	 * @throws \WhiteLabelMachineName\Sdk\VersioningException
-	 * @throws \WhiteLabelMachineName\Sdk\Http\ConnectionException
+	 * @param \Wallee\Sdk\Model\PaymentAppVoidUpdateRequest $request The void update request allows to update the state of a void. (required)
+	 * @throws \Wallee\Sdk\ApiException
+	 * @throws \Wallee\Sdk\VersioningException
+	 * @throws \Wallee\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateVoidWithHttpInfo($space_id, $request) {
@@ -1044,16 +1044,16 @@ class PaymentWebAppService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\WhiteLabelMachineName\Sdk\Model\TransactionVoid',
+				'\Wallee\Sdk\Model\TransactionVoid',
 				'/payment-web-app/update-void'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\WhiteLabelMachineName\Sdk\Model\TransactionVoid', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionVoid', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\TransactionVoid',
+                        '\Wallee\Sdk\Model\TransactionVoid',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1061,7 +1061,7 @@ class PaymentWebAppService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ClientError',
+                        '\Wallee\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1069,7 +1069,7 @@ class PaymentWebAppService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\WhiteLabelMachineName\Sdk\Model\ServerError',
+                        '\Wallee\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

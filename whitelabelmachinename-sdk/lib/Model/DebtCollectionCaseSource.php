@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * DebtCollectionCaseSource model
  *
  * @category    Class
- * @description The debt collection case source represents the origin of the case. It allows to understand from where the amount receivable is coming from.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @description The debt collection case source represents the origin of the case. It allows to understand where the amount receivable is coming from.
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class DebtCollectionCaseSource implements ModelInterface, ArrayAccess
@@ -259,7 +259,7 @@ class DebtCollectionCaseSource implements ModelInterface, ArrayAccess
     /**
      * Sets forced_preparing_state
      *
-     * @param bool $forced_preparing_state 
+     * @param bool $forced_preparing_state Whether debt collection cases created from this source will skip review and directly enter preparing state.
      *
      * @return $this
      */

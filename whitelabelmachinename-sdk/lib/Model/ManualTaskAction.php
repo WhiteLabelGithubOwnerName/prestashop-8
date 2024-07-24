@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ManualTaskAction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ManualTaskAction implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class ManualTaskAction implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'label' => 'map[string,string]',
-        'style' => '\WhiteLabelMachineName\Sdk\Model\ManualTaskActionStyle',
+        'style' => '\Wallee\Sdk\Model\ManualTaskActionStyle',
         'task_type' => 'int'
     ];
 
@@ -274,7 +274,7 @@ class ManualTaskAction implements ModelInterface, ArrayAccess
     /**
      * Gets style
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ManualTaskActionStyle
+     * @return \Wallee\Sdk\Model\ManualTaskActionStyle
      */
     public function getStyle()
     {
@@ -284,7 +284,7 @@ class ManualTaskAction implements ModelInterface, ArrayAccess
     /**
      * Sets style
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ManualTaskActionStyle $style The action's style.
+     * @param \Wallee\Sdk\Model\ManualTaskActionStyle $style The action's style.
      *
      * @return $this
      */

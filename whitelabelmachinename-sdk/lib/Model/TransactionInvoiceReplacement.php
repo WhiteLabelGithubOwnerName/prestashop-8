@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TransactionInvoiceReplacement model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
@@ -49,10 +49,10 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\WhiteLabelMachineName\Sdk\Model\AddressCreate',
+        'billing_address' => '\Wallee\Sdk\Model\AddressCreate',
         'due_on' => '\DateTime',
         'external_id' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItemCreate[]',
+        'line_items' => '\Wallee\Sdk\Model\LineItemCreate[]',
         'merchant_reference' => 'string',
         'sent_to_customer' => 'bool'
     ];
@@ -256,7 +256,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\AddressCreate
+     * @return \Wallee\Sdk\Model\AddressCreate
      */
     public function getBillingAddress()
     {
@@ -266,7 +266,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\AddressCreate $billing_address 
+     * @param \Wallee\Sdk\Model\AddressCreate $billing_address 
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItemCreate[]
+     * @return \Wallee\Sdk\Model\LineItemCreate[]
      */
     public function getLineItems()
     {
@@ -348,7 +348,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItemCreate[] $line_items 
+     * @param \Wallee\Sdk\Model\LineItemCreate[] $line_items 
      *
      * @return $this
      */

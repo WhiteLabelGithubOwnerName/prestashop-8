@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InvoiceReimbursement model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InvoiceReimbursement implements ModelInterface, ArrayAccess
@@ -56,8 +56,8 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         'discarded_on' => '\DateTime',
         'id' => 'int',
         'linked_space_id' => 'int',
-        'payment_connector_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration',
-        'payment_initiation_advice_file' => '\WhiteLabelMachineName\Sdk\Model\PaymentInitiationAdviceFile',
+        'payment_connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
+        'payment_initiation_advice_file' => '\Wallee\Sdk\Model\PaymentInitiationAdviceFile',
         'processed_by' => 'int',
         'processed_on' => '\DateTime',
         'recipient_city' => 'string',
@@ -65,10 +65,11 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         'recipient_family_name' => 'string',
         'recipient_given_name' => 'string',
         'recipient_iban' => 'string',
+        'recipient_organization_name' => 'string',
         'recipient_postcode' => 'string',
         'recipient_street' => 'string',
         'sender_iban' => 'string',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\InvoiceReimbursementState',
+        'state' => '\Wallee\Sdk\Model\InvoiceReimbursementState',
         'version' => 'int'
     ];
 
@@ -94,6 +95,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         'recipient_family_name' => null,
         'recipient_given_name' => null,
         'recipient_iban' => null,
+        'recipient_organization_name' => null,
         'recipient_postcode' => null,
         'recipient_street' => null,
         'sender_iban' => null,
@@ -124,6 +126,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         'recipient_family_name' => 'recipientFamilyName',
         'recipient_given_name' => 'recipientGivenName',
         'recipient_iban' => 'recipientIban',
+        'recipient_organization_name' => 'recipientOrganizationName',
         'recipient_postcode' => 'recipientPostcode',
         'recipient_street' => 'recipientStreet',
         'sender_iban' => 'senderIban',
@@ -153,6 +156,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         'recipient_family_name' => 'setRecipientFamilyName',
         'recipient_given_name' => 'setRecipientGivenName',
         'recipient_iban' => 'setRecipientIban',
+        'recipient_organization_name' => 'setRecipientOrganizationName',
         'recipient_postcode' => 'setRecipientPostcode',
         'recipient_street' => 'setRecipientStreet',
         'sender_iban' => 'setSenderIban',
@@ -182,6 +186,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         'recipient_family_name' => 'getRecipientFamilyName',
         'recipient_given_name' => 'getRecipientGivenName',
         'recipient_iban' => 'getRecipientIban',
+        'recipient_organization_name' => 'getRecipientOrganizationName',
         'recipient_postcode' => 'getRecipientPostcode',
         'recipient_street' => 'getRecipientStreet',
         'sender_iban' => 'getSenderIban',
@@ -238,6 +243,8 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
         $this->container['recipient_given_name'] = isset($data['recipient_given_name']) ? $data['recipient_given_name'] : null;
         
         $this->container['recipient_iban'] = isset($data['recipient_iban']) ? $data['recipient_iban'] : null;
+        
+        $this->container['recipient_organization_name'] = isset($data['recipient_organization_name']) ? $data['recipient_organization_name'] : null;
         
         $this->container['recipient_postcode'] = isset($data['recipient_postcode']) ? $data['recipient_postcode'] : null;
         
@@ -518,7 +525,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     /**
      * Gets payment_connector_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getPaymentConnectorConfiguration()
     {
@@ -528,7 +535,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     /**
      * Sets payment_connector_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration 
+     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration 
      *
      * @return $this
      */
@@ -543,7 +550,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     /**
      * Gets payment_initiation_advice_file
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentInitiationAdviceFile
+     * @return \Wallee\Sdk\Model\PaymentInitiationAdviceFile
      */
     public function getPaymentInitiationAdviceFile()
     {
@@ -553,7 +560,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     /**
      * Sets payment_initiation_advice_file
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentInitiationAdviceFile $payment_initiation_advice_file 
+     * @param \Wallee\Sdk\Model\PaymentInitiationAdviceFile $payment_initiation_advice_file 
      *
      * @return $this
      */
@@ -741,6 +748,31 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     
 
     /**
+     * Gets recipient_organization_name
+     *
+     * @return string
+     */
+    public function getRecipientOrganizationName()
+    {
+        return $this->container['recipient_organization_name'];
+    }
+
+    /**
+     * Sets recipient_organization_name
+     *
+     * @param string $recipient_organization_name 
+     *
+     * @return $this
+     */
+    public function setRecipientOrganizationName($recipient_organization_name)
+    {
+        $this->container['recipient_organization_name'] = $recipient_organization_name;
+
+        return $this;
+    }
+    
+
+    /**
      * Gets recipient_postcode
      *
      * @return string
@@ -818,7 +850,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InvoiceReimbursementState
+     * @return \Wallee\Sdk\Model\InvoiceReimbursementState
      */
     public function getState()
     {
@@ -828,7 +860,7 @@ class InvoiceReimbursement implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InvoiceReimbursementState $state The object's current state.
+     * @param \Wallee\Sdk\Model\InvoiceReimbursementState $state The object's current state.
      *
      * @return $this
      */

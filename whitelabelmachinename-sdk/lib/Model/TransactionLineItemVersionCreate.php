@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TransactionLineItemVersionCreate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionLineItemVersionCreate implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class TransactionLineItemVersionCreate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'external_id' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItemCreate[]',
+        'line_items' => '\Wallee\Sdk\Model\LineItemCreate[]',
         'transaction' => 'int'
     ];
 
@@ -251,7 +251,7 @@ class TransactionLineItemVersionCreate implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItemCreate[]
+     * @return \Wallee\Sdk\Model\LineItemCreate[]
      */
     public function getLineItems()
     {
@@ -261,7 +261,7 @@ class TransactionLineItemVersionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItemCreate[] $line_items 
+     * @param \Wallee\Sdk\Model\LineItemCreate[] $line_items 
      *
      * @return $this
      */

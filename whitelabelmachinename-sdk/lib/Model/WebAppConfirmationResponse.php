@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * WebAppConfirmationResponse model
  *
  * @category    Class
- * @description The confirmation response provides the details about the installation of the web app.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @description The confirmation response provides details about the installation of the web app.
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'access_token' => 'string',
         'scope' => 'string',
-        'space' => '\WhiteLabelMachineName\Sdk\Model\Space',
+        'space' => '\Wallee\Sdk\Model\Space',
         'state' => 'string',
         'token_type' => 'string'
     ];
@@ -241,7 +241,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     /**
      * Sets access_token
      *
-     * @param string $access_token The access code grants permissions to the web service API according to the OAuth standard.
+     * @param string $access_token The access code granting permissions to the web service API according to the OAuth standard.
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     /**
      * Sets scope
      *
-     * @param string $scope The scope contains the permissions granted to the web app within the space.
+     * @param string $scope The list of the permissions granted to the web app within the space.
      *
      * @return $this
      */
@@ -281,7 +281,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     /**
      * Gets space
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Space
+     * @return \Wallee\Sdk\Model\Space
      */
     public function getSpace()
     {
@@ -291,7 +291,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     /**
      * Sets space
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Space $space This is the space into which the web app is installed into.
+     * @param \Wallee\Sdk\Model\Space $space The space that the web app was installed in.
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param string $state The state contains the state parameter content provided when initiating the app installation.
+     * @param string $state The state parameter that was provided in the authorization request.
      *
      * @return $this
      */
@@ -341,7 +341,7 @@ class WebAppConfirmationResponse implements ModelInterface, ArrayAccess
     /**
      * Sets token_type
      *
-     * @param string $token_type The token type indicates the type of the access token. The type determines the authentication mechanism to use for accessing the web service API.
+     * @param string $token_type The type of the access token that determines the authentication mechanism to use for accessing the web service API.
      *
      * @return $this
      */

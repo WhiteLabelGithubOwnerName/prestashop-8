@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionPeriodBill model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
@@ -57,8 +57,8 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
         'period_start_date' => '\DateTime',
         'planned_period_end_date' => '\DateTime',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionPeriodBillState',
-        'subscription_version' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersion',
+        'state' => '\Wallee\Sdk\Model\SubscriptionPeriodBillState',
+        'subscription_version' => '\Wallee\Sdk\Model\SubscriptionVersion',
         'version' => 'int'
     ];
 
@@ -283,7 +283,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Sets created_on
      *
-     * @param \DateTime $created_on 
+     * @param \DateTime $created_on The date and time when the period bill was created.
      *
      * @return $this
      */
@@ -308,7 +308,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Sets effective_period_end_date
      *
-     * @param \DateTime $effective_period_end_date 
+     * @param \DateTime $effective_period_end_date The date and time when the period actually ended.
      *
      * @return $this
      */
@@ -408,7 +408,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Sets period_start_date
      *
-     * @param \DateTime $period_start_date 
+     * @param \DateTime $period_start_date The date and time when the period started.
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Sets planned_period_end_date
      *
-     * @param \DateTime $planned_period_end_date 
+     * @param \DateTime $planned_period_end_date The date and time when the period is planned to end.
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionPeriodBillState
+     * @return \Wallee\Sdk\Model\SubscriptionPeriodBillState
      */
     public function getState()
     {
@@ -483,7 +483,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionPeriodBillState $state The object's current state.
+     * @param \Wallee\Sdk\Model\SubscriptionPeriodBillState $state The object's current state.
      *
      * @return $this
      */
@@ -498,7 +498,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionVersion
+     * @return \Wallee\Sdk\Model\SubscriptionVersion
      */
     public function getSubscriptionVersion()
     {
@@ -508,7 +508,7 @@ class SubscriptionPeriodBill implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionVersion $subscription_version 
+     * @param \Wallee\Sdk\Model\SubscriptionVersion $subscription_version The subscription version that the period bill belongs to.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionVersion model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionVersion implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'activated_on' => '\DateTime',
         'billing_currency' => 'string',
-        'component_configurations' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionComponentConfiguration[]',
+        'component_configurations' => '\Wallee\Sdk\Model\SubscriptionComponentConfiguration[]',
         'created_on' => '\DateTime',
         'expected_last_period_end' => '\DateTime',
         'failed_on' => '\DateTime',
@@ -60,10 +60,9 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'planned_purge_date' => '\DateTime',
         'planned_termination_date' => '\DateTime',
-        'product_version' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion',
-        'selected_components' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponent[]',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionVersionState',
-        'subscription' => '\WhiteLabelMachineName\Sdk\Model\Subscription',
+        'product_version' => '\Wallee\Sdk\Model\SubscriptionProductVersion',
+        'state' => '\Wallee\Sdk\Model\SubscriptionVersionState',
+        'subscription' => '\Wallee\Sdk\Model\Subscription',
         'terminated_on' => '\DateTime',
         'terminating_on' => '\DateTime',
         'termination_issued_on' => '\DateTime',
@@ -88,7 +87,6 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
         'planned_purge_date' => 'date-time',
         'planned_termination_date' => 'date-time',
         'product_version' => null,
-        'selected_components' => null,
         'state' => null,
         'subscription' => null,
         'terminated_on' => 'date-time',
@@ -116,7 +114,6 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
         'planned_purge_date' => 'plannedPurgeDate',
         'planned_termination_date' => 'plannedTerminationDate',
         'product_version' => 'productVersion',
-        'selected_components' => 'selectedComponents',
         'state' => 'state',
         'subscription' => 'subscription',
         'terminated_on' => 'terminatedOn',
@@ -143,7 +140,6 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
         'planned_purge_date' => 'setPlannedPurgeDate',
         'planned_termination_date' => 'setPlannedTerminationDate',
         'product_version' => 'setProductVersion',
-        'selected_components' => 'setSelectedComponents',
         'state' => 'setState',
         'subscription' => 'setSubscription',
         'terminated_on' => 'setTerminatedOn',
@@ -170,7 +166,6 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
         'planned_purge_date' => 'getPlannedPurgeDate',
         'planned_termination_date' => 'getPlannedTerminationDate',
         'product_version' => 'getProductVersion',
-        'selected_components' => 'getSelectedComponents',
         'state' => 'getState',
         'subscription' => 'getSubscription',
         'terminated_on' => 'getTerminatedOn',
@@ -220,8 +215,6 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
         $this->container['planned_termination_date'] = isset($data['planned_termination_date']) ? $data['planned_termination_date'] : null;
         
         $this->container['product_version'] = isset($data['product_version']) ? $data['product_version'] : null;
-        
-        $this->container['selected_components'] = isset($data['selected_components']) ? $data['selected_components'] : null;
         
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         
@@ -339,7 +332,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets activated_on
      *
-     * @param \DateTime $activated_on 
+     * @param \DateTime $activated_on The date and time when the subscription version was activated.
      *
      * @return $this
      */
@@ -364,7 +357,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_currency
      *
-     * @param string $billing_currency The subscriber is charged in the billing currency. The billing currency has to be one of the enabled currencies on the subscription product.
+     * @param string $billing_currency The three-letter code (ISO 4217 format) of the currency used to invoice the customer. Must be one of the currencies supported by the product.
      *
      * @return $this
      */
@@ -379,7 +372,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets component_configurations
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionComponentConfiguration[]
+     * @return \Wallee\Sdk\Model\SubscriptionComponentConfiguration[]
      */
     public function getComponentConfigurations()
     {
@@ -389,7 +382,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets component_configurations
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionComponentConfiguration[] $component_configurations 
+     * @param \Wallee\Sdk\Model\SubscriptionComponentConfiguration[] $component_configurations The configurations of the subscription's components.
      *
      * @return $this
      */
@@ -414,7 +407,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets created_on
      *
-     * @param \DateTime $created_on 
+     * @param \DateTime $created_on The date and time when the subscription version was created.
      *
      * @return $this
      */
@@ -439,7 +432,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets expected_last_period_end
      *
-     * @param \DateTime $expected_last_period_end The expected last period end is the date on which the projected end date of the last period is. This is only a projection and as such the actual date may be different.
+     * @param \DateTime $expected_last_period_end The date and time when the last period is expected to end.
      *
      * @return $this
      */
@@ -464,7 +457,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets failed_on
      *
-     * @param \DateTime $failed_on 
+     * @param \DateTime $failed_on The date and time when the subscription version failed.
      *
      * @return $this
      */
@@ -589,7 +582,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets planned_termination_date
      *
-     * @param \DateTime $planned_termination_date 
+     * @param \DateTime $planned_termination_date The date and time when the termination of the subscription version is planned.
      *
      * @return $this
      */
@@ -604,7 +597,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets product_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion
+     * @return \Wallee\Sdk\Model\SubscriptionProductVersion
      */
     public function getProductVersion()
     {
@@ -614,7 +607,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets product_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion $product_version 
+     * @param \Wallee\Sdk\Model\SubscriptionProductVersion $product_version The product version that is subscribed to.
      *
      * @return $this
      */
@@ -627,34 +620,9 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     
 
     /**
-     * Gets selected_components
-     *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponent[]
-     */
-    public function getSelectedComponents()
-    {
-        return $this->container['selected_components'];
-    }
-
-    /**
-     * Sets selected_components
-     *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponent[] $selected_components 
-     *
-     * @return $this
-     */
-    public function setSelectedComponents($selected_components)
-    {
-        $this->container['selected_components'] = $selected_components;
-
-        return $this;
-    }
-    
-
-    /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionVersionState
+     * @return \Wallee\Sdk\Model\SubscriptionVersionState
      */
     public function getState()
     {
@@ -664,7 +632,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionVersionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\SubscriptionVersionState $state The object's current state.
      *
      * @return $this
      */
@@ -679,7 +647,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Subscription
+     * @return \Wallee\Sdk\Model\Subscription
      */
     public function getSubscription()
     {
@@ -689,7 +657,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Subscription $subscription 
+     * @param \Wallee\Sdk\Model\Subscription $subscription The subscription that this version belongs to.
      *
      * @return $this
      */
@@ -714,7 +682,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets terminated_on
      *
-     * @param \DateTime $terminated_on 
+     * @param \DateTime $terminated_on The date and time when the subscription version was terminated.
      *
      * @return $this
      */
@@ -739,7 +707,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets terminating_on
      *
-     * @param \DateTime $terminating_on 
+     * @param \DateTime $terminating_on The date and time when the termination of the subscription version started.
      *
      * @return $this
      */
@@ -764,7 +732,7 @@ class SubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets termination_issued_on
      *
-     * @param \DateTime $termination_issued_on 
+     * @param \DateTime $termination_issued_on The date and time when the termination of the subscription version was issued.
      *
      * @return $this
      */

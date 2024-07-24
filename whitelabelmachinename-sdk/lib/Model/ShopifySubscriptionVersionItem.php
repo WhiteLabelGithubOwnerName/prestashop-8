@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionVersionItem model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
@@ -50,10 +50,10 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'price_including_tax' => 'float',
-        'price_strategy' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy',
+        'price_strategy' => '\Wallee\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy',
         'product' => 'int',
         'quantity' => 'float',
-        'tax_lines' => '\WhiteLabelMachineName\Sdk\Model\ShopifyTaxLine[]'
+        'tax_lines' => '\Wallee\Sdk\Model\ShopifyTaxLine[]'
     ];
 
     /**
@@ -256,7 +256,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Gets price_strategy
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy
      */
     public function getPriceStrategy()
     {
@@ -266,7 +266,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Sets price_strategy
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy $price_strategy 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy $price_strategy 
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Gets tax_lines
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifyTaxLine[]
+     * @return \Wallee\Sdk\Model\ShopifyTaxLine[]
      */
     public function getTaxLines()
     {
@@ -341,7 +341,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_lines
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifyTaxLine[] $tax_lines 
+     * @param \Wallee\Sdk\Model\ShopifyTaxLine[] $tax_lines 
      *
      * @return $this
      */

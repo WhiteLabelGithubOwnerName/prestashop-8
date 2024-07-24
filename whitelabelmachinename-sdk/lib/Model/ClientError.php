@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ClientError model
  *
  * @category    Class
  * @description An error that is returned as the result of a bad user request or a misconfiguration.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ClientError implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class ClientError implements ModelInterface, ArrayAccess
         'default_message' => 'string',
         'id' => 'string',
         'message' => 'string',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\ClientErrorType'
+        'type' => '\Wallee\Sdk\Model\ClientErrorType'
     ];
 
     /**
@@ -331,7 +331,7 @@ class ClientError implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ClientErrorType
+     * @return \Wallee\Sdk\Model\ClientErrorType
      */
     public function getType()
     {
@@ -341,7 +341,7 @@ class ClientError implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ClientErrorType $type The type of the client error.
+     * @param \Wallee\Sdk\Model\ClientErrorType $type The type of the client error.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriber model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriber implements ModelInterface, ArrayAccess
@@ -57,7 +57,7 @@ class ShopifySubscriber implements ModelInterface, ArrayAccess
         'phone_number' => 'string',
         'planned_purge_date' => '\DateTime',
         'shop' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriberState',
+        'state' => '\Wallee\Sdk\Model\ShopifySubscriberState',
         'version' => 'int'
     ];
 
@@ -482,7 +482,7 @@ class ShopifySubscriber implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriberState
+     * @return \Wallee\Sdk\Model\ShopifySubscriberState
      */
     public function getState()
     {
@@ -492,7 +492,7 @@ class ShopifySubscriber implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriberState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ShopifySubscriberState $state The object's current state.
      *
      * @return $this
      */

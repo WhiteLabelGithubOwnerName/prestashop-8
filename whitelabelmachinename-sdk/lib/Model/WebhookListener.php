@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * WebhookListener model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class WebhookListener implements ModelInterface, ArrayAccess
@@ -53,13 +53,13 @@ class WebhookListener implements ModelInterface, ArrayAccess
         'entity' => 'int',
         'entity_states' => 'string[]',
         'id' => 'int',
-        'identity' => '\WhiteLabelMachineName\Sdk\Model\WebhookIdentity',
+        'identity' => '\Wallee\Sdk\Model\WebhookIdentity',
         'linked_space_id' => 'int',
         'name' => 'string',
         'notify_every_change' => 'bool',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
-        'url' => '\WhiteLabelMachineName\Sdk\Model\WebhookUrl',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'url' => '\Wallee\Sdk\Model\WebhookUrl',
         'version' => 'int'
     ];
 
@@ -384,7 +384,7 @@ class WebhookListener implements ModelInterface, ArrayAccess
     /**
      * Gets identity
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\WebhookIdentity
+     * @return \Wallee\Sdk\Model\WebhookIdentity
      */
     public function getIdentity()
     {
@@ -394,7 +394,7 @@ class WebhookListener implements ModelInterface, ArrayAccess
     /**
      * Sets identity
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\WebhookIdentity $identity The identity used to sign messages.
+     * @param \Wallee\Sdk\Model\WebhookIdentity $identity The identity used to sign messages.
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class WebhookListener implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -523,7 +523,7 @@ class WebhookListener implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class WebhookListener implements ModelInterface, ArrayAccess
     /**
      * Gets url
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\WebhookUrl
+     * @return \Wallee\Sdk\Model\WebhookUrl
      */
     public function getUrl()
     {
@@ -548,7 +548,7 @@ class WebhookListener implements ModelInterface, ArrayAccess
     /**
      * Sets url
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\WebhookUrl $url The URL where notifications about entity changes are sent to.
+     * @param \Wallee\Sdk\Model\WebhookUrl $url The URL where notifications about entity changes are sent to.
      *
      * @return $this
      */

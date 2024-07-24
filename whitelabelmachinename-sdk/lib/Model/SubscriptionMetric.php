@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionMetric model
  *
  * @category    Class
  * @description A metric represents the usage of a resource that can be measured.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionMetric implements ModelInterface, ArrayAccess
@@ -54,8 +54,8 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'name' => 'map[string,string]',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionMetricType',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'type' => '\Wallee\Sdk\Model\SubscriptionMetricType',
         'version' => 'int'
     ];
 
@@ -262,7 +262,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description 
+     * @param map[string,string] $description The localized description of the metric that is displayed to the customer.
      *
      * @return $this
      */
@@ -337,7 +337,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param map[string,string] $name 
+     * @param map[string,string] $name The localized name of the metric that is displayed to the customer.
      *
      * @return $this
      */
@@ -377,7 +377,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -387,7 +387,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -402,7 +402,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionMetricType
+     * @return \Wallee\Sdk\Model\SubscriptionMetricType
      */
     public function getType()
     {
@@ -412,7 +412,7 @@ class SubscriptionMetric implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionMetricType $type 
+     * @param \Wallee\Sdk\Model\SubscriptionMetricType $type The type of the metric.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InstallmentCalculatedPlan model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
@@ -49,11 +49,11 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configuration' => '\WhiteLabelMachineName\Sdk\Model\InstallmentPlanConfiguration',
-        'payment_method_configurations' => '\WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]',
-        'slices' => '\WhiteLabelMachineName\Sdk\Model\InstallmentCalculatedSlice[]',
+        'configuration' => '\Wallee\Sdk\Model\InstallmentPlanConfiguration',
+        'payment_method_configurations' => '\Wallee\Sdk\Model\PaymentMethodConfiguration[]',
+        'slices' => '\Wallee\Sdk\Model\InstallmentCalculatedSlice[]',
         'total_amount' => 'float',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction'
+        'transaction' => '\Wallee\Sdk\Model\Transaction'
     ];
 
     /**
@@ -231,7 +231,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InstallmentPlanConfiguration
+     * @return \Wallee\Sdk\Model\InstallmentPlanConfiguration
      */
     public function getConfiguration()
     {
@@ -241,7 +241,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InstallmentPlanConfiguration $configuration 
+     * @param \Wallee\Sdk\Model\InstallmentPlanConfiguration $configuration 
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method_configurations
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]
+     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration[]
      */
     public function getPaymentMethodConfigurations()
     {
@@ -266,7 +266,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method_configurations
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[] $payment_method_configurations 
+     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration[] $payment_method_configurations 
      *
      * @return $this
      */
@@ -281,7 +281,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Gets slices
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InstallmentCalculatedSlice[]
+     * @return \Wallee\Sdk\Model\InstallmentCalculatedSlice[]
      */
     public function getSlices()
     {
@@ -291,7 +291,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Sets slices
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InstallmentCalculatedSlice[] $slices 
+     * @param \Wallee\Sdk\Model\InstallmentCalculatedSlice[] $slices 
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -341,7 +341,7 @@ class InstallmentCalculatedPlan implements ModelInterface, ArrayAccess
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

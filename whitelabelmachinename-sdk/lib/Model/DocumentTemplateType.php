@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * DocumentTemplateType model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class DocumentTemplateType implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'description' => 'map[string,string]',
         'feature' => 'int',
-        'group' => '\WhiteLabelMachineName\Sdk\Model\DocumentTemplateTypeGroup',
+        'group' => '\Wallee\Sdk\Model\DocumentTemplateTypeGroup',
         'id' => 'int',
         'title' => 'map[string,string]'
     ];
@@ -241,7 +241,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description 
+     * @param map[string,string] $description The localized description of the document template type.
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Sets feature
      *
-     * @param int $feature 
+     * @param int $feature The feature that this document template type belongs to.
      *
      * @return $this
      */
@@ -281,7 +281,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Gets group
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\DocumentTemplateTypeGroup
+     * @return \Wallee\Sdk\Model\DocumentTemplateTypeGroup
      */
     public function getGroup()
     {
@@ -291,7 +291,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Sets group
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\DocumentTemplateTypeGroup $group 
+     * @param \Wallee\Sdk\Model\DocumentTemplateTypeGroup $group The group that this document template type belongs to.
      *
      * @return $this
      */
@@ -341,7 +341,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Sets title
      *
-     * @param map[string,string] $title 
+     * @param map[string,string] $title The localized title of the document template type.
      *
      * @return $this
      */

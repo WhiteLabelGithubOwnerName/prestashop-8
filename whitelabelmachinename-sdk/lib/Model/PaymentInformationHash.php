@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentInformationHash model
  *
  * @category    Class
  * @description A payment information hash is calculated based on the information entered by the user. The same input leads to the same hash. The hash is collision free.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentInformationHash implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class PaymentInformationHash implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\PaymentInformationHashType',
+        'type' => '\Wallee\Sdk\Model\PaymentInformationHashType',
         'value' => 'string'
     ];
 
@@ -242,7 +242,7 @@ class PaymentInformationHash implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentInformationHashType
+     * @return \Wallee\Sdk\Model\PaymentInformationHashType
      */
     public function getType()
     {
@@ -252,7 +252,7 @@ class PaymentInformationHash implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentInformationHashType $type 
+     * @param \Wallee\Sdk\Model\PaymentInformationHashType $type 
      *
      * @return $this
      */

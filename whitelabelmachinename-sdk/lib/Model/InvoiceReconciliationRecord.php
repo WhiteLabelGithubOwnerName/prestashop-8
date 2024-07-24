@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InvoiceReconciliationRecord model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InvoiceReconciliationRecord extends TransactionAwareEntity 
@@ -55,11 +55,11 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
         'currency' => 'string',
         'discarded_by' => 'int',
         'discarded_on' => '\DateTime',
-        'environment' => '\WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment',
+        'environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
         'family_name' => 'string',
         'given_name' => 'string',
         'iban' => 'string',
-        'last_resolution_failure' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
+        'last_resolution_failure' => '\Wallee\Sdk\Model\FailureReason',
         'participant_number' => 'string',
         'payment_fee_amount' => 'float',
         'payment_fee_currency' => 'string',
@@ -67,13 +67,13 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
         'planned_purge_date' => '\DateTime',
         'post_code' => 'string',
         'reference_number' => 'string',
-        'rejection_status' => '\WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordRejectionStatus',
+        'rejection_status' => '\Wallee\Sdk\Model\InvoiceReconciliationRecordRejectionStatus',
         'resolved_by' => 'int',
         'resolved_on' => '\DateTime',
         'sender_bank_account' => 'string',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordState',
+        'state' => '\Wallee\Sdk\Model\InvoiceReconciliationRecordState',
         'street' => 'string',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordType',
+        'type' => '\Wallee\Sdk\Model\InvoiceReconciliationRecordType',
         'unique_id' => 'string',
         'value_date' => '\DateTime',
         'version' => 'int'
@@ -616,7 +616,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Gets environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getEnvironment()
     {
@@ -626,7 +626,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Sets environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment $environment 
+     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $environment 
      *
      * @return $this
      */
@@ -720,7 +720,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Gets last_resolution_failure
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getLastResolutionFailure()
     {
@@ -730,7 +730,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Sets last_resolution_failure
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $last_resolution_failure 
+     * @param \Wallee\Sdk\Model\FailureReason $last_resolution_failure 
      *
      * @return $this
      */
@@ -928,7 +928,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Gets rejection_status
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordRejectionStatus
+     * @return \Wallee\Sdk\Model\InvoiceReconciliationRecordRejectionStatus
      */
     public function getRejectionStatus()
     {
@@ -938,7 +938,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Sets rejection_status
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordRejectionStatus $rejection_status 
+     * @param \Wallee\Sdk\Model\InvoiceReconciliationRecordRejectionStatus $rejection_status 
      *
      * @return $this
      */
@@ -1028,7 +1028,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordState
+     * @return \Wallee\Sdk\Model\InvoiceReconciliationRecordState
      */
     public function getState()
     {
@@ -1038,7 +1038,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordState $state The object's current state.
+     * @param \Wallee\Sdk\Model\InvoiceReconciliationRecordState $state The object's current state.
      *
      * @return $this
      */
@@ -1078,7 +1078,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordType
+     * @return \Wallee\Sdk\Model\InvoiceReconciliationRecordType
      */
     public function getType()
     {
@@ -1088,7 +1088,7 @@ class InvoiceReconciliationRecord extends TransactionAwareEntity
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecordType $type 
+     * @param \Wallee\Sdk\Model\InvoiceReconciliationRecordType $type 
      *
      * @return $this
      */

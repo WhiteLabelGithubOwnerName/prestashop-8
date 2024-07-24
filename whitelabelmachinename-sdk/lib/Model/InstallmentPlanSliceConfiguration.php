@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InstallmentPlanSliceConfiguration model
  *
  * @category    Class
  * @description The installment plan slice defines a single slice of an installment plan.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InstallmentPlanSliceConfiguration implements ModelInterface, ArrayAccess
@@ -53,11 +53,11 @@ class InstallmentPlanSliceConfiguration implements ModelInterface, ArrayAccess
         'line_item_title' => 'map[string,string]',
         'linked_space_id' => 'int',
         'period' => 'string',
-        'plan' => '\WhiteLabelMachineName\Sdk\Model\InstallmentPlanConfiguration',
+        'plan' => '\Wallee\Sdk\Model\InstallmentPlanConfiguration',
         'planned_purge_date' => '\DateTime',
         'priority' => 'int',
         'proportion' => 'float',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -366,7 +366,7 @@ class InstallmentPlanSliceConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets plan
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InstallmentPlanConfiguration
+     * @return \Wallee\Sdk\Model\InstallmentPlanConfiguration
      */
     public function getPlan()
     {
@@ -376,7 +376,7 @@ class InstallmentPlanSliceConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets plan
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InstallmentPlanConfiguration $plan The installment plan this slice belongs to.
+     * @param \Wallee\Sdk\Model\InstallmentPlanConfiguration $plan The installment plan this slice belongs to.
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class InstallmentPlanSliceConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -476,7 +476,7 @@ class InstallmentPlanSliceConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

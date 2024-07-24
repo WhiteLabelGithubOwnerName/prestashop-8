@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * Subscription model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Subscription implements ModelInterface, ArrayAccess
@@ -50,9 +50,9 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'activated_on' => '\DateTime',
-        'affiliate' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionAffiliate',
+        'affiliate' => '\Wallee\Sdk\Model\SubscriptionAffiliate',
         'created_on' => '\DateTime',
-        'current_product_version' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion',
+        'current_product_version' => '\Wallee\Sdk\Model\SubscriptionProductVersion',
         'description' => 'string',
         'id' => 'int',
         'initialized_on' => '\DateTime',
@@ -61,13 +61,13 @@ class Subscription implements ModelInterface, ArrayAccess
         'planned_purge_date' => '\DateTime',
         'planned_termination_date' => '\DateTime',
         'reference' => 'string',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionState',
-        'subscriber' => '\WhiteLabelMachineName\Sdk\Model\Subscriber',
+        'state' => '\Wallee\Sdk\Model\SubscriptionState',
+        'subscriber' => '\Wallee\Sdk\Model\Subscriber',
         'terminated_by' => 'int',
         'terminated_on' => '\DateTime',
         'terminating_on' => '\DateTime',
         'termination_scheduled_on' => '\DateTime',
-        'token' => '\WhiteLabelMachineName\Sdk\Model\Token',
+        'token' => '\Wallee\Sdk\Model\Token',
         'version' => 'int'
     ];
 
@@ -354,7 +354,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets activated_on
      *
-     * @param \DateTime $activated_on 
+     * @param \DateTime $activated_on The date and time when the subscription was activate.
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets affiliate
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionAffiliate
+     * @return \Wallee\Sdk\Model\SubscriptionAffiliate
      */
     public function getAffiliate()
     {
@@ -379,7 +379,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets affiliate
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionAffiliate $affiliate 
+     * @param \Wallee\Sdk\Model\SubscriptionAffiliate $affiliate The affiliate that led to the creation of the subscription.
      *
      * @return $this
      */
@@ -404,7 +404,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets created_on
      *
-     * @param \DateTime $created_on 
+     * @param \DateTime $created_on The date and time when the subscription was created.
      *
      * @return $this
      */
@@ -419,7 +419,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets current_product_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion
+     * @return \Wallee\Sdk\Model\SubscriptionProductVersion
      */
     public function getCurrentProductVersion()
     {
@@ -429,7 +429,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets current_product_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductVersion $current_product_version 
+     * @param \Wallee\Sdk\Model\SubscriptionProductVersion $current_product_version The version of the product that the subscription is currently linked to.
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description 
+     * @param string $description A description used to identify the subscription.
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets initialized_on
      *
-     * @param \DateTime $initialized_on 
+     * @param \DateTime $initialized_on The date and time when the subscription was initialized.
      *
      * @return $this
      */
@@ -608,7 +608,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets planned_termination_date
      *
-     * @param \DateTime $planned_termination_date 
+     * @param \DateTime $planned_termination_date The date and time when the subscription is planned to be terminated.
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets reference
      *
-     * @param string $reference 
+     * @param string $reference The merchant's reference used to identify the subscription.
      *
      * @return $this
      */
@@ -652,7 +652,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionState
+     * @return \Wallee\Sdk\Model\SubscriptionState
      */
     public function getState()
     {
@@ -662,7 +662,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\SubscriptionState $state The object's current state.
      *
      * @return $this
      */
@@ -677,7 +677,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets subscriber
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Subscriber
+     * @return \Wallee\Sdk\Model\Subscriber
      */
     public function getSubscriber()
     {
@@ -687,7 +687,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets subscriber
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Subscriber $subscriber 
+     * @param \Wallee\Sdk\Model\Subscriber $subscriber The subscriber that the subscription belongs to.
      *
      * @return $this
      */
@@ -712,7 +712,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets terminated_by
      *
-     * @param int $terminated_by 
+     * @param int $terminated_by The ID of the user the subscription was terminated by.
      *
      * @return $this
      */
@@ -737,7 +737,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets terminated_on
      *
-     * @param \DateTime $terminated_on 
+     * @param \DateTime $terminated_on The date and time when the subscription was terminated.
      *
      * @return $this
      */
@@ -762,7 +762,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets terminating_on
      *
-     * @param \DateTime $terminating_on 
+     * @param \DateTime $terminating_on The date and time when the termination of the subscription started.
      *
      * @return $this
      */
@@ -787,7 +787,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets termination_scheduled_on
      *
-     * @param \DateTime $termination_scheduled_on 
+     * @param \DateTime $termination_scheduled_on The date and time when the subscription was scheduled to be terminated.
      *
      * @return $this
      */
@@ -802,7 +802,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets token
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Token
+     * @return \Wallee\Sdk\Model\Token
      */
     public function getToken()
     {
@@ -812,7 +812,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets token
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Token $token 
+     * @param \Wallee\Sdk\Model\Token $token The payment token that is used to charge the customer.
      *
      * @return $this
      */

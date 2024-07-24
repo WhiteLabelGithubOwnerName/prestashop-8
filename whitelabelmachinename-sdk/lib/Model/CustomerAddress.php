@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * CustomerAddress model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CustomerAddress implements ModelInterface, ArrayAccess
@@ -49,10 +49,10 @@ class CustomerAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\WhiteLabelMachineName\Sdk\Model\CustomerPostalAddress',
-        'address_type' => '\WhiteLabelMachineName\Sdk\Model\CustomerAddressType',
+        'address' => '\Wallee\Sdk\Model\CustomerPostalAddress',
+        'address_type' => '\Wallee\Sdk\Model\CustomerAddressType',
         'created_on' => '\DateTime',
-        'customer' => '\WhiteLabelMachineName\Sdk\Model\Customer',
+        'customer' => '\Wallee\Sdk\Model\Customer',
         'default_address' => 'bool',
         'id' => 'int',
         'linked_space_id' => 'int',
@@ -252,7 +252,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddress
+     * @return \Wallee\Sdk\Model\CustomerPostalAddress
      */
     public function getAddress()
     {
@@ -262,7 +262,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerPostalAddress $address The actual postal address.
+     * @param \Wallee\Sdk\Model\CustomerPostalAddress $address The actual postal address.
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Gets address_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomerAddressType
+     * @return \Wallee\Sdk\Model\CustomerAddressType
      */
     public function getAddressType()
     {
@@ -287,7 +287,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets address_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
+     * @param \Wallee\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Customer
+     * @return \Wallee\Sdk\Model\Customer
      */
     public function getCustomer()
     {
@@ -337,7 +337,7 @@ class CustomerAddress implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Customer $customer The customer that the object belongs to.
+     * @param \Wallee\Sdk\Model\Customer $customer The customer that the object belongs to.
      *
      * @return $this
      */

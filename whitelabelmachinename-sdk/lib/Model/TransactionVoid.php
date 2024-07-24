@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TransactionVoid model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionVoid extends TransactionAwareEntity 
@@ -50,18 +50,18 @@ class TransactionVoid extends TransactionAwareEntity
         'created_by' => 'int',
         'created_on' => '\DateTime',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
-        'labels' => '\WhiteLabelMachineName\Sdk\Model\Label[]',
+        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'labels' => '\Wallee\Sdk\Model\Label[]',
         'language' => 'string',
-        'mode' => '\WhiteLabelMachineName\Sdk\Model\TransactionVoidMode',
+        'mode' => '\Wallee\Sdk\Model\TransactionVoidMode',
         'next_update_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'processor_reference' => 'string',
         'space_view_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\TransactionVoidState',
+        'state' => '\Wallee\Sdk\Model\TransactionVoidState',
         'succeeded_on' => '\DateTime',
         'timeout_on' => '\DateTime',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -377,7 +377,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -387,7 +387,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $failure_reason 
+     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -402,7 +402,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Gets labels
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Label[]
+     * @return \Wallee\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -412,7 +412,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Sets labels
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Label[] $labels 
+     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -452,7 +452,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Gets mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionVoidMode
+     * @return \Wallee\Sdk\Model\TransactionVoidMode
      */
     public function getMode()
     {
@@ -462,7 +462,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Sets mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TransactionVoidMode $mode 
+     * @param \Wallee\Sdk\Model\TransactionVoidMode $mode 
      *
      * @return $this
      */
@@ -577,7 +577,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionVoidState
+     * @return \Wallee\Sdk\Model\TransactionVoidState
      */
     public function getState()
     {
@@ -587,7 +587,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TransactionVoidState $state The object's current state.
+     * @param \Wallee\Sdk\Model\TransactionVoidState $state The object's current state.
      *
      * @return $this
      */
@@ -652,7 +652,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -662,7 +662,7 @@ class TransactionVoid extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

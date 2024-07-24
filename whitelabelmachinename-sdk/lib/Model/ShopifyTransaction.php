@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifyTransaction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifyTransaction extends TransactionAwareEntity 
@@ -49,12 +49,12 @@ class ShopifyTransaction extends TransactionAwareEntity
     protected static $swaggerTypes = [
         'checkout_id' => 'string',
         'created_on' => '\DateTime',
-        'integration' => '\WhiteLabelMachineName\Sdk\Model\ShopifyIntegration',
+        'integration' => '\Wallee\Sdk\Model\ShopifyV1Integration',
         'order_id' => 'string',
         'order_name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ShopifyTransactionState',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
+        'state' => '\Wallee\Sdk\Model\ShopifyTransactionState',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -303,7 +303,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Gets integration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifyIntegration
+     * @return \Wallee\Sdk\Model\ShopifyV1Integration
      */
     public function getIntegration()
     {
@@ -313,7 +313,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Sets integration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifyIntegration $integration 
+     * @param \Wallee\Sdk\Model\ShopifyV1Integration $integration 
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifyTransactionState
+     * @return \Wallee\Sdk\Model\ShopifyTransactionState
      */
     public function getState()
     {
@@ -413,7 +413,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifyTransactionState $state 
+     * @param \Wallee\Sdk\Model\ShopifyTransactionState $state 
      *
      * @return $this
      */
@@ -428,7 +428,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -438,7 +438,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

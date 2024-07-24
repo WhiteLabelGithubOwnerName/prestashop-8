@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * AnalyticsSchemaTable model
  *
  * @category    Class
  * @description The schema of a single table in Analytics.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AnalyticsSchemaTable implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class AnalyticsSchemaTable implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'columns' => '\WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaColumn[]',
+        'columns' => '\Wallee\Sdk\Model\AnalyticsSchemaColumn[]',
         'description' => 'map[string,string]',
         'table_name' => 'string'
     ];
@@ -217,7 +217,7 @@ class AnalyticsSchemaTable implements ModelInterface, ArrayAccess
     /**
      * Gets columns
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaColumn[]
+     * @return \Wallee\Sdk\Model\AnalyticsSchemaColumn[]
      */
     public function getColumns()
     {
@@ -227,7 +227,7 @@ class AnalyticsSchemaTable implements ModelInterface, ArrayAccess
     /**
      * Sets columns
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\AnalyticsSchemaColumn[] $columns The schemas of all columns of this table.
+     * @param \Wallee\Sdk\Model\AnalyticsSchemaColumn[] $columns The schemas of all columns of the table.
      *
      * @return $this
      */
@@ -252,7 +252,7 @@ class AnalyticsSchemaTable implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description A human readable description of the entity type contained in this table.
+     * @param map[string,string] $description The localized description of the table.
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class AnalyticsSchemaTable implements ModelInterface, ArrayAccess
     /**
      * Sets table_name
      *
-     * @param string $table_name The name of this table.
+     * @param string $table_name The name of the table.
      *
      * @return $this
      */

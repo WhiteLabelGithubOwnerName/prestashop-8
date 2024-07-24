@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ProductMeteredTierFeeUpdate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ProductMeteredTierFeeUpdate implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class ProductMeteredTierFeeUpdate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'version' => 'int',
-        'fee' => '\WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmountUpdate[]',
+        'fee' => '\Wallee\Sdk\Model\PersistableCurrencyAmountUpdate[]',
         'metered_fee' => 'int',
         'start_range' => 'float'
     ];
@@ -287,7 +287,7 @@ class ProductMeteredTierFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets fee
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmountUpdate[]
+     * @return \Wallee\Sdk\Model\PersistableCurrencyAmountUpdate[]
      */
     public function getFee()
     {
@@ -297,7 +297,7 @@ class ProductMeteredTierFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets fee
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmountUpdate[] $fee The fee determines the amount which is charged. The consumed metric is multiplied by the defined fee. The resulting amount is charged at the end of the period.
+     * @param \Wallee\Sdk\Model\PersistableCurrencyAmountUpdate[] $fee The amount charged to the customer for each consumed unit at the end of a billing cycle.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class ProductMeteredTierFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets metered_fee
      *
-     * @param int $metered_fee 
+     * @param int $metered_fee The metered fee that this tier belongs to.
      *
      * @return $this
      */
@@ -347,7 +347,7 @@ class ProductMeteredTierFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets start_range
      *
-     * @param float $start_range The start range defines the metered consumption of the metric from which on the defined fee gets applied. This means when a subscription consumes a value of 10 or more and the start range is set to 10 the fee defined on the tier will be applied.
+     * @param float $start_range Starting from and including this quantity is contained in the tier.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * RestAddressFormat model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RestAddressFormat implements ModelInterface, ArrayAccess
@@ -51,8 +51,8 @@ class RestAddressFormat implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'post_code_examples' => 'string[]',
         'post_code_regex' => 'string',
-        'required_fields' => '\WhiteLabelMachineName\Sdk\Model\RestAddressFormatField[]',
-        'used_fields' => '\WhiteLabelMachineName\Sdk\Model\RestAddressFormatField[]'
+        'required_fields' => '\Wallee\Sdk\Model\RestAddressFormatField[]',
+        'used_fields' => '\Wallee\Sdk\Model\RestAddressFormatField[]'
     ];
 
     /**
@@ -274,7 +274,7 @@ class RestAddressFormat implements ModelInterface, ArrayAccess
     /**
      * Gets required_fields
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RestAddressFormatField[]
+     * @return \Wallee\Sdk\Model\RestAddressFormatField[]
      */
     public function getRequiredFields()
     {
@@ -284,7 +284,7 @@ class RestAddressFormat implements ModelInterface, ArrayAccess
     /**
      * Sets required_fields
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RestAddressFormatField[] $required_fields The fields that are required in the address format.
+     * @param \Wallee\Sdk\Model\RestAddressFormatField[] $required_fields The fields that are required in the address format.
      *
      * @return $this
      */
@@ -299,7 +299,7 @@ class RestAddressFormat implements ModelInterface, ArrayAccess
     /**
      * Gets used_fields
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RestAddressFormatField[]
+     * @return \Wallee\Sdk\Model\RestAddressFormatField[]
      */
     public function getUsedFields()
     {
@@ -309,7 +309,7 @@ class RestAddressFormat implements ModelInterface, ArrayAccess
     /**
      * Sets used_fields
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RestAddressFormatField[] $used_fields The fields that are used in the address format.
+     * @param \Wallee\Sdk\Model\RestAddressFormatField[] $used_fields The fields that are used in the address format.
      *
      * @return $this
      */

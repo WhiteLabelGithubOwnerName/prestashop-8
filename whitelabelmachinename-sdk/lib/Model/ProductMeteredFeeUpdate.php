@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ProductMeteredFeeUpdate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
@@ -55,7 +55,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
         'description' => 'map[string,string]',
         'metric' => 'int',
         'name' => 'map[string,string]',
-        'tier_pricing' => '\WhiteLabelMachineName\Sdk\Model\ProductMeteredTierPricing'
+        'tier_pricing' => '\Wallee\Sdk\Model\ProductMeteredTierPricing'
     ];
 
     /**
@@ -311,7 +311,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets component
      *
-     * @param int $component 
+     * @param int $component The product component that the fee belongs to.
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description The description of a component fee describes the fee to the subscriber. The description may be shown in documents or on certain user interfaces.
+     * @param map[string,string] $description The localized description of the fee that is displayed to the customer.
      *
      * @return $this
      */
@@ -361,7 +361,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets metric
      *
-     * @param int $metric 
+     * @param int $metric The metric used to determine the resource consumption billed to the customer.
      *
      * @return $this
      */
@@ -386,7 +386,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param map[string,string] $name The name of the fee should describe for the subscriber in few words for what the fee is for.
+     * @param map[string,string] $name The localized name of the fee that is displayed to the customer.
      *
      * @return $this
      */
@@ -401,7 +401,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets tier_pricing
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ProductMeteredTierPricing
+     * @return \Wallee\Sdk\Model\ProductMeteredTierPricing
      */
     public function getTierPricing()
     {
@@ -411,7 +411,7 @@ class ProductMeteredFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets tier_pricing
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ProductMeteredTierPricing $tier_pricing The tier pricing determines the calculation method of the tiers. The prices of the different tiers can be applied in different ways. The tier pricing controls this calculation.
+     * @param \Wallee\Sdk\Model\ProductMeteredTierPricing $tier_pricing The method used to calculate the tier price.
      *
      * @return $this
      */

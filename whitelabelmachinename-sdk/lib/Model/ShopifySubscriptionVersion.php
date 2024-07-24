@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionVersion model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
@@ -49,31 +49,31 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddress',
+        'billing_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddress',
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
         'billing_reference_date' => '\DateTime',
-        'billing_weekday' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
         'created_by' => 'int',
         'created_on' => '\DateTime',
         'currency' => 'string',
         'discharged_by' => 'int',
         'discharged_on' => '\DateTime',
         'id' => 'int',
-        'items' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionItem[]',
+        'items' => '\Wallee\Sdk\Model\ShopifySubscriptionVersionItem[]',
         'linked_space_id' => 'int',
         'maximal_billing_cycles' => 'int',
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
         'payment_gateway' => 'string',
-        'shipping_address' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddress',
+        'shipping_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddress',
         'shipping_rate' => 'string',
         'shop' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionState',
+        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionVersionState',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool',
-        'subscription' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscription',
+        'subscription' => '\Wallee\Sdk\Model\ShopifySubscription',
         'termination_billing_cycles' => 'int',
         'token' => 'int',
         'version' => 'int'
@@ -392,7 +392,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddress
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddress
      */
     public function getBillingAddress()
     {
@@ -402,7 +402,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddress $billing_address 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddress $billing_address 
      *
      * @return $this
      */
@@ -467,7 +467,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_interval_unit
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -477,7 +477,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_interval_unit
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit 
      *
      * @return $this
      */
@@ -517,7 +517,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_weekday
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -527,7 +527,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_weekday
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday 
      *
      * @return $this
      */
@@ -692,7 +692,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionItem[]
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersionItem[]
      */
     public function getItems()
     {
@@ -702,7 +702,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionItem[] $items 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersionItem[] $items 
      *
      * @return $this
      */
@@ -842,7 +842,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddress
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddress
      */
     public function getShippingAddress()
     {
@@ -852,7 +852,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionAddress $shipping_address 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddress $shipping_address 
      *
      * @return $this
      */
@@ -917,7 +917,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionState
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersionState
      */
     public function getState()
     {
@@ -927,7 +927,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionVersionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersionState $state The object's current state.
      *
      * @return $this
      */
@@ -992,7 +992,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscription
+     * @return \Wallee\Sdk\Model\ShopifySubscription
      */
     public function getSubscription()
     {
@@ -1002,7 +1002,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscription $subscription 
+     * @param \Wallee\Sdk\Model\ShopifySubscription $subscription 
      *
      * @return $this
      */

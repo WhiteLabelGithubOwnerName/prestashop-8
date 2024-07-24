@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionCreateRequest model
  *
  * @category    Class
  * @description The subscription create request holds all the data required to create a new subscription.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
@@ -49,11 +49,11 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'component_configurations' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionComponentReferenceConfiguration[]',
+        'component_configurations' => '\Wallee\Sdk\Model\SubscriptionComponentReferenceConfiguration[]',
         'currency' => 'string',
         'product' => 'int',
-        'selected_components' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentReference[]',
-        'subscription' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionPending'
+        'selected_components' => '\Wallee\Sdk\Model\SubscriptionProductComponentReference[]',
+        'subscription' => '\Wallee\Sdk\Model\SubscriptionPending'
     ];
 
     /**
@@ -240,7 +240,7 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets component_configurations
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionComponentReferenceConfiguration[]
+     * @return \Wallee\Sdk\Model\SubscriptionComponentReferenceConfiguration[]
      */
     public function getComponentConfigurations()
     {
@@ -250,7 +250,7 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets component_configurations
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionComponentReferenceConfiguration[] $component_configurations 
+     * @param \Wallee\Sdk\Model\SubscriptionComponentReferenceConfiguration[] $component_configurations 
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets selected_components
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentReference[]
+     * @return \Wallee\Sdk\Model\SubscriptionProductComponentReference[]
      */
     public function getSelectedComponents()
     {
@@ -325,7 +325,7 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets selected_components
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionProductComponentReference[] $selected_components 
+     * @param \Wallee\Sdk\Model\SubscriptionProductComponentReference[] $selected_components 
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionPending
+     * @return \Wallee\Sdk\Model\SubscriptionPending
      */
     public function getSubscription()
     {
@@ -350,7 +350,7 @@ class SubscriptionCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionPending $subscription 
+     * @param \Wallee\Sdk\Model\SubscriptionPending $subscription 
      *
      * @return $this
      */

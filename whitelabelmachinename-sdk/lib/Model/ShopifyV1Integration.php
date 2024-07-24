@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,21 +18,21 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
- * ShopifyIntegration model
+ * ShopifyV1Integration model
  *
  * @category    Class
  * @description A Shopify Integration allows to connect a Shopify shop.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
-class ShopifyIntegration implements ModelInterface, ArrayAccess
+class ShopifyV1Integration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -41,7 +41,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ShopifyIntegration';
+    protected static $swaggerModelName = 'ShopifyV1Integration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -49,16 +49,16 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'additional_line_item_data' => '\WhiteLabelMachineName\Sdk\Model\ShopifyAdditionalLineItemData[]',
+        'additional_line_item_data' => '\Wallee\Sdk\Model\ShopifyAdditionalLineItemData[]',
         'allow_invoice_download' => 'bool',
-        'allowed_payment_method_configurations' => '\WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]',
+        'allowed_payment_method_configurations' => '\Wallee\Sdk\Model\PaymentMethodConfiguration[]',
         'currency' => 'string',
         'id' => 'int',
         'integrated_payment_form_enabled' => 'bool',
         'language' => 'string',
         'login_name' => 'string',
         'name' => 'string',
-        'payment_app_version' => '\WhiteLabelMachineName\Sdk\Model\ShopifyIntegrationPaymentAppVersion',
+        'payment_app_version' => '\Wallee\Sdk\Model\ShopifyIntegrationPaymentAppVersion',
         'payment_installed' => 'bool',
         'payment_proxy_path' => 'string',
         'planned_purge_date' => '\DateTime',
@@ -68,8 +68,8 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
         'show_subscription_information' => 'bool',
         'space_id' => 'int',
         'space_view_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
-        'subscription_app_version' => '\WhiteLabelMachineName\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'subscription_app_version' => '\Wallee\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion',
         'subscription_installed' => 'bool',
         'subscription_proxy_path' => 'string',
         'version' => 'int'
@@ -376,7 +376,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Gets additional_line_item_data
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifyAdditionalLineItemData[]
+     * @return \Wallee\Sdk\Model\ShopifyAdditionalLineItemData[]
      */
     public function getAdditionalLineItemData()
     {
@@ -386,7 +386,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Sets additional_line_item_data
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifyAdditionalLineItemData[] $additional_line_item_data 
+     * @param \Wallee\Sdk\Model\ShopifyAdditionalLineItemData[] $additional_line_item_data 
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_payment_method_configurations
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]
+     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration[]
      */
     public function getAllowedPaymentMethodConfigurations()
     {
@@ -436,7 +436,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_method_configurations
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations 
+     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations 
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     public function setLoginName($login_name)
     {
         if (!is_null($login_name) && (mb_strlen($login_name) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $login_name when calling ShopifyIntegration., must be smaller than or equal to 100.');
+            throw new \InvalidArgumentException('invalid length for $login_name when calling ShopifyV1Integration., must be smaller than or equal to 100.');
         }
 
         $this->container['login_name'] = $login_name;
@@ -597,7 +597,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         if (!is_null($name) && (mb_strlen($name) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling ShopifyIntegration., must be smaller than or equal to 100.');
+            throw new \InvalidArgumentException('invalid length for $name when calling ShopifyV1Integration., must be smaller than or equal to 100.');
         }
 
         $this->container['name'] = $name;
@@ -609,7 +609,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Gets payment_app_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifyIntegrationPaymentAppVersion
+     * @return \Wallee\Sdk\Model\ShopifyIntegrationPaymentAppVersion
      */
     public function getPaymentAppVersion()
     {
@@ -619,7 +619,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Sets payment_app_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifyIntegrationPaymentAppVersion $payment_app_version 
+     * @param \Wallee\Sdk\Model\ShopifyIntegrationPaymentAppVersion $payment_app_version 
      *
      * @return $this
      */
@@ -751,7 +751,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     public function setShopName($shop_name)
     {
         if (!is_null($shop_name) && (mb_strlen($shop_name) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $shop_name when calling ShopifyIntegration., must be smaller than or equal to 100.');
+            throw new \InvalidArgumentException('invalid length for $shop_name when calling ShopifyV1Integration., must be smaller than or equal to 100.');
         }
 
         $this->container['shop_name'] = $shop_name;
@@ -863,7 +863,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -873,7 +873,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -888,7 +888,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_app_version
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion
+     * @return \Wallee\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion
      */
     public function getSubscriptionAppVersion()
     {
@@ -898,7 +898,7 @@ class ShopifyIntegration implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_app_version
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion $subscription_app_version 
+     * @param \Wallee\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion $subscription_app_version 
      *
      * @return $this
      */

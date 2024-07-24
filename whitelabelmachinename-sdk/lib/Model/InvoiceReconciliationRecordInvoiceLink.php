@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * InvoiceReconciliationRecordInvoiceLink model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class InvoiceReconciliationRecordInvoiceLink implements ModelInterface, ArrayAccess
@@ -52,9 +52,9 @@ class InvoiceReconciliationRecordInvoiceLink implements ModelInterface, ArrayAcc
         'amount' => 'float',
         'created_on' => '\DateTime',
         'id' => 'int',
-        'invoice' => '\WhiteLabelMachineName\Sdk\Model\TransactionInvoice',
+        'invoice' => '\Wallee\Sdk\Model\TransactionInvoice',
         'linked_space_id' => 'int',
-        'record' => '\WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecord'
+        'record' => '\Wallee\Sdk\Model\InvoiceReconciliationRecord'
     ];
 
     /**
@@ -313,7 +313,7 @@ class InvoiceReconciliationRecordInvoiceLink implements ModelInterface, ArrayAcc
     /**
      * Gets invoice
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionInvoice
+     * @return \Wallee\Sdk\Model\TransactionInvoice
      */
     public function getInvoice()
     {
@@ -323,7 +323,7 @@ class InvoiceReconciliationRecordInvoiceLink implements ModelInterface, ArrayAcc
     /**
      * Sets invoice
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TransactionInvoice $invoice 
+     * @param \Wallee\Sdk\Model\TransactionInvoice $invoice 
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class InvoiceReconciliationRecordInvoiceLink implements ModelInterface, ArrayAcc
     /**
      * Gets record
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecord
+     * @return \Wallee\Sdk\Model\InvoiceReconciliationRecord
      */
     public function getRecord()
     {
@@ -373,7 +373,7 @@ class InvoiceReconciliationRecordInvoiceLink implements ModelInterface, ArrayAcc
     /**
      * Sets record
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\InvoiceReconciliationRecord $record 
+     * @param \Wallee\Sdk\Model\InvoiceReconciliationRecord $record 
      *
      * @return $this
      */

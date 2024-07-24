@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * AbstractSpaceUpdate model
  *
  * @category    Class
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractSpaceUpdate implements ModelInterface, ArrayAccess
@@ -50,10 +50,10 @@ class AbstractSpaceUpdate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'last_modified_date' => '\DateTime',
         'name' => 'string',
-        'postal_address' => '\WhiteLabelMachineName\Sdk\Model\SpaceAddressCreate',
+        'postal_address' => '\Wallee\Sdk\Model\SpaceAddressCreate',
         'primary_currency' => 'string',
         'request_limit' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'technical_contact_addresses' => 'string[]',
         'time_zone' => 'string'
     ];
@@ -316,7 +316,7 @@ class AbstractSpaceUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets postal_address
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SpaceAddressCreate
+     * @return \Wallee\Sdk\Model\SpaceAddressCreate
      */
     public function getPostalAddress()
     {
@@ -326,7 +326,7 @@ class AbstractSpaceUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets postal_address
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SpaceAddressCreate $postal_address The address that is used in communication with clients for example in emails, documents, etc.
+     * @param \Wallee\Sdk\Model\SpaceAddressCreate $postal_address The address that is used in communication with clients for example in emails, documents, etc.
      *
      * @return $this
      */
@@ -391,7 +391,7 @@ class AbstractSpaceUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -401,7 +401,7 @@ class AbstractSpaceUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

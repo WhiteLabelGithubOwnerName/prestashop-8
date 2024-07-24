@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * Refund model
  *
  * @category    Class
  * @description The refund represents a credit back to the customer. It can be issued by the merchant or by the customer (reversal).
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Refund implements ModelInterface, ArrayAccess
@@ -50,35 +50,35 @@ class Refund implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'amount' => 'float',
-        'base_line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
+        'base_line_items' => '\Wallee\Sdk\Model\LineItem[]',
         'completion' => 'int',
         'created_by' => 'int',
         'created_on' => '\DateTime',
-        'environment' => '\WhiteLabelMachineName\Sdk\Model\Environment',
+        'environment' => '\Wallee\Sdk\Model\Environment',
         'external_id' => 'string',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
+        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
         'id' => 'int',
-        'labels' => '\WhiteLabelMachineName\Sdk\Model\Label[]',
+        'labels' => '\Wallee\Sdk\Model\Label[]',
         'language' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
+        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
         'linked_space_id' => 'int',
         'merchant_reference' => 'string',
         'next_update_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'processing_on' => '\DateTime',
         'processor_reference' => 'string',
-        'reduced_line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItem[]',
-        'reductions' => '\WhiteLabelMachineName\Sdk\Model\LineItemReduction[]',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\RefundState',
+        'reduced_line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'reductions' => '\Wallee\Sdk\Model\LineItemReduction[]',
+        'state' => '\Wallee\Sdk\Model\RefundState',
         'succeeded_on' => '\DateTime',
-        'taxes' => '\WhiteLabelMachineName\Sdk\Model\Tax[]',
+        'taxes' => '\Wallee\Sdk\Model\Tax[]',
         'time_zone' => 'string',
         'timeout_on' => '\DateTime',
         'total_applied_fees' => 'float',
         'total_settled_amount' => 'float',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\RefundType',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
+        'type' => '\Wallee\Sdk\Model\RefundType',
         'updated_invoice' => 'int',
         'version' => 'int'
     ];
@@ -461,7 +461,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets base_line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getBaseLineItems()
     {
@@ -471,7 +471,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets base_line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $base_line_items 
+     * @param \Wallee\Sdk\Model\LineItem[] $base_line_items 
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Environment
+     * @return \Wallee\Sdk\Model\Environment
      */
     public function getEnvironment()
     {
@@ -571,7 +571,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Environment $environment 
+     * @param \Wallee\Sdk\Model\Environment $environment 
      *
      * @return $this
      */
@@ -643,7 +643,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets failure_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -653,7 +653,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets failure_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $failure_reason 
+     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets labels
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Label[]
+     * @return \Wallee\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -703,7 +703,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets labels
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Label[] $labels 
+     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -743,7 +743,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -753,7 +753,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $line_items 
+     * @param \Wallee\Sdk\Model\LineItem[] $line_items 
      *
      * @return $this
      */
@@ -926,7 +926,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets reduced_line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItem[]
+     * @return \Wallee\Sdk\Model\LineItem[]
      */
     public function getReducedLineItems()
     {
@@ -936,7 +936,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets reduced_line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItem[] $reduced_line_items 
+     * @param \Wallee\Sdk\Model\LineItem[] $reduced_line_items 
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets reductions
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItemReduction[]
+     * @return \Wallee\Sdk\Model\LineItemReduction[]
      */
     public function getReductions()
     {
@@ -961,7 +961,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets reductions
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItemReduction[] $reductions 
+     * @param \Wallee\Sdk\Model\LineItemReduction[] $reductions 
      *
      * @return $this
      */
@@ -976,7 +976,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RefundState
+     * @return \Wallee\Sdk\Model\RefundState
      */
     public function getState()
     {
@@ -986,7 +986,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RefundState $state The object's current state.
+     * @param \Wallee\Sdk\Model\RefundState $state The object's current state.
      *
      * @return $this
      */
@@ -1026,7 +1026,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets taxes
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Tax[]
+     * @return \Wallee\Sdk\Model\Tax[]
      */
     public function getTaxes()
     {
@@ -1036,7 +1036,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets taxes
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Tax[] $taxes 
+     * @param \Wallee\Sdk\Model\Tax[] $taxes 
      *
      * @return $this
      */
@@ -1151,7 +1151,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -1161,7 +1161,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */
@@ -1176,7 +1176,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RefundType
+     * @return \Wallee\Sdk\Model\RefundType
      */
     public function getType()
     {
@@ -1186,7 +1186,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RefundType $type 
+     * @param \Wallee\Sdk\Model\RefundType $type 
      *
      * @return $this
      */

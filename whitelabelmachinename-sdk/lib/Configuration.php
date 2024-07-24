@@ -1,9 +1,9 @@
 <?php
 
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,14 +19,14 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk;
+namespace Wallee\Sdk;
 
 /**
  * Configuration Class Doc Comment
  *
  * @category    Class
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Configuration
@@ -76,11 +76,11 @@ class Configuration
     protected $host = 'https://app-wallee.com:443/api';
 
     /**
-     * User agent of the HTTP request, set to "WhiteLabelMachineName\Sdk" by default
+     * User agent of the HTTP request, set to "Wallee\Sdk" by default
      *
      * @var string
      */
-    protected $userAgent = 'WhiteLabelMachineName\Sdk/4.2.0/php';
+    protected $userAgent = 'Wallee\Sdk/4.4.0/php';
 
     /**
      * Debug switch (default set to false)
@@ -385,11 +385,11 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (WhiteLabelMachineName\Sdk) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Wallee\Sdk) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
-        $report .= '    OpenAPI Spec Version: 4.2.0' . PHP_EOL;
-        $report .= '    SDK Package Version: 4.2.0' . PHP_EOL;
+        $report .= '    OpenAPI Spec Version: 4.4.0' . PHP_EOL;
+        $report .= '    SDK Package Version: 4.4.0' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

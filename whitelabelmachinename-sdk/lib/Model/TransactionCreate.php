@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TransactionCreate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionCreate extends AbstractTransactionPending 
@@ -49,11 +49,11 @@ class TransactionCreate extends AbstractTransactionPending
     protected static $swaggerTypes = [
         'auto_confirmation_enabled' => 'bool',
         'charge_retry_enabled' => 'bool',
-        'customers_presence' => '\WhiteLabelMachineName\Sdk\Model\CustomersPresence',
+        'customers_presence' => '\Wallee\Sdk\Model\CustomersPresence',
         'device_session_identifier' => 'string',
         'emails_disabled' => 'bool',
-        'environment' => '\WhiteLabelMachineName\Sdk\Model\Environment',
-        'environment_selection_strategy' => '\WhiteLabelMachineName\Sdk\Model\TransactionEnvironmentSelectionStrategy',
+        'environment' => '\Wallee\Sdk\Model\Environment',
+        'environment_selection_strategy' => '\Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy',
         'space_view_id' => 'int'
     ];
 
@@ -339,7 +339,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Gets customers_presence
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CustomersPresence
+     * @return \Wallee\Sdk\Model\CustomersPresence
      */
     public function getCustomersPresence()
     {
@@ -349,7 +349,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Sets customers_presence
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CustomersPresence $customers_presence The customer's presence indicates whether and in what way the transaction's customer is present. Default is VIRTUAL_PRESENT.
+     * @param \Wallee\Sdk\Model\CustomersPresence $customers_presence The customer's presence indicates whether and in what way the transaction's customer is present. Default is VIRTUAL_PRESENT.
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Gets environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Environment
+     * @return \Wallee\Sdk\Model\Environment
      */
     public function getEnvironment()
     {
@@ -431,7 +431,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Sets environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Environment $environment 
+     * @param \Wallee\Sdk\Model\Environment $environment 
      *
      * @return $this
      */
@@ -446,7 +446,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Gets environment_selection_strategy
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\TransactionEnvironmentSelectionStrategy
+     * @return \Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy
      */
     public function getEnvironmentSelectionStrategy()
     {
@@ -456,7 +456,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Sets environment_selection_strategy
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\TransactionEnvironmentSelectionStrategy $environment_selection_strategy The strategy for determining whether the transaction is to be processed in the test or production environment.
+     * @param \Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy $environment_selection_strategy The strategy for determining whether the transaction is to be processed in the test or production environment.
      *
      * @return $this
      */

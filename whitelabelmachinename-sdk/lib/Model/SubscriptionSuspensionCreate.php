@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionSuspensionCreate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'end_action' => '\WhiteLabelMachineName\Sdk\Model\SubscriptionSuspensionAction',
+        'end_action' => '\Wallee\Sdk\Model\SubscriptionSuspensionAction',
         'note' => 'string',
         'planned_end_date' => '\DateTime',
         'subscription' => 'int'
@@ -237,7 +237,7 @@ class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Gets end_action
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SubscriptionSuspensionAction
+     * @return \Wallee\Sdk\Model\SubscriptionSuspensionAction
      */
     public function getEndAction()
     {
@@ -247,7 +247,7 @@ class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets end_action
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SubscriptionSuspensionAction $end_action When the suspension reaches the planned end date the end action will be carried out. This action is only executed when the suspension is ended automatically based on the end date.
+     * @param \Wallee\Sdk\Model\SubscriptionSuspensionAction $end_action Whether the subscription should be terminated or reactivated after the suspension has reached its end date.
      *
      * @return $this
      */
@@ -272,7 +272,7 @@ class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note The note may contain some internal information for the suspension. The note will not be disclosed to the subscriber.
+     * @param string $note A note that contains details about the suspension. It is not disclosed to the subscriber.
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets planned_end_date
      *
-     * @param \DateTime $planned_end_date The planned end date of the suspension identifies the date on which the suspension will be ended automatically.
+     * @param \DateTime $planned_end_date The date and time when the suspension is planned to end.
      *
      * @return $this
      */
@@ -326,7 +326,7 @@ class SubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param int $subscription 
+     * @param int $subscription The subscription that this suspension belongs to.
      *
      * @return $this
      */

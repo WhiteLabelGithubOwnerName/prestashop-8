@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentLinkCreate model
  *
  * @category    Class
  * @description The payment link defines an URL to automatically create transactions.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentLinkCreate extends AbstractPaymentLinkUpdate 
@@ -47,9 +47,9 @@ class PaymentLinkCreate extends AbstractPaymentLinkUpdate
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'external_id' => 'string',
-        'protection_mode' => '\WhiteLabelMachineName\Sdk\Model\PaymentLinkProtectionMode'
+        'protection_mode' => '\Wallee\Sdk\Model\PaymentLinkProtectionMode'
     ];
 
     /**
@@ -135,6 +135,9 @@ class PaymentLinkCreate extends AbstractPaymentLinkUpdate
         if ($this->container['external_id'] === null) {
             $invalidProperties[] = "'external_id' can't be null";
         }
+        if ($this->container['protection_mode'] === null) {
+            $invalidProperties[] = "'protection_mode' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,7 +221,7 @@ class PaymentLinkCreate extends AbstractPaymentLinkUpdate
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -228,7 +231,7 @@ class PaymentLinkCreate extends AbstractPaymentLinkUpdate
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -268,7 +271,7 @@ class PaymentLinkCreate extends AbstractPaymentLinkUpdate
     /**
      * Gets protection_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentLinkProtectionMode
+     * @return \Wallee\Sdk\Model\PaymentLinkProtectionMode
      */
     public function getProtectionMode()
     {
@@ -278,7 +281,7 @@ class PaymentLinkCreate extends AbstractPaymentLinkUpdate
     /**
      * Sets protection_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentLinkProtectionMode $protection_mode The protection mode determines if the payment link is protected against tampering and in what way.
+     * @param \Wallee\Sdk\Model\PaymentLinkProtectionMode $protection_mode The protection mode determines if the payment link is protected against tampering and in what way.
      *
      * @return $this
      */

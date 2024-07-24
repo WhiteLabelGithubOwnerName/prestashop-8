@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAdjustment model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAdjustment implements ModelInterface, ArrayAccess
@@ -52,7 +52,7 @@ class PaymentAdjustment implements ModelInterface, ArrayAccess
         'amount_excluding_tax' => 'float',
         'amount_including_tax' => 'float',
         'rate_in_percentage' => 'float',
-        'tax' => '\WhiteLabelMachineName\Sdk\Model\Tax',
+        'tax' => '\Wallee\Sdk\Model\Tax',
         'type' => 'int'
     ];
 
@@ -306,7 +306,7 @@ class PaymentAdjustment implements ModelInterface, ArrayAccess
     /**
      * Gets tax
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Tax
+     * @return \Wallee\Sdk\Model\Tax
      */
     public function getTax()
     {
@@ -316,7 +316,7 @@ class PaymentAdjustment implements ModelInterface, ArrayAccess
     /**
      * Sets tax
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Tax $tax 
+     * @param \Wallee\Sdk\Model\Tax $tax 
      *
      * @return $this
      */

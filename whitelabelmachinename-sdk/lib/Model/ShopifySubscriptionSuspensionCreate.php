@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionSuspensionCreate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'planned_end_date' => '\DateTime',
         'subscription' => 'int',
-        'type' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionType'
+        'type' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionType'
     ];
 
     /**
@@ -276,7 +276,7 @@ class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionType
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType
      */
     public function getType()
     {
@@ -286,7 +286,7 @@ class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionSuspensionType $type 
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType $type 
      *
      * @return $this
      */

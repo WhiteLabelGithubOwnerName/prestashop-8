@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * TokenizedCardDataCreate model
  *
  * @category    Class
  * @description This model holds the card data in plain.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TokenizedCardDataCreate implements ModelInterface, ArrayAccess
@@ -51,10 +51,10 @@ class TokenizedCardDataCreate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'card_holder_name' => 'string',
         'card_verification_code' => 'string',
-        'cryptogram' => '\WhiteLabelMachineName\Sdk\Model\CardCryptogramCreate',
+        'cryptogram' => '\Wallee\Sdk\Model\CardCryptogramCreate',
         'expiry_date' => 'string',
         'primary_account_number' => 'string',
-        'recurring_indicator' => '\WhiteLabelMachineName\Sdk\Model\RecurringIndicator',
+        'recurring_indicator' => '\Wallee\Sdk\Model\RecurringIndicator',
         'scheme_transaction_reference' => 'string',
         'token_requestor_id' => 'string'
     ];
@@ -340,7 +340,7 @@ class TokenizedCardDataCreate implements ModelInterface, ArrayAccess
     /**
      * Gets cryptogram
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CardCryptogramCreate
+     * @return \Wallee\Sdk\Model\CardCryptogramCreate
      */
     public function getCryptogram()
     {
@@ -350,7 +350,7 @@ class TokenizedCardDataCreate implements ModelInterface, ArrayAccess
     /**
      * Sets cryptogram
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CardCryptogramCreate $cryptogram The additional authentication value used to secure the tokenized card transactions.
+     * @param \Wallee\Sdk\Model\CardCryptogramCreate $cryptogram The additional authentication value used to secure the tokenized card transactions.
      *
      * @return $this
      */
@@ -422,7 +422,7 @@ class TokenizedCardDataCreate implements ModelInterface, ArrayAccess
     /**
      * Gets recurring_indicator
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\RecurringIndicator
+     * @return \Wallee\Sdk\Model\RecurringIndicator
      */
     public function getRecurringIndicator()
     {
@@ -432,7 +432,7 @@ class TokenizedCardDataCreate implements ModelInterface, ArrayAccess
     /**
      * Sets recurring_indicator
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\RecurringIndicator $recurring_indicator 
+     * @param \Wallee\Sdk\Model\RecurringIndicator $recurring_indicator 
      *
      * @return $this
      */

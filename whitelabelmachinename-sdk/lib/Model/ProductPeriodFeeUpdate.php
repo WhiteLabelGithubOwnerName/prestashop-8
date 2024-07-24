@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ProductPeriodFeeUpdate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
@@ -56,7 +56,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
         'ledger_entry_title' => 'map[string,string]',
         'name' => 'map[string,string]',
         'number_of_free_trial_periods' => 'int',
-        'period_fee' => '\WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmountUpdate[]'
+        'period_fee' => '\Wallee\Sdk\Model\PersistableCurrencyAmountUpdate[]'
     ];
 
     /**
@@ -318,7 +318,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets component
      *
-     * @param int $component 
+     * @param int $component The product component that the fee belongs to.
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param map[string,string] $description The description of a component fee describes the fee to the subscriber. The description may be shown in documents or on certain user interfaces.
+     * @param map[string,string] $description The localized description of the fee that is displayed to the customer.
      *
      * @return $this
      */
@@ -368,7 +368,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets ledger_entry_title
      *
-     * @param map[string,string] $ledger_entry_title The ledger entry title will be used for the title in the ledger entry and in the invoice.
+     * @param map[string,string] $ledger_entry_title The localized title that be used on ledger entries and invoices.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param map[string,string] $name The name of the fee should describe for the subscriber in few words for what the fee is for.
+     * @param map[string,string] $name The localized name of the fee that is displayed to the customer.
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets number_of_free_trial_periods
      *
-     * @param int $number_of_free_trial_periods The number of free trial periods specify how many periods are free of charge at the begining of the subscription.
+     * @param int $number_of_free_trial_periods The number of subscription billing cycles that count as a trial phase and during which no fees are charged.
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets period_fee
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmountUpdate[]
+     * @return \Wallee\Sdk\Model\PersistableCurrencyAmountUpdate[]
      */
     public function getPeriodFee()
     {
@@ -443,7 +443,7 @@ class ProductPeriodFeeUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets period_fee
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PersistableCurrencyAmountUpdate[] $period_fee The period fee is charged for every period of the subscription except for those periods which are trial periods.
+     * @param \Wallee\Sdk\Model\PersistableCurrencyAmountUpdate[] $period_fee The amount charged to the customer for each billing cycle during the term of a subscription.
      *
      * @return $this
      */

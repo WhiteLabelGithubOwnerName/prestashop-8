@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ChargeBankTransaction model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeBankTransaction extends TransactionAwareEntity 
@@ -47,11 +47,11 @@ class ChargeBankTransaction extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bank_transaction' => '\WhiteLabelMachineName\Sdk\Model\BankTransaction',
+        'bank_transaction' => '\Wallee\Sdk\Model\BankTransaction',
         'completion' => 'int',
         'language' => 'string',
         'space_view_id' => 'int',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
         'transaction_currency_amount' => 'float',
         'transaction_currency_value_amount' => 'float',
         'version' => 'int'
@@ -246,7 +246,7 @@ class ChargeBankTransaction extends TransactionAwareEntity
     /**
      * Gets bank_transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\BankTransaction
+     * @return \Wallee\Sdk\Model\BankTransaction
      */
     public function getBankTransaction()
     {
@@ -256,7 +256,7 @@ class ChargeBankTransaction extends TransactionAwareEntity
     /**
      * Sets bank_transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\BankTransaction $bank_transaction 
+     * @param \Wallee\Sdk\Model\BankTransaction $bank_transaction 
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class ChargeBankTransaction extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -356,7 +356,7 @@ class ChargeBankTransaction extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

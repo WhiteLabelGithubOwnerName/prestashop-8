@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * AuthenticatedCardData model
  *
  * @category    Class
  * @description This model holds the card data and optional cardholder authentication details.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AuthenticatedCardData extends TokenizedCardData 
@@ -47,7 +47,7 @@ class AuthenticatedCardData extends TokenizedCardData
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'cardholder_authentication' => '\WhiteLabelMachineName\Sdk\Model\CardholderAuthentication'
+        'cardholder_authentication' => '\Wallee\Sdk\Model\CardholderAuthentication'
     ];
 
     /**
@@ -197,7 +197,7 @@ class AuthenticatedCardData extends TokenizedCardData
     /**
      * Gets cardholder_authentication
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CardholderAuthentication
+     * @return \Wallee\Sdk\Model\CardholderAuthentication
      */
     public function getCardholderAuthentication()
     {
@@ -207,7 +207,7 @@ class AuthenticatedCardData extends TokenizedCardData
     /**
      * Sets cardholder_authentication
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CardholderAuthentication $cardholder_authentication The cardholder authentication information. The authentication is optional and can be provided if the cardholder has been already authenticated (e.g. in 3-D Secure system).
+     * @param \Wallee\Sdk\Model\CardholderAuthentication $cardholder_authentication The cardholder authentication information. The authentication is optional and can be provided if the cardholder has been already authenticated (e.g. in 3-D Secure system).
      *
      * @return $this
      */

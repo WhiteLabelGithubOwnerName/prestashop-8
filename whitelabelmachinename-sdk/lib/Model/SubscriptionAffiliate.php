@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SubscriptionAffiliate model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SubscriptionAffiliate implements ModelInterface, ArrayAccess
@@ -57,7 +57,7 @@ class SubscriptionAffiliate implements ModelInterface, ArrayAccess
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
         'reference' => 'string',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -417,7 +417,7 @@ class SubscriptionAffiliate implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name 
+     * @param string $name The name used to identify the affiliate.
      *
      * @return $this
      */
@@ -474,7 +474,7 @@ class SubscriptionAffiliate implements ModelInterface, ArrayAccess
     /**
      * Sets reference
      *
-     * @param string $reference 
+     * @param string $reference The reference used to identify the affiliate.
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class SubscriptionAffiliate implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -506,7 +506,7 @@ class SubscriptionAffiliate implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

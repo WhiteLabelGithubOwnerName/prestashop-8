@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+namespace Wallee\Sdk\Model;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ChargeFlowLevel model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeFlowLevel extends TransactionAwareEntity 
@@ -48,14 +48,14 @@ class ChargeFlowLevel extends TransactionAwareEntity
       */
     protected static $swaggerTypes = [
         'asynchronous_charge' => 'int',
-        'configuration' => '\WhiteLabelMachineName\Sdk\Model\ChargeFlowLevelConfiguration',
+        'configuration' => '\Wallee\Sdk\Model\ChargeFlowLevelConfiguration',
         'created_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ChargeFlowLevelState',
+        'state' => '\Wallee\Sdk\Model\ChargeFlowLevelState',
         'synchronous_charge' => 'int',
         'timeout_on' => '\DateTime',
         'token_charge' => 'int',
-        'transaction' => '\WhiteLabelMachineName\Sdk\Model\Transaction',
+        'transaction' => '\Wallee\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -285,7 +285,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Gets configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeFlowLevelConfiguration
+     * @return \Wallee\Sdk\Model\ChargeFlowLevelConfiguration
      */
     public function getConfiguration()
     {
@@ -295,7 +295,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Sets configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeFlowLevelConfiguration $configuration 
+     * @param \Wallee\Sdk\Model\ChargeFlowLevelConfiguration $configuration 
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeFlowLevelState
+     * @return \Wallee\Sdk\Model\ChargeFlowLevelState
      */
     public function getState()
     {
@@ -370,7 +370,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeFlowLevelState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ChargeFlowLevelState $state The object's current state.
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Transaction
+     * @return \Wallee\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -470,7 +470,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Transaction $transaction 
+     * @param \Wallee\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

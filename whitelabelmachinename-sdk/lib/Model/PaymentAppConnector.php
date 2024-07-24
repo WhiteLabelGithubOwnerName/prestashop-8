@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAppConnector model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAppConnector implements ModelInterface, ArrayAccess
@@ -50,17 +50,17 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'authorization_timeout' => 'string',
-        'completion_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionConfiguration',
-        'connector_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration',
+        'completion_configuration' => '\Wallee\Sdk\Model\PaymentAppCompletionConfiguration',
+        'connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
         'created_on' => '\DateTime',
         'external_id' => 'string',
         'id' => 'int',
         'linked_space_id' => 'int',
         'name' => 'string',
         'payment_page_endpoint' => 'string',
-        'processor' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor',
-        'refund_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppRefundConfiguration',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppConnectorState',
+        'processor' => '\Wallee\Sdk\Model\PaymentAppProcessor',
+        'refund_configuration' => '\Wallee\Sdk\Model\PaymentAppRefundConfiguration',
+        'state' => '\Wallee\Sdk\Model\PaymentAppConnectorState',
         'updated_on' => '\DateTime',
         'version' => 'int'
     ];
@@ -327,7 +327,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Gets completion_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionConfiguration
+     * @return \Wallee\Sdk\Model\PaymentAppCompletionConfiguration
      */
     public function getCompletionConfiguration()
     {
@@ -337,7 +337,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Sets completion_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppCompletionConfiguration $completion_configuration The completion configuration defines how the deferred completion is processed. If it is not present it means that deferred completion is not supported by this connector.
+     * @param \Wallee\Sdk\Model\PaymentAppCompletionConfiguration $completion_configuration The completion configuration defines how the deferred completion is processed. If it is not present it means that deferred completion is not supported by this connector.
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Gets connector_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getConnectorConfiguration()
     {
@@ -362,7 +362,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Sets connector_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentConnectorConfiguration $connector_configuration The connector configuration references the configuration that was created as part of this connector within the space. The connector configuration is referenced within transactions created with this connector.
+     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $connector_configuration The connector configuration references the configuration that was created as part of this connector within the space. The connector configuration is referenced within transactions created with this connector.
      *
      * @return $this
      */
@@ -535,7 +535,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Gets processor
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor
+     * @return \Wallee\Sdk\Model\PaymentAppProcessor
      */
     public function getProcessor()
     {
@@ -545,7 +545,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Sets processor
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessor $processor The processor references the app processor to which this connector belongs to. The relationship is established during the creation of the connector.
+     * @param \Wallee\Sdk\Model\PaymentAppProcessor $processor The processor references the app processor to which this connector belongs to. The relationship is established during the creation of the connector.
      *
      * @return $this
      */
@@ -560,7 +560,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Gets refund_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundConfiguration
+     * @return \Wallee\Sdk\Model\PaymentAppRefundConfiguration
      */
     public function getRefundConfiguration()
     {
@@ -570,7 +570,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Sets refund_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppRefundConfiguration $refund_configuration The refund configuration defines how refunds are processed. If it is not present it means that refunds are not supported by this connector.
+     * @param \Wallee\Sdk\Model\PaymentAppRefundConfiguration $refund_configuration The refund configuration defines how refunds are processed. If it is not present it means that refunds are not supported by this connector.
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppConnectorState
+     * @return \Wallee\Sdk\Model\PaymentAppConnectorState
      */
     public function getState()
     {
@@ -595,7 +595,7 @@ class PaymentAppConnector implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppConnectorState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentAppConnectorState $state The object's current state.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * SpaceReference model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SpaceReference implements ModelInterface, ArrayAccess
@@ -54,7 +54,7 @@ class SpaceReference implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'planned_purge_date' => '\DateTime',
         'space_id' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\SpaceReferenceState',
+        'state' => '\Wallee\Sdk\Model\SpaceReferenceState',
         'version' => 'int'
     ];
 
@@ -370,7 +370,7 @@ class SpaceReference implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SpaceReferenceState
+     * @return \Wallee\Sdk\Model\SpaceReferenceState
      */
     public function getState()
     {
@@ -380,7 +380,7 @@ class SpaceReference implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SpaceReferenceState $state The object's current state.
+     * @param \Wallee\Sdk\Model\SpaceReferenceState $state The object's current state.
      *
      * @return $this
      */

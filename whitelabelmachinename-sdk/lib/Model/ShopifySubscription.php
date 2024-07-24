@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscription model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscription implements ModelInterface, ArrayAccess
@@ -60,8 +60,8 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'order_recurrence_number' => 'int',
         'shop' => 'int',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionState',
-        'subscriber' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriber',
+        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionState',
+        'subscriber' => '\Wallee\Sdk\Model\ShopifySubscriber',
         'terminated_by' => 'int',
         'terminated_on' => '\DateTime',
         'termination_request_date' => '\DateTime',
@@ -605,7 +605,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionState
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionState
      */
     public function getState()
     {
@@ -615,7 +615,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionState $state The object's current state.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionState $state The object's current state.
      *
      * @return $this
      */
@@ -630,7 +630,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Gets subscriber
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriber
+     * @return \Wallee\Sdk\Model\ShopifySubscriber
      */
     public function getSubscriber()
     {
@@ -640,7 +640,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Sets subscriber
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriber $subscriber 
+     * @param \Wallee\Sdk\Model\ShopifySubscriber $subscriber 
      *
      * @return $this
      */

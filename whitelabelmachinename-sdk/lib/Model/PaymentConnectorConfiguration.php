@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentConnectorConfiguration model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
@@ -52,17 +52,17 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
         'applicable_for_transaction_processing' => 'bool',
         'conditions' => 'int[]',
         'connector' => 'int',
-        'enabled_sales_channels' => '\WhiteLabelMachineName\Sdk\Model\SalesChannel[]',
+        'enabled_sales_channels' => '\Wallee\Sdk\Model\SalesChannel[]',
         'enabled_space_views' => 'int[]',
         'id' => 'int',
         'image_path' => 'string',
         'linked_space_id' => 'int',
         'name' => 'string',
-        'payment_method_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration',
+        'payment_method_configuration' => '\Wallee\Sdk\Model\PaymentMethodConfiguration',
         'planned_purge_date' => '\DateTime',
         'priority' => 'int',
-        'processor_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentProcessorConfiguration',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\CreationEntityState',
+        'processor_configuration' => '\Wallee\Sdk\Model\PaymentProcessorConfiguration',
+        'state' => '\Wallee\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -340,7 +340,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets conditions
      *
-     * @param int[] $conditions Conditions allow you to define criteria that a transaction must fulfill in order for the connector configuration to be considered for processing the payment.
+     * @param int[] $conditions Conditions allow to define criteria that a transaction must fulfill in order for the connector configuration to be considered for processing the payment.
      *
      * @return $this
      */
@@ -380,7 +380,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets enabled_sales_channels
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\SalesChannel[]
+     * @return \Wallee\Sdk\Model\SalesChannel[]
      */
     public function getEnabledSalesChannels()
     {
@@ -390,7 +390,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets enabled_sales_channels
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\SalesChannel[] $enabled_sales_channels The sales channels for which the connector configuration is enabled. If empty, it is enabled for all sales channels.
+     * @param \Wallee\Sdk\Model\SalesChannel[] $enabled_sales_channels The sales channels for which the connector configuration is enabled. If empty, it is enabled for all sales channels.
      *
      * @return $this
      */
@@ -534,7 +534,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration
+     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration
      */
     public function getPaymentMethodConfiguration()
     {
@@ -544,7 +544,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration $payment_method_configuration The payment method configuration that the connector configuration belongs to.
+     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration $payment_method_configuration The payment method configuration that the connector configuration belongs to.
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets processor_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentProcessorConfiguration
+     * @return \Wallee\Sdk\Model\PaymentProcessorConfiguration
      */
     public function getProcessorConfiguration()
     {
@@ -619,7 +619,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets processor_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentProcessorConfiguration $processor_configuration The processor configuration that the connector configuration belongs to.
+     * @param \Wallee\Sdk\Model\PaymentProcessorConfiguration $processor_configuration The processor configuration that the connector configuration belongs to.
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\CreationEntityState
+     * @return \Wallee\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -644,7 +644,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

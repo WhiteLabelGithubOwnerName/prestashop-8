@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentContract model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentContract implements ModelInterface, ArrayAccess
@@ -49,20 +49,20 @@ class PaymentContract implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\WhiteLabelMachineName\Sdk\Model\Account',
+        'account' => '\Wallee\Sdk\Model\Account',
         'activated_on' => '\DateTime',
         'contract_identifier' => 'string',
-        'contract_type' => '\WhiteLabelMachineName\Sdk\Model\PaymentContractType',
-        'created_by' => '\WhiteLabelMachineName\Sdk\Model\User',
+        'contract_type' => '\Wallee\Sdk\Model\PaymentContractType',
+        'created_by' => '\Wallee\Sdk\Model\User',
         'created_on' => '\DateTime',
         'external_id' => 'string',
         'id' => 'int',
         'last_modified_date' => '\DateTime',
         'rejected_on' => '\DateTime',
-        'rejection_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
+        'rejection_reason' => '\Wallee\Sdk\Model\FailureReason',
         'start_terminating_on' => '\DateTime',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentContractState',
-        'terminated_by' => '\WhiteLabelMachineName\Sdk\Model\User',
+        'state' => '\Wallee\Sdk\Model\PaymentContractState',
+        'terminated_by' => '\Wallee\Sdk\Model\User',
         'terminated_on' => '\DateTime',
         'version' => 'int'
     ];
@@ -308,7 +308,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\Account
+     * @return \Wallee\Sdk\Model\Account
      */
     public function getAccount()
     {
@@ -318,7 +318,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\Account $account This account that the contract belongs to.
+     * @param \Wallee\Sdk\Model\Account $account This account that the contract belongs to.
      *
      * @return $this
      */
@@ -383,7 +383,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Gets contract_type
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentContractType
+     * @return \Wallee\Sdk\Model\PaymentContractType
      */
     public function getContractType()
     {
@@ -393,7 +393,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Sets contract_type
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentContractType $contract_type The type of the contract.
+     * @param \Wallee\Sdk\Model\PaymentContractType $contract_type The type of the contract.
      *
      * @return $this
      */
@@ -408,7 +408,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Gets created_by
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\User
+     * @return \Wallee\Sdk\Model\User
      */
     public function getCreatedBy()
     {
@@ -418,7 +418,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Sets created_by
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\User $created_by The ID of the user the contract was created by.
+     * @param \Wallee\Sdk\Model\User $created_by The ID of the user the contract was created by.
      *
      * @return $this
      */
@@ -558,7 +558,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Gets rejection_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getRejectionReason()
     {
@@ -568,7 +568,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Sets rejection_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $rejection_reason The reason for rejecting the contract.
+     * @param \Wallee\Sdk\Model\FailureReason $rejection_reason The reason for rejecting the contract.
      *
      * @return $this
      */
@@ -608,7 +608,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentContractState
+     * @return \Wallee\Sdk\Model\PaymentContractState
      */
     public function getState()
     {
@@ -618,7 +618,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentContractState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentContractState $state The object's current state.
      *
      * @return $this
      */
@@ -633,7 +633,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Gets terminated_by
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\User
+     * @return \Wallee\Sdk\Model\User
      */
     public function getTerminatedBy()
     {
@@ -643,7 +643,7 @@ class PaymentContract implements ModelInterface, ArrayAccess
     /**
      * Sets terminated_by
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\User $terminated_by The ID of the user the contract was terminated by.
+     * @param \Wallee\Sdk\Model\User $terminated_by The ID of the user the contract was terminated by.
      *
      * @return $this
      */

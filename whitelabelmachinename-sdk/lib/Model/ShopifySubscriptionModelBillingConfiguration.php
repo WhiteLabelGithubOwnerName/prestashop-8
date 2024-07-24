@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionModelBillingConfiguration model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, ArrayAccess
@@ -51,9 +51,9 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     protected static $swaggerTypes = [
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
         'billing_reference_date' => '\DateTime',
-        'billing_weekday' => '\WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
         'maximal_billing_cycles' => 'int',
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
@@ -309,7 +309,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Gets billing_interval_unit
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -319,7 +319,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Sets billing_interval_unit
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
      *
      * @return $this
      */
@@ -359,7 +359,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Gets billing_weekday
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -369,7 +369,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Sets billing_weekday
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
+     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
      *
      * @return $this
      */

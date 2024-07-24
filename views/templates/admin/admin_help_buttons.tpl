@@ -10,5 +10,5 @@
 <div class="alert alert-info">
 <img src="../modules/whitelabelmachinename/logo.png" style="float:left; margin-right:15px;" height="50">
 <p><strong>{l s='This module requires an %s account.' sprintf='WhiteLabelName' mod='whitelabelmachinename'}</strong></p>
-<p><a class="btn btn-default" href="https://whitelabel-signup.com" target="_blank">{l s='Sign Up' mod='whitelabelmachinename'}</a> <a class="btn btn-default" href="https://whitelabel-docs.com/prestashop-8/1.0.7/docs/en/documentation.html" target="_blank">{l s='Documentation' mod='whitelabelmachinename'}</a></p>
+<p><a class="btn btn-default" href="https://whitelabel-signup.com" target="_blank">{l s='Sign Up' mod='whitelabelmachinename'}</a> <a class="btn btn-default" href="https://whitelabel-docs.com/prestashop-8/1.0.8/docs/en/documentation.html" target="_blank">{l s='Documentation' mod='whitelabelmachinename'}</a></p>
 </div>

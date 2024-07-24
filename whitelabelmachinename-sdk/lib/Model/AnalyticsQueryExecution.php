@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * AnalyticsQueryExecution model
  *
  * @category    Class
  * @description Represents the execution of a query which has been submitted to Analytics.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
@@ -52,7 +52,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
         'account' => 'int',
         'error_message' => 'string',
         'external_id' => 'string',
-        'failure_reason' => '\WhiteLabelMachineName\Sdk\Model\FailureReason',
+        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
         'id' => 'int',
         'processing_end_time' => '\DateTime',
         'processing_start_time' => '\DateTime',
@@ -60,7 +60,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
         'scanned_data_in_gb' => 'float',
         'scanned_data_limit' => 'float',
         'spaces' => 'int[]',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecutionState'
+        'state' => '\Wallee\Sdk\Model\AnalyticsQueryExecutionState'
     ];
 
     /**
@@ -290,7 +290,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param int $account The account in which the query has been executed.
+     * @param int $account The account in which the query is executed.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets error_message
      *
-     * @param string $error_message The error message if and only if the query has failed, otherwise null.
+     * @param string $error_message The error message that describes the reason for the failure of the query execution.
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param string $external_id The External ID of the query if one had been specified; otherwise null.
+     * @param string $external_id The external ID of the query if one was specified, otherwise null.
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Gets failure_reason
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\FailureReason
+     * @return \Wallee\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -365,7 +365,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets failure_reason
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\FailureReason $failure_reason The reason of the failure if and only if the query has failed, otherwise null.
+     * @param \Wallee\Sdk\Model\FailureReason $failure_reason The reason for the failure of query execution.
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets processing_end_time
      *
-     * @param \DateTime $processing_end_time The time at which processing of the query has finished (either successfully or by failure or by cancelation). Will be null if the query execution has not finished yet.
+     * @param \DateTime $processing_end_time The date and time when the processing of the query was completed. Null if the query execution has not yet been completed.
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets processing_start_time
      *
-     * @param \DateTime $processing_start_time The time at which processing of the query has started (never null).
+     * @param \DateTime $processing_start_time The date and time when the processing of the query was started.
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets scanned_data_in_gb
      *
-     * @param float $scanned_data_in_gb The amount of data scanned while processing the query (in GB). (Note that this amount may increase over time while the query is still being processed and not finished yet.)
+     * @param float $scanned_data_in_gb The amount of data that was scanned when processing the query (in GB).
      *
      * @return $this
      */
@@ -515,7 +515,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets scanned_data_limit
      *
-     * @param float $scanned_data_limit The maximal amount of scanned data that this query is allowed to scan. After this limit is reached query will be canceled by the system.
+     * @param float $scanned_data_limit The maximal amount of data that this query is allowed to scan (in GB). If this limit is reached, the query will be canceled.
      *
      * @return $this
      */
@@ -540,7 +540,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets spaces
      *
-     * @param int[] $spaces The spaces in which the query has been executed. May be empty if all spaces of the specified account have been queried.
+     * @param int[] $spaces The spaces in which the query is executed. May be empty if all spaces of the specified account have been queried.
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecutionState
+     * @return \Wallee\Sdk\Model\AnalyticsQueryExecutionState
      */
     public function getState()
     {
@@ -565,7 +565,7 @@ class AnalyticsQueryExecution implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\AnalyticsQueryExecutionState $state The current state of the query execution.
+     * @param \Wallee\Sdk\Model\AnalyticsQueryExecutionState $state The current state of the query execution.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentLinkUpdate model
  *
  * @category    Class
  * @description The payment link defines an URL to automatically create transactions.
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentLinkUpdate implements ModelInterface, ArrayAccess
@@ -51,17 +51,17 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'version' => 'int',
-        'allowed_payment_method_configurations' => '\WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]',
+        'allowed_payment_method_configurations' => '\Wallee\Sdk\Model\PaymentMethodConfiguration[]',
         'applied_space_view' => 'int',
         'available_from' => '\DateTime',
         'available_until' => '\DateTime',
-        'billing_address_handling_mode' => '\WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode',
+        'billing_address_handling_mode' => '\Wallee\Sdk\Model\PaymentLinkAddressHandlingMode',
         'currency' => 'string',
         'language' => 'string',
-        'line_items' => '\WhiteLabelMachineName\Sdk\Model\LineItemCreate[]',
+        'line_items' => '\Wallee\Sdk\Model\LineItemCreate[]',
         'maximal_number_of_transactions' => 'int',
         'name' => 'string',
-        'shipping_address_handling_mode' => '\WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode'
+        'shipping_address_handling_mode' => '\Wallee\Sdk\Model\PaymentLinkAddressHandlingMode'
     ];
 
     /**
@@ -347,7 +347,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_payment_method_configurations
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[]
+     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration[]
      */
     public function getAllowedPaymentMethodConfigurations()
     {
@@ -357,7 +357,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_method_configurations
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations The allowed payment method configurations restrict the payment methods which can be used with this payment link.
+     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations The allowed payment method configurations restrict the payment methods which can be used with this payment link.
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address_handling_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode
+     * @return \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode
      */
     public function getBillingAddressHandlingMode()
     {
@@ -457,7 +457,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address_handling_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode $billing_address_handling_mode The billing address handling mode controls if the address is collected or not and how it is collected.
+     * @param \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode $billing_address_handling_mode The billing address handling mode controls if the address is collected or not and how it is collected.
      *
      * @return $this
      */
@@ -522,7 +522,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\LineItemCreate[]
+     * @return \Wallee\Sdk\Model\LineItemCreate[]
      */
     public function getLineItems()
     {
@@ -532,7 +532,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\LineItemCreate[] $line_items The line items allows to define the line items for this payment link. When the line items are defined they cannot be overridden through the request parameters. If no amount for the payment link is defined, the additional checkout page to enter the amount is shown to the consumer.
+     * @param \Wallee\Sdk\Model\LineItemCreate[] $line_items The line items allows to define the line items for this payment link. When the line items are defined they cannot be overridden through the request parameters. If no amount for the payment link is defined, the additional checkout page to enter the amount is shown to the consumer.
      *
      * @return $this
      */
@@ -601,7 +601,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address_handling_mode
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode
+     * @return \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode
      */
     public function getShippingAddressHandlingMode()
     {
@@ -611,7 +611,7 @@ class PaymentLinkUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address_handling_mode
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentLinkAddressHandlingMode $shipping_address_handling_mode The shipping address handling mode controls if the address is collected or not and how it is collected.
+     * @param \Wallee\Sdk\Model\PaymentLinkAddressHandlingMode $shipping_address_handling_mode The shipping address handling mode controls if the address is collected or not and how it is collected.
      *
      * @return $this
      */

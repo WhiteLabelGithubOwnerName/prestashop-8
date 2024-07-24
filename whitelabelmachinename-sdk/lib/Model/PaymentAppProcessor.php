@@ -1,8 +1,8 @@
 <?php
 /**
- * WhiteLabelName SDK
+ * wallee SDK
  *
- * This library allows to interact with the WhiteLabelName payment service.
+ * This library allows to interact with the wallee payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace WhiteLabelMachineName\Sdk\Model;
+namespace Wallee\Sdk\Model;
 
 use \ArrayAccess;
-use \WhiteLabelMachineName\Sdk\ObjectSerializer;
+use \Wallee\Sdk\ObjectSerializer;
 
 /**
  * PaymentAppProcessor model
  *
  * @category    Class
  * @description 
- * @package     WhiteLabelMachineName\Sdk
- * @author      WhiteLabelMachineName
+ * @package     Wallee\Sdk
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentAppProcessor implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configured_environment' => '\WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment',
+        'configured_environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
         'created_on' => '\DateTime',
         'documentation_url' => 'string',
         'external_id' => 'string',
@@ -57,9 +57,9 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
         'installation_id' => 'int',
         'linked_space_id' => 'int',
         'name' => 'string',
-        'processor_configuration' => '\WhiteLabelMachineName\Sdk\Model\PaymentProcessorConfiguration',
+        'processor_configuration' => '\Wallee\Sdk\Model\PaymentProcessorConfiguration',
         'production_mode_url' => 'string',
-        'state' => '\WhiteLabelMachineName\Sdk\Model\PaymentAppProcessorState',
+        'state' => '\Wallee\Sdk\Model\PaymentAppProcessorState',
         'svg_icon' => 'string',
         'updated_on' => '\DateTime',
         'usable_in_production' => 'bool',
@@ -320,7 +320,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
     /**
      * Gets configured_environment
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getConfiguredEnvironment()
     {
@@ -330,7 +330,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
     /**
      * Sets configured_environment
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\ChargeAttemptEnvironment $configured_environment 
+     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $configured_environment 
      *
      * @return $this
      */
@@ -528,7 +528,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
     /**
      * Gets processor_configuration
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentProcessorConfiguration
+     * @return \Wallee\Sdk\Model\PaymentProcessorConfiguration
      */
     public function getProcessorConfiguration()
     {
@@ -538,7 +538,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
     /**
      * Sets processor_configuration
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentProcessorConfiguration $processor_configuration This processor configuration is created as part of the app processor. Any transaction created with the processor is linked with this processor configuration.
+     * @param \Wallee\Sdk\Model\PaymentProcessorConfiguration $processor_configuration This processor configuration is created as part of the app processor. Any transaction created with the processor is linked with this processor configuration.
      *
      * @return $this
      */
@@ -578,7 +578,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessorState
+     * @return \Wallee\Sdk\Model\PaymentAppProcessorState
      */
     public function getState()
     {
@@ -588,7 +588,7 @@ class PaymentAppProcessor implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \WhiteLabelMachineName\Sdk\Model\PaymentAppProcessorState $state The object's current state.
+     * @param \Wallee\Sdk\Model\PaymentAppProcessorState $state The object's current state.
      *
      * @return $this
      */

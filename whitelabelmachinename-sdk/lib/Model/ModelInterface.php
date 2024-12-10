@@ -5,15 +5,15 @@
  * PHP version 5
  *
  * @category Class
- * @package  Wallee\Sdk\Model
+ * @package  Secupay\Sdk\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,12 +34,12 @@
  * Do not edit the class manually.
  */
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Wallee\Sdk\Model
+ * @package Secupay\Sdk\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

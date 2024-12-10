@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * PaymentMethod model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentMethod implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentMethod implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data_collection_types' => '\Wallee\Sdk\Model\DataCollectionType[]',
+        'data_collection_types' => '\Secupay\Sdk\Model\DataCollectionType[]',
         'description' => 'map[string,string]',
         'id' => 'int',
         'image_path' => 'string',
@@ -245,7 +245,7 @@ class PaymentMethod implements ModelInterface, ArrayAccess
     /**
      * Gets data_collection_types
      *
-     * @return \Wallee\Sdk\Model\DataCollectionType[]
+     * @return \Secupay\Sdk\Model\DataCollectionType[]
      */
     public function getDataCollectionTypes()
     {
@@ -255,7 +255,7 @@ class PaymentMethod implements ModelInterface, ArrayAccess
     /**
      * Sets data_collection_types
      *
-     * @param \Wallee\Sdk\Model\DataCollectionType[] $data_collection_types The data collection types that are supported by the payment method.
+     * @param \Secupay\Sdk\Model\DataCollectionType[] $data_collection_types The data collection types that are supported by the payment method.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * TransactionInvoice model
  *
  * @category    Class
  * @description The transaction invoice represents the invoice document for a particular transaction.
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionInvoice extends TransactionAwareEntity 
@@ -48,22 +48,22 @@ class TransactionInvoice extends TransactionAwareEntity
       */
     protected static $swaggerTypes = [
         'amount' => 'float',
-        'billing_address' => '\Wallee\Sdk\Model\Address',
-        'completion' => '\Wallee\Sdk\Model\TransactionCompletion',
+        'billing_address' => '\Secupay\Sdk\Model\Address',
+        'completion' => '\Secupay\Sdk\Model\TransactionCompletion',
         'created_on' => '\DateTime',
         'derecognized_by' => 'int',
         'derecognized_on' => '\DateTime',
         'due_on' => '\DateTime',
-        'environment' => '\Wallee\Sdk\Model\Environment',
+        'environment' => '\Secupay\Sdk\Model\Environment',
         'external_id' => 'string',
         'language' => 'string',
-        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'line_items' => '\Secupay\Sdk\Model\LineItem[]',
         'merchant_reference' => 'string',
         'outstanding_amount' => 'float',
         'paid_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'space_view_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\TransactionInvoiceState',
+        'state' => '\Secupay\Sdk\Model\TransactionInvoiceState',
         'tax_amount' => 'float',
         'time_zone' => 'string',
         'version' => 'int'
@@ -367,7 +367,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\Address
+     * @return \Secupay\Sdk\Model\Address
      */
     public function getBillingAddress()
     {
@@ -377,7 +377,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\Address $billing_address 
+     * @param \Secupay\Sdk\Model\Address $billing_address 
      *
      * @return $this
      */
@@ -392,7 +392,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Gets completion
      *
-     * @return \Wallee\Sdk\Model\TransactionCompletion
+     * @return \Secupay\Sdk\Model\TransactionCompletion
      */
     public function getCompletion()
     {
@@ -402,7 +402,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Sets completion
      *
-     * @param \Wallee\Sdk\Model\TransactionCompletion $completion 
+     * @param \Secupay\Sdk\Model\TransactionCompletion $completion 
      *
      * @return $this
      */
@@ -517,7 +517,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Gets environment
      *
-     * @return \Wallee\Sdk\Model\Environment
+     * @return \Secupay\Sdk\Model\Environment
      */
     public function getEnvironment()
     {
@@ -527,7 +527,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Sets environment
      *
-     * @param \Wallee\Sdk\Model\Environment $environment 
+     * @param \Secupay\Sdk\Model\Environment $environment 
      *
      * @return $this
      */
@@ -599,7 +599,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Gets line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -609,7 +609,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Sets line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $line_items 
+     * @param \Secupay\Sdk\Model\LineItem[] $line_items 
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\TransactionInvoiceState
+     * @return \Secupay\Sdk\Model\TransactionInvoiceState
      */
     public function getState()
     {
@@ -763,7 +763,7 @@ class TransactionInvoice extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\TransactionInvoiceState $state The object's current state.
+     * @param \Secupay\Sdk\Model\TransactionInvoiceState $state The object's current state.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionVersion model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
@@ -49,31 +49,31 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddress',
+        'billing_address' => '\Secupay\Sdk\Model\ShopifySubscriptionAddress',
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_interval_unit' => '\Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
         'billing_reference_date' => '\DateTime',
-        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_weekday' => '\Secupay\Sdk\Model\ShopifySubscriptionWeekday',
         'created_by' => 'int',
         'created_on' => '\DateTime',
         'currency' => 'string',
         'discharged_by' => 'int',
         'discharged_on' => '\DateTime',
         'id' => 'int',
-        'items' => '\Wallee\Sdk\Model\ShopifySubscriptionVersionItem[]',
+        'items' => '\Secupay\Sdk\Model\ShopifySubscriptionVersionItem[]',
         'linked_space_id' => 'int',
         'maximal_billing_cycles' => 'int',
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
         'payment_gateway' => 'string',
-        'shipping_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddress',
+        'shipping_address' => '\Secupay\Sdk\Model\ShopifySubscriptionAddress',
         'shipping_rate' => 'string',
         'shop' => 'int',
-        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionVersionState',
+        'state' => '\Secupay\Sdk\Model\ShopifySubscriptionVersionState',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool',
-        'subscription' => '\Wallee\Sdk\Model\ShopifySubscription',
+        'subscription' => '\Secupay\Sdk\Model\ShopifySubscription',
         'termination_billing_cycles' => 'int',
         'token' => 'int',
         'version' => 'int'
@@ -392,7 +392,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddress
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionAddress
      */
     public function getBillingAddress()
     {
@@ -402,7 +402,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddress $billing_address 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionAddress $billing_address 
      *
      * @return $this
      */
@@ -467,7 +467,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_interval_unit
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -477,7 +477,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_interval_unit
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit 
      *
      * @return $this
      */
@@ -517,7 +517,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_weekday
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -527,7 +527,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_weekday
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday 
      *
      * @return $this
      */
@@ -692,7 +692,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersionItem[]
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionVersionItem[]
      */
     public function getItems()
     {
@@ -702,7 +702,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersionItem[] $items 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionVersionItem[] $items 
      *
      * @return $this
      */
@@ -842,7 +842,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddress
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionAddress
      */
     public function getShippingAddress()
     {
@@ -852,7 +852,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddress $shipping_address 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionAddress $shipping_address 
      *
      * @return $this
      */
@@ -917,7 +917,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersionState
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionVersionState
      */
     public function getState()
     {
@@ -927,7 +927,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionVersionState $state The object's current state.
      *
      * @return $this
      */
@@ -992,7 +992,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscription
+     * @return \Secupay\Sdk\Model\ShopifySubscription
      */
     public function getSubscription()
     {
@@ -1002,7 +1002,7 @@ class ShopifySubscriptionVersion implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscription $subscription 
+     * @param \Secupay\Sdk\Model\ShopifySubscription $subscription 
      *
      * @return $this
      */

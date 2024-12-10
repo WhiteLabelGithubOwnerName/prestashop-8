@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace Wallee\Sdk\Service;
+namespace Secupay\Sdk\Service;
 
-use Wallee\Sdk\ApiClient;
-use Wallee\Sdk\ApiException;
-use Wallee\Sdk\ApiResponse;
-use Wallee\Sdk\Http\HttpRequest;
-use Wallee\Sdk\ObjectSerializer;
+use Secupay\Sdk\ApiClient;
+use Secupay\Sdk\ApiException;
+use Secupay\Sdk\ApiResponse;
+use Secupay\Sdk\Http\HttpRequest;
+use Secupay\Sdk\ObjectSerializer;
 
 /**
  * AccountService service
  *
  * @category Class
- * @package  Wallee\Sdk
- * @author   wallee AG
+ * @package  Secupay\Sdk
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AccountService {
@@ -71,10 +71,10 @@ class AccountService {
 	 *
 	 * Count
 	 *
-	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return int
 	 */
 	public function count($filter = null) {
@@ -87,10 +87,10 @@ class AccountService {
 	 * Count
      
      *
-	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countWithHttpInfo($filter = null) {
@@ -150,7 +150,7 @@ class AccountService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -158,7 +158,7 @@ class AccountService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -173,11 +173,11 @@ class AccountService {
 	 *
 	 * Create
 	 *
-	 * @param \Wallee\Sdk\Model\AccountCreate $entity The account object with the properties which should be created. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\Account
+	 * @param \Secupay\Sdk\Model\AccountCreate $entity The account object with the properties which should be created. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\Account
 	 */
 	public function create($entity) {
 		return $this->createWithHttpInfo($entity)->getData();
@@ -189,10 +189,10 @@ class AccountService {
 	 * Create
      
      *
-	 * @param \Wallee\Sdk\Model\AccountCreate $entity The account object with the properties which should be created. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\AccountCreate $entity The account object with the properties which should be created. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function createWithHttpInfo($entity) {
@@ -239,16 +239,16 @@ class AccountService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\Account',
+				'\Secupay\Sdk\Model\Account',
 				'/account/create'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Account', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\Account', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\Account',
+                        '\Secupay\Sdk\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class AccountService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class AccountService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,9 +280,9 @@ class AccountService {
 	 * Delete
 	 *
 	 * @param int $id  (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return void
 	 */
 	public function delete($id) {
@@ -296,9 +296,9 @@ class AccountService {
      
      *
 	 * @param int $id  (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function deleteWithHttpInfo($id) {
@@ -354,7 +354,7 @@ class AccountService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -362,7 +362,7 @@ class AccountService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -370,7 +370,7 @@ class AccountService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -386,10 +386,10 @@ class AccountService {
 	 * Read
 	 *
 	 * @param int $id The id of the account which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\Account
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\Account
 	 */
 	public function read($id) {
 		return $this->readWithHttpInfo($id)->getData();
@@ -402,9 +402,9 @@ class AccountService {
      
      *
 	 * @param int $id The id of the account which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($id) {
@@ -449,16 +449,16 @@ class AccountService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\Account',
+				'\Secupay\Sdk\Model\Account',
 				'/account/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Account', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\Account', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\Account',
+                        '\Secupay\Sdk\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class AccountService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -474,7 +474,7 @@ class AccountService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -489,11 +489,11 @@ class AccountService {
 	 *
 	 * Search
 	 *
-	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the accounts which are returned by the search. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\Account[]
+	 * @param \Secupay\Sdk\Model\EntityQuery $query The query restricts the accounts which are returned by the search. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\Account[]
 	 */
 	public function search($query) {
 		return $this->searchWithHttpInfo($query)->getData();
@@ -505,10 +505,10 @@ class AccountService {
 	 * Search
      
      *
-	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the accounts which are returned by the search. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQuery $query The query restricts the accounts which are returned by the search. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchWithHttpInfo($query) {
@@ -555,16 +555,16 @@ class AccountService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\Account[]',
+				'\Secupay\Sdk\Model\Account[]',
 				'/account/search'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Account[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\Account[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\Account[]',
+                        '\Secupay\Sdk\Model\Account[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -572,7 +572,7 @@ class AccountService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -580,7 +580,7 @@ class AccountService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -595,11 +595,11 @@ class AccountService {
 	 *
 	 * Update
 	 *
-	 * @param \Wallee\Sdk\Model\AccountUpdate $entity The account object with all the properties which should be updated. The id and the version are required properties. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\Account
+	 * @param \Secupay\Sdk\Model\AccountUpdate $entity The account object with all the properties which should be updated. The id and the version are required properties. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\Account
 	 */
 	public function update($entity) {
 		return $this->updateWithHttpInfo($entity)->getData();
@@ -611,10 +611,10 @@ class AccountService {
 	 * Update
      
      *
-	 * @param \Wallee\Sdk\Model\AccountUpdate $entity The account object with all the properties which should be updated. The id and the version are required properties. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\AccountUpdate $entity The account object with all the properties which should be updated. The id and the version are required properties. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function updateWithHttpInfo($entity) {
@@ -661,16 +661,16 @@ class AccountService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\Account',
+				'\Secupay\Sdk\Model\Account',
 				'/account/update'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\Account', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\Account', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\Account',
+                        '\Secupay\Sdk\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -678,7 +678,7 @@ class AccountService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -686,7 +686,7 @@ class AccountService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -694,7 +694,7 @@ class AccountService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

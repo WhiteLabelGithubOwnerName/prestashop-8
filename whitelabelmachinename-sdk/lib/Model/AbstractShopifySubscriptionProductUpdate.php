@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * AbstractShopifySubscriptionProductUpdate model
  *
  * @category    Class
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayAccess
@@ -51,13 +51,13 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
         'absolute_price_adjustment' => 'float',
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
-        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_interval_unit' => '\Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_weekday' => '\Secupay\Sdk\Model\ShopifySubscriptionWeekday',
         'fixed_price' => 'float',
         'maximal_billing_cycles' => 'int',
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
-        'pricing_option' => '\Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption',
+        'pricing_option' => '\Secupay\Sdk\Model\ShopifySubscriptionProductPricingOption',
         'relative_price_adjustment' => 'float',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool',
@@ -368,7 +368,7 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
     /**
      * Gets billing_interval_unit
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -378,7 +378,7 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
     /**
      * Sets billing_interval_unit
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
     /**
      * Gets billing_weekday
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -403,7 +403,7 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
     /**
      * Sets billing_weekday
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
     /**
      * Gets pricing_option
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionProductPricingOption
      */
     public function getPricingOption()
     {
@@ -528,7 +528,7 @@ class AbstractShopifySubscriptionProductUpdate implements ModelInterface, ArrayA
     /**
      * Sets pricing_option
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption $pricing_option 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionProductPricingOption $pricing_option 
      *
      * @return $this
      */

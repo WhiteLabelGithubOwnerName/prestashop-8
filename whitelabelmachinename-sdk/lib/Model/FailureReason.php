@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * FailureReason model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class FailureReason implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class FailureReason implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'category' => '\Wallee\Sdk\Model\FailureCategory',
+        'category' => '\Secupay\Sdk\Model\FailureCategory',
         'description' => 'map[string,string]',
         'id' => 'int',
         'name' => 'map[string,string]'
@@ -224,7 +224,7 @@ class FailureReason implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return \Wallee\Sdk\Model\FailureCategory
+     * @return \Secupay\Sdk\Model\FailureCategory
      */
     public function getCategory()
     {
@@ -234,7 +234,7 @@ class FailureReason implements ModelInterface, ArrayAccess
     /**
      * Sets category
      *
-     * @param \Wallee\Sdk\Model\FailureCategory $category The category that the failure reason belongs to.
+     * @param \Secupay\Sdk\Model\FailureCategory $category The category that the failure reason belongs to.
      *
      * @return $this
      */

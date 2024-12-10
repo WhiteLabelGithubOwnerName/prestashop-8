@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Feature model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Feature implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class Feature implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'beta' => 'bool',
-        'category' => '\Wallee\Sdk\Model\FeatureCategory',
+        'category' => '\Secupay\Sdk\Model\FeatureCategory',
         'description' => 'map[string,string]',
         'id' => 'int',
         'logo_path' => 'string',
@@ -284,7 +284,7 @@ class Feature implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return \Wallee\Sdk\Model\FeatureCategory
+     * @return \Secupay\Sdk\Model\FeatureCategory
      */
     public function getCategory()
     {
@@ -294,7 +294,7 @@ class Feature implements ModelInterface, ArrayAccess
     /**
      * Sets category
      *
-     * @param \Wallee\Sdk\Model\FeatureCategory $category The category that the feature belongs to.
+     * @param \Secupay\Sdk\Model\FeatureCategory $category The category that the feature belongs to.
      *
      * @return $this
      */

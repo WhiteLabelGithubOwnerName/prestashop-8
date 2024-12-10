@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ChargeFlowLevelPaymentLink model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeFlowLevelPaymentLink extends TransactionAwareEntity 
@@ -47,7 +47,7 @@ class ChargeFlowLevelPaymentLink extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'charge_flow_level' => '\Wallee\Sdk\Model\ChargeFlowLevel',
+        'charge_flow_level' => '\Secupay\Sdk\Model\ChargeFlowLevel',
         'payment_link' => 'string'
     ];
 
@@ -204,7 +204,7 @@ class ChargeFlowLevelPaymentLink extends TransactionAwareEntity
     /**
      * Gets charge_flow_level
      *
-     * @return \Wallee\Sdk\Model\ChargeFlowLevel
+     * @return \Secupay\Sdk\Model\ChargeFlowLevel
      */
     public function getChargeFlowLevel()
     {
@@ -214,7 +214,7 @@ class ChargeFlowLevelPaymentLink extends TransactionAwareEntity
     /**
      * Sets charge_flow_level
      *
-     * @param \Wallee\Sdk\Model\ChargeFlowLevel $charge_flow_level 
+     * @param \Secupay\Sdk\Model\ChargeFlowLevel $charge_flow_level 
      *
      * @return $this
      */

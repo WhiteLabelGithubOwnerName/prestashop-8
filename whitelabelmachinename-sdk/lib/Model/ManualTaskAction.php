@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ManualTaskAction model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ManualTaskAction implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class ManualTaskAction implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'label' => 'map[string,string]',
-        'style' => '\Wallee\Sdk\Model\ManualTaskActionStyle',
+        'style' => '\Secupay\Sdk\Model\ManualTaskActionStyle',
         'task_type' => 'int'
     ];
 
@@ -274,7 +274,7 @@ class ManualTaskAction implements ModelInterface, ArrayAccess
     /**
      * Gets style
      *
-     * @return \Wallee\Sdk\Model\ManualTaskActionStyle
+     * @return \Secupay\Sdk\Model\ManualTaskActionStyle
      */
     public function getStyle()
     {
@@ -284,7 +284,7 @@ class ManualTaskAction implements ModelInterface, ArrayAccess
     /**
      * Sets style
      *
-     * @param \Wallee\Sdk\Model\ManualTaskActionStyle $style The action's style.
+     * @param \Secupay\Sdk\Model\ManualTaskActionStyle $style The action's style.
      *
      * @return $this
      */

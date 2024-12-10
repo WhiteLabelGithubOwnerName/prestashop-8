@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
  */
 
 
-namespace Wallee\Sdk;
+namespace Secupay\Sdk;
 
 use \Exception;
 
@@ -26,8 +26,8 @@ use \Exception;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  Wallee\Sdk
- * @author   wallee AG
+ * @package  Secupay\Sdk
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ApiException extends Exception

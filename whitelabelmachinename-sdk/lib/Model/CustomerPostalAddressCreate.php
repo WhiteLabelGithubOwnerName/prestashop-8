@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * CustomerPostalAddressCreate model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class CustomerPostalAddressCreate implements ModelInterface, ArrayAccess
@@ -56,7 +56,7 @@ class CustomerPostalAddressCreate implements ModelInterface, ArrayAccess
         'dependent_locality' => 'string',
         'email_address' => 'string',
         'family_name' => 'string',
-        'gender' => '\Wallee\Sdk\Model\Gender',
+        'gender' => '\Secupay\Sdk\Model\Gender',
         'given_name' => 'string',
         'legal_organization_form' => 'int',
         'mobile_phone_number' => 'string',
@@ -591,7 +591,7 @@ class CustomerPostalAddressCreate implements ModelInterface, ArrayAccess
     /**
      * Gets gender
      *
-     * @return \Wallee\Sdk\Model\Gender
+     * @return \Secupay\Sdk\Model\Gender
      */
     public function getGender()
     {
@@ -601,7 +601,7 @@ class CustomerPostalAddressCreate implements ModelInterface, ArrayAccess
     /**
      * Sets gender
      *
-     * @param \Wallee\Sdk\Model\Gender $gender The gender.
+     * @param \Secupay\Sdk\Model\Gender $gender The gender.
      *
      * @return $this
      */

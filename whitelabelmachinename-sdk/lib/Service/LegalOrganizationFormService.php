@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace Wallee\Sdk\Service;
+namespace Secupay\Sdk\Service;
 
-use Wallee\Sdk\ApiClient;
-use Wallee\Sdk\ApiException;
-use Wallee\Sdk\ApiResponse;
-use Wallee\Sdk\Http\HttpRequest;
-use Wallee\Sdk\ObjectSerializer;
+use Secupay\Sdk\ApiClient;
+use Secupay\Sdk\ApiException;
+use Secupay\Sdk\ApiResponse;
+use Secupay\Sdk\Http\HttpRequest;
+use Secupay\Sdk\ObjectSerializer;
 
 /**
  * LegalOrganizationFormService service
  *
  * @category Class
- * @package  Wallee\Sdk
- * @author   wallee AG
+ * @package  Secupay\Sdk
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class LegalOrganizationFormService {
@@ -71,10 +71,10 @@ class LegalOrganizationFormService {
 	 *
 	 * All
 	 *
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\LegalOrganizationForm[]
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\LegalOrganizationForm[]
 	 */
 	public function all() {
 		return $this->allWithHttpInfo()->getData();
@@ -86,9 +86,9 @@ class LegalOrganizationFormService {
 	 * All
      
      *
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function allWithHttpInfo() {
@@ -126,16 +126,16 @@ class LegalOrganizationFormService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\LegalOrganizationForm[]',
+				'\Secupay\Sdk\Model\LegalOrganizationForm[]',
 				'/legal-organization-form/all'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\LegalOrganizationForm[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\LegalOrganizationForm[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\LegalOrganizationForm[]',
+                        '\Secupay\Sdk\Model\LegalOrganizationForm[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -143,7 +143,7 @@ class LegalOrganizationFormService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -151,7 +151,7 @@ class LegalOrganizationFormService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -167,10 +167,10 @@ class LegalOrganizationFormService {
 	 * Find by Country
 	 *
 	 * @param string $code The country in ISO 3166-1 alpha-2 format, for which all legal organization forms should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\LegalOrganizationForm[]
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\LegalOrganizationForm[]
 	 */
 	public function country($code) {
 		return $this->countryWithHttpInfo($code)->getData();
@@ -183,9 +183,9 @@ class LegalOrganizationFormService {
      
      *
 	 * @param string $code The country in ISO 3166-1 alpha-2 format, for which all legal organization forms should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countryWithHttpInfo($code) {
@@ -230,16 +230,16 @@ class LegalOrganizationFormService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\LegalOrganizationForm[]',
+				'\Secupay\Sdk\Model\LegalOrganizationForm[]',
 				'/legal-organization-form/country'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\LegalOrganizationForm[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\LegalOrganizationForm[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\LegalOrganizationForm[]',
+                        '\Secupay\Sdk\Model\LegalOrganizationForm[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class LegalOrganizationFormService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class LegalOrganizationFormService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -271,10 +271,10 @@ class LegalOrganizationFormService {
 	 * Read
 	 *
 	 * @param int $id The id of the legal organization form which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\LegalOrganizationForm
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\LegalOrganizationForm
 	 */
 	public function read($id) {
 		return $this->readWithHttpInfo($id)->getData();
@@ -287,9 +287,9 @@ class LegalOrganizationFormService {
      
      *
 	 * @param int $id The id of the legal organization form which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($id) {
@@ -334,16 +334,16 @@ class LegalOrganizationFormService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\LegalOrganizationForm',
+				'\Secupay\Sdk\Model\LegalOrganizationForm',
 				'/legal-organization-form/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\LegalOrganizationForm', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\LegalOrganizationForm', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\LegalOrganizationForm',
+                        '\Secupay\Sdk\Model\LegalOrganizationForm',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -351,7 +351,7 @@ class LegalOrganizationFormService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -359,7 +359,7 @@ class LegalOrganizationFormService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

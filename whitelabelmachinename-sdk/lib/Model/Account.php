@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Account model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Account implements ModelInterface, ArrayAccess
@@ -58,13 +58,13 @@ class Account implements ModelInterface, ArrayAccess
         'id' => 'int',
         'last_modified_date' => '\DateTime',
         'name' => 'string',
-        'parent_account' => '\Wallee\Sdk\Model\Account',
+        'parent_account' => '\Secupay\Sdk\Model\Account',
         'planned_purge_date' => '\DateTime',
         'restricted_active' => 'bool',
         'scope' => 'int',
-        'state' => '\Wallee\Sdk\Model\AccountState',
+        'state' => '\Secupay\Sdk\Model\AccountState',
         'subaccount_limit' => 'int',
-        'type' => '\Wallee\Sdk\Model\AccountType',
+        'type' => '\Secupay\Sdk\Model\AccountType',
         'version' => 'int'
     ];
 
@@ -555,7 +555,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets parent_account
      *
-     * @return \Wallee\Sdk\Model\Account
+     * @return \Secupay\Sdk\Model\Account
      */
     public function getParentAccount()
     {
@@ -565,7 +565,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets parent_account
      *
-     * @param \Wallee\Sdk\Model\Account $parent_account The parent account responsible for administering this account.
+     * @param \Secupay\Sdk\Model\Account $parent_account The parent account responsible for administering this account.
      *
      * @return $this
      */
@@ -655,7 +655,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\AccountState
+     * @return \Secupay\Sdk\Model\AccountState
      */
     public function getState()
     {
@@ -665,7 +665,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\AccountState $state The object's current state.
+     * @param \Secupay\Sdk\Model\AccountState $state The object's current state.
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\AccountType
+     * @return \Secupay\Sdk\Model\AccountType
      */
     public function getType()
     {
@@ -715,7 +715,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\AccountType $type The account's type which defines its role and capabilities.
+     * @param \Secupay\Sdk\Model\AccountType $type The account's type which defines its role and capabilities.
      *
      * @return $this
      */

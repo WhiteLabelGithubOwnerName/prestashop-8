@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@
  */
 
 
-namespace Wallee\Sdk\Http;
+namespace Secupay\Sdk\Http;
 
 /**
  * This class provides an HTTP client instance that is supported by the environment.
  *
  * @category Class
- * @package  Wallee\Sdk\Http
- * @author   wallee AG
+ * @package  Secupay\Sdk\Http
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class HttpClientFactory {
@@ -82,7 +82,7 @@ final class HttpClientFactory {
 	 * @return IHttpClient
 	 */
 	private function getClientInternal($type = null) {
-        $type = empty($type) ? getenv('WLE_HTTP_CLIENT') : $type;
+        $type = empty($type) ? getenv('SCP_HTTP_CLIENT') : $type;
         if(empty($type)){
             foreach ($this->clients as $client) {
                 if ($client->isSupported()) {

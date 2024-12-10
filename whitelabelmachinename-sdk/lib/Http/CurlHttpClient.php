@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,17 +20,17 @@
 
 declare(strict_types=1);
 
-namespace Wallee\Sdk\Http;
+namespace Secupay\Sdk\Http;
 
-use Wallee\Sdk\Http\ConnectionException;
-use Wallee\Sdk\ApiClient;
+use Secupay\Sdk\Http\ConnectionException;
+use Secupay\Sdk\ApiClient;
 
 /**
  * This class sends API calls via cURL.
  *
  * @category Class
- * @package  Wallee\Sdk\Http
- * @author   wallee AG
+ * @package  Secupay\Sdk\Http
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class CurlHttpClient implements IHttpClient {
@@ -183,7 +183,12 @@ final class CurlHttpClient implements IHttpClient {
 	 * @return HttpResponse
 	 * @throws ConnectionException
 	 */
-	private function handleResponse(ApiClient $apiClient, HttpRequest $request, \CurlHandle $curl, string|bool $curlResponse, string $url): HttpResponse {
+	private function handleResponse(ApiClient $apiClient, HttpRequest $request, $curl, $curlResponse, string $url): HttpResponse {
+		// Remove this check once PHP 7.4 is not supported anymore and this can be set in the arguments:
+		if (!is_string($curlResponse) && !is_bool($curlResponse)) {
+			throw new ConnectionException($url, $request->getLogToken(), "API call response was not bool or string.");
+		}
+
 		$httpHeaderSize = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
 
 		// Handle the case where $curlResponse is false (indicating an error)

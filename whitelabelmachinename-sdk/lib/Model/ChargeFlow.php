@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ChargeFlow model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeFlow implements ModelInterface, ArrayAccess
@@ -55,7 +55,7 @@ class ChargeFlow implements ModelInterface, ArrayAccess
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
         'priority' => 'int',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -402,7 +402,7 @@ class ChargeFlow implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -412,7 +412,7 @@ class ChargeFlow implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

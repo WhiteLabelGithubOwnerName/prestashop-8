@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * TokenVersion model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TokenVersion implements ModelInterface, ArrayAccess
@@ -50,27 +50,27 @@ class TokenVersion implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'activated_on' => '\DateTime',
-        'billing_address' => '\Wallee\Sdk\Model\Address',
+        'billing_address' => '\Secupay\Sdk\Model\Address',
         'created_on' => '\DateTime',
-        'environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
+        'environment' => '\Secupay\Sdk\Model\ChargeAttemptEnvironment',
         'expires_on' => '\DateTime',
         'icon_url' => 'string',
         'id' => 'int',
-        'labels' => '\Wallee\Sdk\Model\Label[]',
+        'labels' => '\Secupay\Sdk\Model\Label[]',
         'language' => 'string',
         'linked_space_id' => 'int',
         'name' => 'string',
         'obsoleted_on' => '\DateTime',
-        'payment_connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
-        'payment_information_hashes' => '\Wallee\Sdk\Model\PaymentInformationHash[]',
+        'payment_connector_configuration' => '\Secupay\Sdk\Model\PaymentConnectorConfiguration',
+        'payment_information_hashes' => '\Secupay\Sdk\Model\PaymentInformationHash[]',
         'payment_method' => 'int',
         'payment_method_brand' => 'int',
         'planned_purge_date' => '\DateTime',
         'processor_token' => 'string',
-        'shipping_address' => '\Wallee\Sdk\Model\Address',
-        'state' => '\Wallee\Sdk\Model\TokenVersionState',
-        'token' => '\Wallee\Sdk\Model\Token',
-        'type' => '\Wallee\Sdk\Model\TokenVersionType',
+        'shipping_address' => '\Secupay\Sdk\Model\Address',
+        'state' => '\Secupay\Sdk\Model\TokenVersionState',
+        'token' => '\Secupay\Sdk\Model\Token',
+        'type' => '\Secupay\Sdk\Model\TokenVersionType',
         'version' => 'int'
     ];
 
@@ -390,7 +390,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\Address
+     * @return \Secupay\Sdk\Model\Address
      */
     public function getBillingAddress()
     {
@@ -400,7 +400,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\Address $billing_address 
+     * @param \Secupay\Sdk\Model\Address $billing_address 
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets environment
      *
-     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Secupay\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getEnvironment()
     {
@@ -450,7 +450,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets environment
      *
-     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $environment 
+     * @param \Secupay\Sdk\Model\ChargeAttemptEnvironment $environment 
      *
      * @return $this
      */
@@ -540,7 +540,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets labels
      *
-     * @return \Wallee\Sdk\Model\Label[]
+     * @return \Secupay\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -550,7 +550,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets labels
      *
-     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
+     * @param \Secupay\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets payment_connector_configuration
      *
-     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Secupay\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getPaymentConnectorConfiguration()
     {
@@ -679,7 +679,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets payment_connector_configuration
      *
-     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration 
+     * @param \Secupay\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration 
      *
      * @return $this
      */
@@ -694,7 +694,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets payment_information_hashes
      *
-     * @return \Wallee\Sdk\Model\PaymentInformationHash[]
+     * @return \Secupay\Sdk\Model\PaymentInformationHash[]
      */
     public function getPaymentInformationHashes()
     {
@@ -704,7 +704,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets payment_information_hashes
      *
-     * @param \Wallee\Sdk\Model\PaymentInformationHash[] $payment_information_hashes The payment information hash set contains hashes of the payment information represented by this token version.
+     * @param \Secupay\Sdk\Model\PaymentInformationHash[] $payment_information_hashes The payment information hash set contains hashes of the payment information represented by this token version.
      *
      * @return $this
      */
@@ -823,7 +823,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Wallee\Sdk\Model\Address
+     * @return \Secupay\Sdk\Model\Address
      */
     public function getShippingAddress()
     {
@@ -833,7 +833,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Wallee\Sdk\Model\Address $shipping_address 
+     * @param \Secupay\Sdk\Model\Address $shipping_address 
      *
      * @return $this
      */
@@ -848,7 +848,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\TokenVersionState
+     * @return \Secupay\Sdk\Model\TokenVersionState
      */
     public function getState()
     {
@@ -858,7 +858,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\TokenVersionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\TokenVersionState $state The object's current state.
      *
      * @return $this
      */
@@ -873,7 +873,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets token
      *
-     * @return \Wallee\Sdk\Model\Token
+     * @return \Secupay\Sdk\Model\Token
      */
     public function getToken()
     {
@@ -883,7 +883,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets token
      *
-     * @param \Wallee\Sdk\Model\Token $token 
+     * @param \Secupay\Sdk\Model\Token $token 
      *
      * @return $this
      */
@@ -898,7 +898,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\TokenVersionType
+     * @return \Secupay\Sdk\Model\TokenVersionType
      */
     public function getType()
     {
@@ -908,7 +908,7 @@ class TokenVersion implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\TokenVersionType $type The token version type determines what kind of token it is and by which payment connector the token can be processed by.
+     * @param \Secupay\Sdk\Model\TokenVersionType $type The token version type determines what kind of token it is and by which payment connector the token can be processed by.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * TokenVersionType model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TokenVersionType implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class TokenVersionType implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'description' => 'map[string,string]',
-        'feature' => '\Wallee\Sdk\Model\Feature',
+        'feature' => '\Secupay\Sdk\Model\Feature',
         'id' => 'int',
         'name' => 'map[string,string]'
     ];
@@ -249,7 +249,7 @@ class TokenVersionType implements ModelInterface, ArrayAccess
     /**
      * Gets feature
      *
-     * @return \Wallee\Sdk\Model\Feature
+     * @return \Secupay\Sdk\Model\Feature
      */
     public function getFeature()
     {
@@ -259,7 +259,7 @@ class TokenVersionType implements ModelInterface, ArrayAccess
     /**
      * Sets feature
      *
-     * @param \Wallee\Sdk\Model\Feature $feature 
+     * @param \Secupay\Sdk\Model\Feature $feature 
      *
      * @return $this
      */

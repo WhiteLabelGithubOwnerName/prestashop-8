@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ChargeFlowLevel model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeFlowLevel extends TransactionAwareEntity 
@@ -48,14 +48,14 @@ class ChargeFlowLevel extends TransactionAwareEntity
       */
     protected static $swaggerTypes = [
         'asynchronous_charge' => 'int',
-        'configuration' => '\Wallee\Sdk\Model\ChargeFlowLevelConfiguration',
+        'configuration' => '\Secupay\Sdk\Model\ChargeFlowLevelConfiguration',
         'created_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
-        'state' => '\Wallee\Sdk\Model\ChargeFlowLevelState',
+        'state' => '\Secupay\Sdk\Model\ChargeFlowLevelState',
         'synchronous_charge' => 'int',
         'timeout_on' => '\DateTime',
         'token_charge' => 'int',
-        'transaction' => '\Wallee\Sdk\Model\Transaction',
+        'transaction' => '\Secupay\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -285,7 +285,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Gets configuration
      *
-     * @return \Wallee\Sdk\Model\ChargeFlowLevelConfiguration
+     * @return \Secupay\Sdk\Model\ChargeFlowLevelConfiguration
      */
     public function getConfiguration()
     {
@@ -295,7 +295,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Sets configuration
      *
-     * @param \Wallee\Sdk\Model\ChargeFlowLevelConfiguration $configuration 
+     * @param \Secupay\Sdk\Model\ChargeFlowLevelConfiguration $configuration 
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ChargeFlowLevelState
+     * @return \Secupay\Sdk\Model\ChargeFlowLevelState
      */
     public function getState()
     {
@@ -370,7 +370,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ChargeFlowLevelState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ChargeFlowLevelState $state The object's current state.
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \Wallee\Sdk\Model\Transaction
+     * @return \Secupay\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -470,7 +470,7 @@ class ChargeFlowLevel extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \Wallee\Sdk\Model\Transaction $transaction 
+     * @param \Secupay\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

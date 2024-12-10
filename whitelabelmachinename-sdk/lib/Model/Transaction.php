@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Transaction model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Transaction implements ModelInterface, ArrayAccess
@@ -54,16 +54,16 @@ class Transaction implements ModelInterface, ArrayAccess
         'allowed_payment_method_brands' => 'int[]',
         'allowed_payment_method_configurations' => 'int[]',
         'authorization_amount' => 'float',
-        'authorization_environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
+        'authorization_environment' => '\Secupay\Sdk\Model\ChargeAttemptEnvironment',
         'authorization_sales_channel' => 'int',
         'authorization_timeout_on' => '\DateTime',
         'authorized_on' => '\DateTime',
         'auto_confirmation_enabled' => 'bool',
-        'billing_address' => '\Wallee\Sdk\Model\Address',
+        'billing_address' => '\Secupay\Sdk\Model\Address',
         'charge_retry_enabled' => 'bool',
         'completed_amount' => 'float',
         'completed_on' => '\DateTime',
-        'completion_behavior' => '\Wallee\Sdk\Model\TransactionCompletionBehavior',
+        'completion_behavior' => '\Secupay\Sdk\Model\TransactionCompletionBehavior',
         'completion_timeout_on' => '\DateTime',
         'confirmed_by' => 'int',
         'confirmed_on' => '\DateTime',
@@ -72,49 +72,49 @@ class Transaction implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'customer_email_address' => 'string',
         'customer_id' => 'string',
-        'customers_presence' => '\Wallee\Sdk\Model\CustomersPresence',
+        'customers_presence' => '\Secupay\Sdk\Model\CustomersPresence',
         'delivery_decision_made_on' => '\DateTime',
         'device_session_identifier' => 'string',
         'emails_disabled' => 'bool',
         'end_of_life' => '\DateTime',
-        'environment' => '\Wallee\Sdk\Model\Environment',
-        'environment_selection_strategy' => '\Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy',
+        'environment' => '\Secupay\Sdk\Model\Environment',
+        'environment_selection_strategy' => '\Secupay\Sdk\Model\TransactionEnvironmentSelectionStrategy',
         'failed_on' => '\DateTime',
         'failed_url' => 'string',
-        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
-        'group' => '\Wallee\Sdk\Model\TransactionGroup',
+        'failure_reason' => '\Secupay\Sdk\Model\FailureReason',
+        'group' => '\Secupay\Sdk\Model\TransactionGroup',
         'id' => 'int',
         'internet_protocol_address' => 'string',
         'internet_protocol_address_country' => 'string',
         'invoice_merchant_reference' => 'string',
         'java_enabled' => 'bool',
         'language' => 'string',
-        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'line_items' => '\Secupay\Sdk\Model\LineItem[]',
         'linked_space_id' => 'int',
         'merchant_reference' => 'string',
         'meta_data' => 'map[string,string]',
         'parent' => 'int',
-        'payment_connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
+        'payment_connector_configuration' => '\Secupay\Sdk\Model\PaymentConnectorConfiguration',
         'planned_purge_date' => '\DateTime',
         'processing_on' => '\DateTime',
         'refunded_amount' => 'float',
         'screen_color_depth' => 'string',
         'screen_height' => 'string',
         'screen_width' => 'string',
-        'shipping_address' => '\Wallee\Sdk\Model\Address',
+        'shipping_address' => '\Secupay\Sdk\Model\Address',
         'shipping_method' => 'string',
         'space_view_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\TransactionState',
+        'state' => '\Secupay\Sdk\Model\TransactionState',
         'success_url' => 'string',
-        'terminal' => '\Wallee\Sdk\Model\PaymentTerminal',
+        'terminal' => '\Secupay\Sdk\Model\PaymentTerminal',
         'time_zone' => 'string',
-        'token' => '\Wallee\Sdk\Model\Token',
-        'tokenization_mode' => '\Wallee\Sdk\Model\TokenizationMode',
+        'token' => '\Secupay\Sdk\Model\Token',
+        'tokenization_mode' => '\Secupay\Sdk\Model\TokenizationMode',
         'total_applied_fees' => 'float',
         'total_settled_amount' => 'float',
         'user_agent_header' => 'string',
         'user_failure_message' => 'string',
-        'user_interface_type' => '\Wallee\Sdk\Model\TransactionUserInterfaceType',
+        'user_interface_type' => '\Secupay\Sdk\Model\TransactionUserInterfaceType',
         'version' => 'int',
         'window_height' => 'string',
         'window_width' => 'string',
@@ -851,7 +851,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets authorization_environment
      *
-     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Secupay\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getAuthorizationEnvironment()
     {
@@ -861,7 +861,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets authorization_environment
      *
-     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $authorization_environment The environment in which the transaction was authorized.
+     * @param \Secupay\Sdk\Model\ChargeAttemptEnvironment $authorization_environment The environment in which the transaction was authorized.
      *
      * @return $this
      */
@@ -976,7 +976,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\Address
+     * @return \Secupay\Sdk\Model\Address
      */
     public function getBillingAddress()
     {
@@ -986,7 +986,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\Address $billing_address The address associated with the payment method for invoicing and transaction processing purposes.
+     * @param \Secupay\Sdk\Model\Address $billing_address The address associated with the payment method for invoicing and transaction processing purposes.
      *
      * @return $this
      */
@@ -1076,7 +1076,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets completion_behavior
      *
-     * @return \Wallee\Sdk\Model\TransactionCompletionBehavior
+     * @return \Secupay\Sdk\Model\TransactionCompletionBehavior
      */
     public function getCompletionBehavior()
     {
@@ -1086,7 +1086,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets completion_behavior
      *
-     * @param \Wallee\Sdk\Model\TransactionCompletionBehavior $completion_behavior The behavior that controls when the transaction is completed.
+     * @param \Secupay\Sdk\Model\TransactionCompletionBehavior $completion_behavior The behavior that controls when the transaction is completed.
      *
      * @return $this
      */
@@ -1305,7 +1305,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets customers_presence
      *
-     * @return \Wallee\Sdk\Model\CustomersPresence
+     * @return \Secupay\Sdk\Model\CustomersPresence
      */
     public function getCustomersPresence()
     {
@@ -1315,7 +1315,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets customers_presence
      *
-     * @param \Wallee\Sdk\Model\CustomersPresence $customers_presence The customer's presence indicates whether and in what way the transaction's customer is present. Default is VIRTUAL_PRESENT.
+     * @param \Secupay\Sdk\Model\CustomersPresence $customers_presence The customer's presence indicates whether and in what way the transaction's customer is present. Default is VIRTUAL_PRESENT.
      *
      * @return $this
      */
@@ -1437,7 +1437,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets environment
      *
-     * @return \Wallee\Sdk\Model\Environment
+     * @return \Secupay\Sdk\Model\Environment
      */
     public function getEnvironment()
     {
@@ -1447,7 +1447,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets environment
      *
-     * @param \Wallee\Sdk\Model\Environment $environment 
+     * @param \Secupay\Sdk\Model\Environment $environment 
      *
      * @return $this
      */
@@ -1462,7 +1462,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets environment_selection_strategy
      *
-     * @return \Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy
+     * @return \Secupay\Sdk\Model\TransactionEnvironmentSelectionStrategy
      */
     public function getEnvironmentSelectionStrategy()
     {
@@ -1472,7 +1472,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets environment_selection_strategy
      *
-     * @param \Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy $environment_selection_strategy The strategy for determining whether the transaction is to be processed in the test or production environment.
+     * @param \Secupay\Sdk\Model\TransactionEnvironmentSelectionStrategy $environment_selection_strategy The strategy for determining whether the transaction is to be processed in the test or production environment.
      *
      * @return $this
      */
@@ -1544,7 +1544,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets failure_reason
      *
-     * @return \Wallee\Sdk\Model\FailureReason
+     * @return \Secupay\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -1554,7 +1554,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets failure_reason
      *
-     * @param \Wallee\Sdk\Model\FailureReason $failure_reason The reason for the failure of the transaction.
+     * @param \Secupay\Sdk\Model\FailureReason $failure_reason The reason for the failure of the transaction.
      *
      * @return $this
      */
@@ -1569,7 +1569,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets group
      *
-     * @return \Wallee\Sdk\Model\TransactionGroup
+     * @return \Secupay\Sdk\Model\TransactionGroup
      */
     public function getGroup()
     {
@@ -1579,7 +1579,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets group
      *
-     * @param \Wallee\Sdk\Model\TransactionGroup $group The group that the transaction belongs to.
+     * @param \Secupay\Sdk\Model\TransactionGroup $group The group that the transaction belongs to.
      *
      * @return $this
      */
@@ -1748,7 +1748,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -1758,7 +1758,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $line_items The line items purchased by the customer.
+     * @param \Secupay\Sdk\Model\LineItem[] $line_items The line items purchased by the customer.
      *
      * @return $this
      */
@@ -1877,7 +1877,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets payment_connector_configuration
      *
-     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Secupay\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getPaymentConnectorConfiguration()
     {
@@ -1887,7 +1887,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets payment_connector_configuration
      *
-     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration The payment connector configuration that was used to authorize the transaction.
+     * @param \Secupay\Sdk\Model\PaymentConnectorConfiguration $payment_connector_configuration The payment connector configuration that was used to authorize the transaction.
      *
      * @return $this
      */
@@ -2052,7 +2052,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Wallee\Sdk\Model\Address
+     * @return \Secupay\Sdk\Model\Address
      */
     public function getShippingAddress()
     {
@@ -2062,7 +2062,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Wallee\Sdk\Model\Address $shipping_address The address to where the order will be shipped.
+     * @param \Secupay\Sdk\Model\Address $shipping_address The address to where the order will be shipped.
      *
      * @return $this
      */
@@ -2131,7 +2131,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\TransactionState
+     * @return \Secupay\Sdk\Model\TransactionState
      */
     public function getState()
     {
@@ -2141,7 +2141,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\TransactionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\TransactionState $state The object's current state.
      *
      * @return $this
      */
@@ -2188,7 +2188,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets terminal
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminal
+     * @return \Secupay\Sdk\Model\PaymentTerminal
      */
     public function getTerminal()
     {
@@ -2198,7 +2198,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets terminal
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminal $terminal The payment terminal through which the payment was processed.
+     * @param \Secupay\Sdk\Model\PaymentTerminal $terminal The payment terminal through which the payment was processed.
      *
      * @return $this
      */
@@ -2238,7 +2238,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets token
      *
-     * @return \Wallee\Sdk\Model\Token
+     * @return \Secupay\Sdk\Model\Token
      */
     public function getToken()
     {
@@ -2248,7 +2248,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets token
      *
-     * @param \Wallee\Sdk\Model\Token $token The payment token that should be used to charge the customer.
+     * @param \Secupay\Sdk\Model\Token $token The payment token that should be used to charge the customer.
      *
      * @return $this
      */
@@ -2263,7 +2263,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets tokenization_mode
      *
-     * @return \Wallee\Sdk\Model\TokenizationMode
+     * @return \Secupay\Sdk\Model\TokenizationMode
      */
     public function getTokenizationMode()
     {
@@ -2273,7 +2273,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets tokenization_mode
      *
-     * @param \Wallee\Sdk\Model\TokenizationMode $tokenization_mode The tokenization mode specifies whether and how the tokenization of payment information is applied to the transaction.
+     * @param \Secupay\Sdk\Model\TokenizationMode $tokenization_mode The tokenization mode specifies whether and how the tokenization of payment information is applied to the transaction.
      *
      * @return $this
      */
@@ -2388,7 +2388,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets user_interface_type
      *
-     * @return \Wallee\Sdk\Model\TransactionUserInterfaceType
+     * @return \Secupay\Sdk\Model\TransactionUserInterfaceType
      */
     public function getUserInterfaceType()
     {
@@ -2398,7 +2398,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets user_interface_type
      *
-     * @param \Wallee\Sdk\Model\TransactionUserInterfaceType $user_interface_type The type of user interface the customer used to provide the payment information.
+     * @param \Secupay\Sdk\Model\TransactionUserInterfaceType $user_interface_type The type of user interface the customer used to provide the payment information.
      *
      * @return $this
      */

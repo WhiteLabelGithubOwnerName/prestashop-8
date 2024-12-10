@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@
  */
 
 
-namespace Wallee\Sdk\Http;
+namespace Secupay\Sdk\Http;
 
 /**
  * This class represents an HTTP response.
  *
  * @category Class
- * @package  Wallee\Sdk\Http
- * @author   wallee AG
+ * @package  Secupay\Sdk\Http
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class HttpResponse {

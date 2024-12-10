@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace Wallee\Sdk\Service;
+namespace Secupay\Sdk\Service;
 
-use Wallee\Sdk\ApiClient;
-use Wallee\Sdk\ApiException;
-use Wallee\Sdk\ApiResponse;
-use Wallee\Sdk\Http\HttpRequest;
-use Wallee\Sdk\ObjectSerializer;
+use Secupay\Sdk\ApiClient;
+use Secupay\Sdk\ApiException;
+use Secupay\Sdk\ApiResponse;
+use Secupay\Sdk\Http\HttpRequest;
+use Secupay\Sdk\ObjectSerializer;
 
 /**
  * TransactionIframeService service
  *
  * @category Class
- * @package  Wallee\Sdk
- * @author   wallee AG
+ * @package  Secupay\Sdk
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionIframeService {
@@ -73,9 +73,9 @@ class TransactionIframeService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return string
 	 */
 	public function javascriptUrl($space_id, $id) {
@@ -90,9 +90,9 @@ class TransactionIframeService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function javascriptUrlWithHttpInfo($space_id, $id) {
@@ -106,7 +106,7 @@ class TransactionIframeService {
 		}
 		// header params
 		$headerParams = [];
-		$headerAccept = $this->apiClient->selectHeaderAccept(['application/json', 'text/plain;charset=utf-8']);
+		$headerAccept = $this->apiClient->selectHeaderAccept(['text/plain;charset=utf-8', 'application/json']);
 		if (!is_null($headerAccept)) {
 			$headerParams[HttpRequest::HEADER_KEY_ACCEPT] = $headerAccept;
 		}
@@ -161,7 +161,7 @@ class TransactionIframeService {
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class TransactionIframeService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -177,7 +177,7 @@ class TransactionIframeService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

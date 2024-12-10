@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * RestCountry model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RestCountry implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class RestCountry implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_format' => '\Wallee\Sdk\Model\RestAddressFormat',
+        'address_format' => '\Secupay\Sdk\Model\RestAddressFormat',
         'iso_code2' => 'string',
         'iso_code3' => 'string',
         'name' => 'string',
@@ -238,7 +238,7 @@ class RestCountry implements ModelInterface, ArrayAccess
     /**
      * Gets address_format
      *
-     * @return \Wallee\Sdk\Model\RestAddressFormat
+     * @return \Secupay\Sdk\Model\RestAddressFormat
      */
     public function getAddressFormat()
     {
@@ -248,7 +248,7 @@ class RestCountry implements ModelInterface, ArrayAccess
     /**
      * Sets address_format
      *
-     * @param \Wallee\Sdk\Model\RestAddressFormat $address_format Specifies the country's way of formatting addresses.
+     * @param \Secupay\Sdk\Model\RestAddressFormat $address_format Specifies the country's way of formatting addresses.
      *
      * @return $this
      */

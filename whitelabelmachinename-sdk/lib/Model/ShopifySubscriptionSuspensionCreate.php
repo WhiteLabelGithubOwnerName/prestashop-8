@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionSuspensionCreate model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'planned_end_date' => '\DateTime',
         'subscription' => 'int',
-        'type' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionType'
+        'type' => '\Secupay\Sdk\Model\ShopifySubscriptionSuspensionType'
     ];
 
     /**
@@ -276,7 +276,7 @@ class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionSuspensionType
      */
     public function getType()
     {
@@ -286,7 +286,7 @@ class ShopifySubscriptionSuspensionCreate implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType $type 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionSuspensionType $type 
      *
      * @return $this
      */

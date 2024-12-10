@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Role model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Role implements ModelInterface, ArrayAccess
@@ -49,12 +49,12 @@ class Role implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Wallee\Sdk\Model\Account',
+        'account' => '\Secupay\Sdk\Model\Account',
         'id' => 'int',
         'name' => 'map[string,string]',
-        'permissions' => '\Wallee\Sdk\Model\Permission[]',
+        'permissions' => '\Secupay\Sdk\Model\Permission[]',
         'planned_purge_date' => '\DateTime',
-        'state' => '\Wallee\Sdk\Model\RoleState',
+        'state' => '\Secupay\Sdk\Model\RoleState',
         'two_factor_required' => 'bool',
         'version' => 'int'
     ];
@@ -252,7 +252,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Wallee\Sdk\Model\Account
+     * @return \Secupay\Sdk\Model\Account
      */
     public function getAccount()
     {
@@ -262,7 +262,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Wallee\Sdk\Model\Account $account The account the role belongs to. The role can only be assigned within this account.
+     * @param \Secupay\Sdk\Model\Account $account The account the role belongs to. The role can only be assigned within this account.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets permissions
      *
-     * @return \Wallee\Sdk\Model\Permission[]
+     * @return \Secupay\Sdk\Model\Permission[]
      */
     public function getPermissions()
     {
@@ -337,7 +337,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets permissions
      *
-     * @param \Wallee\Sdk\Model\Permission[] $permissions The permissions granted to users with this role.
+     * @param \Secupay\Sdk\Model\Permission[] $permissions The permissions granted to users with this role.
      *
      * @return $this
      */
@@ -377,7 +377,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\RoleState
+     * @return \Secupay\Sdk\Model\RoleState
      */
     public function getState()
     {
@@ -387,7 +387,7 @@ class Role implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\RoleState $state The object's current state.
+     * @param \Secupay\Sdk\Model\RoleState $state The object's current state.
      *
      * @return $this
      */

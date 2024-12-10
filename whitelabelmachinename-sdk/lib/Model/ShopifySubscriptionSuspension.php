@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionSuspension model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
@@ -54,13 +54,13 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
         'ended_by' => 'int',
         'ended_on' => '\DateTime',
         'id' => 'int',
-        'initiator' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionInitiator',
+        'initiator' => '\Secupay\Sdk\Model\ShopifySubscriptionSuspensionInitiator',
         'linked_space_id' => 'int',
         'planned_end_date' => '\DateTime',
         'shop' => 'int',
-        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionState',
-        'subscription' => '\Wallee\Sdk\Model\ShopifySubscription',
-        'type' => '\Wallee\Sdk\Model\ShopifySubscriptionSuspensionType',
+        'state' => '\Secupay\Sdk\Model\ShopifySubscriptionSuspensionState',
+        'subscription' => '\Secupay\Sdk\Model\ShopifySubscription',
+        'type' => '\Secupay\Sdk\Model\ShopifySubscriptionSuspensionType',
         'version' => 'int'
     ];
 
@@ -412,7 +412,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets initiator
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionInitiator
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionSuspensionInitiator
      */
     public function getInitiator()
     {
@@ -422,7 +422,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets initiator
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionInitiator $initiator 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionSuspensionInitiator $initiator 
      *
      * @return $this
      */
@@ -512,7 +512,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionState
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionSuspensionState
      */
     public function getState()
     {
@@ -522,7 +522,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionSuspensionState $state The object's current state.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets subscription
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscription
+     * @return \Secupay\Sdk\Model\ShopifySubscription
      */
     public function getSubscription()
     {
@@ -547,7 +547,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets subscription
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscription $subscription 
+     * @param \Secupay\Sdk\Model\ShopifySubscription $subscription 
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionSuspensionType
      */
     public function getType()
     {
@@ -572,7 +572,7 @@ class ShopifySubscriptionSuspension implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionSuspensionType $type 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionSuspensionType $type 
      *
      * @return $this
      */

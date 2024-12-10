@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace Wallee\Sdk\Service;
+namespace Secupay\Sdk\Service;
 
-use Wallee\Sdk\ApiClient;
-use Wallee\Sdk\ApiException;
-use Wallee\Sdk\ApiResponse;
-use Wallee\Sdk\Http\HttpRequest;
-use Wallee\Sdk\ObjectSerializer;
+use Secupay\Sdk\ApiClient;
+use Secupay\Sdk\ApiException;
+use Secupay\Sdk\ApiResponse;
+use Secupay\Sdk\Http\HttpRequest;
+use Secupay\Sdk\ObjectSerializer;
 
 /**
  * TokenVersionService service
  *
  * @category Class
- * @package  Wallee\Sdk
- * @author   wallee AG
+ * @package  Secupay\Sdk
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TokenVersionService {
@@ -73,10 +73,10 @@ class TokenVersionService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of a token for which you want to look up the current active token version. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TokenVersion
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TokenVersion
 	 */
 	public function activeVersion($space_id, $id) {
 		return $this->activeVersionWithHttpInfo($space_id, $id)->getData();
@@ -90,9 +90,9 @@ class TokenVersionService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of a token for which you want to look up the current active token version. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function activeVersionWithHttpInfo($space_id, $id) {
@@ -144,16 +144,16 @@ class TokenVersionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TokenVersion',
+				'\Secupay\Sdk\Model\TokenVersion',
 				'/token-version/active-version'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TokenVersion', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TokenVersion', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TokenVersion',
+                        '\Secupay\Sdk\Model\TokenVersion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -161,7 +161,7 @@ class TokenVersionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class TokenVersionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,10 +185,10 @@ class TokenVersionService {
 	 * Count
 	 *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return int
 	 */
 	public function count($space_id, $filter = null) {
@@ -202,10 +202,10 @@ class TokenVersionService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countWithHttpInfo($space_id, $filter = null) {
@@ -272,7 +272,7 @@ class TokenVersionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,7 +280,7 @@ class TokenVersionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -297,10 +297,10 @@ class TokenVersionService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the token version which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TokenVersion
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TokenVersion
 	 */
 	public function read($space_id, $id) {
 		return $this->readWithHttpInfo($space_id, $id)->getData();
@@ -314,9 +314,9 @@ class TokenVersionService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the token version which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($space_id, $id) {
@@ -368,16 +368,16 @@ class TokenVersionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TokenVersion',
+				'\Secupay\Sdk\Model\TokenVersion',
 				'/token-version/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TokenVersion', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TokenVersion', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TokenVersion',
+                        '\Secupay\Sdk\Model\TokenVersion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -385,7 +385,7 @@ class TokenVersionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -393,7 +393,7 @@ class TokenVersionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -409,11 +409,11 @@ class TokenVersionService {
 	 * Search
 	 *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the token versions which are returned by the search. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TokenVersion[]
+	 * @param \Secupay\Sdk\Model\EntityQuery $query The query restricts the token versions which are returned by the search. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TokenVersion[]
 	 */
 	public function search($space_id, $query) {
 		return $this->searchWithHttpInfo($space_id, $query)->getData();
@@ -426,10 +426,10 @@ class TokenVersionService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the token versions which are returned by the search. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQuery $query The query restricts the token versions which are returned by the search. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchWithHttpInfo($space_id, $query) {
@@ -483,16 +483,16 @@ class TokenVersionService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TokenVersion[]',
+				'\Secupay\Sdk\Model\TokenVersion[]',
 				'/token-version/search'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TokenVersion[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TokenVersion[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TokenVersion[]',
+                        '\Secupay\Sdk\Model\TokenVersion[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -500,7 +500,7 @@ class TokenVersionService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -508,7 +508,7 @@ class TokenVersionService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

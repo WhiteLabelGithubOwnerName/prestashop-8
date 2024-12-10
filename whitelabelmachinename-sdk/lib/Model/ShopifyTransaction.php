@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifyTransaction model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifyTransaction extends TransactionAwareEntity 
@@ -49,12 +49,12 @@ class ShopifyTransaction extends TransactionAwareEntity
     protected static $swaggerTypes = [
         'checkout_id' => 'string',
         'created_on' => '\DateTime',
-        'integration' => '\Wallee\Sdk\Model\ShopifyV1Integration',
+        'integration' => '\Secupay\Sdk\Model\ShopifyV1Integration',
         'order_id' => 'string',
         'order_name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'state' => '\Wallee\Sdk\Model\ShopifyTransactionState',
-        'transaction' => '\Wallee\Sdk\Model\Transaction',
+        'state' => '\Secupay\Sdk\Model\ShopifyTransactionState',
+        'transaction' => '\Secupay\Sdk\Model\Transaction',
         'version' => 'int'
     ];
 
@@ -303,7 +303,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Gets integration
      *
-     * @return \Wallee\Sdk\Model\ShopifyV1Integration
+     * @return \Secupay\Sdk\Model\ShopifyV1Integration
      */
     public function getIntegration()
     {
@@ -313,7 +313,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Sets integration
      *
-     * @param \Wallee\Sdk\Model\ShopifyV1Integration $integration 
+     * @param \Secupay\Sdk\Model\ShopifyV1Integration $integration 
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ShopifyTransactionState
+     * @return \Secupay\Sdk\Model\ShopifyTransactionState
      */
     public function getState()
     {
@@ -413,7 +413,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ShopifyTransactionState $state 
+     * @param \Secupay\Sdk\Model\ShopifyTransactionState $state 
      *
      * @return $this
      */
@@ -428,7 +428,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \Wallee\Sdk\Model\Transaction
+     * @return \Secupay\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -438,7 +438,7 @@ class ShopifyTransaction extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \Wallee\Sdk\Model\Transaction $transaction 
+     * @param \Secupay\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */

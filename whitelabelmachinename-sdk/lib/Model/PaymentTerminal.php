@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminal model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminal implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configuration_version' => '\Wallee\Sdk\Model\PaymentTerminalConfigurationVersion',
+        'configuration_version' => '\Secupay\Sdk\Model\PaymentTerminalConfigurationVersion',
         'default_currency' => 'string',
         'device_name' => 'string',
         'device_serial_number' => 'string',
@@ -57,11 +57,11 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
         'id' => 'int',
         'identifier' => 'string',
         'linked_space_id' => 'int',
-        'location_version' => '\Wallee\Sdk\Model\PaymentTerminalLocationVersion',
+        'location_version' => '\Secupay\Sdk\Model\PaymentTerminalLocationVersion',
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'state' => '\Wallee\Sdk\Model\PaymentTerminalState',
-        'type' => '\Wallee\Sdk\Model\PaymentTerminalType',
+        'state' => '\Secupay\Sdk\Model\PaymentTerminalState',
+        'type' => '\Secupay\Sdk\Model\PaymentTerminalType',
         'version' => 'int'
     ];
 
@@ -298,7 +298,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Gets configuration_version
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminalConfigurationVersion
+     * @return \Secupay\Sdk\Model\PaymentTerminalConfigurationVersion
      */
     public function getConfigurationVersion()
     {
@@ -308,7 +308,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_version
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminalConfigurationVersion $configuration_version The configuration that is assigned to the terminal and determines how it works.
+     * @param \Secupay\Sdk\Model\PaymentTerminalConfigurationVersion $configuration_version The configuration that is assigned to the terminal and determines how it works.
      *
      * @return $this
      */
@@ -498,7 +498,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Gets location_version
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminalLocationVersion
+     * @return \Secupay\Sdk\Model\PaymentTerminalLocationVersion
      */
     public function getLocationVersion()
     {
@@ -508,7 +508,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Sets location_version
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminalLocationVersion $location_version The physical location where the terminal is used.
+     * @param \Secupay\Sdk\Model\PaymentTerminalLocationVersion $location_version The physical location where the terminal is used.
      *
      * @return $this
      */
@@ -577,7 +577,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminalState
+     * @return \Secupay\Sdk\Model\PaymentTerminalState
      */
     public function getState()
     {
@@ -587,7 +587,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminalState $state The object's current state.
+     * @param \Secupay\Sdk\Model\PaymentTerminalState $state The object's current state.
      *
      * @return $this
      */
@@ -602,7 +602,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminalType
+     * @return \Secupay\Sdk\Model\PaymentTerminalType
      */
     public function getType()
     {
@@ -612,7 +612,7 @@ class PaymentTerminal implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminalType $type The type of the payment terminal.
+     * @param \Secupay\Sdk\Model\PaymentTerminalType $type The type of the payment terminal.
      *
      * @return $this
      */

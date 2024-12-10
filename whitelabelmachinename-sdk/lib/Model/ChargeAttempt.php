@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ChargeAttempt model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeAttempt extends TransactionAwareEntity 
@@ -47,32 +47,32 @@ class ChargeAttempt extends TransactionAwareEntity
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'charge' => '\Wallee\Sdk\Model\Charge',
-        'completion_behavior' => '\Wallee\Sdk\Model\TransactionCompletionBehavior',
-        'connector_configuration' => '\Wallee\Sdk\Model\PaymentConnectorConfiguration',
+        'charge' => '\Secupay\Sdk\Model\Charge',
+        'completion_behavior' => '\Secupay\Sdk\Model\TransactionCompletionBehavior',
+        'connector_configuration' => '\Secupay\Sdk\Model\PaymentConnectorConfiguration',
         'created_on' => '\DateTime',
-        'customers_presence' => '\Wallee\Sdk\Model\CustomersPresence',
-        'environment' => '\Wallee\Sdk\Model\ChargeAttemptEnvironment',
+        'customers_presence' => '\Secupay\Sdk\Model\CustomersPresence',
+        'environment' => '\Secupay\Sdk\Model\ChargeAttemptEnvironment',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'failure_reason' => '\Secupay\Sdk\Model\FailureReason',
         'initializing_token_version' => 'bool',
-        'invocation' => '\Wallee\Sdk\Model\ConnectorInvocation',
-        'labels' => '\Wallee\Sdk\Model\Label[]',
+        'invocation' => '\Secupay\Sdk\Model\ConnectorInvocation',
+        'labels' => '\Secupay\Sdk\Model\Label[]',
         'language' => 'string',
         'next_update_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'redirection_url' => 'string',
         'sales_channel' => 'int',
         'space_view_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\ChargeAttemptState',
+        'state' => '\Secupay\Sdk\Model\ChargeAttemptState',
         'succeeded_on' => '\DateTime',
-        'terminal' => '\Wallee\Sdk\Model\PaymentTerminal',
+        'terminal' => '\Secupay\Sdk\Model\PaymentTerminal',
         'time_zone' => 'string',
         'timeout_on' => '\DateTime',
-        'token_version' => '\Wallee\Sdk\Model\TokenVersion',
+        'token_version' => '\Secupay\Sdk\Model\TokenVersion',
         'user_failure_message' => 'string',
         'version' => 'int',
-        'wallet' => '\Wallee\Sdk\Model\WalletType'
+        'wallet' => '\Secupay\Sdk\Model\WalletType'
     ];
 
     /**
@@ -376,7 +376,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets charge
      *
-     * @return \Wallee\Sdk\Model\Charge
+     * @return \Secupay\Sdk\Model\Charge
      */
     public function getCharge()
     {
@@ -386,7 +386,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets charge
      *
-     * @param \Wallee\Sdk\Model\Charge $charge 
+     * @param \Secupay\Sdk\Model\Charge $charge 
      *
      * @return $this
      */
@@ -401,7 +401,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets completion_behavior
      *
-     * @return \Wallee\Sdk\Model\TransactionCompletionBehavior
+     * @return \Secupay\Sdk\Model\TransactionCompletionBehavior
      */
     public function getCompletionBehavior()
     {
@@ -411,7 +411,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets completion_behavior
      *
-     * @param \Wallee\Sdk\Model\TransactionCompletionBehavior $completion_behavior 
+     * @param \Secupay\Sdk\Model\TransactionCompletionBehavior $completion_behavior 
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets connector_configuration
      *
-     * @return \Wallee\Sdk\Model\PaymentConnectorConfiguration
+     * @return \Secupay\Sdk\Model\PaymentConnectorConfiguration
      */
     public function getConnectorConfiguration()
     {
@@ -436,7 +436,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets connector_configuration
      *
-     * @param \Wallee\Sdk\Model\PaymentConnectorConfiguration $connector_configuration 
+     * @param \Secupay\Sdk\Model\PaymentConnectorConfiguration $connector_configuration 
      *
      * @return $this
      */
@@ -476,7 +476,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets customers_presence
      *
-     * @return \Wallee\Sdk\Model\CustomersPresence
+     * @return \Secupay\Sdk\Model\CustomersPresence
      */
     public function getCustomersPresence()
     {
@@ -486,7 +486,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets customers_presence
      *
-     * @param \Wallee\Sdk\Model\CustomersPresence $customers_presence The customers presence indicates which kind of customer interaction was used during the charge attempt.
+     * @param \Secupay\Sdk\Model\CustomersPresence $customers_presence The customers presence indicates which kind of customer interaction was used during the charge attempt.
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets environment
      *
-     * @return \Wallee\Sdk\Model\ChargeAttemptEnvironment
+     * @return \Secupay\Sdk\Model\ChargeAttemptEnvironment
      */
     public function getEnvironment()
     {
@@ -511,7 +511,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets environment
      *
-     * @param \Wallee\Sdk\Model\ChargeAttemptEnvironment $environment 
+     * @param \Secupay\Sdk\Model\ChargeAttemptEnvironment $environment 
      *
      * @return $this
      */
@@ -551,7 +551,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \Wallee\Sdk\Model\FailureReason
+     * @return \Secupay\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -561,7 +561,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
+     * @param \Secupay\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -601,7 +601,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets invocation
      *
-     * @return \Wallee\Sdk\Model\ConnectorInvocation
+     * @return \Secupay\Sdk\Model\ConnectorInvocation
      */
     public function getInvocation()
     {
@@ -611,7 +611,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets invocation
      *
-     * @param \Wallee\Sdk\Model\ConnectorInvocation $invocation 
+     * @param \Secupay\Sdk\Model\ConnectorInvocation $invocation 
      *
      * @return $this
      */
@@ -626,7 +626,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets labels
      *
-     * @return \Wallee\Sdk\Model\Label[]
+     * @return \Secupay\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -636,7 +636,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets labels
      *
-     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
+     * @param \Secupay\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -801,7 +801,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ChargeAttemptState
+     * @return \Secupay\Sdk\Model\ChargeAttemptState
      */
     public function getState()
     {
@@ -811,7 +811,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ChargeAttemptState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ChargeAttemptState $state The object's current state.
      *
      * @return $this
      */
@@ -851,7 +851,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets terminal
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminal
+     * @return \Secupay\Sdk\Model\PaymentTerminal
      */
     public function getTerminal()
     {
@@ -861,7 +861,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets terminal
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminal $terminal 
+     * @param \Secupay\Sdk\Model\PaymentTerminal $terminal 
      *
      * @return $this
      */
@@ -926,7 +926,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets token_version
      *
-     * @return \Wallee\Sdk\Model\TokenVersion
+     * @return \Secupay\Sdk\Model\TokenVersion
      */
     public function getTokenVersion()
     {
@@ -936,7 +936,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets token_version
      *
-     * @param \Wallee\Sdk\Model\TokenVersion $token_version 
+     * @param \Secupay\Sdk\Model\TokenVersion $token_version 
      *
      * @return $this
      */
@@ -1005,7 +1005,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Gets wallet
      *
-     * @return \Wallee\Sdk\Model\WalletType
+     * @return \Secupay\Sdk\Model\WalletType
      */
     public function getWallet()
     {
@@ -1015,7 +1015,7 @@ class ChargeAttempt extends TransactionAwareEntity
     /**
      * Sets wallet
      *
-     * @param \Wallee\Sdk\Model\WalletType $wallet 
+     * @param \Secupay\Sdk\Model\WalletType $wallet 
      *
      * @return $this
      */

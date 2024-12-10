@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * TransactionInvoiceReplacement model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
@@ -49,10 +49,10 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\Wallee\Sdk\Model\AddressCreate',
+        'billing_address' => '\Secupay\Sdk\Model\AddressCreate',
         'due_on' => '\DateTime',
         'external_id' => 'string',
-        'line_items' => '\Wallee\Sdk\Model\LineItemCreate[]',
+        'line_items' => '\Secupay\Sdk\Model\LineItemCreate[]',
         'merchant_reference' => 'string',
         'sent_to_customer' => 'bool'
     ];
@@ -256,7 +256,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\AddressCreate
+     * @return \Secupay\Sdk\Model\AddressCreate
      */
     public function getBillingAddress()
     {
@@ -266,7 +266,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\AddressCreate $billing_address 
+     * @param \Secupay\Sdk\Model\AddressCreate $billing_address 
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \Wallee\Sdk\Model\LineItemCreate[]
+     * @return \Secupay\Sdk\Model\LineItemCreate[]
      */
     public function getLineItems()
     {
@@ -348,7 +348,7 @@ class TransactionInvoiceReplacement implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \Wallee\Sdk\Model\LineItemCreate[] $line_items 
+     * @param \Secupay\Sdk\Model\LineItemCreate[] $line_items 
      *
      * @return $this
      */

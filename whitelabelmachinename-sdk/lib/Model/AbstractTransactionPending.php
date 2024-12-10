@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * AbstractTransactionPending model
  *
  * @category    Class
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractTransactionPending implements ModelInterface, ArrayAccess
@@ -50,23 +50,23 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'allowed_payment_method_brands' => 'int[]',
         'allowed_payment_method_configurations' => 'int[]',
-        'billing_address' => '\Wallee\Sdk\Model\AddressCreate',
-        'completion_behavior' => '\Wallee\Sdk\Model\TransactionCompletionBehavior',
+        'billing_address' => '\Secupay\Sdk\Model\AddressCreate',
+        'completion_behavior' => '\Secupay\Sdk\Model\TransactionCompletionBehavior',
         'currency' => 'string',
         'customer_email_address' => 'string',
         'customer_id' => 'string',
         'failed_url' => 'string',
         'invoice_merchant_reference' => 'string',
         'language' => 'string',
-        'line_items' => '\Wallee\Sdk\Model\LineItemCreate[]',
+        'line_items' => '\Secupay\Sdk\Model\LineItemCreate[]',
         'merchant_reference' => 'string',
         'meta_data' => 'map[string,string]',
-        'shipping_address' => '\Wallee\Sdk\Model\AddressCreate',
+        'shipping_address' => '\Secupay\Sdk\Model\AddressCreate',
         'shipping_method' => 'string',
         'success_url' => 'string',
         'time_zone' => 'string',
         'token' => 'int',
-        'tokenization_mode' => '\Wallee\Sdk\Model\TokenizationMode'
+        'tokenization_mode' => '\Secupay\Sdk\Model\TokenizationMode'
     ];
 
     /**
@@ -410,7 +410,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\AddressCreate
+     * @return \Secupay\Sdk\Model\AddressCreate
      */
     public function getBillingAddress()
     {
@@ -420,7 +420,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\AddressCreate $billing_address The address associated with the payment method for invoicing and transaction processing purposes.
+     * @param \Secupay\Sdk\Model\AddressCreate $billing_address The address associated with the payment method for invoicing and transaction processing purposes.
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Gets completion_behavior
      *
-     * @return \Wallee\Sdk\Model\TransactionCompletionBehavior
+     * @return \Secupay\Sdk\Model\TransactionCompletionBehavior
      */
     public function getCompletionBehavior()
     {
@@ -445,7 +445,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Sets completion_behavior
      *
-     * @param \Wallee\Sdk\Model\TransactionCompletionBehavior $completion_behavior The behavior that controls when the transaction is completed.
+     * @param \Secupay\Sdk\Model\TransactionCompletionBehavior $completion_behavior The behavior that controls when the transaction is completed.
      *
      * @return $this
      */
@@ -625,7 +625,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \Wallee\Sdk\Model\LineItemCreate[]
+     * @return \Secupay\Sdk\Model\LineItemCreate[]
      */
     public function getLineItems()
     {
@@ -635,7 +635,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \Wallee\Sdk\Model\LineItemCreate[] $line_items The line items purchased by the customer.
+     * @param \Secupay\Sdk\Model\LineItemCreate[] $line_items The line items purchased by the customer.
      *
      * @return $this
      */
@@ -704,7 +704,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Wallee\Sdk\Model\AddressCreate
+     * @return \Secupay\Sdk\Model\AddressCreate
      */
     public function getShippingAddress()
     {
@@ -714,7 +714,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Wallee\Sdk\Model\AddressCreate $shipping_address The address to where the order will be shipped.
+     * @param \Secupay\Sdk\Model\AddressCreate $shipping_address The address to where the order will be shipped.
      *
      * @return $this
      */
@@ -840,7 +840,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Gets tokenization_mode
      *
-     * @return \Wallee\Sdk\Model\TokenizationMode
+     * @return \Secupay\Sdk\Model\TokenizationMode
      */
     public function getTokenizationMode()
     {
@@ -850,7 +850,7 @@ class AbstractTransactionPending implements ModelInterface, ArrayAccess
     /**
      * Sets tokenization_mode
      *
-     * @param \Wallee\Sdk\Model\TokenizationMode $tokenization_mode The tokenization mode specifies whether and how the tokenization of payment information is applied to the transaction.
+     * @param \Secupay\Sdk\Model\TokenizationMode $tokenization_mode The tokenization mode specifies whether and how the tokenization of payment information is applied to the transaction.
      *
      * @return $this
      */

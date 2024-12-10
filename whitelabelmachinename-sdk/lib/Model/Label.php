@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Label model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Label implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class Label implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'content' => 'object',
         'content_as_string' => 'string',
-        'descriptor' => '\Wallee\Sdk\Model\LabelDescriptor',
+        'descriptor' => '\Secupay\Sdk\Model\LabelDescriptor',
         'id' => 'int',
         'version' => 'int'
     ];
@@ -281,7 +281,7 @@ class Label implements ModelInterface, ArrayAccess
     /**
      * Gets descriptor
      *
-     * @return \Wallee\Sdk\Model\LabelDescriptor
+     * @return \Secupay\Sdk\Model\LabelDescriptor
      */
     public function getDescriptor()
     {
@@ -291,7 +291,7 @@ class Label implements ModelInterface, ArrayAccess
     /**
      * Sets descriptor
      *
-     * @param \Wallee\Sdk\Model\LabelDescriptor $descriptor The descriptor that describes what information the label provides.
+     * @param \Secupay\Sdk\Model\LabelDescriptor $descriptor The descriptor that describes what information the label provides.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Charge model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Charge extends TransactionAwareEntity 
@@ -48,15 +48,15 @@ class Charge extends TransactionAwareEntity
       */
     protected static $swaggerTypes = [
         'created_on' => '\DateTime',
-        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'failure_reason' => '\Secupay\Sdk\Model\FailureReason',
         'language' => 'string',
         'planned_purge_date' => '\DateTime',
         'space_view_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\ChargeState',
+        'state' => '\Secupay\Sdk\Model\ChargeState',
         'time_zone' => 'string',
         'timeout_on' => '\DateTime',
-        'transaction' => '\Wallee\Sdk\Model\Transaction',
-        'type' => '\Wallee\Sdk\Model\ChargeType',
+        'transaction' => '\Secupay\Sdk\Model\Transaction',
+        'type' => '\Secupay\Sdk\Model\ChargeType',
         'user_failure_message' => 'string',
         'version' => 'int'
     ];
@@ -299,7 +299,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \Wallee\Sdk\Model\FailureReason
+     * @return \Secupay\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -309,7 +309,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
+     * @param \Secupay\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ChargeState
+     * @return \Secupay\Sdk\Model\ChargeState
      */
     public function getState()
     {
@@ -409,7 +409,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ChargeState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ChargeState $state The object's current state.
      *
      * @return $this
      */
@@ -474,7 +474,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \Wallee\Sdk\Model\Transaction
+     * @return \Secupay\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -484,7 +484,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \Wallee\Sdk\Model\Transaction $transaction 
+     * @param \Secupay\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\ChargeType
+     * @return \Secupay\Sdk\Model\ChargeType
      */
     public function getType()
     {
@@ -509,7 +509,7 @@ class Charge extends TransactionAwareEntity
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\ChargeType $type 
+     * @param \Secupay\Sdk\Model\ChargeType $type 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * TransactionCreate model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionCreate extends AbstractTransactionPending 
@@ -49,11 +49,11 @@ class TransactionCreate extends AbstractTransactionPending
     protected static $swaggerTypes = [
         'auto_confirmation_enabled' => 'bool',
         'charge_retry_enabled' => 'bool',
-        'customers_presence' => '\Wallee\Sdk\Model\CustomersPresence',
+        'customers_presence' => '\Secupay\Sdk\Model\CustomersPresence',
         'device_session_identifier' => 'string',
         'emails_disabled' => 'bool',
-        'environment' => '\Wallee\Sdk\Model\Environment',
-        'environment_selection_strategy' => '\Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy',
+        'environment' => '\Secupay\Sdk\Model\Environment',
+        'environment_selection_strategy' => '\Secupay\Sdk\Model\TransactionEnvironmentSelectionStrategy',
         'space_view_id' => 'int'
     ];
 
@@ -339,7 +339,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Gets customers_presence
      *
-     * @return \Wallee\Sdk\Model\CustomersPresence
+     * @return \Secupay\Sdk\Model\CustomersPresence
      */
     public function getCustomersPresence()
     {
@@ -349,7 +349,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Sets customers_presence
      *
-     * @param \Wallee\Sdk\Model\CustomersPresence $customers_presence The customer's presence indicates whether and in what way the transaction's customer is present. Default is VIRTUAL_PRESENT.
+     * @param \Secupay\Sdk\Model\CustomersPresence $customers_presence The customer's presence indicates whether and in what way the transaction's customer is present. Default is VIRTUAL_PRESENT.
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Gets environment
      *
-     * @return \Wallee\Sdk\Model\Environment
+     * @return \Secupay\Sdk\Model\Environment
      */
     public function getEnvironment()
     {
@@ -431,7 +431,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Sets environment
      *
-     * @param \Wallee\Sdk\Model\Environment $environment 
+     * @param \Secupay\Sdk\Model\Environment $environment 
      *
      * @return $this
      */
@@ -446,7 +446,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Gets environment_selection_strategy
      *
-     * @return \Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy
+     * @return \Secupay\Sdk\Model\TransactionEnvironmentSelectionStrategy
      */
     public function getEnvironmentSelectionStrategy()
     {
@@ -456,7 +456,7 @@ class TransactionCreate extends AbstractTransactionPending
     /**
      * Sets environment_selection_strategy
      *
-     * @param \Wallee\Sdk\Model\TransactionEnvironmentSelectionStrategy $environment_selection_strategy The strategy for determining whether the transaction is to be processed in the test or production environment.
+     * @param \Secupay\Sdk\Model\TransactionEnvironmentSelectionStrategy $environment_selection_strategy The strategy for determining whether the transaction is to be processed in the test or production environment.
      *
      * @return $this
      */

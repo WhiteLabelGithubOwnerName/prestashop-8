@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionUpdateRequest model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
@@ -49,9 +49,9 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_configuration' => '\Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
+        'billing_configuration' => '\Secupay\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
         'id' => 'int',
-        'items' => '\Wallee\Sdk\Model\ShopifySubscriptionModelItem[]',
+        'items' => '\Secupay\Sdk\Model\ShopifySubscriptionModelItem[]',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool'
     ];
@@ -231,7 +231,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_configuration
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
      */
     public function getBillingConfiguration()
     {
@@ -241,7 +241,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_configuration
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
      *
      * @return $this
      */
@@ -281,7 +281,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelItem[]
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionModelItem[]
      */
     public function getItems()
     {
@@ -291,7 +291,7 @@ class ShopifySubscriptionUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelItem[] $items 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionModelItem[] $items 
      *
      * @return $this
      */

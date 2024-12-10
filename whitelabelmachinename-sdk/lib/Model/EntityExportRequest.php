@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * EntityExportRequest model
  *
  * @category    Class
  * @description The entity property export request contains the information required to create an export of a list of entities.
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class EntityExportRequest implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class EntityExportRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'properties' => 'string[]',
-        'query' => '\Wallee\Sdk\Model\EntityQuery'
+        'query' => '\Secupay\Sdk\Model\EntityQuery'
     ];
 
     /**
@@ -238,7 +238,7 @@ class EntityExportRequest implements ModelInterface, ArrayAccess
     /**
      * Gets query
      *
-     * @return \Wallee\Sdk\Model\EntityQuery
+     * @return \Secupay\Sdk\Model\EntityQuery
      */
     public function getQuery()
     {
@@ -248,7 +248,7 @@ class EntityExportRequest implements ModelInterface, ArrayAccess
     /**
      * Sets query
      *
-     * @param \Wallee\Sdk\Model\EntityQuery $query The query limits the returned entries. The query allows to restrict the entries to return and it allows to control the order of them.
+     * @param \Secupay\Sdk\Model\EntityQuery $query The query limits the returned entries. The query allows to restrict the entries to return and it allows to control the order of them.
      *
      * @return $this
      */

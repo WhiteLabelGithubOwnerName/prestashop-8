@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@
  */
 
 
-namespace Wallee\Sdk\Service;
+namespace Secupay\Sdk\Service;
 
-use Wallee\Sdk\ApiClient;
-use Wallee\Sdk\ApiException;
-use Wallee\Sdk\ApiResponse;
-use Wallee\Sdk\Http\HttpRequest;
-use Wallee\Sdk\ObjectSerializer;
+use Secupay\Sdk\ApiClient;
+use Secupay\Sdk\ApiException;
+use Secupay\Sdk\ApiResponse;
+use Secupay\Sdk\Http\HttpRequest;
+use Secupay\Sdk\ObjectSerializer;
 
 /**
  * TransactionInvoiceService service
  *
  * @category Class
- * @package  Wallee\Sdk
- * @author   wallee AG
+ * @package  Secupay\Sdk
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionInvoiceService {
@@ -72,10 +72,10 @@ class TransactionInvoiceService {
 	 * Count
 	 *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return int
 	 */
 	public function count($space_id, $filter = null) {
@@ -89,10 +89,10 @@ class TransactionInvoiceService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQueryFilter $filter The filter which restricts the entities which are used to calculate the count. (optional)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function countWithHttpInfo($space_id, $filter = null) {
@@ -159,7 +159,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -167,7 +167,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,10 +184,10 @@ class TransactionInvoiceService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice to get the document for. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\RenderedDocument
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\RenderedDocument
 	 */
 	public function getInvoiceDocument($space_id, $id) {
 		return $this->getInvoiceDocumentWithHttpInfo($space_id, $id)->getData();
@@ -201,9 +201,9 @@ class TransactionInvoiceService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice to get the document for. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function getInvoiceDocumentWithHttpInfo($space_id, $id) {
@@ -255,16 +255,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\RenderedDocument',
+				'\Secupay\Sdk\Model\RenderedDocument',
 				'/transaction-invoice/getInvoiceDocument'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\RenderedDocument', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\RenderedDocument', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\RenderedDocument',
+                        '\Secupay\Sdk\Model\RenderedDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -280,7 +280,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,10 +298,10 @@ class TransactionInvoiceService {
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice to get the document for. (required)
 	 * @param int $target_media_type_id The id of the target media type for which the invoice should be generated for. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\RenderedDocument
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\RenderedDocument
 	 */
 	public function getInvoiceDocumentWithTargetMediaType($space_id, $id, $target_media_type_id) {
 		return $this->getInvoiceDocumentWithTargetMediaTypeWithHttpInfo($space_id, $id, $target_media_type_id)->getData();
@@ -316,9 +316,9 @@ class TransactionInvoiceService {
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice to get the document for. (required)
 	 * @param int $target_media_type_id The id of the target media type for which the invoice should be generated for. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function getInvoiceDocumentWithTargetMediaTypeWithHttpInfo($space_id, $id, $target_media_type_id) {
@@ -377,16 +377,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\RenderedDocument',
+				'\Secupay\Sdk\Model\RenderedDocument',
 				'/transaction-invoice/getInvoiceDocumentWithTargetMediaType'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\RenderedDocument', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\RenderedDocument', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\RenderedDocument',
+                        '\Secupay\Sdk\Model\RenderedDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -394,7 +394,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -402,7 +402,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -419,9 +419,9 @@ class TransactionInvoiceService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The invoice which should be checked if a replacement is possible. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return bool
 	 */
 	public function isReplacementPossible($space_id, $id) {
@@ -436,9 +436,9 @@ class TransactionInvoiceService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The invoice which should be checked if a replacement is possible. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function isReplacementPossibleWithHttpInfo($space_id, $id) {
@@ -507,7 +507,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -532,10 +532,10 @@ class TransactionInvoiceService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice which should be marked as derecognized. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TransactionInvoice
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TransactionInvoice
 	 */
 	public function markAsDerecognized($space_id, $id) {
 		return $this->markAsDerecognizedWithHttpInfo($space_id, $id)->getData();
@@ -549,9 +549,9 @@ class TransactionInvoiceService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice which should be marked as derecognized. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function markAsDerecognizedWithHttpInfo($space_id, $id) {
@@ -603,16 +603,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TransactionInvoice',
+				'\Secupay\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/markAsDerecognized'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionInvoice', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TransactionInvoice', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TransactionInvoice',
+                        '\Secupay\Sdk\Model\TransactionInvoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -620,7 +620,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -628,7 +628,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -645,10 +645,10 @@ class TransactionInvoiceService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice which should be marked as paid. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TransactionInvoice
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TransactionInvoice
 	 */
 	public function markAsPaid($space_id, $id) {
 		return $this->markAsPaidWithHttpInfo($space_id, $id)->getData();
@@ -662,9 +662,9 @@ class TransactionInvoiceService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoice which should be marked as paid. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function markAsPaidWithHttpInfo($space_id, $id) {
@@ -716,16 +716,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TransactionInvoice',
+				'\Secupay\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/markAsPaid'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionInvoice', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TransactionInvoice', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TransactionInvoice',
+                        '\Secupay\Sdk\Model\TransactionInvoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -733,7 +733,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -741,7 +741,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -758,10 +758,10 @@ class TransactionInvoiceService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoices which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TransactionInvoice
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TransactionInvoice
 	 */
 	public function read($space_id, $id) {
 		return $this->readWithHttpInfo($space_id, $id)->getData();
@@ -775,9 +775,9 @@ class TransactionInvoiceService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoices which should be returned. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function readWithHttpInfo($space_id, $id) {
@@ -829,16 +829,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TransactionInvoice',
+				'\Secupay\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/read'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionInvoice', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TransactionInvoice', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TransactionInvoice',
+                        '\Secupay\Sdk\Model\TransactionInvoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -846,7 +846,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -871,11 +871,11 @@ class TransactionInvoiceService {
 	 *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoices which should be replaced. (required)
-	 * @param \Wallee\Sdk\Model\TransactionInvoiceReplacement $replacement  (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TransactionInvoice
+	 * @param \Secupay\Sdk\Model\TransactionInvoiceReplacement $replacement  (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TransactionInvoice
 	 */
 	public function replace($space_id, $id, $replacement) {
 		return $this->replaceWithHttpInfo($space_id, $id, $replacement)->getData();
@@ -889,10 +889,10 @@ class TransactionInvoiceService {
      *
 	 * @param int $space_id  (required)
 	 * @param int $id The id of the transaction invoices which should be replaced. (required)
-	 * @param \Wallee\Sdk\Model\TransactionInvoiceReplacement $replacement  (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\TransactionInvoiceReplacement $replacement  (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function replaceWithHttpInfo($space_id, $id, $replacement) {
@@ -953,16 +953,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TransactionInvoice',
+				'\Secupay\Sdk\Model\TransactionInvoice',
 				'/transaction-invoice/replace'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionInvoice', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TransactionInvoice', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TransactionInvoice',
+                        '\Secupay\Sdk\Model\TransactionInvoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -970,7 +970,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -978,7 +978,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -994,11 +994,11 @@ class TransactionInvoiceService {
 	 * Search
 	 *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the transaction invoices which are returned by the search. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
-	 * @return \Wallee\Sdk\Model\TransactionInvoice[]
+	 * @param \Secupay\Sdk\Model\EntityQuery $query The query restricts the transaction invoices which are returned by the search. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
+	 * @return \Secupay\Sdk\Model\TransactionInvoice[]
 	 */
 	public function search($space_id, $query) {
 		return $this->searchWithHttpInfo($space_id, $query)->getData();
@@ -1011,10 +1011,10 @@ class TransactionInvoiceService {
      
      *
 	 * @param int $space_id  (required)
-	 * @param \Wallee\Sdk\Model\EntityQuery $query The query restricts the transaction invoices which are returned by the search. (required)
-	 * @throws \Wallee\Sdk\ApiException
-	 * @throws \Wallee\Sdk\VersioningException
-	 * @throws \Wallee\Sdk\Http\ConnectionException
+	 * @param \Secupay\Sdk\Model\EntityQuery $query The query restricts the transaction invoices which are returned by the search. (required)
+	 * @throws \Secupay\Sdk\ApiException
+	 * @throws \Secupay\Sdk\VersioningException
+	 * @throws \Secupay\Sdk\Http\ConnectionException
 	 * @return ApiResponse
 	 */
 	public function searchWithHttpInfo($space_id, $query) {
@@ -1068,16 +1068,16 @@ class TransactionInvoiceService {
 				$queryParams,
 				$httpBody,
 				$headerParams,
-				'\Wallee\Sdk\Model\TransactionInvoice[]',
+				'\Secupay\Sdk\Model\TransactionInvoice[]',
 				'/transaction-invoice/search'
             );
-			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Wallee\Sdk\Model\TransactionInvoice[]', $response->getHeaders()));
+			return new ApiResponse($response->getStatusCode(), $response->getHeaders(), $this->apiClient->getSerializer()->deserialize($response->getData(), '\Secupay\Sdk\Model\TransactionInvoice[]', $response->getHeaders()));
 		} catch (ApiException $e) {
 			switch ($e->getCode()) {
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\TransactionInvoice[]',
+                        '\Secupay\Sdk\Model\TransactionInvoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1085,7 +1085,7 @@ class TransactionInvoiceService {
                 case 442:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ClientError',
+                        '\Secupay\Sdk\Model\ClientError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1093,7 +1093,7 @@ class TransactionInvoiceService {
                 case 542:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Wallee\Sdk\Model\ServerError',
+                        '\Secupay\Sdk\Model\ServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

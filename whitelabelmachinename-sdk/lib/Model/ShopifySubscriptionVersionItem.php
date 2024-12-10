@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionVersionItem model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
@@ -50,10 +50,10 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'price_including_tax' => 'float',
-        'price_strategy' => '\Wallee\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy',
+        'price_strategy' => '\Secupay\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy',
         'product' => 'int',
         'quantity' => 'float',
-        'tax_lines' => '\Wallee\Sdk\Model\ShopifyTaxLine[]'
+        'tax_lines' => '\Secupay\Sdk\Model\ShopifyTaxLine[]'
     ];
 
     /**
@@ -256,7 +256,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Gets price_strategy
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy
      */
     public function getPriceStrategy()
     {
@@ -266,7 +266,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Sets price_strategy
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy $price_strategy 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionVersionItemPriceStrategy $price_strategy 
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Gets tax_lines
      *
-     * @return \Wallee\Sdk\Model\ShopifyTaxLine[]
+     * @return \Secupay\Sdk\Model\ShopifyTaxLine[]
      */
     public function getTaxLines()
     {
@@ -341,7 +341,7 @@ class ShopifySubscriptionVersionItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_lines
      *
-     * @param \Wallee\Sdk\Model\ShopifyTaxLine[] $tax_lines 
+     * @param \Secupay\Sdk\Model\ShopifyTaxLine[] $tax_lines 
      *
      * @return $this
      */

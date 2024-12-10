@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ChargeFlowLevelConfiguration model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
@@ -49,14 +49,14 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'flow' => '\Wallee\Sdk\Model\ChargeFlow',
+        'flow' => '\Secupay\Sdk\Model\ChargeFlow',
         'id' => 'int',
         'linked_space_id' => 'int',
         'name' => 'string',
         'period' => 'string',
         'planned_purge_date' => '\DateTime',
         'priority' => 'int',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
         'type' => 'int',
         'version' => 'int'
     ];
@@ -270,7 +270,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets flow
      *
-     * @return \Wallee\Sdk\Model\ChargeFlow
+     * @return \Secupay\Sdk\Model\ChargeFlow
      */
     public function getFlow()
     {
@@ -280,7 +280,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets flow
      *
-     * @param \Wallee\Sdk\Model\ChargeFlow $flow The charge flow level configuration to which the flow is associated.
+     * @param \Secupay\Sdk\Model\ChargeFlow $flow The charge flow level configuration to which the flow is associated.
      *
      * @return $this
      */
@@ -449,7 +449,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -459,7 +459,7 @@ class ChargeFlowLevelConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

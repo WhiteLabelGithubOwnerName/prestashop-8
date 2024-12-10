@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * DocumentTemplateType model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class DocumentTemplateType implements ModelInterface, ArrayAccess
@@ -51,7 +51,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'description' => 'map[string,string]',
         'feature' => 'int',
-        'group' => '\Wallee\Sdk\Model\DocumentTemplateTypeGroup',
+        'group' => '\Secupay\Sdk\Model\DocumentTemplateTypeGroup',
         'id' => 'int',
         'title' => 'map[string,string]'
     ];
@@ -281,7 +281,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Gets group
      *
-     * @return \Wallee\Sdk\Model\DocumentTemplateTypeGroup
+     * @return \Secupay\Sdk\Model\DocumentTemplateTypeGroup
      */
     public function getGroup()
     {
@@ -291,7 +291,7 @@ class DocumentTemplateType implements ModelInterface, ArrayAccess
     /**
      * Sets group
      *
-     * @param \Wallee\Sdk\Model\DocumentTemplateTypeGroup $group The group that this document template type belongs to.
+     * @param \Secupay\Sdk\Model\DocumentTemplateTypeGroup $group The group that this document template type belongs to.
      *
      * @return $this
      */

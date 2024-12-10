@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * PaymentMethodConfiguration model
  *
  * @category    Class
  * @description The payment method configuration builds the base to connect with different payment method connectors.
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
@@ -49,13 +49,13 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data_collection_type' => '\Wallee\Sdk\Model\DataCollectionType',
+        'data_collection_type' => '\Secupay\Sdk\Model\DataCollectionType',
         'description' => 'map[string,string]',
         'id' => 'int',
-        'image_resource_path' => '\Wallee\Sdk\Model\ModelResourcePath',
+        'image_resource_path' => '\Secupay\Sdk\Model\ModelResourcePath',
         'linked_space_id' => 'int',
         'name' => 'string',
-        'one_click_payment_mode' => '\Wallee\Sdk\Model\OneClickPaymentMode',
+        'one_click_payment_mode' => '\Secupay\Sdk\Model\OneClickPaymentMode',
         'payment_method' => 'int',
         'planned_purge_date' => '\DateTime',
         'resolved_description' => 'map[string,string]',
@@ -63,7 +63,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
         'resolved_title' => 'map[string,string]',
         'sort_order' => 'int',
         'space_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
         'title' => 'map[string,string]',
         'version' => 'int'
     ];
@@ -319,7 +319,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets data_collection_type
      *
-     * @return \Wallee\Sdk\Model\DataCollectionType
+     * @return \Secupay\Sdk\Model\DataCollectionType
      */
     public function getDataCollectionType()
     {
@@ -329,7 +329,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets data_collection_type
      *
-     * @param \Wallee\Sdk\Model\DataCollectionType $data_collection_type The data collection type specifies how the payment information is collected.
+     * @param \Secupay\Sdk\Model\DataCollectionType $data_collection_type The data collection type specifies how the payment information is collected.
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets image_resource_path
      *
-     * @return \Wallee\Sdk\Model\ModelResourcePath
+     * @return \Secupay\Sdk\Model\ModelResourcePath
      */
     public function getImageResourcePath()
     {
@@ -404,7 +404,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets image_resource_path
      *
-     * @param \Wallee\Sdk\Model\ModelResourcePath $image_resource_path The resource path to a custom image for the payment method which is displayed to the customer.
+     * @param \Secupay\Sdk\Model\ModelResourcePath $image_resource_path The resource path to a custom image for the payment method which is displayed to the customer.
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets one_click_payment_mode
      *
-     * @return \Wallee\Sdk\Model\OneClickPaymentMode
+     * @return \Secupay\Sdk\Model\OneClickPaymentMode
      */
     public function getOneClickPaymentMode()
     {
@@ -483,7 +483,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets one_click_payment_mode
      *
-     * @param \Wallee\Sdk\Model\OneClickPaymentMode $one_click_payment_mode The one-click payment mode determines whether the customer can save their payment details for later payments.
+     * @param \Secupay\Sdk\Model\OneClickPaymentMode $one_click_payment_mode The one-click payment mode determines whether the customer can save their payment details for later payments.
      *
      * @return $this
      */
@@ -673,7 +673,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -683,7 +683,7 @@ class PaymentMethodConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

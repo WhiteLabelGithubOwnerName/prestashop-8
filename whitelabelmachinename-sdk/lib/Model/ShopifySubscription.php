@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscription model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscription implements ModelInterface, ArrayAccess
@@ -60,8 +60,8 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'order_recurrence_number' => 'int',
         'shop' => 'int',
-        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionState',
-        'subscriber' => '\Wallee\Sdk\Model\ShopifySubscriber',
+        'state' => '\Secupay\Sdk\Model\ShopifySubscriptionState',
+        'subscriber' => '\Secupay\Sdk\Model\ShopifySubscriber',
         'terminated_by' => 'int',
         'terminated_on' => '\DateTime',
         'termination_request_date' => '\DateTime',
@@ -605,7 +605,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionState
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionState
      */
     public function getState()
     {
@@ -615,7 +615,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionState $state The object's current state.
      *
      * @return $this
      */
@@ -630,7 +630,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Gets subscriber
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriber
+     * @return \Secupay\Sdk\Model\ShopifySubscriber
      */
     public function getSubscriber()
     {
@@ -640,7 +640,7 @@ class ShopifySubscription implements ModelInterface, ArrayAccess
     /**
      * Sets subscriber
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriber $subscriber 
+     * @param \Secupay\Sdk\Model\ShopifySubscriber $subscriber 
      *
      * @return $this
      */

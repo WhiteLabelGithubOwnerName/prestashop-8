@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * LabelDescriptor model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class LabelDescriptor implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class LabelDescriptor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'category' => '\Wallee\Sdk\Model\LabelDescriptorCategory',
+        'category' => '\Secupay\Sdk\Model\LabelDescriptorCategory',
         'description' => 'map[string,string]',
         'features' => 'int[]',
         'group' => 'int',
@@ -252,7 +252,7 @@ class LabelDescriptor implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return \Wallee\Sdk\Model\LabelDescriptorCategory
+     * @return \Secupay\Sdk\Model\LabelDescriptorCategory
      */
     public function getCategory()
     {
@@ -262,7 +262,7 @@ class LabelDescriptor implements ModelInterface, ArrayAccess
     /**
      * Sets category
      *
-     * @param \Wallee\Sdk\Model\LabelDescriptorCategory $category The label's category.
+     * @param \Secupay\Sdk\Model\LabelDescriptorCategory $category The label's category.
      *
      * @return $this
      */

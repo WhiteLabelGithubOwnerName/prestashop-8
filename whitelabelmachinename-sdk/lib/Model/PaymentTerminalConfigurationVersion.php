@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * PaymentTerminalConfigurationVersion model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
@@ -49,7 +49,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configuration' => '\Wallee\Sdk\Model\PaymentTerminalConfiguration',
+        'configuration' => '\Secupay\Sdk\Model\PaymentTerminalConfiguration',
         'connector_configurations' => 'int[]',
         'created_by' => 'int',
         'created_on' => '\DateTime',
@@ -59,7 +59,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
         'maintenance_window_duration' => 'string',
         'maintenance_window_start' => 'string',
         'planned_purge_date' => '\DateTime',
-        'state' => '\Wallee\Sdk\Model\PaymentTerminalConfigurationVersionState',
+        'state' => '\Secupay\Sdk\Model\PaymentTerminalConfigurationVersionState',
         'time_zone' => 'string',
         'version' => 'int',
         'version_applied_immediately' => 'bool'
@@ -294,7 +294,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminalConfiguration
+     * @return \Secupay\Sdk\Model\PaymentTerminalConfiguration
      */
     public function getConfiguration()
     {
@@ -304,7 +304,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminalConfiguration $configuration The payment terminal configuration that the version belongs to.
+     * @param \Secupay\Sdk\Model\PaymentTerminalConfiguration $configuration The payment terminal configuration that the version belongs to.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\PaymentTerminalConfigurationVersionState
+     * @return \Secupay\Sdk\Model\PaymentTerminalConfigurationVersionState
      */
     public function getState()
     {
@@ -554,7 +554,7 @@ class PaymentTerminalConfigurationVersion implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\PaymentTerminalConfigurationVersionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\PaymentTerminalConfigurationVersionState $state The object's current state.
      *
      * @return $this
      */

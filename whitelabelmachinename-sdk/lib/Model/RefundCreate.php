@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * RefundCreate model
  *
  * @category    Class
  * @description The refund represents a credit back to the customer. It can be issued by the merchant or by the customer (reversal).
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class RefundCreate implements ModelInterface, ArrayAccess
@@ -53,9 +53,9 @@ class RefundCreate implements ModelInterface, ArrayAccess
         'completion' => 'int',
         'external_id' => 'string',
         'merchant_reference' => 'string',
-        'reductions' => '\Wallee\Sdk\Model\LineItemReductionCreate[]',
+        'reductions' => '\Secupay\Sdk\Model\LineItemReductionCreate[]',
         'transaction' => 'int',
-        'type' => '\Wallee\Sdk\Model\RefundType'
+        'type' => '\Secupay\Sdk\Model\RefundType'
     ];
 
     /**
@@ -374,7 +374,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Gets reductions
      *
-     * @return \Wallee\Sdk\Model\LineItemReductionCreate[]
+     * @return \Secupay\Sdk\Model\LineItemReductionCreate[]
      */
     public function getReductions()
     {
@@ -384,7 +384,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Sets reductions
      *
-     * @param \Wallee\Sdk\Model\LineItemReductionCreate[] $reductions 
+     * @param \Secupay\Sdk\Model\LineItemReductionCreate[] $reductions 
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\RefundType
+     * @return \Secupay\Sdk\Model\RefundType
      */
     public function getType()
     {
@@ -434,7 +434,7 @@ class RefundCreate implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\RefundType $type 
+     * @param \Secupay\Sdk\Model\RefundType $type 
      *
      * @return $this
      */

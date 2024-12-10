@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionModelBillingConfiguration model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, ArrayAccess
@@ -51,9 +51,9 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     protected static $swaggerTypes = [
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_interval_unit' => '\Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
         'billing_reference_date' => '\DateTime',
-        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_weekday' => '\Secupay\Sdk\Model\ShopifySubscriptionWeekday',
         'maximal_billing_cycles' => 'int',
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
@@ -309,7 +309,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Gets billing_interval_unit
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -319,7 +319,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Sets billing_interval_unit
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
      *
      * @return $this
      */
@@ -359,7 +359,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Gets billing_weekday
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -369,7 +369,7 @@ class ShopifySubscriptionModelBillingConfiguration implements ModelInterface, Ar
     /**
      * Sets billing_weekday
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
      *
      * @return $this
      */

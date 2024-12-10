@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifyV1Integration model
  *
  * @category    Class
  * @description A Shopify Integration allows to connect a Shopify shop.
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifyV1Integration implements ModelInterface, ArrayAccess
@@ -49,16 +49,16 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'additional_line_item_data' => '\Wallee\Sdk\Model\ShopifyAdditionalLineItemData[]',
+        'additional_line_item_data' => '\Secupay\Sdk\Model\ShopifyAdditionalLineItemData[]',
         'allow_invoice_download' => 'bool',
-        'allowed_payment_method_configurations' => '\Wallee\Sdk\Model\PaymentMethodConfiguration[]',
+        'allowed_payment_method_configurations' => '\Secupay\Sdk\Model\PaymentMethodConfiguration[]',
         'currency' => 'string',
         'id' => 'int',
         'integrated_payment_form_enabled' => 'bool',
         'language' => 'string',
         'login_name' => 'string',
         'name' => 'string',
-        'payment_app_version' => '\Wallee\Sdk\Model\ShopifyIntegrationPaymentAppVersion',
+        'payment_app_version' => '\Secupay\Sdk\Model\ShopifyIntegrationPaymentAppVersion',
         'payment_installed' => 'bool',
         'payment_proxy_path' => 'string',
         'planned_purge_date' => '\DateTime',
@@ -68,8 +68,8 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
         'show_subscription_information' => 'bool',
         'space_id' => 'int',
         'space_view_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
-        'subscription_app_version' => '\Wallee\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
+        'subscription_app_version' => '\Secupay\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion',
         'subscription_installed' => 'bool',
         'subscription_proxy_path' => 'string',
         'version' => 'int'
@@ -376,7 +376,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Gets additional_line_item_data
      *
-     * @return \Wallee\Sdk\Model\ShopifyAdditionalLineItemData[]
+     * @return \Secupay\Sdk\Model\ShopifyAdditionalLineItemData[]
      */
     public function getAdditionalLineItemData()
     {
@@ -386,7 +386,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Sets additional_line_item_data
      *
-     * @param \Wallee\Sdk\Model\ShopifyAdditionalLineItemData[] $additional_line_item_data 
+     * @param \Secupay\Sdk\Model\ShopifyAdditionalLineItemData[] $additional_line_item_data 
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Gets allowed_payment_method_configurations
      *
-     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration[]
+     * @return \Secupay\Sdk\Model\PaymentMethodConfiguration[]
      */
     public function getAllowedPaymentMethodConfigurations()
     {
@@ -436,7 +436,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Sets allowed_payment_method_configurations
      *
-     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations 
+     * @param \Secupay\Sdk\Model\PaymentMethodConfiguration[] $allowed_payment_method_configurations 
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Gets payment_app_version
      *
-     * @return \Wallee\Sdk\Model\ShopifyIntegrationPaymentAppVersion
+     * @return \Secupay\Sdk\Model\ShopifyIntegrationPaymentAppVersion
      */
     public function getPaymentAppVersion()
     {
@@ -619,7 +619,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Sets payment_app_version
      *
-     * @param \Wallee\Sdk\Model\ShopifyIntegrationPaymentAppVersion $payment_app_version 
+     * @param \Secupay\Sdk\Model\ShopifyIntegrationPaymentAppVersion $payment_app_version 
      *
      * @return $this
      */
@@ -863,7 +863,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -873,7 +873,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -888,7 +888,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_app_version
      *
-     * @return \Wallee\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion
+     * @return \Secupay\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion
      */
     public function getSubscriptionAppVersion()
     {
@@ -898,7 +898,7 @@ class ShopifyV1Integration implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_app_version
      *
-     * @param \Wallee\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion $subscription_app_version 
+     * @param \Secupay\Sdk\Model\ShopifyIntegrationSubscriptionAppVersion $subscription_app_version 
      *
      * @return $this
      */

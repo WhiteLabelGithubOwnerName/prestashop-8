@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * User model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class User implements ModelInterface, ArrayAccess
@@ -52,8 +52,8 @@ class User implements ModelInterface, ArrayAccess
         'id' => 'int',
         'planned_purge_date' => '\DateTime',
         'scope' => 'int',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
-        'user_type' => '\Wallee\Sdk\Model\UserType',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
+        'user_type' => '\Secupay\Sdk\Model\UserType',
         'version' => 'int'
     ];
 
@@ -313,7 +313,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -323,7 +323,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets user_type
      *
-     * @return \Wallee\Sdk\Model\UserType
+     * @return \Secupay\Sdk\Model\UserType
      */
     public function getUserType()
     {
@@ -348,7 +348,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param \Wallee\Sdk\Model\UserType $user_type The user's type which defines its role and capabilities.
+     * @param \Secupay\Sdk\Model\UserType $user_type The user's type which defines its role and capabilities.
      *
      * @return $this
      */

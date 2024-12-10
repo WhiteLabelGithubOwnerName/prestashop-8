@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * LineItem model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class LineItem implements ModelInterface, ArrayAccess
@@ -52,7 +52,7 @@ class LineItem implements ModelInterface, ArrayAccess
         'aggregated_tax_rate' => 'float',
         'amount_excluding_tax' => 'float',
         'amount_including_tax' => 'float',
-        'attributes' => 'map[string,\Wallee\Sdk\Model\LineItemAttribute]',
+        'attributes' => 'map[string,\Secupay\Sdk\Model\LineItemAttribute]',
         'discount_excluding_tax' => 'float',
         'discount_including_tax' => 'float',
         'name' => 'string',
@@ -61,8 +61,8 @@ class LineItem implements ModelInterface, ArrayAccess
         'sku' => 'string',
         'tax_amount' => 'float',
         'tax_amount_per_unit' => 'float',
-        'taxes' => '\Wallee\Sdk\Model\Tax[]',
-        'type' => '\Wallee\Sdk\Model\LineItemType',
+        'taxes' => '\Secupay\Sdk\Model\Tax[]',
+        'type' => '\Secupay\Sdk\Model\LineItemType',
         'undiscounted_amount_excluding_tax' => 'float',
         'undiscounted_amount_including_tax' => 'float',
         'undiscounted_unit_price_excluding_tax' => 'float',
@@ -434,7 +434,7 @@ class LineItem implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return map[string,\Wallee\Sdk\Model\LineItemAttribute]
+     * @return map[string,\Secupay\Sdk\Model\LineItemAttribute]
      */
     public function getAttributes()
     {
@@ -444,7 +444,7 @@ class LineItem implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param map[string,\Wallee\Sdk\Model\LineItemAttribute] $attributes A map of custom information for the item.
+     * @param map[string,\Secupay\Sdk\Model\LineItemAttribute] $attributes A map of custom information for the item.
      *
      * @return $this
      */
@@ -670,7 +670,7 @@ class LineItem implements ModelInterface, ArrayAccess
     /**
      * Gets taxes
      *
-     * @return \Wallee\Sdk\Model\Tax[]
+     * @return \Secupay\Sdk\Model\Tax[]
      */
     public function getTaxes()
     {
@@ -680,7 +680,7 @@ class LineItem implements ModelInterface, ArrayAccess
     /**
      * Sets taxes
      *
-     * @param \Wallee\Sdk\Model\Tax[] $taxes A set of tax lines, each of which specifies a tax applied to the item.
+     * @param \Secupay\Sdk\Model\Tax[] $taxes A set of tax lines, each of which specifies a tax applied to the item.
      *
      * @return $this
      */
@@ -695,7 +695,7 @@ class LineItem implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\LineItemType
+     * @return \Secupay\Sdk\Model\LineItemType
      */
     public function getType()
     {
@@ -705,7 +705,7 @@ class LineItem implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\LineItemType $type The type of the line item.
+     * @param \Secupay\Sdk\Model\LineItemType $type The type of the line item.
      *
      * @return $this
      */

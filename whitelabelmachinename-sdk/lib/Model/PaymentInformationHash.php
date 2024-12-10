@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * PaymentInformationHash model
  *
  * @category    Class
  * @description A payment information hash is calculated based on the information entered by the user. The same input leads to the same hash. The hash is collision free.
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentInformationHash implements ModelInterface, ArrayAccess
@@ -50,7 +50,7 @@ class PaymentInformationHash implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'type' => '\Wallee\Sdk\Model\PaymentInformationHashType',
+        'type' => '\Secupay\Sdk\Model\PaymentInformationHashType',
         'value' => 'string'
     ];
 
@@ -242,7 +242,7 @@ class PaymentInformationHash implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\PaymentInformationHashType
+     * @return \Secupay\Sdk\Model\PaymentInformationHashType
      */
     public function getType()
     {
@@ -252,7 +252,7 @@ class PaymentInformationHash implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\PaymentInformationHashType $type 
+     * @param \Secupay\Sdk\Model\PaymentInformationHashType $type 
      *
      * @return $this
      */

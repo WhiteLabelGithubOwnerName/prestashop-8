@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * SpaceView model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class SpaceView implements ModelInterface, ArrayAccess
@@ -53,8 +53,8 @@ class SpaceView implements ModelInterface, ArrayAccess
         'linked_space_id' => 'int',
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'space' => '\Wallee\Sdk\Model\Space',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'space' => '\Secupay\Sdk\Model\Space',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -360,7 +360,7 @@ class SpaceView implements ModelInterface, ArrayAccess
     /**
      * Gets space
      *
-     * @return \Wallee\Sdk\Model\Space
+     * @return \Secupay\Sdk\Model\Space
      */
     public function getSpace()
     {
@@ -370,7 +370,7 @@ class SpaceView implements ModelInterface, ArrayAccess
     /**
      * Sets space
      *
-     * @param \Wallee\Sdk\Model\Space $space The space that the space view belongs to.
+     * @param \Secupay\Sdk\Model\Space $space The space that the space view belongs to.
      *
      * @return $this
      */
@@ -385,7 +385,7 @@ class SpaceView implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -395,7 +395,7 @@ class SpaceView implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

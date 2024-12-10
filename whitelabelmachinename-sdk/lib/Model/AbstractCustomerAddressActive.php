@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * AbstractCustomerAddressActive model
  *
  * @category    Class
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
@@ -48,8 +48,8 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\Wallee\Sdk\Model\CustomerPostalAddressCreate',
-        'address_type' => '\Wallee\Sdk\Model\CustomerAddressType'
+        'address' => '\Secupay\Sdk\Model\CustomerPostalAddressCreate',
+        'address_type' => '\Secupay\Sdk\Model\CustomerAddressType'
     ];
 
     /**
@@ -209,7 +209,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \Wallee\Sdk\Model\CustomerPostalAddressCreate
+     * @return \Secupay\Sdk\Model\CustomerPostalAddressCreate
      */
     public function getAddress()
     {
@@ -219,7 +219,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \Wallee\Sdk\Model\CustomerPostalAddressCreate $address The actual postal address.
+     * @param \Secupay\Sdk\Model\CustomerPostalAddressCreate $address The actual postal address.
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Gets address_type
      *
-     * @return \Wallee\Sdk\Model\CustomerAddressType
+     * @return \Secupay\Sdk\Model\CustomerAddressType
      */
     public function getAddressType()
     {
@@ -244,7 +244,7 @@ class AbstractCustomerAddressActive implements ModelInterface, ArrayAccess
     /**
      * Sets address_type
      *
-     * @param \Wallee\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
+     * @param \Secupay\Sdk\Model\CustomerAddressType $address_type Whether the address is for billing or shipping or both.
      *
      * @return $this
      */

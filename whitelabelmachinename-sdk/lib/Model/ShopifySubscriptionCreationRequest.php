@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionCreationRequest model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
@@ -49,19 +49,19 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'billing_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddressCreate',
-        'billing_configuration' => '\Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
+        'billing_address' => '\Secupay\Sdk\Model\ShopifySubscriptionAddressCreate',
+        'billing_configuration' => '\Secupay\Sdk\Model\ShopifySubscriptionModelBillingConfiguration',
         'currency' => 'string',
         'external_id' => 'string',
         'initial_execution_date' => '\DateTime',
         'integration' => 'int',
-        'items' => '\Wallee\Sdk\Model\ShopifySubscriptionModelItem[]',
+        'items' => '\Secupay\Sdk\Model\ShopifySubscriptionModelItem[]',
         'language' => 'string',
-        'shipping_address' => '\Wallee\Sdk\Model\ShopifySubscriptionAddressCreate',
+        'shipping_address' => '\Secupay\Sdk\Model\ShopifySubscriptionAddressCreate',
         'shipping_method_name' => 'string',
         'space_view_id' => 'int',
         'store_order_confirmation_email_enabled' => 'bool',
-        'subscriber' => '\Wallee\Sdk\Model\ShopifySubscriberCreation',
+        'subscriber' => '\Secupay\Sdk\Model\ShopifySubscriberCreation',
         'subscriber_suspension_allowed' => 'bool'
     ];
 
@@ -318,7 +318,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionAddressCreate
      */
     public function getBillingAddress()
     {
@@ -328,7 +328,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate $billing_address 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionAddressCreate $billing_address 
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets billing_configuration
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionModelBillingConfiguration
      */
     public function getBillingConfiguration()
     {
@@ -353,7 +353,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets billing_configuration
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionModelBillingConfiguration $billing_configuration 
      *
      * @return $this
      */
@@ -468,7 +468,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelItem[]
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionModelItem[]
      */
     public function getItems()
     {
@@ -478,7 +478,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelItem[] $items 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionModelItem[] $items 
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionAddressCreate
      */
     public function getShippingAddress()
     {
@@ -528,7 +528,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionAddressCreate $shipping_address 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionAddressCreate $shipping_address 
      *
      * @return $this
      */
@@ -618,7 +618,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Gets subscriber
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriberCreation
+     * @return \Secupay\Sdk\Model\ShopifySubscriberCreation
      */
     public function getSubscriber()
     {
@@ -628,7 +628,7 @@ class ShopifySubscriptionCreationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets subscriber
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriberCreation $subscriber 
+     * @param \Secupay\Sdk\Model\ShopifySubscriberCreation $subscriber 
      *
      * @return $this
      */

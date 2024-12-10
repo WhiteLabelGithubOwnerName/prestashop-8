@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Space model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Space implements ModelInterface, ArrayAccess
@@ -49,23 +49,23 @@ class Space implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Wallee\Sdk\Model\Account',
+        'account' => '\Secupay\Sdk\Model\Account',
         'active' => 'bool',
         'active_or_restricted_active' => 'bool',
         'created_by' => 'int',
         'created_on' => '\DateTime',
-        'database' => '\Wallee\Sdk\Model\TenantDatabase',
+        'database' => '\Secupay\Sdk\Model\TenantDatabase',
         'deleted_by' => 'int',
         'deleted_on' => '\DateTime',
         'id' => 'int',
         'last_modified_date' => '\DateTime',
         'name' => 'string',
         'planned_purge_date' => '\DateTime',
-        'postal_address' => '\Wallee\Sdk\Model\SpaceAddress',
+        'postal_address' => '\Secupay\Sdk\Model\SpaceAddress',
         'primary_currency' => 'string',
         'request_limit' => 'int',
         'restricted_active' => 'bool',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
         'technical_contact_addresses' => 'string[]',
         'time_zone' => 'string',
         'version' => 'int'
@@ -344,7 +344,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Wallee\Sdk\Model\Account
+     * @return \Secupay\Sdk\Model\Account
      */
     public function getAccount()
     {
@@ -354,7 +354,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Wallee\Sdk\Model\Account $account The account that the space belongs to.
+     * @param \Secupay\Sdk\Model\Account $account The account that the space belongs to.
      *
      * @return $this
      */
@@ -469,7 +469,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Gets database
      *
-     * @return \Wallee\Sdk\Model\TenantDatabase
+     * @return \Secupay\Sdk\Model\TenantDatabase
      */
     public function getDatabase()
     {
@@ -479,7 +479,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Sets database
      *
-     * @param \Wallee\Sdk\Model\TenantDatabase $database The database the space is connected to and that holds the space's data.
+     * @param \Secupay\Sdk\Model\TenantDatabase $database The database the space is connected to and that holds the space's data.
      *
      * @return $this
      */
@@ -651,7 +651,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Gets postal_address
      *
-     * @return \Wallee\Sdk\Model\SpaceAddress
+     * @return \Secupay\Sdk\Model\SpaceAddress
      */
     public function getPostalAddress()
     {
@@ -661,7 +661,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Sets postal_address
      *
-     * @param \Wallee\Sdk\Model\SpaceAddress $postal_address The address that is used in communication with clients for example in emails, documents, etc.
+     * @param \Secupay\Sdk\Model\SpaceAddress $postal_address The address that is used in communication with clients for example in emails, documents, etc.
      *
      * @return $this
      */
@@ -751,7 +751,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -761,7 +761,7 @@ class Space implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionProduct model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
@@ -52,8 +52,8 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
         'absolute_price_adjustment' => 'float',
         'billing_day_of_month' => 'int',
         'billing_interval_amount' => 'int',
-        'billing_interval_unit' => '\Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
-        'billing_weekday' => '\Wallee\Sdk\Model\ShopifySubscriptionWeekday',
+        'billing_interval_unit' => '\Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit',
+        'billing_weekday' => '\Secupay\Sdk\Model\ShopifySubscriptionWeekday',
         'fixed_price' => 'float',
         'id' => 'int',
         'linked_space_id' => 'int',
@@ -61,7 +61,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
         'maximal_suspendable_cycles' => 'int',
         'minimal_billing_cycles' => 'int',
         'planned_purge_date' => '\DateTime',
-        'pricing_option' => '\Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption',
+        'pricing_option' => '\Secupay\Sdk\Model\ShopifySubscriptionProductPricingOption',
         'product_id' => 'string',
         'product_name' => 'string',
         'product_price' => 'float',
@@ -71,7 +71,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
         'relative_price_adjustment' => 'float',
         'shipping_required' => 'bool',
         'shop' => 'int',
-        'state' => '\Wallee\Sdk\Model\ShopifySubscriptionProductState',
+        'state' => '\Secupay\Sdk\Model\ShopifySubscriptionProductState',
         'stock_check_required' => 'bool',
         'store_order_confirmation_email_enabled' => 'bool',
         'subscriber_suspension_allowed' => 'bool',
@@ -474,7 +474,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets billing_interval_unit
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit
      */
     public function getBillingIntervalUnit()
     {
@@ -484,7 +484,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets billing_interval_unit
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionBillingIntervalUnit $billing_interval_unit Define how frequently recurring orders should be created.
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets billing_weekday
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionWeekday
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionWeekday
      */
     public function getBillingWeekday()
     {
@@ -509,7 +509,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets billing_weekday
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionWeekday $billing_weekday Define the weekday on which the recurring orders should be created.
      *
      * @return $this
      */
@@ -699,7 +699,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets pricing_option
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionProductPricingOption
      */
     public function getPricingOption()
     {
@@ -709,7 +709,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets pricing_option
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionProductPricingOption $pricing_option 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionProductPricingOption $pricing_option 
      *
      * @return $this
      */
@@ -949,7 +949,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionProductState
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionProductState
      */
     public function getState()
     {
@@ -959,7 +959,7 @@ class ShopifySubscriptionProduct implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionProductState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionProductState $state The object's current state.
      *
      * @return $this
      */

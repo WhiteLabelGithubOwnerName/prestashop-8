@@ -1,21 +1,21 @@
 {
-    "name": "wallee/sdk",
-    "version": "4.4.0",
-	"description": "wallee SDK for PHP",
+    "name": "secupay/sdk",
+    "version": "4.6.0",
+	"description": "Secupay SDK for PHP",
 	"keywords": [
-		"wallee",
+		"secupay",
 		"payment",
 		"php",
 		"sdk",
 		"api"
 	],
-	"homepage": "http://github.com/wallee-payment/php-sdk",
+	"homepage": "http://github.com/secupay-payment/php-sdk",
 	"license": "Apache-2.0",
 	"authors": [
 		{
-			"name": "wallee AG",
-			"email": "info@wallee.com",
-			"homepage": "https://www.wallee.com"
+			"name": "Secupay AG.",
+			"email": "support@secupay.com",
+			"homepage": "https://secupay.com/"
 		}
 	],
 	"require": {
@@ -27,9 +27,9 @@
 		"phpunit/phpunit": "~8"
 	},
 	"autoload": {
-		"psr-4": { "Wallee\\Sdk\\" : "lib/" }
+		"psr-4": { "Secupay\\Sdk\\" : "lib/" }
 	},
 	"autoload-dev": {
-		"psr-4": { "Wallee\\Sdk\\" : "test/" }
+		"psr-4": { "Secupay\\Sdk\\" : "test/" }
 	}
 }

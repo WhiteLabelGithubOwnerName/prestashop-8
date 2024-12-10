@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * PaymentConnectorConfiguration model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
@@ -52,17 +52,17 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
         'applicable_for_transaction_processing' => 'bool',
         'conditions' => 'int[]',
         'connector' => 'int',
-        'enabled_sales_channels' => '\Wallee\Sdk\Model\SalesChannel[]',
+        'enabled_sales_channels' => '\Secupay\Sdk\Model\SalesChannel[]',
         'enabled_space_views' => 'int[]',
         'id' => 'int',
         'image_path' => 'string',
         'linked_space_id' => 'int',
         'name' => 'string',
-        'payment_method_configuration' => '\Wallee\Sdk\Model\PaymentMethodConfiguration',
+        'payment_method_configuration' => '\Secupay\Sdk\Model\PaymentMethodConfiguration',
         'planned_purge_date' => '\DateTime',
         'priority' => 'int',
-        'processor_configuration' => '\Wallee\Sdk\Model\PaymentProcessorConfiguration',
-        'state' => '\Wallee\Sdk\Model\CreationEntityState',
+        'processor_configuration' => '\Secupay\Sdk\Model\PaymentProcessorConfiguration',
+        'state' => '\Secupay\Sdk\Model\CreationEntityState',
         'version' => 'int'
     ];
 
@@ -380,7 +380,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets enabled_sales_channels
      *
-     * @return \Wallee\Sdk\Model\SalesChannel[]
+     * @return \Secupay\Sdk\Model\SalesChannel[]
      */
     public function getEnabledSalesChannels()
     {
@@ -390,7 +390,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets enabled_sales_channels
      *
-     * @param \Wallee\Sdk\Model\SalesChannel[] $enabled_sales_channels The sales channels for which the connector configuration is enabled. If empty, it is enabled for all sales channels.
+     * @param \Secupay\Sdk\Model\SalesChannel[] $enabled_sales_channels The sales channels for which the connector configuration is enabled. If empty, it is enabled for all sales channels.
      *
      * @return $this
      */
@@ -534,7 +534,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets payment_method_configuration
      *
-     * @return \Wallee\Sdk\Model\PaymentMethodConfiguration
+     * @return \Secupay\Sdk\Model\PaymentMethodConfiguration
      */
     public function getPaymentMethodConfiguration()
     {
@@ -544,7 +544,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets payment_method_configuration
      *
-     * @param \Wallee\Sdk\Model\PaymentMethodConfiguration $payment_method_configuration The payment method configuration that the connector configuration belongs to.
+     * @param \Secupay\Sdk\Model\PaymentMethodConfiguration $payment_method_configuration The payment method configuration that the connector configuration belongs to.
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets processor_configuration
      *
-     * @return \Wallee\Sdk\Model\PaymentProcessorConfiguration
+     * @return \Secupay\Sdk\Model\PaymentProcessorConfiguration
      */
     public function getProcessorConfiguration()
     {
@@ -619,7 +619,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets processor_configuration
      *
-     * @param \Wallee\Sdk\Model\PaymentProcessorConfiguration $processor_configuration The processor configuration that the connector configuration belongs to.
+     * @param \Secupay\Sdk\Model\PaymentProcessorConfiguration $processor_configuration The processor configuration that the connector configuration belongs to.
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\CreationEntityState
+     * @return \Secupay\Sdk\Model\CreationEntityState
      */
     public function getState()
     {
@@ -644,7 +644,7 @@ class PaymentConnectorConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\CreationEntityState $state The object's current state.
+     * @param \Secupay\Sdk\Model\CreationEntityState $state The object's current state.
      *
      * @return $this
      */

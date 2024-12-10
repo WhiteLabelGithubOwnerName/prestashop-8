@@ -1,13 +1,13 @@
-[![Build Status](https://travis-ci.org/wallee-payment/php-sdk.svg?branch=master)](https://travis-ci.org/wallee-payment/php-sdk)
+[![Build Status](https://travis-ci.org/secupay-payment/php-sdk.svg?branch=master)](https://travis-ci.org/secupay-payment/php-sdk)
 
-# wallee PHP Library
+# Secupay PHP Library
 
-The wallee PHP library wraps around the wallee API. This library facilitates your interaction with various services such as transactions, accounts, and subscriptions.
+The Secupay PHP library wraps around the Secupay API. This library facilitates your interaction with various services such as transactions, accounts, and subscriptions.
 
 
 ## Documentation
 
-[wallee Web Service API](https://app-wallee.com/doc/api/web-service)
+[Secupay Web Service API](https://shopportal.secupay.com/doc/api/web-service)
 
 ## Requirements
 
@@ -26,7 +26,7 @@ composer installed.
 Once composer is installed, execute the following command in your project root to install this library:
 
 ```sh
-composer require wallee/sdk
+composer require secupay/sdk
 ```
 
 ### Manual Installation
@@ -40,8 +40,8 @@ require_once '/path/to/php-sdk/autoload.php';
 ```
 
 ## Usage
-The library needs to be configured with your account's space id, user id, and secret key which are available in your [wallee
-account dashboard](https://app-wallee.com/account/select). Set `space_id`, `user_id`, and `api_secret` to their values.
+The library needs to be configured with your account's space id, user id, and secret key which are available in your [Secupay
+account dashboard](https://shopportal.secupay.com/account/select). Set `space_id`, `user_id`, and `api_secret` to their values.
 
 ### Configuring a Service
 
@@ -54,7 +54,7 @@ $userId = 512;
 $secret = 'FKrO76r5VwJtBrqZawBspljbBNOxp5veKQQkOnZxucQ=';
 
 // Setup API client
-$client = new \Wallee\Sdk\ApiClient($userId, $secret);
+$client = new \Secupay\Sdk\ApiClient($userId, $secret);
 
 // Get API service instance
 $client->getTransactionService();
@@ -73,19 +73,19 @@ $userId = 512;
 $secret = 'FKrO76r5VwJtBrqZawBspljbBNOxp5veKQQkOnZxucQ=';
 
 // Setup API client
-$client = new \Wallee\Sdk\ApiClient($userId, $secret);
+$client = new \Secupay\Sdk\ApiClient($userId, $secret);
 
 // Create transaction
-$lineItem = new \Wallee\Sdk\Model\LineItemCreate();
+$lineItem = new \Secupay\Sdk\Model\LineItemCreate();
 $lineItem->setName('Red T-Shirt');
 $lineItem->setUniqueId('5412');
 $lineItem->setSku('red-t-shirt-123');
 $lineItem->setQuantity(1);
 $lineItem->setAmountIncludingTax(29.95);
-$lineItem->setType(\Wallee\Sdk\Model\LineItemType::PRODUCT);
+$lineItem->setType(\Secupay\Sdk\Model\LineItemType::PRODUCT);
 
 
-$transactionPayload = new \Wallee\Sdk\Model\TransactionCreate();
+$transactionPayload = new \Secupay\Sdk\Model\TransactionCreate();
 $transactionPayload->setCurrency('EUR');
 $transactionPayload->setLineItems(array($lineItem));
 $transactionPayload->setAutoConfirmationEnabled(true);
@@ -108,9 +108,9 @@ $userId = 512;
 $secret = 'FKrO76r5VwJtBrqZawBspljbBNOxp5veKQQkOnZxucQ=';
 
 // Setup API client
-$client = new \Wallee\Sdk\ApiClient($userId, $secret);
+$client = new \Secupay\Sdk\ApiClient($userId, $secret);
 
-$httpClientType = \Wallee\Sdk\Http\HttpClientFactory::TYPE_CURL; // or \Wallee\Sdk\Http\HttpClientFactory::TYPE_SOCKET
+$httpClientType = \Secupay\Sdk\Http\HttpClientFactory::TYPE_CURL; // or \Secupay\Sdk\Http\HttpClientFactory::TYPE_SOCKET
 
 $client->setHttpClientType($httpClientType);
 
@@ -118,12 +118,12 @@ $client->setHttpClientType($httpClientType);
 $client->setConnectionTimeout(20);
 ```
 
-You can also specify the HTTP client via the `WLE_HTTP_CLIENT` environment variable. The possible string values are `curl` or `socket`.
+You can also specify the HTTP client via the `SCP_HTTP_CLIENT` environment variable. The possible string values are `curl` or `socket`.
 
 
 ```php
 <?php
-putenv('WLE_HTTP_CLIENT=curl');
+putenv('SCP_HTTP_CLIENT=curl');
 ?>
 ```
 
@@ -139,7 +139,7 @@ Payload field `state` provides direct information about the state update of the 
 >
 > Please ensure that you adapt and extend this code to meet the specific needs of your application, including appropriate security measures and error handling.
 For a detailed webhook payload signing mechanism understanding we highly recommend referring to our comprehensive
-[Webhook Payload Signing Documentation](https://app-wallee.com/doc/webhooks#_webhook_payload_signing_mechanism).
+[Webhook Payload Signing Documentation](https://shopportal.secupay.com/doc/webhooks#_webhook_payload_signing_mechanism).
 
 ```php
 public function handleWebhook() {
@@ -167,4 +167,4 @@ public function handleWebhook() {
 
 ## License
 
-Please see the [license file](https://github.com/wallee-payment/php-sdk/blob/master/LICENSE) for more information.
+Please see the [license file](https://github.com/secupay-payment/php-sdk/blob/master/LICENSE) for more information.

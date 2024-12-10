@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ConnectorInvocation model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ConnectorInvocation extends TransactionAwareEntity 
@@ -49,7 +49,7 @@ class ConnectorInvocation extends TransactionAwareEntity
     protected static $swaggerTypes = [
         'created_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
-        'stage' => '\Wallee\Sdk\Model\ConnectorInvocationStage',
+        'stage' => '\Secupay\Sdk\Model\ConnectorInvocationStage',
         'time_took_in_milliseconds' => 'int',
         'transaction' => 'int',
         'version' => 'int'
@@ -282,7 +282,7 @@ class ConnectorInvocation extends TransactionAwareEntity
     /**
      * Gets stage
      *
-     * @return \Wallee\Sdk\Model\ConnectorInvocationStage
+     * @return \Secupay\Sdk\Model\ConnectorInvocationStage
      */
     public function getStage()
     {
@@ -292,7 +292,7 @@ class ConnectorInvocation extends TransactionAwareEntity
     /**
      * Sets stage
      *
-     * @param \Wallee\Sdk\Model\ConnectorInvocationStage $stage 
+     * @param \Secupay\Sdk\Model\ConnectorInvocationStage $stage 
      *
      * @return $this
      */

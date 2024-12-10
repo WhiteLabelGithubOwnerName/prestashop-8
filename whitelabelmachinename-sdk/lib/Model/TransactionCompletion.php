@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * TransactionCompletion model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class TransactionCompletion extends TransactionAwareEntity 
@@ -48,27 +48,27 @@ class TransactionCompletion extends TransactionAwareEntity
       */
     protected static $swaggerTypes = [
         'amount' => 'float',
-        'base_line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'base_line_items' => '\Secupay\Sdk\Model\LineItem[]',
         'created_by' => 'int',
         'created_on' => '\DateTime',
         'external_id' => 'string',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'failure_reason' => '\Secupay\Sdk\Model\FailureReason',
         'invoice_merchant_reference' => 'string',
-        'labels' => '\Wallee\Sdk\Model\Label[]',
+        'labels' => '\Secupay\Sdk\Model\Label[]',
         'language' => 'string',
         'last_completion' => 'bool',
-        'line_item_version' => '\Wallee\Sdk\Model\TransactionLineItemVersion',
-        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
-        'mode' => '\Wallee\Sdk\Model\TransactionCompletionMode',
+        'line_item_version' => '\Secupay\Sdk\Model\TransactionLineItemVersion',
+        'line_items' => '\Secupay\Sdk\Model\LineItem[]',
+        'mode' => '\Secupay\Sdk\Model\TransactionCompletionMode',
         'next_update_on' => '\DateTime',
         'payment_information' => 'string',
         'planned_purge_date' => '\DateTime',
         'processing_on' => '\DateTime',
         'processor_reference' => 'string',
-        'remaining_line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'remaining_line_items' => '\Secupay\Sdk\Model\LineItem[]',
         'space_view_id' => 'int',
-        'state' => '\Wallee\Sdk\Model\TransactionCompletionState',
+        'state' => '\Secupay\Sdk\Model\TransactionCompletionState',
         'statement_descriptor' => 'string',
         'succeeded_on' => '\DateTime',
         'tax_amount' => 'float',
@@ -427,7 +427,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets base_line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getBaseLineItems()
     {
@@ -437,7 +437,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets base_line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $base_line_items The base line items on which the completion is applied on.
+     * @param \Secupay\Sdk\Model\LineItem[] $base_line_items The base line items on which the completion is applied on.
      *
      * @return $this
      */
@@ -559,7 +559,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \Wallee\Sdk\Model\FailureReason
+     * @return \Secupay\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -569,7 +569,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
+     * @param \Secupay\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -613,7 +613,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets labels
      *
-     * @return \Wallee\Sdk\Model\Label[]
+     * @return \Secupay\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -623,7 +623,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets labels
      *
-     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
+     * @param \Secupay\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets line_item_version
      *
-     * @return \Wallee\Sdk\Model\TransactionLineItemVersion
+     * @return \Secupay\Sdk\Model\TransactionLineItemVersion
      */
     public function getLineItemVersion()
     {
@@ -698,7 +698,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets line_item_version
      *
-     * @param \Wallee\Sdk\Model\TransactionLineItemVersion $line_item_version 
+     * @param \Secupay\Sdk\Model\TransactionLineItemVersion $line_item_version 
      *
      * @return $this
      */
@@ -713,7 +713,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -723,7 +723,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $line_items The line items which are captured.
+     * @param \Secupay\Sdk\Model\LineItem[] $line_items The line items which are captured.
      *
      * @return $this
      */
@@ -738,7 +738,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets mode
      *
-     * @return \Wallee\Sdk\Model\TransactionCompletionMode
+     * @return \Secupay\Sdk\Model\TransactionCompletionMode
      */
     public function getMode()
     {
@@ -748,7 +748,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets mode
      *
-     * @param \Wallee\Sdk\Model\TransactionCompletionMode $mode 
+     * @param \Secupay\Sdk\Model\TransactionCompletionMode $mode 
      *
      * @return $this
      */
@@ -888,7 +888,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets remaining_line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getRemainingLineItems()
     {
@@ -898,7 +898,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets remaining_line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $remaining_line_items 
+     * @param \Secupay\Sdk\Model\LineItem[] $remaining_line_items 
      *
      * @return $this
      */
@@ -938,7 +938,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\TransactionCompletionState
+     * @return \Secupay\Sdk\Model\TransactionCompletionState
      */
     public function getState()
     {
@@ -948,7 +948,7 @@ class TransactionCompletion extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\TransactionCompletionState $state The object's current state.
+     * @param \Secupay\Sdk\Model\TransactionCompletionState $state The object's current state.
      *
      * @return $this
      */

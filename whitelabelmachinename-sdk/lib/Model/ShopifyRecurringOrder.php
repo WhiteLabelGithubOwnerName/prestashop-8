@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Model;
-use \Wallee\Sdk\ObjectSerializer;
+namespace Secupay\Sdk\Model;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifyRecurringOrder model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifyRecurringOrder extends TransactionAwareEntity 
@@ -50,7 +50,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
         'billed_on' => '\DateTime',
         'checkout_token' => 'string',
         'created_on' => '\DateTime',
-        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'failure_reason' => '\Secupay\Sdk\Model\FailureReason',
         'order_id' => 'string',
         'order_name' => 'string',
         'planned_execution_date' => '\DateTime',
@@ -58,9 +58,9 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
         'recurrence_number' => 'int',
         'shop' => 'int',
         'started_processing_on' => '\DateTime',
-        'state' => '\Wallee\Sdk\Model\ShopifyRecurringOrderState',
-        'subscription_version' => '\Wallee\Sdk\Model\ShopifySubscriptionVersion',
-        'transaction' => '\Wallee\Sdk\Model\ShopifyTransaction'
+        'state' => '\Secupay\Sdk\Model\ShopifyRecurringOrderState',
+        'subscription_version' => '\Secupay\Sdk\Model\ShopifySubscriptionVersion',
+        'transaction' => '\Secupay\Sdk\Model\ShopifyTransaction'
     ];
 
     /**
@@ -363,7 +363,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Gets failure_reason
      *
-     * @return \Wallee\Sdk\Model\FailureReason
+     * @return \Secupay\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -373,7 +373,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Sets failure_reason
      *
-     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
+     * @param \Secupay\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -563,7 +563,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\ShopifyRecurringOrderState
+     * @return \Secupay\Sdk\Model\ShopifyRecurringOrderState
      */
     public function getState()
     {
@@ -573,7 +573,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\ShopifyRecurringOrderState $state The object's current state.
+     * @param \Secupay\Sdk\Model\ShopifyRecurringOrderState $state The object's current state.
      *
      * @return $this
      */
@@ -588,7 +588,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Gets subscription_version
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionVersion
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionVersion
      */
     public function getSubscriptionVersion()
     {
@@ -598,7 +598,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Sets subscription_version
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionVersion $subscription_version 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionVersion $subscription_version 
      *
      * @return $this
      */
@@ -613,7 +613,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Gets transaction
      *
-     * @return \Wallee\Sdk\Model\ShopifyTransaction
+     * @return \Secupay\Sdk\Model\ShopifyTransaction
      */
     public function getTransaction()
     {
@@ -623,7 +623,7 @@ class ShopifyRecurringOrder extends TransactionAwareEntity
     /**
      * Sets transaction
      *
-     * @param \Wallee\Sdk\Model\ShopifyTransaction $transaction 
+     * @param \Secupay\Sdk\Model\ShopifyTransaction $transaction 
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
  */
 
 
-namespace Wallee\Sdk\Http;
+namespace Secupay\Sdk\Http;
 
-use Wallee\Sdk\ObjectSerializer;
+use Secupay\Sdk\ObjectSerializer;
 
 /**
  * This class represents an HTTP request.
  *
  * @category Class
- * @package  Wallee\Sdk\Http
- * @author   wallee AG
+ * @package  Secupay\Sdk\Http
+ * @author   Secupay AG.
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 final class HttpRequest {
@@ -76,11 +76,11 @@ final class HttpRequest {
 	const HEADER_KEY_ACCEPT = 'accept';
 	
 	/**
-	 * The key of the 'x-wallee-logtoken' header.
+	 * The key of the 'x-secupay-logtoken' header.
 	 *
 	 * @var string
 	 */
-	const HEADER_LOG_TOKEN = 'x-wallee-logtoken';
+	const HEADER_LOG_TOKEN = 'x-secupay-logtoken';
 
 	/**
 	 * The object serializer.

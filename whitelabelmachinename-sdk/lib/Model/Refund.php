@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * Refund model
  *
  * @category    Class
  * @description The refund represents a credit back to the customer. It can be issued by the merchant or by the customer (reversal).
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class Refund implements ModelInterface, ArrayAccess
@@ -50,35 +50,35 @@ class Refund implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'amount' => 'float',
-        'base_line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'base_line_items' => '\Secupay\Sdk\Model\LineItem[]',
         'completion' => 'int',
         'created_by' => 'int',
         'created_on' => '\DateTime',
-        'environment' => '\Wallee\Sdk\Model\Environment',
+        'environment' => '\Secupay\Sdk\Model\Environment',
         'external_id' => 'string',
         'failed_on' => '\DateTime',
-        'failure_reason' => '\Wallee\Sdk\Model\FailureReason',
+        'failure_reason' => '\Secupay\Sdk\Model\FailureReason',
         'id' => 'int',
-        'labels' => '\Wallee\Sdk\Model\Label[]',
+        'labels' => '\Secupay\Sdk\Model\Label[]',
         'language' => 'string',
-        'line_items' => '\Wallee\Sdk\Model\LineItem[]',
+        'line_items' => '\Secupay\Sdk\Model\LineItem[]',
         'linked_space_id' => 'int',
         'merchant_reference' => 'string',
         'next_update_on' => '\DateTime',
         'planned_purge_date' => '\DateTime',
         'processing_on' => '\DateTime',
         'processor_reference' => 'string',
-        'reduced_line_items' => '\Wallee\Sdk\Model\LineItem[]',
-        'reductions' => '\Wallee\Sdk\Model\LineItemReduction[]',
-        'state' => '\Wallee\Sdk\Model\RefundState',
+        'reduced_line_items' => '\Secupay\Sdk\Model\LineItem[]',
+        'reductions' => '\Secupay\Sdk\Model\LineItemReduction[]',
+        'state' => '\Secupay\Sdk\Model\RefundState',
         'succeeded_on' => '\DateTime',
-        'taxes' => '\Wallee\Sdk\Model\Tax[]',
+        'taxes' => '\Secupay\Sdk\Model\Tax[]',
         'time_zone' => 'string',
         'timeout_on' => '\DateTime',
         'total_applied_fees' => 'float',
         'total_settled_amount' => 'float',
-        'transaction' => '\Wallee\Sdk\Model\Transaction',
-        'type' => '\Wallee\Sdk\Model\RefundType',
+        'transaction' => '\Secupay\Sdk\Model\Transaction',
+        'type' => '\Secupay\Sdk\Model\RefundType',
         'updated_invoice' => 'int',
         'version' => 'int'
     ];
@@ -461,7 +461,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets base_line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getBaseLineItems()
     {
@@ -471,7 +471,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets base_line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $base_line_items 
+     * @param \Secupay\Sdk\Model\LineItem[] $base_line_items 
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets environment
      *
-     * @return \Wallee\Sdk\Model\Environment
+     * @return \Secupay\Sdk\Model\Environment
      */
     public function getEnvironment()
     {
@@ -571,7 +571,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets environment
      *
-     * @param \Wallee\Sdk\Model\Environment $environment 
+     * @param \Secupay\Sdk\Model\Environment $environment 
      *
      * @return $this
      */
@@ -643,7 +643,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets failure_reason
      *
-     * @return \Wallee\Sdk\Model\FailureReason
+     * @return \Secupay\Sdk\Model\FailureReason
      */
     public function getFailureReason()
     {
@@ -653,7 +653,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets failure_reason
      *
-     * @param \Wallee\Sdk\Model\FailureReason $failure_reason 
+     * @param \Secupay\Sdk\Model\FailureReason $failure_reason 
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets labels
      *
-     * @return \Wallee\Sdk\Model\Label[]
+     * @return \Secupay\Sdk\Model\Label[]
      */
     public function getLabels()
     {
@@ -703,7 +703,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets labels
      *
-     * @param \Wallee\Sdk\Model\Label[] $labels The labels providing additional information about the object.
+     * @param \Secupay\Sdk\Model\Label[] $labels The labels providing additional information about the object.
      *
      * @return $this
      */
@@ -743,7 +743,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getLineItems()
     {
@@ -753,7 +753,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $line_items 
+     * @param \Secupay\Sdk\Model\LineItem[] $line_items 
      *
      * @return $this
      */
@@ -926,7 +926,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets reduced_line_items
      *
-     * @return \Wallee\Sdk\Model\LineItem[]
+     * @return \Secupay\Sdk\Model\LineItem[]
      */
     public function getReducedLineItems()
     {
@@ -936,7 +936,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets reduced_line_items
      *
-     * @param \Wallee\Sdk\Model\LineItem[] $reduced_line_items 
+     * @param \Secupay\Sdk\Model\LineItem[] $reduced_line_items 
      *
      * @return $this
      */
@@ -951,7 +951,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets reductions
      *
-     * @return \Wallee\Sdk\Model\LineItemReduction[]
+     * @return \Secupay\Sdk\Model\LineItemReduction[]
      */
     public function getReductions()
     {
@@ -961,7 +961,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets reductions
      *
-     * @param \Wallee\Sdk\Model\LineItemReduction[] $reductions 
+     * @param \Secupay\Sdk\Model\LineItemReduction[] $reductions 
      *
      * @return $this
      */
@@ -976,7 +976,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \Wallee\Sdk\Model\RefundState
+     * @return \Secupay\Sdk\Model\RefundState
      */
     public function getState()
     {
@@ -986,7 +986,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \Wallee\Sdk\Model\RefundState $state The object's current state.
+     * @param \Secupay\Sdk\Model\RefundState $state The object's current state.
      *
      * @return $this
      */
@@ -1026,7 +1026,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets taxes
      *
-     * @return \Wallee\Sdk\Model\Tax[]
+     * @return \Secupay\Sdk\Model\Tax[]
      */
     public function getTaxes()
     {
@@ -1036,7 +1036,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets taxes
      *
-     * @param \Wallee\Sdk\Model\Tax[] $taxes 
+     * @param \Secupay\Sdk\Model\Tax[] $taxes 
      *
      * @return $this
      */
@@ -1151,7 +1151,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets transaction
      *
-     * @return \Wallee\Sdk\Model\Transaction
+     * @return \Secupay\Sdk\Model\Transaction
      */
     public function getTransaction()
     {
@@ -1161,7 +1161,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets transaction
      *
-     * @param \Wallee\Sdk\Model\Transaction $transaction 
+     * @param \Secupay\Sdk\Model\Transaction $transaction 
      *
      * @return $this
      */
@@ -1176,7 +1176,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\RefundType
+     * @return \Secupay\Sdk\Model\RefundType
      */
     public function getType()
     {
@@ -1186,7 +1186,7 @@ class Refund implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\RefundType $type 
+     * @param \Secupay\Sdk\Model\RefundType $type 
      *
      * @return $this
      */

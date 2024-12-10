@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ClientError model
  *
  * @category    Class
  * @description An error that is returned as the result of a bad user request or a misconfiguration.
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ClientError implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class ClientError implements ModelInterface, ArrayAccess
         'default_message' => 'string',
         'id' => 'string',
         'message' => 'string',
-        'type' => '\Wallee\Sdk\Model\ClientErrorType'
+        'type' => '\Secupay\Sdk\Model\ClientErrorType'
     ];
 
     /**
@@ -331,7 +331,7 @@ class ClientError implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Wallee\Sdk\Model\ClientErrorType
+     * @return \Secupay\Sdk\Model\ClientErrorType
      */
     public function getType()
     {
@@ -341,7 +341,7 @@ class ClientError implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Wallee\Sdk\Model\ClientErrorType $type The type of the client error.
+     * @param \Secupay\Sdk\Model\ClientErrorType $type The type of the client error.
      *
      * @return $this
      */

@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * HumanUser model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class HumanUser implements ModelInterface, ArrayAccess
@@ -60,7 +60,7 @@ class HumanUser implements ModelInterface, ArrayAccess
         'scope' => 'int',
         'time_zone' => 'string',
         'two_factor_enabled' => 'bool',
-        'two_factor_type' => '\Wallee\Sdk\Model\TwoFactorAuthenticationType'
+        'two_factor_type' => '\Secupay\Sdk\Model\TwoFactorAuthenticationType'
     ];
 
     /**
@@ -587,7 +587,7 @@ class HumanUser implements ModelInterface, ArrayAccess
     /**
      * Gets two_factor_type
      *
-     * @return \Wallee\Sdk\Model\TwoFactorAuthenticationType
+     * @return \Secupay\Sdk\Model\TwoFactorAuthenticationType
      */
     public function getTwoFactorType()
     {
@@ -597,7 +597,7 @@ class HumanUser implements ModelInterface, ArrayAccess
     /**
      * Sets two_factor_type
      *
-     * @param \Wallee\Sdk\Model\TwoFactorAuthenticationType $two_factor_type The type of two-factor authentication that is enabled for the user.
+     * @param \Secupay\Sdk\Model\TwoFactorAuthenticationType $two_factor_type The type of two-factor authentication that is enabled for the user.
      *
      * @return $this
      */

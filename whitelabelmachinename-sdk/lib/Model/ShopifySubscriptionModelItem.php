@@ -1,8 +1,8 @@
 <?php
 /**
- * wallee SDK
+ * Secupay SDK
  *
- * This library allows to interact with the wallee payment service.
+ * This library allows to interact with the Secupay payment service.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
  */
 
 
-namespace Wallee\Sdk\Model;
+namespace Secupay\Sdk\Model;
 
 use \ArrayAccess;
-use \Wallee\Sdk\ObjectSerializer;
+use \Secupay\Sdk\ObjectSerializer;
 
 /**
  * ShopifySubscriptionModelItem model
  *
  * @category    Class
  * @description 
- * @package     Wallee\Sdk
- * @author      wallee AG
+ * @package     Secupay\Sdk
+ * @author      Secupay AG.
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
@@ -53,7 +53,7 @@ class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
         'product_id' => 'int',
         'quantity' => 'float',
         'recalculate_price' => 'bool',
-        'tax_lines' => '\Wallee\Sdk\Model\ShopifySubscriptionModelTaxLine[]'
+        'tax_lines' => '\Secupay\Sdk\Model\ShopifySubscriptionModelTaxLine[]'
     ];
 
     /**
@@ -331,7 +331,7 @@ class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
     /**
      * Gets tax_lines
      *
-     * @return \Wallee\Sdk\Model\ShopifySubscriptionModelTaxLine[]
+     * @return \Secupay\Sdk\Model\ShopifySubscriptionModelTaxLine[]
      */
     public function getTaxLines()
     {
@@ -341,7 +341,7 @@ class ShopifySubscriptionModelItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_lines
      *
-     * @param \Wallee\Sdk\Model\ShopifySubscriptionModelTaxLine[] $tax_lines 
+     * @param \Secupay\Sdk\Model\ShopifySubscriptionModelTaxLine[] $tax_lines 
      *
      * @return $this
      */
